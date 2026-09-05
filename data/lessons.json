@@ -1,0 +1,280 @@
+{
+  "1": {
+    "day": 1,
+    "title": "Day 1: Sentence Framework (S + V + O) & 3 Core Tenses",
+    "summary": "ปูพื้นฐานการสร้างประโยค 3 กาลหลักที่ครอบคลุมการพูดในชีวิตประจำวัน 80%",
+    "rule": "Present Simple (ทำประจำ) | Present Continuous (กำลังทำ) | Future Simple (จะทำ)",
+    "vocab": [
+      {
+        "word": "Inventory",
+        "phonetic": "/ˈɪn.vən.tɔːr.i/",
+        "part_of_speech": "Noun",
+        "meaning": "สินค้าคงคลัง / สต็อกสินค้า",
+        "example": "We need to check the inventory every Monday morning.",
+        "example_th": "พวกเราต้องตรวจเช็คสต็อกสินค้าทุกเช้าวันจันทร์"
+      },
+      {
+        "word": "Urgent",
+        "phonetic": "/ˈɜː.dʒənt/",
+        "part_of_speech": "Adjective",
+        "meaning": "เร่งด่วน / ฉุกเฉิน",
+        "example": "This is an urgent request from our customer.",
+        "example_th": "นี่คือคำขอเร่งด่วนจากลูกค้าของเรา"
+      },
+      {
+        "word": "Discrepancy",
+        "phonetic": "/dɪˈskrep.ən.si/",
+        "part_of_speech": "Noun",
+        "meaning": "ความคลาดเคลื่อน / ยอดไม่ตรงกัน",
+        "example": "We found a discrepancy between the system and physical count.",
+        "example_th": "เราพบความคลาดเคลื่อนระหว่างยอดในระบบกับยอดนับจริง"
+      },
+      {
+        "word": "Finalize",
+        "phonetic": "/ˈfaɪ.nəl.aɪz/",
+        "part_of_speech": "Verb",
+        "meaning": "สรุปผล / ทำให้เสร็จสมบูรณ์",
+        "example": "I will finalize the report this afternoon.",
+        "example_th": "ฉันจะสรุปรายงานให้เสร็จสมบูรณ์บ่ายวันนี้"
+      },
+      {
+        "word": "Inspect",
+        "phonetic": "/ɪnˈspekt/",
+        "part_of_speech": "Verb",
+        "meaning": "ตรวจสอบ / ตรวจตรา",
+        "example": "The supervisor will inspect the production line.",
+        "example_th": "หัวหน้างานจะเข้าตรวจสายการผลิต"
+      },
+      {
+        "word": "Schedule",
+        "phonetic": "/ˈskedʒ.uːl/",
+        "part_of_speech": "Noun / Verb",
+        "meaning": "กำหนดการ / จัดตารางเวลา",
+        "example": "Everything is running according to schedule.",
+        "example_th": "ทุกอย่างกำลังดำเนินไปตามกำหนดการ"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "I am working on the daily report right now.",
+        "th": "ฉันกำลังทำรายงานประจำวันอยู่ตอนนี้",
+        "tip": "เน้นเสียงที่กริยา working และกรรม report"
+      },
+      {
+        "en": "I will send you the updated file this afternoon.",
+        "th": "ฉันจะส่งไฟล์ที่อัปเดตให้คุณบ่ายวันนี้",
+        "tip": "ย่อ I will เป็น I'll /aɪl/ เพื่อความเป็นธรรมชาติ"
+      },
+      {
+        "en": "The team usually reviews the inventory every morning.",
+        "th": "ทีมมักจะตรวจสอบสต็อกสินค้าทุกๆ เช้า",
+        "tip": "usually ออกเสียงว่า /ˈjuː.ʒu.ə.li/ ลงน้ำหนักที่พยางค์แรก"
+      },
+      {
+        "en": "We completed the urgent shipment yesterday.",
+        "th": "พวกเราจัดการการจัดส่งด่วนเสร็จเรียบร้อยเมื่อวานนี้",
+        "tip": "completed ลงท้ายด้วยเสียง /t/ ชัดเจน"
+      },
+      {
+        "en": "Could you please confirm receipt of the goods?",
+        "th": "ช่วยยืนยันการรับสินค้าให้หน่อยได้ไหมครับ",
+        "tip": "receipt ไม่ออกเสียงตัว p ให้ออกเป็น /rɪˈsiːt/"
+      },
+      {
+        "en": "The production line is running smoothly today.",
+        "th": "สายการผลิตวันนี้กำลังดำเนินไปอย่างราบรื่นครับ",
+        "tip": "smoothly ออกเสียง th แบบแลบลิ้นสั้นๆ /ˈsmuːð.li/"
+      },
+      {
+        "en": "We noticed a minor issue during the morning shift.",
+        "th": "เราสังเกตเห็นปัญหาเล็กน้อยในระหว่างกะเช้าครับ",
+        "tip": "noticed ออกเสียงลงท้ายด้วยเสียง /t/"
+      },
+      {
+        "en": "I will let you know as soon as the batch is ready.",
+        "th": "ฉันจะแจ้งให้คุณทราบทันทีที่ล็อตสินค้าพร้อมครับ",
+        "tip": "as soon as พูดเชื่อมเสียงเร็วๆ /əz-suːn-əz/"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Supervisor",
+        "en": "Good morning. How is the inventory counting going?",
+        "th": "อรุณสวัสดิ์ครับ การนับสต็อกสินค้าเป็นอย่างไรบ้าง"
+      },
+      {
+        "speaker": "Staff",
+        "en": "Good morning. We are currently counting Rack 1 to Rack 3.",
+        "th": "อรุณสวัสดิ์ครับ ตอนนี้พวกเรากำลังนับแร็คที่ 1 ถึงแร็คที่ 3 อยู่ครับ"
+      },
+      {
+        "speaker": "Supervisor",
+        "en": "Did you find any discrepancy so far?",
+        "th": "จนถึงตอนนี้พบยอดตัวเลขที่ไม่ตรงกันบ้างไหมครับ"
+      },
+      {
+        "speaker": "Staff",
+        "en": "No, everything matches the system. I will finalize the summary by 2 PM.",
+        "th": "ไม่พบครับ ทุกอย่างตรงกับในระบบ ผมจะสรุปยอดทั้งหมดภายในบ่าย 2 โมงครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "ฉันส่งเอกสารให้ลูกค้าเรียบร้อยแล้วเมื่อวานนี้",
+        "prefix": "I",
+        "suffix": "the document to the client yesterday.",
+        "hint": "คำกริยา 'send' เปลี่ยนรูปเป็นอดีต (Past Simple)",
+        "acceptable_answers": ["sent", "already sent"],
+        "correct_word": "sent",
+        "full_sentence": "I sent the document to the client yesterday.",
+        "explanation": "เหตุการณ์จบลงแล้วในอดีต (yesterday) ต้องใช้กริยาช่อง 2 คือ sent"
+      },
+      {
+        "thai_prompt": "พวกเรากำลังตรวจสอบสต็อกสินค้าอยู่ในขณะนี้",
+        "prefix": "We are currently",
+        "suffix": "the inventory in the warehouse.",
+        "hint": "คำกริยา 'check' ในรูปกำลังกระทำ (V.ing)",
+        "acceptable_answers": ["checking", "reviewing", "inspecting"],
+        "correct_word": "checking",
+        "full_sentence": "We are currently checking the inventory in the warehouse.",
+        "explanation": "Present Continuous ใช้โครงสร้าง S + is/am/are + V.ing เพื่อบอกสิ่งที่กำลังทำขณะนี้"
+      },
+      {
+        "thai_prompt": "ฉันจะแจ้งให้คุณทราบทันทีที่มีข้อมูลอัปเดต",
+        "prefix": "I will",
+        "suffix": "you know as soon as there is an update.",
+        "hint": "คำกริยาแปลว่า 'ปล่อย/อนุญาต/ให้' (l...)",
+        "acceptable_answers": ["let"],
+        "correct_word": "let",
+        "full_sentence": "I will let you know as soon as there is an update.",
+        "explanation": "สำนวน 'let you know' แปลว่า แจ้งให้คุณทราบ เป็นสำนวนมาตรฐานในการทำงาน"
+      }
+    ],
+    "email_template": {
+      "name": "Status Update (รายงานความคืบหน้างานประจำวัน)",
+      "fields": ["Recipient Name", "Project Name", "Current Status", "Next Step"],
+      "template": "Dear {Recipient Name},\n\nI am writing to provide a quick update on {Project Name}.\nCurrently, {Current Status}.\n\nOur next step is to {Next Step}. I will keep you posted on our progress.\n\nBest regards,\n[Your Name]"
+    }
+  },
+  "2": {
+    "day": 2,
+    "title": "Day 2: Polite Requests & Inquiries",
+    "summary": "เทคนิคการขอความช่วยเหลือและการสอบถามข้อมูลอย่างสุภาพและเป็นมืออาชีพ",
+    "rule": "ใช้ Could you please... หรือ Would you mind... แทนคำสั่งตรงๆ",
+    "vocab": [
+      {
+        "word": "Clarify",
+        "phonetic": "/ˈklær.ɪ.faɪ/",
+        "part_of_speech": "Verb",
+        "meaning": "ชี้แจง / อธิบายให้กระจ่าง",
+        "example": "Could you clarify this requirement for me?",
+        "example_th": "ช่วยอธิบายข้อกำหนดนี้ให้ชัดเจนขึ้นได้ไหมครับ"
+      },
+      {
+        "word": "Appreciate",
+        "phonetic": "/əˈpriː.ʃi.eɪt/",
+        "part_of_speech": "Verb",
+        "meaning": "ซาบซึ้ง / ขอบคุณเป็นอย่างยิ่ง",
+        "example": "I would appreciate your quick assistance.",
+        "example_th": "ผมจะขอบคุณเป็นอย่างยิ่งสำหรับความช่วยเหลือที่รวดเร็วของคุณ"
+      },
+      {
+        "word": "Assistance",
+        "phonetic": "/əˈsɪs.təns/",
+        "part_of_speech": "Noun",
+        "meaning": "ความช่วยเหลือ",
+        "example": "Thank you for your valuable assistance.",
+        "example_th": "ขอบคุณสำหรับความช่วยเหลือที่มีค่ายิ่งของคุณ"
+      },
+      {
+        "word": "Prompt",
+        "phonetic": "/prɒmpt/",
+        "part_of_speech": "Adjective",
+        "meaning": "รวดเร็ว / ทันทีทันใด",
+        "example": "Thank you for your prompt response.",
+        "example_th": "ขอบคุณสำหรับการตอบกลับอย่างรวดเร็วของคุณ"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "Could you please clarify the delivery schedule?",
+        "th": "ช่วยชี้แจงกำหนดการจัดส่งสินค้าให้ชัดเจนได้ไหมครับ",
+        "tip": "Could you please สุภาพกว่า Can you อย่างมาก"
+      },
+      {
+        "en": "Would you mind checking this detail for me?",
+        "th": "รบกวนช่วยตรวจสอบรายละเอียดตรงนี้ให้หน่อยได้ไหมครับ",
+        "tip": "หลัง Would you mind ต้องตามด้วย กริยาเติม -ing เสมอ"
+      },
+      {
+        "en": "I would appreciate it if you could reply by today.",
+        "th": "จะขอบคุณมากหากคุณสามารถตอบกลับได้ภายในวันนี้",
+        "tip": "ใช้วลีนี้เมื่อต้องการเร่งงานอย่างสุภาพ"
+      },
+      {
+        "en": "May I ask for an update regarding the shipment?",
+        "th": "ขออนุญาตสอบถามความคืบหน้าเกี่ยวกับการจัดส่งได้ไหมครับ",
+        "tip": "May I ask for เป็นสำนวนทางการที่สุภาพมาก"
+      },
+      {
+        "en": "Do you have five minutes for a quick sync?",
+        "th": "คุณสะดวกคุยสายสั้นๆ สัก 5 นาทีไหมครับ",
+        "tip": "quick sync หมายถึง การประชุมสั้นๆ เพื่ออัปเดตงาน"
+      },
+      {
+        "en": "Please let me know if you need any further information.",
+        "th": "แจ้งได้เลยนะครับหากคุณต้องการข้อมูลเพิ่มเติม",
+        "tip": "ใช้ปิดท้ายการสนทนาหรืออีเมลเพื่อแสดงความพร้อมช่วยเหลือ"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Colleague",
+        "en": "Hi, do you have a moment to review this document?",
+        "th": "สวัสดีครับ พอมีเวลาสักครู่ช่วยดูเอกสารนี้หน่อยได้ไหมครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "Sure. Would you mind sending it over to my email first?",
+        "th": "ได้แน่นอนครับ รบกวนส่งเข้ามาที่อีเมลของผมก่อนได้ไหมครับ"
+      },
+      {
+        "speaker": "Colleague",
+        "en": "I just sent it. Could you please take a look before 4 PM?",
+        "th": "ผมเพิ่งส่งไปครับ รบกวนช่วยดูให้ก่อน 4 โมงเย็นได้ไหมครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "No problem at all. I will check it right away.",
+        "th": "ไม่มีปัญหาเลยครับ เดี๋ยวผมจะรีบตรวจสอบให้ทันทีครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "รบกวนช่วยตรวจสอบรายละเอียดตรงนี้ให้หน่อยได้ไหมครับ",
+        "prefix": "Would you mind",
+        "suffix": "this detail for me?",
+        "hint": "คำกริยา 'check' เมื่ออยู่หลัง Would you mind (V.ing)",
+        "acceptable_answers": ["checking"],
+        "correct_word": "checking",
+        "full_sentence": "Would you mind checking this detail for me?",
+        "explanation": "โครงสร้าง 'Would you mind' ต้องตามด้วย Gerund (V.ing) เสมอ"
+      },
+      {
+        "thai_prompt": "ช่วยชี้แจงกำหนดการส่งสินค้าให้ชัดเจนได้ไหมครับ",
+        "prefix": "Could you please",
+        "suffix": "the delivery schedule?",
+        "hint": "คำกริยาแปลว่า 'ทำให้ชัดเจน/ชี้แจง' (c...)",
+        "acceptable_answers": ["clarify", "explain"],
+        "correct_word": "clarify",
+        "full_sentence": "Could you please clarify the delivery schedule?",
+        "explanation": "'Could you please + กริยาช่อง 1' ใช้สำหรับขอร้องอย่างเป็นทางการ"
+      }
+    ],
+    "email_template": {
+      "name": "Document Request (ขอเอกสารหรือข้อมูลเพิ่มเติม)",
+      "fields": ["Recipient Name", "Document Name", "Reason", "Deadline"],
+      "template": "Dear {Recipient Name},\n\nCould you please send over the latest {Document Name} when you get a chance?\nWe need it to {Reason}.\n\nIt would be great if we could have it by {Deadline}.\n\nThank you for your assistance.\n\nBest regards,\n[Your Name]"
+    }
+  }
+}
