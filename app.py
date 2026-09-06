@@ -20,30 +20,26 @@ PROGRESS_FILE = "data/user_progress.json"
 LESSONS_FILE = "data/lessons.json"
 
 # -----------------------------------------------------------------------------
-# 2. Persistence Layer (ไม่ใช้แคชหน่วงเพื่อป้องกันการค้างหน้าประมวลผล)
+# 2. Persistence Layer & Curriculum Loader
 # -----------------------------------------------------------------------------
-def load_curriculum():
-    """โหลดข้อมูลบทเรียนสดใหม่ พร้อมแสดงแจ้งเตือนหากไฟล์มีปัญหา"""
-    if not os.path.exists(LESSONS_FILE):
-        st.error(f"❌ หาไฟล์ไม่พบ: ไม่พบไฟล์ที่ '{LESSONS_FILE}'")
-        return {}
-    try:
-        with open(LESSONS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except json.JSONDecodeError as err:
-        st.error(f"❌ รูปแบบไฟล์ JSON ผิดพลาดที่บรรทัด {err.lineno} คอลัมน์ {err.colno}: {err.msg}")
-        return {}
-    except Exception as err:
-        st.error(f"❌ เกิดข้อผิดพลาดในการโหลดไฟล์: {str(err)}")
-        return {}
+def load_progress() -> dict:
+    """อ่านข้อมูลความคืบหน้าของผู้เรียน ป้องกันข้อผิดพลาดหากไม่พบไฟล์"""
+    if os.path.exists(PROGRESS_FILE):
+        try:
+            with open(PROGRESS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {"completed_days": []}
+    return {"completed_days": []}
 
 def save_progress(data: dict):
+    """บันทึกข้อมูลความคืบหน้าลงไฟล์ JSON"""
     os.makedirs("data", exist_ok=True)
     with open(PROGRESS_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def load_curriculum():
-    """โหลดข้อมูลสดใหม่เสมอ ป้องกันปัญหาค้างหน้าจอ Day 3"""
+def load_curriculum() -> dict:
+    """โหลดข้อมูลบทเรียนสดใหม่เสมอ ป้องกันปัญหาติดแคชเก่า"""
     if not os.path.exists(LESSONS_FILE):
         return {}
     try:
@@ -52,6 +48,7 @@ def load_curriculum():
     except Exception:
         return {}
 
+# กำหนดค่าเริ่มต้น session state
 if "user_data" not in st.session_state:
     st.session_state.user_data = load_progress()
 
@@ -110,7 +107,7 @@ def play_audio_button(text: str, key_id: str, label: str = "🔊 ฟังเส
             ctx_{key_id} = new AudioCtx();
             src_{key_id} = ctx_{key_id}.createMediaElementSource(audio);
             gain_{key_id} = ctx_{key_id}.createGain();
-            gain_{key_id}.gain.value = 2.5; // เร่งเสียง 2.5 เท่า ชัดเจน ไม่แตก
+            gain_{key_id}.gain.value = 2.5;
             src_{key_id}.connect(gain_{key_id});
             gain_{key_id}.connect(ctx_{key_id}.destination);
         }}
@@ -234,9 +231,7 @@ else:
         "🤖 AI Writing Coach"
     ])
 
-    # ---------------------------------------------------------
     # TAB 1: 20 Vocabulary & Idioms
-    # ---------------------------------------------------------
     with tabs[0]:
         st.subheader("คลังคำศัพท์และสำนวนสำคัญประจำวัน (20 รายการ)")
         vocab_list = lesson.get("vocab", [])
@@ -258,9 +253,7 @@ else:
         else:
             st.write("ไม่มีข้อมูลคำศัพท์")
 
-    # ---------------------------------------------------------
     # TAB 2: 20 Speaking Phrases Drill
-    # ---------------------------------------------------------
     with tabs[1]:
         st.subheader("คลังประโยคฝึกพูดสื่อสารจริง (20 ประโยค)")
         phrases = lesson.get("phrases", [])
@@ -274,9 +267,7 @@ else:
                 with col_snd:
                     play_audio_button(item["en"], f"spk_{selected_day}_{idx}", "🔊 กดฟังเสียงชัดเจน")
 
-    # ---------------------------------------------------------
     # TAB 3: 10 Workplace Dialogue Scenarios
-    # ---------------------------------------------------------
     with tabs[2]:
         st.subheader("บทสนทนาจำลองสถานการณ์การทำงานจริง (10 ฉากสนทนา)")
         dialogues = lesson.get("dialogues", [])
@@ -295,9 +286,7 @@ else:
         else:
             st.write("ไม่มีบทสนทนาสำหรับวันนี้")
 
-    # ---------------------------------------------------------
     # TAB 4: 10 Fill-in-the-Blank Exercises
-    # ---------------------------------------------------------
     with tabs[3]:
         st.subheader("ชุดแบบฝึกหัดเติมคำในประโยค (10 ข้อ)")
         exercises = lesson.get("exercises", [])
@@ -327,12 +316,10 @@ else:
         else:
             st.write("ไม่มีแบบฝึกหัดสำหรับวันนี้")
 
-    # ---------------------------------------------------------
-    # TAB 5: 4 Short Stories with Illustrations (สไตล์ครูดิว)
-    # ---------------------------------------------------------
+    # TAB 5: 4 Short Stories with Illustrations
     with tabs[4]:
         st.subheader("📚 ฝึกอ่านเรื่องสั้น ไม่เก่งก็อ่านได้ (วันละ 4 เรื่อง)")
-        st.caption("อ่านเรื่องสั้นเพลินๆ พร้อมการ์ตูนประกอบ กล่องคำศัพท์ และคำแปลไทยแบบละเอียด")
+        st.caption("อ่านเรื่องสั้นเพลินๆ พร้อมภาพประกอบ กล่องคำศัพท์ และคำแปลไทย")
         
         stories = lesson.get("stories", [])
         if stories:
@@ -340,21 +327,17 @@ else:
                 with st.container(border=True):
                     st.markdown(f"## เรื่องที่ {st_idx+1}: {item['title']}")
                     
-                    # ภาพประกอบเรื่องสั้น
                     if item.get("image_url"):
                         st.image(item["image_url"], use_container_width=True, caption=f"ภาพประกอบ: {item['title']}")
                     
                     st.divider()
                     
                     col_vocab, col_story = st.columns([1, 2])
-                    
-                    # กล่องคำศัพท์น่ารู้ฝั่งซ้าย (ตามแบบภาพ)
                     with col_vocab:
                         st.markdown("### 📌 คำศัพท์น่ารู้")
                         for w in item.get("vocab_list", []):
                             st.markdown(f"• **{w['word']}** *({w['pos']})*\n  = {w['th']}")
                     
-                    # เนื้อเรื่องภาษาอังกฤษและคำแปลไทยฝั่งขวา
                     with col_story:
                         st.markdown(f"### 📖 {item['title']}")
                         st.markdown(f"<div style='font-size: 16px; line-height: 1.7;'>{item['story_en']}</div>", unsafe_allow_html=True)
@@ -367,9 +350,7 @@ else:
         else:
             st.write("ไม่มีเรื่องสั้นสำหรับวันนี้")
 
-    # ---------------------------------------------------------
     # TAB 6: AI Writing Coach
-    # ---------------------------------------------------------
     with tabs[5]:
         st.subheader("🤖 ให้ AI ตรวจประโยคและข้อความของคุณ")
         draft = st.text_area("ข้อความของคุณ (ภาษาอังกฤษ):", placeholder="เช่น: I am working on daily report and I will update inventory tomorrow.", height=120)
