@@ -2,8 +2,8 @@
   "1": {
     "day": 1,
     "title": "Day 1: Sentence Framework (S + V + O) & 3 Core Tenses",
-    "summary": "ปูพื้นฐานการสร้างประโยค 3 กาลหลักที่ครอบคลุมการพูดในชีวิตประจำวัน 80%",
-    "rule": "Present Simple (ทำประจำ) | Present Continuous (กำลังทำ) | Future Simple (จะทำ)",
+    "summary": "ปูพื้นฐานการสร้างประโยค 3 กาลหลักที่ครอบคลุมการพูดในชีวิตประจำวันและหน้างาน 80%",
+    "rule": "Present Simple (ทำประจำ) | Present Continuous (กำลังทำขณะนี้) | Future Simple (จะทำในอนาคต)",
     "vocab": [
       {
         "word": "Inventory",
@@ -34,23 +34,23 @@
         "phonetic": "/ˈfaɪ.nəl.aɪz/",
         "part_of_speech": "Verb",
         "meaning": "สรุปผล / ทำให้เสร็จสมบูรณ์",
-        "example": "I will finalize the report this afternoon.",
-        "example_th": "ฉันจะสรุปรายงานให้เสร็จสมบูรณ์บ่ายวันนี้"
+        "example": "I will finalize the daily report this afternoon.",
+        "example_th": "ฉันจะสรุปรายงานประจำวันให้เสร็จสมบูรณ์บ่ายวันนี้"
       },
       {
         "word": "Inspect",
         "phonetic": "/ɪnˈspekt/",
         "part_of_speech": "Verb",
         "meaning": "ตรวจสอบ / ตรวจตรา",
-        "example": "The supervisor will inspect the production line.",
-        "example_th": "หัวหน้างานจะเข้าตรวจสายการผลิต"
+        "example": "The supervisor will inspect the production area.",
+        "example_th": "หัวหน้างานจะเข้าตรวจสอบพื้นที่สายการผลิต"
       },
       {
         "word": "Schedule",
         "phonetic": "/ˈskedʒ.uːl/",
         "part_of_speech": "Noun / Verb",
         "meaning": "กำหนดการ / จัดตารางเวลา",
-        "example": "Everything is running according to schedule.",
+        "example": "Everything is progressing according to schedule.",
         "example_th": "ทุกอย่างกำลังดำเนินไปตามกำหนดการ"
       }
     ],
@@ -58,7 +58,7 @@
       {
         "en": "I am working on the daily report right now.",
         "th": "ฉันกำลังทำรายงานประจำวันอยู่ตอนนี้",
-        "tip": "เน้นเสียงที่กริยา working และกรรม report"
+        "tip": "เน้นเสียงหนักที่กริยา working และกรรม report"
       },
       {
         "en": "I will send you the updated file this afternoon.",
@@ -160,7 +160,7 @@
     "day": 2,
     "title": "Day 2: Polite Requests & Inquiries",
     "summary": "เทคนิคการขอความช่วยเหลือและการสอบถามข้อมูลอย่างสุภาพและเป็นมืออาชีพ",
-    "rule": "ใช้ Could you please... หรือ Would you mind... แทนคำสั่งตรงๆ",
+    "rule": "ใช้ Could you please... หรือ Would you mind... แทนการออกคำสั่งตรงๆ",
     "vocab": [
       {
         "word": "Clarify",
@@ -182,7 +182,7 @@
         "word": "Assistance",
         "phonetic": "/əˈsɪs.təns/",
         "part_of_speech": "Noun",
-        "meaning": "ความช่วยเหลือ",
+        "meaning": "ความช่วยเหลือ / การสนับสนุน",
         "example": "Thank you for your valuable assistance.",
         "example_th": "ขอบคุณสำหรับความช่วยเหลือที่มีค่ายิ่งของคุณ"
       },
@@ -193,6 +193,22 @@
         "meaning": "รวดเร็ว / ทันทีทันใด",
         "example": "Thank you for your prompt response.",
         "example_th": "ขอบคุณสำหรับการตอบกลับอย่างรวดเร็วของคุณ"
+      },
+      {
+        "word": "Convenient",
+        "phonetic": "/kənˈviː.ni.ənt/",
+        "part_of_speech": "Adjective",
+        "meaning": "สะดวก / เหมาะสมกับเวลา",
+        "example": "Please call me back when it is convenient for you.",
+        "example_th": "รบกวนโทรกลับหาผมเมื่อคุณสะดวกนะครับ"
+      },
+      {
+        "word": "Inquire",
+        "phonetic": "/ɪnˈkwaɪər/",
+        "part_of_speech": "Verb",
+        "meaning": "สอบถาม / ขอข้อมูล",
+        "example": "I am calling to inquire about the quotation.",
+        "example_th": "ผมโทรมาเพื่อสอบถามเกี่ยวกับใบเสนอราคาครับ"
       }
     ],
     "phrases": [
@@ -225,6 +241,16 @@
         "en": "Please let me know if you need any further information.",
         "th": "แจ้งได้เลยนะครับหากคุณต้องการข้อมูลเพิ่มเติม",
         "tip": "ใช้ปิดท้ายการสนทนาหรืออีเมลเพื่อแสดงความพร้อมช่วยเหลือ"
+      },
+      {
+        "en": "Could you resend the attachment? I did not receive it.",
+        "th": "ช่วยส่งไฟล์แนบมาใหม่อีกครั้งได้ไหมครับ พอดีผมยังไม่ได้รับ",
+        "tip": "resend ออกเสียงเน้นที่ /riːˈsend/"
+      },
+      {
+        "en": "Would it be possible to arrange a meeting tomorrow?",
+        "th": "พอจะเป็นไปได้ไหมที่จะขอนัดประชุมวันพรุ่งนี้ครับ",
+        "tip": "Would it be possible to... เป็นรูปประโยคเสนอแนะที่นุ่มนวล"
       }
     ],
     "dialogue": [
@@ -269,12 +295,807 @@
         "correct_word": "clarify",
         "full_sentence": "Could you please clarify the delivery schedule?",
         "explanation": "'Could you please + กริยาช่อง 1' ใช้สำหรับขอร้องอย่างเป็นทางการ"
+      },
+      {
+        "thai_prompt": "ผมจะขอบคุณเป็นอย่างยิ่งหากคุณสามารถตอบกลับได้ภายในวันนี้",
+        "prefix": "I would",
+        "suffix": "it if you could reply by today.",
+        "hint": "คำกริยาแปลว่า 'ซาบซึ้ง/ขอบคุณ' (a...)",
+        "acceptable_answers": ["appreciate"],
+        "correct_word": "appreciate",
+        "full_sentence": "I would appreciate it if you could reply by today.",
+        "explanation": "'I would appreciate it if...' เป็นสำนวนชั้นสูงในการขอความร่วมมืออย่างสุภาพ"
       }
     ],
     "email_template": {
       "name": "Document Request (ขอเอกสารหรือข้อมูลเพิ่มเติม)",
       "fields": ["Recipient Name", "Document Name", "Reason", "Deadline"],
       "template": "Dear {Recipient Name},\n\nCould you please send over the latest {Document Name} when you get a chance?\nWe need it to {Reason}.\n\nIt would be great if we could have it by {Deadline}.\n\nThank you for your assistance.\n\nBest regards,\n[Your Name]"
+    }
+  },
+  "3": {
+    "day": 3,
+    "title": "Day 3: Reporting Problems & Delays",
+    "summary": "การแจ้งปัญหา ความล่าช้า และการเสนอแนวทางแก้ไขโดยไม่ให้ผู้ฟังตระหนก",
+    "rule": "แจ้งปัญหา (Issue) -> อธิบายสาเหตุสั้นๆ (Due to) -> เสนอทางแก้ไข (Action)",
+    "vocab": [
+      {
+        "word": "Delay",
+        "phonetic": "/dɪˈleɪ/",
+        "part_of_speech": "Noun / Verb",
+        "meaning": "ความล่าช้า / ทำให้ล่าช้า",
+        "example": "There is a slight delay in shipment due to weather conditions.",
+        "example_th": "การจัดส่งมีความล่าช้าเล็กน้อยเนื่องจากสภาพอากาศ"
+      },
+      {
+        "word": "Bottleneck",
+        "phonetic": "/ˈbɒt.əl.nek/",
+        "part_of_speech": "Noun",
+        "meaning": "จุดคอขวด / จุดที่งานติดขัดชะงัก",
+        "example": "We identified a bottleneck at the packaging station.",
+        "example_th": "เราพบจุดคอขวดที่สถานีบรรจุหีบห่อ"
+      },
+      {
+        "word": "Resolve",
+        "phonetic": "/rɪˈzɒlv/",
+        "part_of_speech": "Verb",
+        "meaning": "แก้ไขปัญหา / คลี่คลาย",
+        "example": "Our technical team resolved the issue within two hours.",
+        "example_th": "ทีมช่างเทคนิคของเราแก้ไขปัญหานี้เสร็จสิ้นภายในสองชั่วโมง"
+      },
+      {
+        "word": "Malfunction",
+        "phonetic": "/ˌmælˈfʌŋk.ʃən/",
+        "part_of_speech": "Noun / Verb",
+        "meaning": "การทำงานผิดปกติ / เครื่องจักรขัดข้อง",
+        "example": "The machine stopped due to an electrical malfunction.",
+        "example_th": "เครื่องจักรหยุดทำงานเนื่องจากระบบไฟฟ้าขัดข้อง"
+      },
+      {
+        "word": "Quarantine",
+        "phonetic": "/ˈkwɒr.ən.tiːn/",
+        "part_of_speech": "Noun / Verb",
+        "meaning": "การกักแยก / แยกสินค้าที่มีปัญหาออก",
+        "example": "We placed the defective parts in the quarantine area.",
+        "example_th": "เราได้นำชิ้นส่วนที่มีตำหนิไปไว้ในพื้นที่กักแยกแล้ว"
+      },
+      {
+        "word": "Impact",
+        "phonetic": "/ˈɪm.pækt/",
+        "part_of_speech": "Noun / Verb",
+        "meaning": "ผลกระทบ / ส่งผลกระทบ",
+        "example": "We are taking actions to minimize the negative impact.",
+        "example_th": "พวกเรากำลังดำเนินมาตรการเพื่อลดผลกระทบเชิงลบให้น้อยที่สุด"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "We are experiencing a slight delay due to technical issues.",
+        "th": "เรากำลังประสบปัญหาล่าช้าเล็กน้อยเนื่องจากปัญหาทางเทคนิค",
+        "tip": "due to ตามด้วยคำนามเสมอ"
+      },
+      {
+        "en": "We have already taken corrective actions to resolve this.",
+        "th": "เราได้ดำเนินมาตรการแก้ไขเพื่อจัดการปัญหานี้เรียบร้อยแล้ว",
+        "tip": "corrective actions = มาตรการแก้ไขปัญหา"
+      },
+      {
+        "en": "There is a minor discrepancy in the count.",
+        "th": "พบความคลาดเคลื่อนเล็กน้อยในจำนวนนับ",
+        "tip": "discrepancy /dɪˈskrep.ən.si/ = ความไม่ตรงกัน"
+      },
+      {
+        "en": "We are doing our best to minimize the impact on production.",
+        "th": "พวกเรากำลังทำเต็มที่เพื่อลดผลกระทบต่อสายการผลิตให้น้อยที่สุด",
+        "tip": "minimize the impact เป็นสำนวนที่ดูมีความรับผิดชอบสูง"
+      },
+      {
+        "en": "The machine is temporarily out of service for maintenance.",
+        "th": "เครื่องจักรหยุดทำงานชั่วคราวเพื่อรับการซ่อมบำรุงครับ",
+        "tip": "out of service แปลว่า งดให้บริการ/หยุดทำงาน"
+      },
+      {
+        "en": "We expect the operation to resume by 3:00 PM.",
+        "th": "เราคาดว่าการทำงานจะกลับมาดำเนินการได้อีกครั้งภายในเวลา 15.00 น.",
+        "tip": "resume /rɪˈzjuːm/ แปลว่า เริ่มต้นใหม่หลังจากหยุดไป"
+      },
+      {
+        "en": "The root cause was identified as a sensor failure.",
+        "th": "สาเหตุที่แท้จริงตรวจพบว่าเกิดจากตัวเซนเซอร์ทำงานล้มเหลว",
+        "tip": "root cause = สาเหตุต้นตอ"
+      },
+      {
+        "en": "We apologize for the inconvenience and will keep you updated.",
+        "th": "ขออภัยในความไม่สะดวก และเราจะคอยรายงานความคืบหน้าให้ทราบเรื่อยๆ ครับ",
+        "tip": "ประโยคมาตรฐานในการจบการแจ้งปัญหา"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Manager",
+        "en": "Why has Line 2 stopped running?",
+        "th": "ทำไมสายการผลิตที่ 2 ถึงหยุดทำงานครับ"
+      },
+      {
+        "speaker": "Engineer",
+        "en": "We encountered a conveyor belt malfunction 20 minutes ago.",
+        "th": "เราเจอปัญหาสายพานลำเลียงขัดข้องเมื่อ 20 นาทีที่แล้วครับ"
+      },
+      {
+        "speaker": "Manager",
+        "en": "How long will it take to repair?",
+        "th": "จะใช้เวลาซ่อมนานแค่ไหนครับ"
+      },
+      {
+        "speaker": "Engineer",
+        "en": "The technicians are working on it. It will be back online by 11 AM.",
+        "th": "ช่างกำลังเร่งซ่อมอยู่ครับ น่าจะกลับมาเดินเครื่องได้ตามปกติก่อน 11 โมงเช้าครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "เรากำลังประสบปัญหาล่าช้าเล็กน้อยเนื่องจากปัญหาทางเทคนิค",
+        "prefix": "We are experiencing a slight delay",
+        "suffix": "technical issues.",
+        "hint": "วลีบุพบทแปลว่า 'เนื่องจาก' (ขึ้นต้นด้วย d)",
+        "acceptable_answers": ["due to", "because of"],
+        "correct_word": "due to",
+        "full_sentence": "We are experiencing a slight delay due to technical issues.",
+        "explanation": "ใช้วลี 'due to' ตามด้วยคำนาม เพื่ออธิบายสาเหตุในบริบทธุรกิจอย่างเป็นทางการ"
+      },
+      {
+        "thai_prompt": "พวกเรากำลังทำทุกอย่างเพื่อลดผลกระทบต่อลูกค้าให้น้อยที่สุด",
+        "prefix": "We are doing our best to",
+        "suffix": "the impact on our customers.",
+        "hint": "คำกริยาแปลว่า 'ลดให้น้อยที่สุด' (m...)",
+        "acceptable_answers": ["minimize", "minimise", "reduce"],
+        "correct_word": "minimize",
+        "full_sentence": "We are doing our best to minimize the impact on our customers.",
+        "explanation": "'minimize' แปลว่า ลดระดับลงให้เหลือต่ำที่สุด เพื่อควบคุมความเสียหาย"
+      },
+      {
+        "thai_prompt": "ปัญหานี้ได้รับการแก้ไขเรียบร้อยแล้วโดยทีมวิศวกร",
+        "prefix": "This issue has been",
+        "suffix": "by the engineering team.",
+        "hint": "คำกริยาช่อง 3 แปลว่า 'แก้ไขปัญหาลุล่วงแล้ว' (r...)",
+        "acceptable_answers": ["resolved", "fixed", "solved"],
+        "correct_word": "resolved",
+        "full_sentence": "This issue has been resolved by the engineering team.",
+        "explanation": "'resolved' นิยมใช้ในเชิงการทำงาน แปลว่า แก้ไขปัญหาได้สำเร็จลุล่วง"
+      }
+    ],
+    "email_template": {
+      "name": "Delay Notification (แจ้งความล่าช้าและแผนสำรอง)",
+      "fields": ["Recipient Name", "Task/Shipment", "New Expected Time", "Action Taken"],
+      "template": "Hi {Recipient Name},\n\nI am writing to inform you that {Task/Shipment} is currently delayed.\nWe expect it to be completed by {New Expected Time}.\n\nIn the meantime, {Action Taken} to minimize any impact.\n\nWe apologize for the inconvenience.\n\nBest regards,\n[Your Name]"
+    }
+  },
+  "4": {
+    "day": 4,
+    "title": "Day 4: Daily Standup & Work Progress",
+    "summary": "พูดรายงานสิ่งที่ทำเสร็จ สิ่งที่กำลังทำ และอุปสรรคในการประชุมประจำวัน",
+    "rule": "รูปแบบ 3 ขั้น: What I did yesterday -> What I will do today -> Any Blockers/Obstacles",
+    "vocab": [
+      {
+        "word": "Backlog",
+        "phonetic": "/ˈbæk.lɒɡ/",
+        "part_of_speech": "Noun",
+        "meaning": "งานหรือออเดอร์ที่คั่งค้างสะสม",
+        "example": "We managed to clear 80% of the backlog yesterday.",
+        "example_th": "พวกเราสามารถเคลียร์งานที่คั่งค้างได้ถึง 80% เมื่อวานนี้"
+      },
+      {
+        "word": "Blocker",
+        "phonetic": "/ˈblɒk.ər/",
+        "part_of_speech": "Noun",
+        "meaning": "อุปสรรค / สิ่งกีดขวางที่ทำให้งานเดินต่อไม่ได้",
+        "example": "I have no blockers today; everything is going well.",
+        "example_th": "วันนี้ผมไม่มีปัญหาติดขัดอะไรครับ ทุกอย่างราบรื่นดี"
+      },
+      {
+        "word": "Milestone",
+        "phonetic": "/ˈmaɪl.stəʊn/",
+        "part_of_speech": "Noun",
+        "meaning": "เป้าหมายสำคัญ / จุดเช็คพอยต์ของโครงการ",
+        "example": "We reached an important milestone ahead of schedule.",
+        "example_th": "เราบรรลุเป้าหมายสำคัญได้เร็วกว่ากำหนดการ"
+      },
+      {
+        "word": "Prioritize",
+        "phonetic": "/praɪˈɒr.ɪ.taɪz/",
+        "part_of_speech": "Verb",
+        "meaning": "จัดลำดับความสำคัญก่อน-หลัง",
+        "example": "We need to prioritize urgent customer deliveries today.",
+        "example_th": "วันนี้พวกเราต้องจัดลำดับการส่งมอบด่วนของลูกค้าไว้เป็นอันดับแรก"
+      },
+      {
+        "word": "Progress",
+        "phonetic": "/ˈprəʊ.ɡres/",
+        "part_of_speech": "Noun / Verb",
+        "meaning": "ความคืบหน้า / ก้าวหน้า",
+        "example": "Good progress has been made on the layout redesign.",
+        "example_th": "การปรับปรุงผังใหม่มีความคืบหน้าไปในทิศทางที่ดีมาก"
+      },
+      {
+        "word": "Deliverable",
+        "phonetic": "/dɪˈlɪv.ər.ə.bəl/",
+        "part_of_speech": "Noun",
+        "meaning": "ชิ้นงานหรือผลงานที่ต้องส่งมอบ",
+        "example": "Our final deliverable is due this Friday.",
+        "example_th": "ผลงานชิ้นสุดท้ายของเรามีกำหนดส่งมอบวันศุกร์นี้"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "Yesterday, I finalized the inspection report.",
+        "th": "เมื่อวานนี้ผมสรุปรายงานการตรวจสอบเสร็จเรียบร้อยแล้วครับ",
+        "tip": "finalize แปลว่า ตรวจสอบและทำให้เสร็จสมบูรณ์"
+      },
+      {
+        "en": "Today, I am focusing on clearing the backlog.",
+        "th": "วันนี้ผมจะโฟกัสที่การเคลียร์งานที่ค้างอยู่ครับ",
+        "tip": "focusing on ออกเสียงเชื่อม /ˌfəʊ.kəs.ɪŋ-ɒn/"
+      },
+      {
+        "en": "I am currently blocked by pending approval from QA.",
+        "th": "ตอนนี้ผมติดปัญหาเรื่องรอการอนุมัติจากแผนก QA ครับ",
+        "tip": "blocked by ใช้บอกอุปสรรคที่ทำให้งานเดินต่อไม่ได้"
+      },
+      {
+        "en": "Everything is on track to meet the deadline.",
+        "th": "ทุกอย่างดำเนินไปตามแผนและทันกำหนดแน่นอนครับ",
+        "tip": "on track แปลว่า เป็นไปตามแผนที่วางไว้"
+      },
+      {
+        "en": "We are running slightly behind schedule on Room A1.",
+        "th": "พวกเราทำงานล่าช้ากว่ากำหนดการเล็กน้อยในห้อง A1 ครับ",
+        "tip": "behind schedule แปลว่า ช้ากว่ากำหนด"
+      },
+      {
+        "en": "I will coordinate with the logistics team this morning.",
+        "th": "ผมจะประสานงานกับทีมโลจิสติกส์ในช่วงเช้าวันนี้ครับ",
+        "tip": "coordinate with = ประสานงานร่วมกับ"
+      },
+      {
+        "en": "Do we need any extra support for the afternoon shift?",
+        "th": "เราต้องการกำลังเสริมเพิ่มเติมสำหรับกะบ่ายไหมครับ",
+        "tip": "extra support = ความช่วยเหลือเพิ่มเติม"
+      },
+      {
+        "en": "My main priority today is to reorganize the storage racks.",
+        "th": "ภารกิจหลักอันดับแรกของผมวันนี้คือการจัดระเบียบแร็คเก็บของครับ",
+        "tip": "main priority = เป้าหมายสำคัญสูงสุด"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Team Lead",
+        "en": "Let's do a quick round. What is your update today, Sam?",
+        "th": "มาอัปเดตสั้นๆ กันครับ วันนี้คุณมีอะไรอัปเดตบ้าง แซม"
+      },
+      {
+        "speaker": "Sam",
+        "en": "Yesterday, I finished the location coding for Rack 1 to 3.",
+        "th": "เมื่อวานนี้ผมทำโค้ดตำแหน่งสำหรับแร็ค 1 ถึง 3 เสร็จแล้วครับ"
+      },
+      {
+        "speaker": "Team Lead",
+        "en": "Great. What are you working on today? Any blockers?",
+        "th": "ยอดเยี่ยม วันนี้ทำอะไรต่อครับ มีติดขัดตรงไหนไหม"
+      },
+      {
+        "speaker": "Sam",
+        "en": "Today, I will proceed with Rack 4 to 6. No blockers at the moment.",
+        "th": "วันนี้ผมจะทำแร็ค 4 ถึง 6 ต่อครับ ตอนนี้ยังไม่มีปัญหาติดขัดอะไรครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "ทุกอย่างดำเนินไปตามแผนเพื่อส่งงานให้ทันกำหนด",
+        "prefix": "Everything is",
+        "suffix": "to meet the deadline.",
+        "hint": "สำนวนแปลว่า 'เป็นไปตามแผน' (2 คำ ขึ้นต้นด้วย o และ t)",
+        "acceptable_answers": ["on track"],
+        "correct_word": "on track",
+        "full_sentence": "Everything is on track to meet the deadline.",
+        "explanation": "'on track' เป็นสำนวนธุรกิจยอดนิยม แปลว่าดำเนินไปตามเป้าหมาย/แผนงานที่กำหนด"
+      },
+      {
+        "thai_prompt": "วันนี้ผมกำลังมุ่งเน้นไปที่การเคลียร์งานที่คั่งค้างอยู่",
+        "prefix": "Today, I am",
+        "suffix": "on clearing the backlog.",
+        "hint": "คำกริยาเติม -ing แปลว่า 'ให้ความสนใจ/เพ่งความสนใจ' (f...)",
+        "acceptable_answers": ["focusing", "working"],
+        "correct_word": "focusing",
+        "full_sentence": "Today, I am focusing on clearing the backlog.",
+        "explanation": "'focusing on' แปลว่า เพ่งความสนใจหรือทุ่มเทสมาธิให้กับงานนั้นๆ"
+      },
+      {
+        "thai_prompt": "พวกเรากำลังทำงานล่าช้ากว่ากำหนดการเดิมเล็กน้อย",
+        "prefix": "We are running slightly",
+        "suffix": "schedule due to raw material shortage.",
+        "hint": "คำบุพบทแปลว่า 'อยู่ข้างหลัง/ตามหลัง' (b...)",
+        "acceptable_answers": ["behind"],
+        "correct_word": "behind",
+        "full_sentence": "We are running slightly behind schedule due to raw material shortage.",
+        "explanation": "'behind schedule' แปลว่า ช้ากว่ากำหนดการที่วางแผนไว้"
+      }
+    ],
+    "email_template": {
+      "name": "Daily Standup Summary (ส่งสรุปสแตนด์อัปรายวัน)",
+      "fields": ["Recipient Name", "Completed Tasks", "Today's Priorities", "Blockers"],
+      "template": "Hi {Recipient Name},\n\nHere is my quick update for today:\n- Completed: {Completed Tasks}\n- In Progress / Priorities: {Today's Priorities}\n- Blockers: {Blockers}\n\nPlease let me know if any adjustments are needed.\n\nBest,\n[Your Name]"
+    }
+  },
+  "5": {
+    "day": 5,
+    "title": "Day 5: Scheduling & Rescheduling Meetings",
+    "summary": "การนัดหมาย เสนอเวลาว่าง เลื่อนนัด และยืนยันกำหนดการอย่างมืออาชีพ",
+    "rule": "ระบุวันเวลาให้ชัดเจนเสมอ + เสนอทางเลือก (Are you available at...?)",
+    "vocab": [
+      {
+        "word": "Available",
+        "phonetic": "/əˈveɪ.lə.bəl/",
+        "part_of_speech": "Adjective",
+        "meaning": "ว่าง / สะดวก / พร้อมให้บริการ",
+        "example": "Are you available for a 15-minute sync this afternoon?",
+        "example_th": "คุณพอจะว่างคุยงานสั้นๆ สัก 15 นาทีบ่ายนี้ไหมครับ"
+      },
+      {
+        "word": "Reschedule",
+        "phonetic": "/ˌriːˈskedʒ.uːl/",
+        "part_of_speech": "Verb",
+        "meaning": "เลื่อนกำหนดการ / นัดหมายใหม่",
+        "example": "Could we reschedule our meeting to Friday morning?",
+        "example_th": "พวกเราขอเลื่อนการประชุมไปเป็นเช้าวันศุกร์ได้ไหมครับ"
+      },
+      {
+        "word": "Conflict",
+        "phonetic": "/ˈkɒn.flɪkt/",
+        "part_of_speech": "Noun",
+        "meaning": "ข้อขัดแย้ง / ตารางเวลาซ้อนชนกัน",
+        "example": "I have a scheduling conflict at 2 PM today.",
+        "example_th": "ผมมีนัดหมายซ้อนกันตอนบ่าย 2 โมงวันนี้ครับ"
+      },
+      {
+        "word": "Propose",
+        "phonetic": "/prəˈpəʊz/",
+        "part_of_speech": "Verb",
+        "meaning": "เสนอ / ยื่นข้อเสนอ",
+        "example": "I would like to propose an alternative date.",
+        "example_th": "ผมอยากจะขอเสนอวันเวลาอื่นเป็นทางเลือกครับ"
+      },
+      {
+        "word": "Confirm",
+        "phonetic": "/kənˈfɜːm/",
+        "part_of_speech": "Verb",
+        "meaning": "ยืนยัน",
+        "example": "Please confirm your attendance by replying to this invite.",
+        "example_th": "โปรดยืนยันการเข้าร่วมโดยการตอบรับคำเชิญนี้ครับ"
+      },
+      {
+        "word": "Postpone",
+        "phonetic": "/pəʊstˈpəʊn/",
+        "part_of_speech": "Verb",
+        "meaning": "เลื่อนออกไป (ชะลอเวลา)",
+        "example": "The review session was postponed until next week.",
+        "example_th": "การประชุมทบทวนถูกเลื่อนออกไปเป็นสัปดาห์หน้า"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "Are you available for a quick meeting tomorrow at 2 PM?",
+        "th": "คุณสะดวกประชุมสั้นๆ พรุ่งนี้ตอนบ่าย 2 โมงไหมครับ",
+        "tip": "available ออกเสียงว่า /əˈveɪ.lə.bəl/"
+      },
+      {
+        "en": "Does Thursday morning work for you?",
+        "th": "เช้าวันพฤหัสบดีสะดวกสำหรับคุณไหมครับ",
+        "tip": "Does ... work for you? เป็นคำถามเช็คความสะดวกที่สุภาพและเป็นธรรมชาติ"
+      },
+      {
+        "en": "I am afraid I have a scheduling conflict at that time.",
+        "th": "ผมเกรงว่าผมจะมีนัดชนกันในช่วงเวลาดังกล่าวครับ",
+        "tip": "scheduling conflict หมายถึง นัดหมายซ้อนกัน"
+      },
+      {
+        "en": "Could we reschedule our sync to Friday instead?",
+        "th": "พวกเราขอเลื่อนการประชุมสั้นๆ ไปเป็นวันศุกร์แทนได้ไหมครับ",
+        "tip": "reschedule ออกเสียงเน้นที่ /ˌriːˈskedʒ.uːl/"
+      },
+      {
+        "en": "Please send over a calendar invite once confirmed.",
+        "th": "เมื่อยืนยันแล้ว รบกวนส่งคำเชิญปฏิทินมาให้ด้วยนะครับ",
+        "tip": "calendar invite = บัตรเชิญประชุมบนปฏิทินอีเมล"
+      },
+      {
+        "en": "Any time after 3:00 PM works perfectly for me.",
+        "th": "เวลาไหนก็ได้หลังบ่าย 3 โมง สะดวกสำหรับผมทั้งหมดเลยครับ",
+        "tip": "works perfectly for me = สะดวกมากๆ สำหรับผม"
+      },
+      {
+        "en": "I would like to confirm our appointment for Monday.",
+        "th": "ผมขออนุญาตยืนยันการนัดหมายของเราในวันจันทร์นี้นะครับ",
+        "tip": "confirm our appointment = ยืนยันการนัด"
+      },
+      {
+        "en": "Sorry for the short notice regarding this meeting change.",
+        "th": "ขออภัยด้วยครับที่แจ้งเปลี่ยนแปลงกำหนดประชุมอย่างกระชั้นชิด",
+        "tip": "short notice = การบอกล่วงหน้าในเวลากระชั้นชิด"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Client",
+        "en": "Can we meet tomorrow at 10 AM to discuss the quotation?",
+        "th": "พรุ่งนี้ตอน 10 โมงเช้าเรานัดคุยเรื่องใบเสนอราคากันได้ไหมครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "I have an internal audit at 10 AM. Would 1:30 PM work for you instead?",
+        "th": "ตอน 10 โมงผมติดการตรวจประเมินภายในครับ สะดวกเป็นบ่าย 1 โมงครึ่งแทนได้ไหมครับ"
+      },
+      {
+        "speaker": "Client",
+        "en": "Yes, 1:30 PM works fine for me.",
+        "th": "ได้ครับ บ่ายโมงครึ่งสะดวกสำหรับผมเลยครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "Perfect. I will send a meeting link to your email shortly.",
+        "th": "ยอดเยี่ยมครับ เดี๋ยวผมจะรีบส่งลิงก์ห้องประชุมไปให้อีเมลของคุณทันทีครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "บ่ายวันพรุ่งนี้สะดวกสำหรับคุณไหมครับ?",
+        "prefix": "Does tomorrow afternoon",
+        "suffix": "for you?",
+        "hint": "คำกริยาแปลว่า 'ใช้การได้/สะดวก' (w...)",
+        "acceptable_answers": ["work"],
+        "correct_word": "work",
+        "full_sentence": "Does tomorrow afternoon work for you?",
+        "explanation": "สำนวน 'Does [time] work for you?' แปลว่า วัน/เวลานั้นสะดวกสำหรับคุณไหม"
+      },
+      {
+        "thai_prompt": "ผมเกรงว่าผมจะมีนัดหมายซ้อนกันในช่วงเวลานั้นครับ",
+        "prefix": "I am afraid I have a scheduling",
+        "suffix": "at that time.",
+        "hint": "คำนามแปลว่า 'การชนกัน/ความขัดแย้ง' (c...)",
+        "acceptable_answers": ["conflict"],
+        "correct_word": "conflict",
+        "full_sentence": "I am afraid I have a scheduling conflict at that time.",
+        "explanation": "'scheduling conflict' แปลว่า ตารางเวลาชนกัน เป็นเหตุผลปฏิเสธเวลานัดหมายอย่างสุภาพ"
+      },
+      {
+        "thai_prompt": "พวกเราสามารถเลื่อนการประชุมไปสัปดาห์หน้าได้ไหมครับ",
+        "prefix": "Could we",
+        "suffix": "the meeting to next week?",
+        "hint": "คำกริยาแปลว่า 'กำหนดตารางเวลาใหม่' (r...)",
+        "acceptable_answers": ["reschedule", "postpone", "move"],
+        "correct_word": "reschedule",
+        "full_sentence": "Could we reschedule the meeting to next week?",
+        "explanation": "'reschedule' หมายถึง การย้ายนัดหมายเดิมไปเป็นวันหรือเวลาอื่น"
+      }
+    ],
+    "email_template": {
+      "name": "Meeting Request / Reschedule (ขอนัดหมายหรือเลื่อนประชุม)",
+      "fields": ["Recipient Name", "Meeting Topic", "Proposed Time", "Alternative Time"],
+      "template": "Hi {Recipient Name},\n\nI would like to schedule a quick call to discuss {Meeting Topic}.\nWould {Proposed Time} work for you?\nIf not, I am also available on {Alternative Time}.\n\nLooking forward to hearing from you.\n\nBest regards,\n[Your Name]"
+    }
+  },
+  "6": {
+    "day": 6,
+    "title": "Day 6: Clarifying Instructions & Active Listening",
+    "summary": "การทวนความเข้าใจ เช็คคำสั่ง เพื่อป้องกันความผิดพลาดในการทำงาน",
+    "rule": "Let me confirm... | Just to clarify... | Did you mean...?",
+    "vocab": [
+      {
+        "word": "Elaborate",
+        "phonetic": "/iˈlæb.ə.reɪt/",
+        "part_of_speech": "Verb",
+        "meaning": "อธิบายเพิ่มเติม / ขยายความให้ละเอียด",
+        "example": "Could you please elaborate on your second point?",
+        "example_th": "ช่วยขยายความในประเด็นที่สองเพิ่มเติมได้ไหมครับ"
+      },
+      {
+        "word": "Alignment",
+        "phonetic": "/əˈlaɪn.mənt/",
+        "part_of_speech": "Noun",
+        "meaning": "ความเข้าใจตรงกัน / ความสอดคล้องไปในทางเดียวกัน",
+        "example": "We need complete alignment between both departments.",
+        "example_th": "พวกเราต้องการความเข้าใจที่ตรงกันอย่างสมบูรณ์ระหว่างทั้งสองแผนก"
+      },
+      {
+        "word": "Specification",
+        "phonetic": "/ˌspes.ɪ.fɪˈkeɪ.ʃən/",
+        "part_of_speech": "Noun",
+        "meaning": "ข้อกำหนดเฉพาะ / รายละเอียดสเปก",
+        "example": "Please review the technical specifications carefully.",
+        "example_th": "โปรดตรวจทานรายละเอียดสเปกทางเทคนิคอย่างถี่ถ้วน"
+      },
+      {
+        "word": "Verify",
+        "phonetic": "/ˈver.ɪ.faɪ/",
+        "part_of_speech": "Verb",
+        "meaning": "ตรวจสอบความถูกต้อง / ทวนสอบ",
+        "example": "Always verify the part numbers before packing.",
+        "example_th": "ทวนสอบหมายเลขชิ้นส่วนให้ถูกต้องเสมอก่อนทำการแพ็คลงกล่อง"
+      },
+      {
+        "word": "Ambiguous",
+        "phonetic": "/æmˈbɪɡ.ju.əs/",
+        "part_of_speech": "Adjective",
+        "meaning": "กำกวม / คลุมเครือ ไม่ชัดเจน",
+        "example": "The customer requirements were slightly ambiguous.",
+        "example_th": "ความต้องการของลูกค้ามีความคลุมเครืออยู่เล็กน้อย"
+      },
+      {
+        "word": "Summarize",
+        "phonetic": "/ˈsʌm.ər.aɪz/",
+        "part_of_speech": "Verb",
+        "meaning": "สรุปใจความสำคัญ",
+        "example": "Let me summarize the main takeaways from this discussion.",
+        "example_th": "ขออนุญาตสรุปประเด็นสำคัญที่ได้จากการหารือครั้งนี้ครับ"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "Just to make sure we are on the same page, should I prepare the report first?",
+        "th": "เพื่อความเข้าใจที่ตรงกัน ผมควรเตรียมรายงานก่อนใช่ไหมครับ",
+        "tip": "on the same page หมายถึง เข้าใจตรงกัน"
+      },
+      {
+        "en": "Could you please elaborate on what you mean by that?",
+        "th": "ช่วยขยายความสิ่งที่คุณหมายถึงเพิ่มเติมอีกนิดได้ไหมครับ",
+        "tip": "elaborate แปลว่า อธิบายในรายละเอียด"
+      },
+      {
+        "en": "If I understand correctly, the deadline is moved to next Monday.",
+        "th": "ถ้าผมเข้าใจถูกต้อง กำหนดส่งเลื่อนไปเป็นวันจันทร์หน้าใช่ไหมครับ",
+        "tip": "If I understand correctly ช่วยเช็คความเข้าใจได้ดีมาก"
+      },
+      {
+        "en": "Could you please speak a bit slower? I want to catch every detail.",
+        "th": "ช่วยพูดช้าลงอีกนิดนึงได้ไหมครับ พอดีผมอยากจดรายละเอียดให้ครบถ้วน",
+        "tip": "ใช้เมื่อฟังชาวต่างชาติไม่ทัน ไม่ต้องกลัวที่จะพูด"
+      },
+      {
+        "en": "Let me rephrase that to make sure I got your point.",
+        "th": "ขออนุญาตทวนประโยคอีกครั้งเพื่อให้แน่ใจว่าผมเข้าใจประเด็นของคุณครับ",
+        "tip": "rephrase = เปลี่ยนคำพูดเพื่อทบทวนความเข้าใจ"
+      },
+      {
+        "en": "Did you mean the raw material batch or the finished goods?",
+        "th": "คุณหมายถึงล็อตวัตถุดิบหรือสินค้าสำเร็จรูปครับ",
+        "tip": "Did you mean... ใช้ถามเพื่อแยกแยะความชัดเจน"
+      },
+      {
+        "en": "Could you please put that instruction in an email for reference?",
+        "th": "รบกวนช่วยสรุปคำสั่งดังกล่าวส่งมาทางอีเมลเพื่อใช้อ้างอิงได้ไหมครับ",
+        "tip": "for reference = ไว้ใช้อ้างอิงเป็นหลักฐาน"
+      },
+      {
+        "en": "I understand your point clearly now. Thank you for the clarification.",
+        "th": "ตอนนี้ผมเข้าใจประเด็นของคุณอย่างชัดเจนแล้วครับ ขอบคุณสำหรับคำชี้แจง",
+        "tip": "clarification = การชี้แจงให้กระจ่าง"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Operations Manager",
+        "en": "We need all shipments repacked by tomorrow noon.",
+        "th": "เราต้องให้สินค้าทุกชิ้นถูกแพ็คใหม่ทั้งหมดก่อนเที่ยงวันพรุ่งนี้ครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "Just to clarify, does this apply to both Room A1 and Room A2?",
+        "th": "ขออนุญาตทวนความชัดเจนครับ หมายรวมถึงทั้งห้อง A1 และ A2 เลยใช่ไหมครับ"
+      },
+      {
+        "speaker": "Operations Manager",
+        "en": "No, only Room A1 where the humidity issue was detected.",
+        "th": "ไม่ใช่ครับ เฉพาะห้อง A1 ที่ตรวจพบปัญหาความชื้นเท่านั้นครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "Understood. I will allocate 4 operators to Room A1 immediately.",
+        "th": "เข้าใจแล้วครับ เดี๋ยวผมจะจัดเจ้าหน้าที่ 4 คนเข้าไปจัดการห้อง A1 ทันทีครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "เพื่อให้แน่ใจว่าเราเข้าใจตรงกัน",
+        "prefix": "Just to make sure we are on the",
+        "suffix": "page.",
+        "hint": "คำแปลว่า 'หน้าเดียวกัน' หรือเข้าใจตรงกัน (s...)",
+        "acceptable_answers": ["same"],
+        "correct_word": "same",
+        "full_sentence": "Just to make sure we are on the same page.",
+        "explanation": "สำนวน 'on the same page' หมายถึง มีความเข้าใจตรงกัน ไม่มีความคลาดเคลื่อน"
+      },
+      {
+        "thai_prompt": "ช่วยอธิบายขยายความเพิ่มเติมในจุดนี้ได้ไหมครับ",
+        "prefix": "Could you please",
+        "suffix": "on this specific point?",
+        "hint": "คำกริยาแปลว่า 'ขยายความ/อธิบายเพิ่ม' (e...)",
+        "acceptable_answers": ["elaborate", "clarify", "explain"],
+        "correct_word": "elaborate",
+        "full_sentence": "Could you please elaborate on this specific point?",
+        "explanation": "'elaborate on' แปลว่า ให้ข้อมูลหรือรายละเอียดเพิ่มเติมในเรื่องนั้นๆ"
+      },
+      {
+        "thai_prompt": "ถ้าผมเข้าใจถูกต้อง งานนี้ต้องส่งมอบภายในวันพรุ่งนี้ใช่ไหมครับ",
+        "prefix": "If I understand",
+        "suffix": ", this task must be delivered tomorrow.",
+        "hint": "คำกริยาวิเศษณ์แปลว่า 'อย่างถูกต้อง' (c...)",
+        "acceptable_answers": ["correctly", "right"],
+        "correct_word": "correctly",
+        "full_sentence": "If I understand correctly, this task must be delivered tomorrow.",
+        "explanation": "'If I understand correctly' เป็นวลีทองในการเช็คความเข้าใจคำสั่งหัวหน้าหรือลูกค้า"
+      }
+    ],
+    "email_template": {
+      "name": "Meeting Recap / Confirmation (สรุปความเข้าใจหลังประชุม)",
+      "fields": ["Recipient Name", "Meeting Subject", "Key Takeaways", "Assigned Action"],
+      "template": "Hi {Recipient Name},\n\nThank you for the productive discussion regarding {Meeting Subject}.\nTo ensure alignment, here is what we agreed upon:\n- {Key Takeaways}\n\nI will proceed with {Assigned Action} as discussed.\n\nPlease let me know if I missed anything.\n\nBest regards,\n[Your Name]"
+    }
+  },
+  "7": {
+    "day": 7,
+    "title": "Day 7: Weekly Wrap-up & Executive Summary",
+    "summary": "การเขียนสรุปผลงานประจำสัปดาห์ (Highlights, Challenges, Next Week Plan)",
+    "rule": "เน้นสรุปแบบ Bullet points กระชับ ชัดเจน พร้อมระบุตัวเลขชี้วัดผลงาน",
+    "vocab": [
+      {
+        "word": "Achievement",
+        "phonetic": "/əˈtʃiːv.mənt/",
+        "part_of_speech": "Noun",
+        "meaning": "ความสำเร็จ / ผลงานที่บรรลุเป้า",
+        "example": "Finishing the layout on time was our greatest achievement this week.",
+        "example_th": "การปรับปรุงผังสำเร็จตรงเวลาคือผลงานที่ยอดเยี่ยมที่สุดของเราในสัปดาห์นี้"
+      },
+      {
+        "word": "Benchmark",
+        "phonetic": "/ˈbentʃ.mɑːk/",
+        "part_of_speech": "Noun",
+        "meaning": "เกณฑ์มาตรฐานเปรียบเทียบ",
+        "example": "We exceeded the quality benchmark by 5%.",
+        "example_th": "เราทำผลงานได้เหนือกว่าเกณฑ์มาตรฐานด้านคุณภาพถึง 5%"
+      },
+      {
+        "word": "Output",
+        "phonetic": "/ˈaʊt.pʊt/",
+        "part_of_speech": "Noun",
+        "meaning": "ผลผลิต / ยอดผลิตรวม",
+        "example": "Total production output reached 10,000 units this week.",
+        "example_th": "ยอดผลผลิตรวมแตะระดับ 10,000 ชิ้นในสัปดาห์นี้"
+      },
+      {
+        "word": "Efficiency",
+        "phonetic": "/ɪˈfɪʃ.ən.si/",
+        "part_of_speech": "Noun",
+        "meaning": "ประสิทธิภาพการทำงาน",
+        "example": "The new numbering system increased warehouse picking efficiency.",
+        "example_th": "ระบบรหัสใหม่ช่วยเพิ่มประสิทธิภาพการหยิบสินค้าในคลังได้อย่างมาก"
+      },
+      {
+        "word": "Summary",
+        "phonetic": "/ˈsʌm.ər.i/",
+        "part_of_speech": "Noun",
+        "meaning": "บทสรุป / สรุปย่อ",
+        "example": "Here is an executive summary of our weekly operations.",
+        "example_th": "นี่คือสรุปภาพรวมสำหรับผู้บริหารเกี่ยวกับการปฏิบัติงานประจำสัปดาห์"
+      },
+      {
+        "word": "Momentum",
+        "phonetic": "/məˈmen.təm/",
+        "part_of_speech": "Noun",
+        "meaning": "แรงขับเคลื่อน / ความต่อเนื่องของผลงาน",
+        "example": "Let us maintain this momentum into next week.",
+        "example_th": "พวกเรามารักษาแรงขับเคลื่อนและความต่อเนื่องนี้ต่อไปในสัปดาห์หน้ากันครับ"
+      }
+    ],
+    "phrases": [
+      {
+        "en": "Here is the summary of our weekly achievements.",
+        "th": "นี่คือสรุปผลการดำเนินงานที่สำเร็จในสัปดาห์นี้ครับ",
+        "tip": "achievement หมายถึง ความสำเร็จที่เกิดจากความพยายาม"
+      },
+      {
+        "en": "We achieved a 98% on-time delivery rate this week.",
+        "th": "สัปดาห์นี้เราทำอัตราการส่งมอบตรงเวลาได้ถึง 98% ครับ",
+        "tip": "ใช้ตัวเลขระบุชัดเจนสร้างความน่าเชื่อถือ"
+      },
+      {
+        "en": "Our top priority for next week is system optimization.",
+        "th": "เป้าหมายสำคัญอันดับแรกสำหรับสัปดาห์หน้าคือการปรับปรุงระบบครับ",
+        "tip": "top priority = สิ่งที่ต้องทำเป็นอันดับแรก"
+      },
+      {
+        "en": "Thank you all for your hard work throughout the week.",
+        "th": "ขอบคุณทุกคนสำหรับการทำงานอย่างหนักตลอดทั้งสัปดาห์ครับ",
+        "tip": "คำกล่าวขอบคุณทีมในวันศุกร์"
+      },
+      {
+        "en": "We managed to overcome all unexpected delays.",
+        "th": "พวกเราสามารถเอาชนะและจัดการความล่าช้าที่ไม่คาดคิดได้ทั้งหมดครับ",
+        "tip": "overcome = เอาชนะอุปสรรค"
+      },
+      {
+        "en": "Total scrap was reduced by 4.5% compared to last week.",
+        "th": "ยอดของเสียรวมลดลงไป 4.5% เมื่อเทียบกับสัปดาห์ที่แล้วครับ",
+        "tip": "compared to = เมื่อเปรียบเทียบกับ"
+      },
+      {
+        "en": "Please review the attached spreadsheet for full metrics.",
+        "th": "โปรดดูไฟล์สเปรดชีตที่แนบมาสำหรับตัวเลขดัชนีชี้วัดฉบับเต็มครับ",
+        "tip": "metrics = ตัวเลขชี้วัดผลงาน"
+      },
+      {
+        "en": "Have a restful weekend, everyone!",
+        "th": "ขอให้ทุกคนได้พักผ่อนอย่างเต็มที่ในวันหยุดสุดสัปดาห์นะครับ!",
+        "tip": "คำอวยพรสุดสัปดาห์ที่สุภาพและเป็นกันเอง"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Director",
+        "en": "How did we wrap up the week in Material Control?",
+        "th": "สัปดาห์นี้แผนกควบคุมวัตถุดิบปิดยอดผลงานเป็นอย่างไรบ้างครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "We successfully hit 99% accuracy on the cycle count and dispatched all backlog orders.",
+        "th": "เราทำความแม่นยำในการนับสต็อกได้ 99% และส่งมอบออเดอร์ที่ค้างได้ทั้งหมดครับ"
+      },
+      {
+        "speaker": "Director",
+        "en": "Outstanding work. What is our focus for Monday?",
+        "th": "ยอดเยี่ยมมาก วันจันทร์หน้าเราจะโฟกัสเรื่องอะไรต่อครับ"
+      },
+      {
+        "speaker": "You",
+        "en": "We will kick off the Room A2 reorganization project first thing in the morning.",
+        "th": "เราจะเริ่มโปรเจกต์จัดระเบียบห้อง A2 เป็นสิ่งแรกในเช้าวันจันทร์ครับ"
+      }
+    ],
+    "exercises": [
+      {
+        "thai_prompt": "เป้าหมายสำคัญอันดับหนึ่งของเราในสัปดาห์หน้าคือการปรับปรุงระบบ",
+        "prefix": "Our top",
+        "suffix": "for next week is system optimization.",
+        "hint": "คำแปลว่า 'ลำดับความสำคัญ' (p...)",
+        "acceptable_answers": ["priority"],
+        "correct_word": "priority",
+        "full_sentence": "Our top priority for next week is system optimization.",
+        "explanation": "'top priority' หมายถึง ภารกิจที่มีความสำคัญเร่งด่วนสูงสุด"
+      },
+      {
+        "thai_prompt": "พวกเราทำอัตราการส่งมอบสินค้าตรงเวลาได้ถึง 98% ในสัปดาห์นี้",
+        "prefix": "We",
+        "suffix": "a 98% on-time delivery rate this week.",
+        "hint": "คำกริยาอดีตแปลว่า 'ทำสำเร็จ/บรรลุ' (a...)",
+        "acceptable_answers": ["achieved", "reached", "attained"],
+        "correct_word": "achieved",
+        "full_sentence": "We achieved a 98% on-time delivery rate this week.",
+        "explanation": "'achieved' มักใช้คู่กับตัวเลขร้อยละหรือเป้าหมายที่เกิดจากความพยายามของทีม"
+      },
+      {
+        "thai_prompt": "ยอดของเสียรวมลดลงเมื่อเปรียบเทียบกับสัปดาห์ที่แล้ว",
+        "prefix": "Total scrap was reduced",
+        "suffix": "to last week.",
+        "hint": "คำกริยาช่อง 3 แปลว่า 'เปรียบเทียบ' (ขึ้นต้นด้วย c ตามด้วย to)",
+        "acceptable_answers": ["compared"],
+        "correct_word": "compared",
+        "full_sentence": "Total scrap was reduced compared to last week.",
+        "explanation": "'compared to...' ใช้สำหรับเปรียบเทียบตัวเลขผลประกอบการระหว่างช่วงเวลา"
+      }
+    ],
+    "email_template": {
+      "name": "Weekly Report (รายงานสรุปผลงานประจำสัปดาห์)",
+      "fields": ["Recipient Name", "Weekly Highlights", "Key Metrics", "Next Week Focus"],
+      "template": "Dear {Recipient Name},\n\nPlease find the weekly operational summary below:\n\n1. Highlights:\n- {Weekly Highlights}\n\n2. Key Metrics:\n- {Key Metrics}\n\n3. Next Week Focus:\n- {Next Week Focus}\n\nFeel free to reach out if you have any questions.\n\nBest regards,\n[Your Name]"
     }
   }
 }
