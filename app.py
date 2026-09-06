@@ -22,14 +22,20 @@ LESSONS_FILE = "data/lessons.json"
 # -----------------------------------------------------------------------------
 # 2. Persistence Layer (ไม่ใช้แคชหน่วงเพื่อป้องกันการค้างหน้าประมวลผล)
 # -----------------------------------------------------------------------------
-def load_progress() -> dict:
-    if os.path.exists(PROGRESS_FILE):
-        try:
-            with open(PROGRESS_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            return {"completed_days": []}
-    return {"completed_days": []}
+def load_curriculum():
+    """โหลดข้อมูลบทเรียนสดใหม่ พร้อมแสดงแจ้งเตือนหากไฟล์มีปัญหา"""
+    if not os.path.exists(LESSONS_FILE):
+        st.error(f"❌ หาไฟล์ไม่พบ: ไม่พบไฟล์ที่ '{LESSONS_FILE}'")
+        return {}
+    try:
+        with open(LESSONS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except json.JSONDecodeError as err:
+        st.error(f"❌ รูปแบบไฟล์ JSON ผิดพลาดที่บรรทัด {err.lineno} คอลัมน์ {err.colno}: {err.msg}")
+        return {}
+    except Exception as err:
+        st.error(f"❌ เกิดข้อผิดพลาดในการโหลดไฟล์: {str(err)}")
+        return {}
 
 def save_progress(data: dict):
     os.makedirs("data", exist_ok=True)
