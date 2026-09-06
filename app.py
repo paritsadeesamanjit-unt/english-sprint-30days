@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # -----------------------------------------------------------------------------
-# 2. Helper Data Builder for Week 1 (Day 1 - Day 7)
+# 2. Helper Data Builders
 # -----------------------------------------------------------------------------
 def make_vocab(data_list):
     return [
@@ -55,7 +55,7 @@ def make_stories(data_list):
     ]
 
 # -----------------------------------------------------------------------------
-# 3. Complete Week 1 Curriculum Dataset
+# 3. Complete Week 1 Dataset (Days 1 - 7: 100% Unique Content)
 # -----------------------------------------------------------------------------
 WEEK_1_DATA = {
     "1": {
@@ -234,7 +234,7 @@ WEEK_1_DATA = {
              "David clicks Send on an important email to his client. A minute later, he realizes he forgot to attach the invoice. He politely replies: Please find the attachment included in this message, with my apologies. The client replies with a smile emoji.",
              "เดวิดกดส่งอีเมลสำคัญหาลูกค้า หนึ่งนาทีต่อมาเขานึกขึ้นได้ว่าลืมแนบใบแจ้งหนี้ เขาจึงรีบส่งตามไปอย่างสุภาพ: ขออภัยด้วยครับ โปรดดูไฟล์แนบในอีเมลฉบับนี้ ลูกค้าตอบกลับมาพร้อมอีโมจิยิ้ม"),
             ("A Quick Five Minutes", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
-             [("available", "adj.", "ว่าง"), ("clarify", "pos", "ชี้แจง"), ("project", "n.", "โครงการ"), ("solution", "n.", "ทางออก")],
+             [("available", "adj.", "ว่าง"), ("clarify", "v.", "ชี้แจง"), ("project", "n.", "โครงการ"), ("solution", "n.", "ทางออก")],
              "Lisa sees her supervisor walking past. “Do you have five minutes to <b>clarify</b> the label format?” she asks.<br><br>Her boss stops, looks at the sample, and points out the correct barcode standard. That five-minute chat saves the team three hours of rework.",
              "Lisa sees her supervisor walking past. Do you have five minutes to clarify the label format? she asks. Her boss stops, looks at the sample, and points out the correct barcode standard. That five-minute chat saves the team three hours of rework.",
              "ลิซ่าเห็นหัวหน้าเดินผ่านมา จึงถามว่า: พอมีเวลา 5 นาทีช่วยดูรูปแบบฉลากหน่อยได้ไหมคะ หัวหน้าหยุดดูตัวอย่างแล้วชี้จุดมาตรฐานบาร์โค้ดที่ถูกต้อง การคุยแค่ 5 นาทีช่วยประหยัดเวลาแก้งานได้ถึง 3 ชั่วโมง"),
@@ -249,201 +249,491 @@ WEEK_1_DATA = {
              "An international shipment was stuck at customs. Instead of demanding immediate release, Nancy wrote a very polite email explaining the medical urgency. Touched by her respectful tone, the customs officer expedited the clearance within the hour.",
              "สินค้าด่วนระหว่างประเทศติดอยู่ที่ด่านศุลกากร แทนที่จะส่งอีเมลสั่งการ แนนซี่เขียนอธิบายความจำเป็นอย่างสุภาพ เจ้าหน้าที่ประทับใจในความนุ่มนวล จึงเร่งดำเนินเรื่องให้เสร็จสิ้นภายในหนึ่งชั่วโมง")
         ])
+    },
+    "3": {
+        "day": 3,
+        "title": "Day 3: Reporting Problems & Delays",
+        "summary": "การแจ้งปัญหา ความล่าช้า และการเสนอทางออกอย่างเป็นมืออาชีพ",
+        "rule": "แจ้งปัญหา (Issue) -> อธิบายสาเหตุ (Due to) -> เสนอทางแก้ไข (Action)",
+        "vocab": make_vocab([
+            ("Delay", "/dɪˈleɪ/", "n./v.", "ความล่าช้า / ทำให้ช้า", "There is a slight delay.", "มีความล่าช้าเกิดขึ้นเล็กน้อย"),
+            ("Bottleneck", "/ˈbɒt.əl.nek/", "n.", "จุดคอขวด / จุดติดขัด", "We found a bottleneck at packing.", "พบจุดคอขวดที่การแพ็ค"),
+            ("Resolve", "/rɪˈzɒlv/", "v.", "แก้ไขปัญหาลุล่วง", "We resolved the issue.", "พวกเราแก้ปัญหาแล้ว"),
+            ("Malfunction", "/ˌmælˈfʌŋk.ʃən/", "n.", "เครื่องขัดข้อง / ผิดปกติ", "The motor malfunctioned.", "มอเตอร์ขัดข้อง"),
+            ("Impact", "/ˈɪm.pækt/", "n.", "ผลกระทบ", "We want to minimize the impact.", "เราต้องการลดผลกระทบ"),
+            ("Resume", "/rɪˈzjuːm/", "v.", "เริ่มทำงานต่อ", "Production will resume soon.", "การผลิตจะเริ่มต่อเร็วๆ นี้"),
+            ("Halt", "/hɒlt/", "v.", "หยุดชะงัก", "Operations were halted.", "การทำงานหยุดชะงัก"),
+            ("Shortage", "/ˈʃɔː.tɪdʒ/", "n.", "ของขาดแคลน", "There is a material shortage.", "เกิดภาวะวัตถุดิบขาด"),
+            ("Investigate", "/ɪnˈves.tɪ.ɡeɪt/", "v.", "สืบสวนหาสาเหตุ", "We are investigating the cause.", "เรากำลังหาสาเหตุ"),
+            ("Alternative", "/ɒlˈtɜː.nə.tɪv/", "n.", "ทางเลือกสำรอง", "We have an alternative plan.", "เรามีแผนสำรอง"),
+            ("Preventive", "/prɪˈven.tɪv/", "adj.", "เชิงป้องกัน", "Take preventive action.", "ดำเนินมาตรการป้องกัน"),
+            ("Replacement", "/rɪˈpleɪs.mənt/", "n.", "ของเปลี่ยนทดแทน", "We ordered a replacement.", "เราสั่งของทดแทนแล้ว"),
+            ("Root cause", "/ruːt kɔːz/", "n.", "สาเหตุต้นตอ", "Identify the root cause.", "ระบุสาเหตุต้นตอ"),
+            ("Correction", "/kəˈrek.ʃən/", "n.", "การแก้ไข", "Make the correction now.", "ทำการแก้ไขทันที"),
+            ("Technician", "/tekˈnɪʃ.ən/", "n.", "ช่างเทคนิค", "Call the on-duty technician.", "เรียกช่างประจำกะมา"),
+            ("Capacity", "/kəˈpæs.ə.ti/", "n.", "กำลังการผลิต", "We run at 80% capacity.", "เราเดินเครื่องที่ 80%"),
+            ("Quarantine", "/ˈkwɒr.ən.tiːn/", "n./v.", "กักแยกของเสีย", "Quarantine the damaged goods.", "กักแยกสินค้าที่เสียหาย"),
+            ("Recurrence", "/rɪˈkʌr.əns/", "n.", "การเกิดซ้ำ", "Prevent recurrence of error.", "ป้องกันการเกิดข้อผิดพลาดซ้ำ"),
+            ("Estimate", "/ˈes.tɪ.meɪt/", "v.", "ประเมินเวลา/ยอด", "Estimate two hours of delay.", "ประเมินว่าช้าไป 2 ชม."),
+            ("Contingency", "/kənˈtɪn.dʒən.si/", "n.", "แผนฉุกเฉิน", "Follow the contingency plan.", "ทำตามแผนฉุกเฉิน")
+        ]),
+        "phrases": make_phrases([
+            ("We are experiencing a slight delay due to technical issues.", "เรากำลังประสบปัญหาล่าช้าเล็กน้อยเนื่องจากปัญหาทางเทคนิค", "due to ตามด้วยคำนามเสมอ"),
+            ("We have already taken corrective actions to resolve this.", "เราได้ดำเนินมาตรการแก้ไขเพื่อจัดการปัญหานี้เรียบร้อยแล้ว", "corrective actions = มาตรการแก้ไข"),
+            ("There is a minor discrepancy in the count.", "พบความคลาดเคลื่อนเล็กน้อยในจำนวนนับ", "discrepancy = ยอดไม่ตรงกัน"),
+            ("We are doing our best to minimize the impact on production.", "พวกเรากำลังทำเต็มที่เพื่อลดผลกระทบต่อสายการผลิตให้น้อยที่สุด", "minimize the impact เป็นสำนวนมืออาชีพ"),
+            ("The machine is temporarily out of service for maintenance.", "เครื่องจักรหยุดทำงานชั่วคราวเพื่อรับการซ่อมบำรุงครับ", "out of service = ปิดซ่อม/งดบริการ"),
+            ("We expect operations to resume by 3:00 PM.", "เราคาดว่าจะกลับมาเดินเครื่องได้อีกครั้งตอนบ่าย 3 โมง", "resume = เริ่มต่อ"),
+            ("The root cause was identified as a sensor failure.", "สาเหตุที่แท้จริงตรวจพบว่าเกิดจากเซนเซอร์ขัดข้อง", "root cause = สาเหตุต้นตอ"),
+            ("We apologize for the inconvenience and will keep you updated.", "ขออภัยในความไม่สะดวกและจะคอยรายงานความคืบหน้าครับ", "ประโยคจบการแจ้งปัญหามาตรฐาน"),
+            ("Production was halted for thirty minutes due to power loss.", "สายการผลิตหยุดชะงักไป 30 นาทีเนื่องจากไฟดับ", "halted = หยุดชะงัก"),
+            ("Our technician is currently troubleshooting the error code.", "ช่างเทคนิคกำลังตรวจสอบแก้รหัสข้อผิดพลาดอยู่ครับ", "troubleshooting = วิเคราะห์แก้ปัญหา"),
+            ("We switched to our backup supplier to avoid a material shortage.", "เราเปลี่ยนไปใช้ซัพพลายเออร์สำรองเพื่อเลี่ยงของขาด", "backup supplier = ผู้จัดหาสำรอง"),
+            ("Please isolate the damaged goods immediately.", "กรุณาแยกสินค้าที่ชำรุดออกไปโดยทันทีครับ", "isolate = แยกเดี่ยว"),
+            ("This error occurred during the system calibration.", "ข้อผิดพลาดนี้เกิดขึ้นระหว่างการปรับเทียบค่าระบบ", "occurred = เกิดขึ้น"),
+            ("We are currently running at 70% capacity.", "ปัจจุบันเราเดินเครื่องอยู่ที่ 70% ของกำลังการผลิตครับ", "capacity = กำลังการผลิต"),
+            ("The estimated delay is approximately two hours.", "ความล่าช้าโดยประมาณอยู่ที่ราวๆ สองชั่วโมงครับ", "approximately = โดยประมาณ"),
+            ("All operators have been briefed on the contingency plan.", "พนักงานทุกคนได้รับฟังการชี้แจงแผนสำรองแล้วครับ", "contingency plan = แผนฉุกเฉิน"),
+            ("No customer orders will be affected by this incident.", "จะไม่มีออเดอร์ของลูกค้าได้รับผลกระทบจากเหตุการณ์นี้ครับ", "will be affected = ได้รับผลกระทบ"),
+            ("We have implemented preventive measures to avoid recurrence.", "เราได้ใช้มาตรการป้องกันเพื่อไม่ให้เกิดซ้ำแล้วครับ", "recurrence = การเกิดซ้ำ"),
+            ("Please escalate this issue to the engineering manager.", "รบกวนส่งต่อเรื่องนี้ให้ผู้จัดการฝ่ายวิศวกรรมด้วยครับ", "escalate = ส่งต่อเรื่องด่วน"),
+            ("Everything is back under control now.", "ตอนนี้ทุกอย่างกลับมาอยู่ภายใต้การควบคุมเรียบร้อยแล้วครับ", "under control = ควบคุมได้")
+        ]),
+        "dialogues": make_dialogues([
+            ("เครื่องจักรสายพานหยุดกะทันหัน", [("Lead", "Why did Line 2 stop?", "ทำไมสายการผลิตที่ 2 ถึงหยุด"), ("Tech", "The conveyor belt jammed. Fixing it now.", "สายพานติดขัดครับ กำลังแก้ไขอยู่")]),
+            ("แจ้งลูกค้าเรื่องสินค้าดีเลย์", [("Staff", "Your delivery will be delayed by one hour.", "สินค้าของคุณจะล่าช้าไป 1 ชั่วโมงครับ"), ("Client", "Thank you for informing us in advance.", "ขอบคุณที่แจ้งให้เราทราบล่วงหน้าครับ")]),
+            ("วัตถุดิบขาดสต็อก", [("Purchasing", "The raw material shipment is stuck at port.", "วัตถุดิบติดอยู่ที่ท่าเรือครับ"), ("Manager", "Use our safety stock for today's run.", "นำสต็อกสำรองออกมาใช้ก่อนสำหรับวันนี้")]),
+            ("ตรวจพบรอยขีดข่วนบนชิ้นงาน", [("Inspector", "I spotted surface scratches on this batch.", "ผมพบรอยขีดข่วนบนผิวชิ้นงานล็อตนี้ครับ"), ("Lead", "Quarantine them and notify QA right away.", "กักแยกไว้แล้วรีบแจ้ง QA ทันที")]),
+            ("ไฟฟ้าดับในโกดัง", [("Staff", "The power is out in Warehouse B.", "ไฟดับในโกดัง B ครับ"), ("Lead", "The generator will kick in in 30 seconds.", "เครื่องปั่นไฟสำรองจะทำงานใน 30 วินาที")]),
+            ("รถโฟล์คลิฟต์แบตหมด", [("Driver", "Forklift number 3 has a dead battery.", "รถโฟล์คลิฟต์เบอร์ 3 แบตหมดครับ"), ("Lead", "Plug it in and switch to Forklift 5.", "เสียบชาร์จไว้แล้วไปใช้เบอร์ 5 แทน")]),
+            ("อุณหภูมิห้องเย็นเกินเกณฑ์", [("QA", "Room A1 rose to 26 degrees Celsius.", "ห้อง A1 อุณหภูมิพุ่งไป 26 องศาแล้ว"), ("Tech", "I will reset the compressor unit now.", "เดี๋ยวผมรีเซ็ตคอมเพรสเซอร์เดี๋ยวนี้ครับ")]),
+            ("กล่องสินค้าตกหล่น", [("Operator", "One box fell from the top shelf.", "มีกล่องหนึ่งตกลงมาจากชั้นบนสุดครับ"), ("Lead", "Check if the inner products are intact.", "ตรวจดูว่าสินค้าข้างในยังสมบูรณ์ดีไหม")]),
+            ("ระบบสแกนออนไลน์ล่ม", [("Staff", "The Wi-Fi dropped; scanners cannot sync.", "เน็ตหลุดครับ สแกนเนอร์ส่งข้อมูลไม่ได้"), ("IT", "We are restarting the access point.", "พวกเรากำลังรีสตาร์ตตัวกระจายสัญญาณครับ")]),
+            ("รายงานผู้จัดการเมื่อแก้เสร็จ", [("Staff", "Line 2 is fully operational again.", "สายการผลิตที่ 2 กลับมาเดินเครื่องปกติแล้วครับ"), ("Manager", "Great recovery. Document the root cause.", "กู้สถานการณ์ได้ดีมาก จดบันทึกสาเหตุไว้ด้วยนะ")])
+        ]),
+        "exercises": make_exercises([
+            ("เรากำลังประสบปัญหาล่าช้าเล็กน้อยเนื่องจากปัญหาทางเทคนิค", "We are experiencing a slight delay", "technical issues.", "คำบุพบทแปลว่า เนื่องจาก (d...)", "due to", [], "We are experiencing a slight delay due to technical issues.", "ใช้วลี due to ตามด้วยคำนามเพื่ออธิบายสาเหตุ"),
+            ("พวกเรากำลังทำทุกอย่างเพื่อลดผลกระทบต่อลูกค้าให้น้อยที่สุด", "We are doing our best to", "the impact on customers.", "คำกริยาแปลว่า ลดให้น้อยที่สุด (m...)", "minimize", ["minimise"], "We are doing our best to minimize the impact on customers.", "'minimize' แปลว่า ลดระดับลงให้เหลือน้อยที่สุด"),
+            ("ปัญหานี้ได้รับการแก้ไขเรียบร้อยแล้วโดยทีมวิศวกร", "This problem has been", "by the engineering team.", "คำกริยาช่อง 3 แปลว่า แก้ไขลุล่วง (r...)", "resolved", ["fixed"], "This problem has been resolved by the engineering team.", "'resolved' นิยมใช้ในความหมายว่า แก้ไขปัญหาสำเร็จ"),
+            ("เครื่องจักรหยุดทำงานลงอย่างกะทันหัน", "The machinery was", "unexpectedly.", "คำกริยาช่อง 3 แปลว่า ถูกสั่งหยุด/ชะงัก (h...)", "halted", ["stopped"], "The machinery was halted unexpectedly.", "'halted' หมายถึง การหยุดชะงักลง"),
+            ("เราจำเป็นต้องแยกสินค้าที่มีตำหนิออกทันที", "We must", "the defective items immediately.", "คำกริยาแปลว่า แยกเดี่ยว/กักแยก (i...)", "isolate", ["quarantine"], "We must isolate the defective items immediately.", "'isolate' แปลว่า แยกชิ้นส่วนที่มีปัญหาออก"),
+            ("การผลิตจะกลับมาเริ่มต้นใหม่อีกครั้งเวลาบ่ายสองโมง", "Production will", "at 2:00 PM.", "คำกริยาแปลว่า กลับมาเริ่มต่อ (r...)", "resume", [], "Production will resume at 2:00 PM.", "'resume' แปลว่า เริ่มทำงานใหม่อีกครั้งหลังจากหยุดไป"),
+            ("สาเหตุที่แท้จริงเกิดจากเซนเซอร์ตรวจจับเสีย", "The", "cause was a broken sensor.", "คำแปลว่า รากเหง้า/ต้นตอ (r...)", "root", [], "The root cause was a broken sensor.", "'root cause' คือสาเหตุที่แท้จริงของปัญหา"),
+            ("เรามีแผนสำรองเพื่อป้องกันสินค้าขาดแคลน", "We have a", "plan in place.", "คำแปลว่า ทางเลือกสำรอง (c... หรือ a...)", "contingency", ["backup", "alternative"], "We have a contingency plan in place.", "'contingency plan' แปลว่า แผนฉุกเฉินสำรอง"),
+            ("เรากำลังเผชิญกับภาวะขาดแคลนวัตถุดิบ", "We are facing a material", ".", "คำนามแปลว่า การขาดแคลน (s...)", "shortage", [], "We are facing a material shortage.", "'shortage' แปลว่า ภาวะของขาดแคลน"),
+            ("ตอนนี้สถานการณ์ทั้งหมดกลับมาอยู่ภายใต้การควบคุมแล้ว", "The situation is back", "control now.", "คำบุพบทแปลว่า ใต้ (u...)", "under", [], "The situation is back under control now.", "'under control' แปลว่า อยู่ในการควบคุม")
+        ]),
+        "stories": make_stories([
+            ("The Jammed Conveyor", "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop&q=80",
+             [("conveyor", "n.", "สายพานลำเลียง"), ("jam", "v.", "ติดขัด"), ("technician", "n.", "ช่างเทคนิค"), ("resume", "v.", "เริ่มทำงานต่อ")],
+             "A loud screech echoes across the packing area. A plastic box <b>jammed</b> inside the <b>conveyor</b> belt, halting all movement.<br><br>The on-duty <b>technician</b> clears the blockage and inspects the motor. Within twenty minutes, the line <b>resumes</b> safely without damaging a single product.",
+             "A loud screech echoes across the packing area. A plastic box jammed inside the conveyor belt, halting all movement. The on-duty technician clears the blockage and inspects the motor. Within twenty minutes, the line resumes safely without damaging a single product.",
+             "เสียงดังเอี๊ยดก้องไปทั่วแผนกบรรจุหีบห่อ กล่องพลาสติกติดขัดในสายพานลำเลียงทำให้ทุกอย่างหยุดชะงัก ช่างเทคนิคประจำกะรีบเคลียร์จุดติดขัดและตรวจเช็คมอเตอร์ ภายใน 20 นาทีสายการผลิตก็กลับมาเดินเครื่องได้ตามปกติโดยไม่มีสินค้าเสียหาย"),
+            ("The Temperature Warning", "https://images.unsplash.com/photo-1584467735815-f778f274e296?w=900&auto=format&fit=crop&q=80",
+             [("temperature", "n.", "อุณหภูมิ"), ("warning", "n.", "การเตือนภัย"), ("sensor", "n.", "เซนเซอร์"), ("relief", "n.", "ความโล่งอก")],
+             "A red flashing light warns that Room A1's <b>temperature</b> reached 25°C. Sensitive electronics components must stay below 22°C.<br><br>The team quickly investigates and discovers a faulty door seal, not a broken cooler. They shut the inner door tightly, cooling the room back to safety with a collective sigh of <b>relief</b>.",
+             "A red flashing light warns that Room A1's temperature reached 25°C. Sensitive electronics components must stay below 22°C. The team quickly investigates and discovers a faulty door seal, not a broken cooler. They shut the inner door tightly, cooling the room back to safety with a collective sigh of relief.",
+             "ไฟแดงกะพริบเตือนว่าอุณหภูมิในห้อง A1 แตะ 25 องศา ซึ่งชิ้นส่วนอิเล็กทรอนิกส์ต้องเก็บต่ำกว่า 22 องศา ทีมงานรีบตรวจพบว่าขอบยางประตูไม่สนิท ไม่ใช่แอร์เสีย พวกเขาปิดประตูด้านในให้แน่นจนอุณหภูมิลดลงสู่ระดับปลอดภัยด้วยความโล่งอก"),
+            ("Rainstorm on the Highway", "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=900&auto=format&fit=crop&q=80",
+             [("rainstorm", "n.", "พายุฝน"), ("highway", "n.", "ทางหลวง"), ("safety", "n.", "ความปลอดภัย"), ("intact", "adj.", "สมบูรณ์ดี")],
+             "Truck Driver Somchai was heading from Ayutthaya to Pathum Thani when a fierce <b>rainstorm</b> struck the <b>highway</b>. Visibility dropped to near zero.<br><br>Prioritizing <b>safety</b>, Somchai safely parked at a rest area and notified the warehouse. He arrived forty minutes late, but every single pallet was completely dry and <b>intact</b>.",
+             "Truck Driver Somchai was heading from Ayutthaya to Pathum Thani when a fierce rainstorm struck the highway. Visibility dropped to near zero. Prioritizing safety, Somchai safely parked at a rest area and notified the warehouse. He arrived forty minutes late, but every single pallet was completely dry and intact.",
+             "คนขับรถสมชายกำลังวิ่งจากอยุธยาไปปทุมธานี แต่พายุฝนกระหน่ำบนทางหลวงจนมองแทบไม่เห็นทาง เขาเลือกความปลอดภัยโดยจอดพักที่จุดพักรถและโทรแจ้งคลังสินค้า เขาส่งของช้าไป 40 นาที แต่สินค้าทุกพาเลทแห้งสนิทและสมบูรณ์ 100%"),
+            ("The Missing Crate", "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+             [("crate", "n.", "ลังไม้ / ตะกร้า"), ("discrepancy", "n.", "ยอดคลาดเคลื่อน"), ("location", "n.", "ตำแหน่ง"), ("correct", "v.", "แก้ไข")],
+             "During the cycle count, one wooden <b>crate</b> of connectors was missing from Rack A1112. The audit showed an alarming <b>discrepancy</b>.<br><br>Instead of panicking, the team checked the adjacent shelf and found it mislabeled under A1113. They quickly <b>corrected</b> the system tag with zero loss.",
+             "During the cycle count, one wooden crate of connectors was missing from Rack A1112. The audit showed an alarming discrepancy. Instead of panicking, the team checked the adjacent shelf and found it mislabeled under A1113. They quickly corrected the system tag with zero loss.",
+             "ระหว่างการนับสต็อก ลังคอนเนกเตอร์หายไปหนึ่งลังจากแร็ค A1112 ซึ่งทำให้ยอดไม่ตรงอย่างน่าตกใจ ทีมงานตั้งสติแล้วเดินตรวจแร็คข้างๆ จนพบว่าถูกวางสลับไว้ที่ A1113 พวกเขาจึงรีบแก้ไขแท็กในระบบให้ถูกต้องโดยไม่มีของสูญหาย")
+        ])
+    },
+    "4": {
+        "day": 4,
+        "title": "Day 4: Daily Standup & Work Progress",
+        "summary": "การรายงานสิ่งที่ทำเสร็จ สิ่งที่กำลังทำ และอุปสรรคในการทำงานประจำวัน",
+        "rule": "รูปแบบ 3 ขั้น: What I did yesterday -> What I will do today -> Blockers",
+        "vocab": make_vocab([
+            ("Backlog", "/ˈbæk.lɒɡ/", "n.", "งานคั่งค้าง", "We cleared the backlog.", "พวกเราเคลียร์งานค้างเสร็จแล้ว"),
+            ("Blocker", "/ˈblɒk.ər/", "n.", "อุปสรรคติดขัด", "Do you have any blockers?", "คุณมีอะไรติดขัดไหม"),
+            ("Milestone", "/ˈmaɪl.stəʊn/", "n.", "เป้าหมายสำคัญ", "We reached a new milestone.", "เราบรรลุเป้าหมายสำคัญ"),
+            ("Prioritize", "/praɪˈɒr.ɪ.taɪz/", "v.", "จัดลำดับสำคัญ", "Prioritize safety first.", "จัดลำดับความปลอดภัยไว้ก่อน"),
+            ("Progress", "/ˈprəʊ.ɡres/", "n.", "ความคืบหน้า", "Good progress was made.", "มีความคืบหน้าที่ดีมาก"),
+            ("Deliverable", "/dɪˈlɪv.ər.ə.bəl/", "n.", "ชิ้นงานส่งมอบ", "The deliverable is due today.", "งานส่งมอบครบกำหนดวันนี้"),
+            ("Achievement", "/əˈtʃiːv.mənt/", "n.", "ผลงานสำเร็จ", "Great team achievement.", "ผลงานยอดเยี่ยมของทีม"),
+            ("Pending", "/ˈpen.dɪŋ/", "adj.", "อยู่ระหว่างรอผล", "Approval is pending.", "กำลังรออนุมัติอยู่"),
+            ("Coordinate", "/kəʊˈɔː.dɪ.neɪt/", "v.", "ประสานงาน", "I will coordinate with QA.", "ผมจะประสานงานกับ QA"),
+            ("Handover", "/ˈhændˌəʊ.vər/", "n.", "การส่งมอบงาน", "Do a smooth shift handover.", "ส่งมอบงานระหว่างกะอย่างราบรื่น"),
+            ("Target", "/ˈtɑː.ɡɪt/", "n.", "เป้าหมาย", "We hit our daily target.", "เราทำยอดได้ตามเป้า"),
+            ("Update", "/ʌpˈdeɪt/", "v./n.", "รายงานความคืบหน้า", "Give me a quick update.", "ช่วยอัปเดตสั้นๆ ให้ฟังหน่อย"),
+            ("Support", "/səˈpɔːt/", "n.", "การช่วยเหลือ", "I need technical support.", "ผมต้องการความช่วยเหลือทางเทคนิค"),
+            ("Efficiency", "/ɪˈfɪʃ.ən.si/", "n.", "ประสิทธิภาพ", "Boost warehouse efficiency.", "เพิ่มประสิทธิภาพคลัง"),
+            ("Assign", "/əˈsaɪn/", "v.", "มอบหมายงาน", "Assign tasks to the crew.", "มอบหมายงานให้ทีม"),
+            ("Status", "/ˈsteɪ.təs/", "n.", "สถานะงาน", "What is the status now?", "สถานะงานตอนนี้เป็นอย่างไร"),
+            ("Resource", "/rɪˈzɔːs/", "n.", "ทรัพยากร/กำลังคน", "We need more resources.", "เราต้องการกำลังคนเพิ่ม"),
+            ("Morale", "/məˈrɑːl/", "n.", "ขวัญกำลังใจ", "Team morale is high.", "ขวัญกำลังใจทีมงานดีมาก"),
+            ("Align", "/əˈlaɪn/", "v.", "ปรับให้ตรงกัน", "Let's align our tasks.", "มาปรับงานให้ตรงกัน"),
+            ("Wrap up", "/ræp ʌp/", "v.", "สรุปจบงาน", "Wrap up the standup meeting.", "สรุปจบการประชุมสแตนด์อัป")
+        ]),
+        "phrases": make_phrases([
+            ("Yesterday, I finalized the inspection report.", "เมื่อวานนี้ผมสรุปรายงานการตรวจสอบเสร็จเรียบร้อยแล้วครับ", "finalize = สรุปเสร็จสมบูรณ์"),
+            ("Today, I am focusing on clearing the backlog.", "วันนี้ผมจะโฟกัสที่การเคลียร์งานที่คั่งค้างอยู่ครับ", "focusing on = ทุ่มความสนใจ"),
+            ("I am currently blocked by pending approval from QA.", "ตอนนี้ผมติดปัญหาเรื่องรอการอนุมัติจากแผนก QA ครับ", "blocked by = ติดขัดเรื่อง"),
+            ("Everything is on track to meet the deadline.", "ทุกอย่างดำเนินไปตามแผนและทันกำหนดแน่นอนครับ", "on track = เป็นไปตามแผน"),
+            ("We completed five cycles ahead of schedule.", "พวกเรานับสต็อกเสร็จก่อนเวลา 5 รอบครับ", "ahead of schedule = เร็วกว่ากำหนด"),
+            ("My top priority today is checking Rack 4.", "เป้าหมายหลักของผมวันนี้คือการตรวจแร็ค 4 ครับ", "top priority = เรื่องสำคัญอันดับแรก"),
+            ("I will collaborate with the night shift leader.", "ผมจะประสานงานกับหัวหน้ากะดึกครับ", "collaborate = ร่วมมือกัน"),
+            ("No major blockers were reported this morning.", "ไม่มีรายงานปัญหาติดขัดรุนแรงเช้านี้ครับ", "no major blockers"),
+            ("We hit our target of packing 800 units.", "เราทำยอดแพ็คของได้ตามเป้า 800 ชิ้นครับ", "hit our target = บรรลุเป้าหมาย"),
+            ("I need fifteen minutes of technical support.", "ผมต้องการความช่วยเหลือทางเทคนิคสัก 15 นาทีครับ", "technical support = ความช่วยเหลือด้านเทคนิค"),
+            ("The attendance sheet has been updated.", "ตารางการเข้างานได้รับการอัปเดตแล้วครับ", "attendance sheet = ใบลงเวลา"),
+            ("We are currently running at full efficiency.", "ตอนนี้เราเดินงานเต็มประสิทธิภาพครับ", "full efficiency = เต็มประสิทธิภาพ"),
+            ("I will deliver the finalized document by 4 PM.", "ผมจะส่งเอกสารฉบับสมบูรณ์ให้ก่อน 4 โมงเย็นครับ", "deliver = นำส่ง"),
+            ("Let's align our tasks before starting the shift.", "พวกเรามาปรับเป้าหมายงานให้ตรงกันก่อนเริ่มกะกันครับ", "align tasks = ปรับงานให้ตรงกัน"),
+            ("Who is assigned to inspect the incoming shipment?", "ใครได้รับมอบหมายให้ตรวจสินค้าที่รับเข้ามาครับ", "assigned to = มอบหมายให้"),
+            ("We managed to reduce processing time by 10%.", "เราลดระยะเวลาการทำงานลงได้ถึง 10% ครับ", "processing time = ระยะเวลาทำงาน"),
+            ("I will follow up on the missing quotation today.", "วันนี้ผมจะติดตามเรื่องใบเสนอราคาที่ยังขาดอยู่ครับ", "follow up on = ติดตามเรื่อง"),
+            ("The team morale is high and productive.", "กำลังใจของทีมงานดีมากและทำงานได้ผลงานสูงครับ", "morale = ขวัญกำลังใจ"),
+            ("Please log your completed items in the system.", "ช่วยบันทึกรายการที่ทำเสร็จลงในระบบด้วยครับ", "log in the system = บันทึกเข้าระบบ"),
+            ("That wraps up my morning standup report.", "นั่นคือสรุปรายงานการประชุมสแตนด์อัปเช้านี้ของผมครับ", "wraps up = ปิดท้ายสรุป")
+        ]),
+        "dialogues": make_dialogues([
+            ("รายงานกะสแตนด์อัป", [("Leader", "What is your main task today, Sam?", "วันนี้งานหลักของคุณคืออะไร แซม"), ("Sam", "I am clearing the Room A1 backlog.", "ผมจะเคลียร์งานคั่งค้างในห้อง A1 ครับ")]),
+            ("แจ้งติดขัดรอเอกสาร", [("Staff", "I am blocked by the missing invoice.", "ผมติดปัญหาเรื่องยังไม่ได้ใบแจ้งหนี้ครับ"), ("Leader", "I will call the accounting team now.", "เดี๋ยวผมโทรตามบัญชีให้เดี๋ยวนี้")]),
+            ("แจ้งทำยอดทะลุเป้า", [("Lead", "Did we reach our target yesterday?", "เมื่อวานเราทำยอดถึงเป้าไหม"), ("Staff", "Yes, we packed 1,200 units, 10% over target.", "ถึงครับ แพ็คได้ 1,200 ชิ้น เกินเป้า 10% ครับ")]),
+            ("ขอความช่วยเหลือจากเพื่อนร่วมงาน", [("Operator", "I need support with heavy lifting today.", "วันนี้ผมอยากได้คนช่วยยกของหนักครับ"), ("Colleague", "I will join you after my coffee break.", "เดี๋ยวฉันไปช่วยหลังจากพักดื่มกาแฟนะ")]),
+            ("ส่งมอบงานก่อนเลิกกะ", [("A", "All pallets on Rack 5 are verified.", "พาเลททั้งหมดบนแร็ค 5 ตรวจสอบแล้ว"), ("B", "Thanks, I will take over Rack 6 now.", "ขอบคุณ เดี๋ยวผมรับช่วงต่อแร็ค 6 เอง")]),
+            ("รายงานระบบคอมพิวเตอร์พร้อมใช้", [("IT", "The warehouse scanner system is fully updated.", "ระบบสแกนเนอร์ของคลังอัปเดตเรียบร้อยแล้ว"), ("Staff", "Great, the sync is much faster now.", "ยอดเยี่ยม ส่งข้อมูลไวขึ้นเยอะเลยครับ")]),
+            ("แบ่งหน้าที่ในกะเช้า", [("Leader", "Ken, handle inbound. Lisa, handle packing.", "เคนดูของเข้า ลิซ่าดูแลการแพ็คของนะ"), ("Both", "Understood, we are on it.", "รับทราบครับ/ค่ะ พวกเราลุยเลย")]),
+            ("ติดตามเรื่องความปลอดภัย", [("Safety Officer", "Remember to wear high-visibility vests.", "อย่าลืมสวมเสื้อกั๊กสะท้อนแสงกันทุกคนนะ"), ("Team", "Yes, safety first every single day.", "รับทราบครับ ปลอดภัยไว้ก่อนทุกๆ วัน")]),
+            ("รายงานการซ่อมบำรุงรถโฟล์คลิฟต์", [("Mechanic", "Forklift maintenance is complete.", "การบำรุงรักษารถโฟล์คลิฟต์เสร็จแล้วครับ"), ("Driver", "Awesome, I will do a quick brake test.", "เยี่ยมเลย เดี๋ยวผมขอทดสอบเบรกแป๊บหนึ่ง")]),
+            ("ปิดการประชุมยามเช้า", [("Manager", "Let's have a safe and productive day!", "ขอให้เป็นวันที่ปลอดภัยและมีผลงานยอดเยี่ยมนะ!"), ("Team", "Let's do this!", "ลุยกันเลยครับ!")])
+        ]),
+        "exercises": make_exercises([
+            ("ทุกอย่างดำเนินไปตามแผนเพื่อส่งงานให้ทันกำหนด", "Everything is on", "to meet the deadline.", "สำนวนแปลว่า ตามแผน (t...)", "track", [], "Everything is on track to meet the deadline.", "'on track' แปลว่า เป็นไปตามแผนงาน"),
+            ("วันนี้ผมมุ่งเน้นไปที่การเคลียร์งานที่ค้างอยู่", "Today, I am", "on clearing the backlog.", "คำกริยาเติม -ing แปลว่า จดจ่อ/มุ่งเน้น (f...)", "focusing", [], "Today, I am focusing on clearing the backlog.", "'focusing on' แปลว่า ให้ความสำคัญ/จดจ่อ"),
+            ("ผมติดปัญหาเรื่องยังรอการอนุมัติอยู่ครับ", "I am", "by pending approval.", "คำกริยาช่อง 3 แปลว่า ติดขัด (b...)", "blocked", [], "I am blocked by pending approval.", "'blocked by' แปลว่า ติดปัญหาหรือติดขัดจาก..."),
+            ("งานส่งมอบชิ้นสุดท้ายมีกำหนดส่งวันนี้", "The final", "is due today.", "คำนามแปลว่า ชิ้นงานส่งมอบ (d...)", "deliverable", [], "The final deliverable is due today.", "'deliverable' คือผลงานที่ต้องส่งมอบ"),
+            ("เมื่อวานนี้ผมสรุปรายงานการตรวจเสร็จเรียบร้อยแล้ว", "Yesterday, I", "the inspection report.", "คำกริยาอดีตแปลว่า ทำให้เสร็จสิ้น (f...)", "finalized", [], "Yesterday, I finalized the inspection report.", "'finalized' แปลว่า ทำเสร็จสมบูรณ์ในอดีต"),
+            ("พวกเราทำงานเสร็จเร็วกว่ากำหนดการสองชั่วโมง", "We finished two hours ahead of", ".", "คำนามแปลว่า กำหนดการ (s...)", "schedule", [], "We finished two hours ahead of schedule.", "'ahead of schedule' แปลว่า เร็วกว่ากำหนด"),
+            ("ใครได้รับมอบหมายให้ดูแลงานชิ้นนี้ครับ", "Who is", "to this task?", "คำกริยาช่อง 3 แปลว่า มอบหมาย (a...)", "assigned", [], "Who is assigned to this task?", "'assigned to' แปลว่า ได้รับมอบหมายให้ทำ"),
+            ("เป้าหมายสำคัญอันดับหนึ่งของฉันคือการจัดระเบียบแร็ค", "My top", "is organizing the racks.", "คำแปลว่า ลำดับความสำคัญ (p...)", "priority", [], "My top priority is organizing the racks.", "'top priority' คือสิ่งที่ต้องทำเป็นอันดับแรก"),
+            ("เราจำเป็นต้องประสานงานกับทีมงานกะดึก", "We must", "with the night shift team.", "คำกริยาแปลว่า ประสานงาน (c...)", "coordinate", ["collaborate"], "We must coordinate with the night shift team.", "'coordinate with' แปลว่า ประสานงานร่วมกับ"),
+            ("นั่นคือสรุปรายงานการประชุมประจำเช้าของผมครับ", "That", "up my morning report.", "คำกริยาเติม s แปลว่า ห่อ/สรุปปิดท้าย (w...)", "wraps", [], "That wraps up my morning report.", "'wraps up' แปลว่า จบหรือสรุปรายงาน")
+        ]),
+        "stories": make_stories([
+            ("Clearing the Mountain", "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+             [("backlog", "n.", "งานคั่งค้าง"), ("standup", "n.", "การประชุมสั้น"), ("target", "n.", "เป้าหมาย"), ("celebrate", "v.", "ฉลอง")],
+             "At the morning <b>standup</b>, the team faced a daunting <b>backlog</b> of five hundred unverified parcels.<br><br>The leader broke the quota into small hourly targets. By 4 PM, they met the <b>target</b> and shared a box of warm donuts to <b>celebrate</b>.",
+             "At the morning standup, the team faced a daunting backlog of five hundred unverified parcels. The leader broke the quota into small hourly targets. By 4 PM, they met the target and shared a box of warm donuts to celebrate.",
+             "ในการประชุมสแตนด์อัปยามเช้า ทีมงานต้องเผชิญกับพัสดุคั่งค้างที่ยังไม่ตรวจนับถึง 500 กล่อง หัวหน้าทีมจึงแบ่งเป้าหมายออกเป็นชั่วโมงๆ เมื่อถึงบ่ายสี่โมง พวกเขาก็ทำสำเร็จตามเป้าและแบ่งโดนัทฉลองร่วมกัน"),
+            ("Speak Up on the Blocker", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+             [("blocker", "n.", "อุปสรรค"), ("honest", "adj.", "ซื่อสัตย์/ตรงไปตรงมา"), ("guide", "v.", "แนะนำ"), ("solve", "v.", "แก้ไข")],
+             "During the sync, junior operator Leo raised his hand: “I have a <b>blocker</b>. I don’t fully understand the new wiring diagram.”<br><br>Senior engineer Paul appreciated his <b>honest</b> update, spent ten minutes to <b>guide</b> him, and <b>solved</b> the issue on the spot.",
+             "During the sync, junior operator Leo raised his hand: I have a blocker. I don’t fully understand the new wiring diagram. Senior engineer Paul appreciated his honest update, spent ten minutes to guide him, and solved the issue on the spot.",
+             "ระหว่างประชุม ลีโอช่างเทคนิครุ่นใหม่ยกมือขึ้นอย่างตรงไปตรงมา: ผมติดปัญหาตรงที่ไม่ค่อยเข้าใจแบบวงจรไฟฟ้าอันใหม่ครับ พอลวิศวกรอาวุโสชื่นชมความซื่อสัตย์ ใช้เวลา 10 นาทีช่วยสอนจนแก้ปัญหาได้ทันที"),
+            ("The Shift Handover Log", "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+             [("handover", "n.", "การส่งต่องาน"), ("accurate", "adj.", "แม่นยำ"), ("shift", "n.", "กะทำงาน"), ("smooth", "adj.", "ราบรื่น")],
+             "Before clocking out, Niran completed a neat <b>handover</b> sheet specifying which racks were counted and which boxes remained.<br><br>The night <b>shift</b> supervisor was thrilled by the clear notes, allowing a perfectly <b>smooth</b> and error-free operation until dawn.",
+             "Before clocking out, Niran completed a neat handover sheet specifying which racks were counted and which boxes remained. The night shift supervisor was thrilled by the clear notes, allowing a perfectly smooth and error-free operation until dawn.",
+             "ก่อนสแกนนิ้วกลับบ้าน นิรันดร์เขียนบันทึกส่งมอบงานอย่างเป็นระเบียบว่าแร็คไหนนับแล้วและกล่องไหนที่ยังค้างอยู่ หัวหน้ากะดึกประทับใจในความชัดเจน ทำให้การทำงานกะกลางคืนราบรื่นไร้ข้อผิดพลาดจนถึงเช้า"),
+            ("Ten Percent Over Target", "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80",
+             [("target", "n.", "เป้าหมาย"), ("efficient", "adj.", "มีประสิทธิภาพ"), ("cheer", "v.", "ส่งเสียงยินดี"), ("teamwork", "n.", "การทำงานเป็นทีม")],
+             "Line 3 was challenged to pack 1,000 units. By reorganizing their workbench, their workflow became remarkably <b>efficient</b>.<br><br>At shift end, they counted 1,100 finished boxes! The room erupted into <b>cheers</b>, celebrating the power of great <b>teamwork</b>.",
+             "Line 3 was challenged to pack 1,000 units. By reorganizing their workbench, their workflow became remarkably efficient. At shift end, they counted 1,100 finished boxes! The room erupted into cheers, celebrating the power of great teamwork.",
+             "สายการผลิตที่ 3 ได้รับโจทย์ให้แพ็คของ 1,000 ชิ้น ด้วยการจัดระเบียบโต๊ะทำงานใหม่ กระบวนการจึงมีประสิทธิภาพขึ้นอย่างเห็นได้ชัด เมื่อจบกะ พวกเขานับได้ถึง 1,100 กล่อง ทั้งห้องส่งเสียงเฮฉลองพลังแห่งการทำงานเป็นทีม")
+        ])
+    },
+    "5": {
+        "day": 5,
+        "title": "Day 5: Scheduling & Rescheduling Meetings",
+        "summary": "การนัดหมาย เสนอเวลาว่าง เลื่อนนัด และยืนยันกำหนดการอย่างมืออาชีพ",
+        "rule": "ระบุเวลาชัดเจน + เสนอทางเลือก (Does [time] work for you?)",
+        "vocab": make_vocab([
+            ("Available", "/əˈveɪ.lə.bəl/", "adj.", "ว่าง / สะดวก", "Are you available tomorrow?", "พรุ่งนี้คุณว่างไหมครับ"),
+            ("Reschedule", "/ˌriːˈskedʒ.uːl/", "v.", "เลื่อนนัดหมาย", "Can we reschedule our call?", "ขอเลื่อนนัดคุยสายได้ไหม"),
+            ("Conflict", "/ˈkɒn.flɪkt/", "n.", "เวลาชนกัน", "I have a scheduling conflict.", "ผมมีตารางเวลาชนกัน"),
+            ("Propose", "/prəˈpəʊz/", "v.", "เสนอเวลา", "I propose Friday at 2 PM.", "ผมขอเสนอวันศุกร์บ่ายสอง"),
+            ("Confirm", "/kənˈfɜːm/", "v.", "ยืนยัน", "Confirm the meeting room.", "ช่วยยืนยันห้องประชุมด้วย"),
+            ("Postpone", "/pəʊstˈpəʊn/", "v.", "เลื่อนออกไป", "The sync was postponed.", "การประชุมถูกเลื่อนออกไป"),
+            ("Agenda", "/əˈdʒen.də/", "n.", "วาระการประชุม", "Check the meeting agenda.", "ตรวจดูวาระการประชุม"),
+            ("Attendee", "/ə.tenˈdiː/", "n.", "ผู้เข้าร่วม", "All attendees arrived.", "ผู้เข้าร่วมทุกคนมาถึงแล้ว"),
+            ("Convenient", "/kənˈviː.ni.ənt/", "adj.", "สะดวกสบาย", "Is Thursday convenient?", "วันพฤหัสบดีสะดวกไหม"),
+            ("Invitation", "/ˌɪn.vɪˈteɪ.ʃən/", "n.", "คำเชิญปฏิทิน", "Send a calendar invitation.", "ส่งคำเชิญปฏิทินมาด้วย"),
+            ("Duration", "/djʊəˈreɪ.ʃən/", "n.", "ระยะเวลาประชุม", "The duration is 30 mins.", "ระยะเวลาคือ 30 นาที"),
+            ("Minutes", "/ˈmɪn.ɪts/", "n.", "บันทึกการประชุม", "Send the meeting minutes.", "ส่งบันทึกการประชุม"),
+            ("Facilitate", "/fəˈsɪl.ɪ.teɪt/", "v.", "ดำเนินรายการ", "Who will facilitate the call?", "ใครจะดำเนินรายการประชุม"),
+            ("Discussion", "/dɪˈskʌʃ.ən/", "n.", "การหารือ", "We had a great discussion.", "เรามีการหารือที่ดีมาก"),
+            ("Tentative", "/ˈten.tə.tɪv/", "adj.", "กำหนดการคร่าวๆ", "This is a tentative date.", "นี่คือวันนัดคร่าวๆ"),
+            ("Reminder", "/rɪˈmaɪn.dər/", "n.", "การเตือนความจำ", "Send a quick reminder.", "ส่งการเตือนความจำสั้นๆ"),
+            ("Platform", "/ˈplæt.fɔːm/", "n.", "โปรแกรมประชุม", "Teams is our platform.", "เราใช้ Teams ประชุม"),
+            ("Dial-in", "/ˈdaɪ.əl.ɪn/", "n.", "ลิงก์เข้าประชุม", "Here is the dial-in link.", "นี่คือลิงก์เข้าประชุม"),
+            ("Punctual", "/ˈpʌŋk.tʃu.əl/", "adj.", "ตรงต่อเวลา", "Please be punctual.", "กรุณาตรงต่อเวลา"),
+            ("Accommodate", "/əˈkɒm.ə.deɪt/", "v.", "ปรับเวลาให้ลงตัว", "Thanks for accommodating me.", "ขอบคุณที่ปรับเวลาให้")
+        ]),
+        "phrases": make_phrases([
+            ("Are you available for a quick meeting tomorrow at 2 PM?", "คุณสะดวกประชุมสั้นๆ พรุ่งนี้ตอนบ่าย 2 โมงไหมครับ", "available ออกเสียงว่า /əˈveɪ.lə.bəl/"),
+            ("Does Thursday morning work for you?", "เช้าวันพฤหัสบดีสะดวกสำหรับคุณไหมครับ", "Does ... work for you? เป็นคำถามสุภาพมาก"),
+            ("I am afraid I have a scheduling conflict at that time.", "ผมเกรงว่าผมจะมีนัดชนกันในช่วงเวลาดังกล่าวครับ", "scheduling conflict = นัดซ้อนชนกัน"),
+            ("Could we reschedule our sync to Friday instead?", "พวกเราขอเลื่อนการประชุมสั้นๆ ไปเป็นวันศุกร์แทนได้ไหมครับ", "reschedule = เลื่อนนัด"),
+            ("Please send over a calendar invite once confirmed.", "เมื่อยืนยันแล้ว รบกวนส่งคำเชิญปฏิทินมาให้ด้วยนะครับ", "calendar invite = คำเชิญปฏิทิน"),
+            ("Any time after 3:00 PM works perfectly for me.", "เวลาไหนก็ได้หลังบ่าย 3 โมง สะดวกสำหรับผมทั้งหมดเลยครับ", "works perfectly for me"),
+            ("I would like to confirm our appointment for Monday.", "ผมขออนุญาตยืนยันการนัดหมายของเราในวันจันทร์นี้นะครับ", "confirm our appointment"),
+            ("Sorry for the short notice regarding this meeting change.", "ขออภัยด้วยครับที่แจ้งเปลี่ยนแปลงกำหนดประชุมกระชั้นชิด", "short notice = แจ้งกะทันหัน"),
+            ("Would next Tuesday be more convenient for the team?", "วันอังคารหน้าจะสะดวกกับทีมมากกว่าไหมครับ", "more convenient = สะดวกกว่า"),
+            ("I will send the meeting link fifteen minutes prior.", "ผมจะส่งลิงก์ห้องประชุมให้ล่วงหน้า 15 นาทีครับ", "prior = ก่อนล่วงหน้า"),
+            ("Let's postpone the review until the data is verified.", "เราเลื่อนการทบทวนไปจนกว่าข้อมูลจะตรวจเสร็จดีกว่าครับ", "postpone = เลื่อนออกไป"),
+            ("The meeting is scheduled to last approximately thirty minutes.", "การประชุมถูกกำหนดไว้ที่ประมาณ 30 นาทีครับ", "last approximately = กินเวลาราวๆ"),
+            ("Could you please add John to the meeting invite?", "ช่วยเพิ่มจอห์นเข้าไปในรายชื่อผู้เข้าร่วมประชุมด้วยได้ไหมครับ", "add to the invite"),
+            ("I have an urgent production issue and cannot join today.", "ผมติดปัญหาด่วนในสายการผลิต คงเข้าร่วมวันนี้ไม่ได้ครับ", "cannot join = เข้าร่วมไม่ได้"),
+            ("Please find the proposed agenda attached for your review.", "โปรดดูวาระการประชุมที่เสนอในเอกสารแนบครับ", "proposed agenda = วาระที่เสนอ"),
+            ("Can we move our call thirty minutes earlier?", "เราเลื่อนเวลาคุยให้เร็วขึ้น 30 นาทีได้ไหมครับ", "earlier = เร็วขึ้น"),
+            ("I will be five minutes late due to traffic.", "ผมจะเข้าประชุมสาย 5 นาทีเนื่องจากรถติดครับ", "late due to"),
+            ("Let's lock in the time for Thursday at 10 AM.", "เราขอล็อกเวลานัดเป็นวันพฤหัสบดี 10 โมงเช้าเลยนะครับ", "lock in = ล็อกเวลายืนยัน"),
+            ("Thank you for accommodating my busy schedule.", "ขอบคุณมากที่ช่วยปรับเวลาตามตารางงานที่ยุ่งของผมครับ", "accommodating = ปรับตัวยืดหยุ่นให้"),
+            ("Looking forward to our discussion tomorrow.", "รอคอยที่จะได้พูดคุยหารือกันในวันพรุ่งนี้นะครับ", "looking forward to = ตั้งตารอ")
+        ]),
+        "dialogues": make_dialogues([
+            ("นัดเวลาคุยสเปกงาน", [("A", "Does tomorrow morning work for you?", "เช้าพรุ่งนี้สะดวกสำหรับคุณไหมครับ"), ("B", "Yes, 9:30 AM works perfectly.", "ได้เลยครับ เก้าโมงครึ่งสะดวกมาก")]),
+            ("ขอเลื่อนนัดเพราะติดงานด่วน", [("Staff", "I have a conflict at 2 PM. Can we move it?", "ผมมีนัดชนตอนบ่ายสอง ขอเลื่อนได้ไหมครับ"), ("Client", "No problem, how about Friday at 10 AM?", "ไม่มีปัญหา วันศุกร์สิบโมงเช้าเป็นอย่างไร")]),
+            ("ขอล็อกห้องประชุมใหญ่", [("Admin", "The main conference room is reserved for you.", "ห้องประชุมใหญ่จองไว้ให้คุณแล้วค่ะ"), ("Lead", "Thank you, please send the key card.", "ขอบคุณครับ รบกวนส่งคีย์การ์ดมาด้วยนะครับ")]),
+            ("ประชุมผ่านโปรแกรม Teams", [("Host", "Can everyone see my shared screen?", "ทุกคนมองเห็นหน้าจอที่ผมแชร์ไหมครับ"), ("User", "Yes, loud and clear.", "เห็นชัดเจนและได้ยินเสียงชัดมากครับ")]),
+            ("แจ้งขอเข้าประชุมสาย", [("Tech", "I will join 10 minutes late due to Line 1.", "ผมจะเข้าสาย 10 นาทีเพราะติดดูไลน์ 1 ครับ"), ("Host", "Understood, we will cover your part later.", "รับทราบ เดี๋ยวเราค่อยคุยส่วนของคุณทีหลัง")]),
+            ("ยืนยันเวลากับซัพพลายเออร์", [("Buyer", "Confirming our supplier review for Thursday.", "ขอยืนยันนัดประเมินซัพพลายเออร์วันพฤหัสบดีนะ"), ("Vendor", "Confirmed. We have our slides ready.", "ยืนยันครับ พวกเราเตรียมสไลด์พร้อมแล้ว")]),
+            ("ขอส่งคนอื่นเข้าประชุมแทน", [("Manager", "I cannot make it, but Dan will represent me.", "ผมไปไม่ได้ แต่แดนจะเป็นตัวแทนผมเข้าประชุม"), ("Leader", "Perfect, Dan knows the project well.", "ยอดเยี่ยมครับ แดนเข้าใจงานนี้เป็นอย่างดี")]),
+            ("ขยายเวลาประชุมต่อ", [("Speaker", "We have 5 minutes left, but need more time.", "เหลือเวลา 5 นาทีแต่เราต้องการคุยต่ออีกหน่อย"), ("All", "We can stay another 15 minutes.", "พวกเราอยู่ต่อได้อีก 15 นาทีครับ")]),
+            ("เตือนความจำก่อนเริ่มประชุม", [("Secretary", "Quick reminder: project sync starts in 10 mins.", "เตือนความจำ: ประชุมโปรเจกต์เริ่มในอีก 10 นาทีค่ะ"), ("Team", "Thanks, heading to the meeting room now.", "ขอบคุณครับ กำลังเดินไปห้องประชุมเดี๋ยวนี้")]),
+            ("ส่งสรุปบันทึกการประชุม", [("Staff", "I just emailed the meeting minutes to all.", "ผมเพิ่งส่งบันทึกการประชุมทางอีเมลให้ทุกคนแล้วครับ"), ("Manager", "Great summary, thanks for the prompt action.", "สรุปได้ดีมาก ขอบคุณสำหรับการทำงานที่รวดเร็ว")])
+        ]),
+        "exercises": make_exercises([
+            ("บ่ายวันพรุ่งนี้สะดวกสำหรับคุณไหมครับ", "Does tomorrow afternoon", "for you?", "คำกริยาแปลว่า ใช้การได้/สะดวก (w...)", "work", [], "Does tomorrow afternoon work for you?", "สำนวน 'Does [time] work for you?' แปลว่า วัน/เวลานั้นสะดวกไหม"),
+            ("ผมเกรงว่าผมจะมีนัดหมายซ้อนกันในช่วงเวลานั้นครับ", "I am afraid I have a scheduling", "at that time.", "คำนามแปลว่า ขัดแย้ง/ชนกัน (c...)", "conflict", [], "I am afraid I have a scheduling conflict at that time.", "'scheduling conflict' แปลว่า ตารางเวลาชนกัน"),
+            ("พวกเราสามารถเลื่อนการประชุมไปสัปดาห์หน้าได้ไหมครับ", "Could we", "the meeting to next week?", "คำกริยาแปลว่า กำหนดวันเวลาใหม่ (r...)", "reschedule", [], "Could we reschedule the meeting to next week?", "'reschedule' แปลว่า เลื่อนกำหนดการนัด"),
+            ("คุณว่างสำหรับการคุยงานสั้นๆ ไหมครับ", "Are you", "for a short call?", "คำแปลว่า ว่าง/สะดวก (a...)", "available", [], "Are you available for a short call?", "'available' แปลว่า ว่างหรือสะดวก"),
+            ("โปรดส่งคำเชิญปฏิทินมาให้ผมด้วยครับ", "Please send over a calendar", ".", "คำแปลว่า คำเชิญ (i...)", "invite", ["invitation"], "Please send over a calendar invite.", "'calendar invite' แปลว่า บัตรเชิญปฏิทินนัดหมาย"),
+            ("เวลาไหนก็ได้หลังบ่ายสองโมงสะดวกสำหรับฉันมาก", "Any time after 2 PM works", "for me.", "คำกริยาวิเศษณ์แปลว่า อย่างสมบูรณ์แบบ (p...)", "perfectly", [], "Any time after 2 PM works perfectly for me.", "'works perfectly' แปลว่า สะดวกอย่างยิ่ง"),
+            ("ขออภัยที่แจ้งเปลี่ยนแปลงเวลากะทันหันครับ", "Sorry for the short", "regarding the change.", "คำแปลว่า การบอกล่วงหน้าสั้นๆ (n...)", "notice", [], "Sorry for the short notice regarding the change.", "'short notice' แปลว่า แจ้งในเวลากระชั้นชิด"),
+            ("เรามาเลื่อนการประชุมไปจนกว่าข้อมูลจะพร้อมดีกว่า", "Let's", "the meeting until data is ready.", "คำกริยาแปลว่า เลื่อนออกไป (p...)", "postpone", [], "Let's postpone the meeting until data is ready.", "'postpone' แปลว่า เลื่อนออกไป"),
+            ("โปรดดูวาระการประชุมที่แนบมานี้", "Please check the attached meeting", ".", "คำนามแปลว่า วาระการประชุม (a...)", "agenda", [], "Please check the attached meeting agenda.", "'meeting agenda' แปลว่า วาระการประชุม"),
+            ("ขอยืนยันนัดหมายของเราในวันพฤหัสบดีครับ", "Confirming our", "for Thursday.", "คำนามแปลว่า การนัดหมาย (a...)", "appointment", [], "Confirming our appointment for Thursday.", "'appointment' แปลว่า การนัดหมาย")
+        ]),
+        "stories": make_stories([
+            ("Double Booked at 2 PM", "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80",
+             [("conflict", "n.", "เวลาชนกัน"), ("reschedule", "v.", "เลื่อนนัด"), ("polite", "adj.", "สุภาพ"), ("smooth", "adj.", "ราบรื่น")],
+             "Mark noticed two calendar meetings booked at 2 PM: one with QA and one with a supplier.<br><br>He sent a <b>polite</b> email explaining the <b>conflict</b> and <b>rescheduled</b> the vendor call to 3:30 PM. Both meetings proceeded in a completely <b>smooth</b> manner.",
+             "Mark noticed two calendar meetings booked at 2 PM: one with QA and one with a supplier. He sent a polite email explaining the conflict and rescheduled the vendor call to 3:30 PM. Both meetings proceeded in a completely smooth manner.",
+             "มาร์คพบว่าปฏิทินของเขามีนัดซ้อนกันสองนัดตอนบ่ายสอง: นัดหนึ่งกับ QA อีกนัดกับซัพพลายเออร์ เขาจึงส่งข้อความอย่างสุภาพเพื่อขอเลื่อนเวลากับซัพพลายเออร์ไปเป็นบ่ายสามโมงครึ่ง ทั้งสองการประชุมจึงดำเนินไปได้อย่างราบรื่น"),
+            ("The Missing Meeting Link", "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+             [("invite", "n.", "คำเชิญ"), ("dial-in", "n.", "ลิงก์เข้าประชุม"), ("punctual", "adj.", "ตรงเวลา"), ("productive", "adj.", "ได้ผลงานดี")],
+             "Ten minutes before the cross-plant sync, engineers noticed the <b>dial-in</b> link was missing from the calendar <b>invite</b>.<br><br>Anna immediately re-sent the update with the link. All participants joined <b>punctual</b> and prepared, making the sync remarkably <b>productive</b>.",
+             "Ten minutes before the cross-plant sync, engineers noticed the dial-in link was missing from the calendar invite. Anna immediately re-sent the update with the link. All participants joined punctual and prepared, making the sync remarkably productive.",
+             "สิบนาทีก่อนเริ่มประชุมข้ามโรงงาน วิศวกรสังเกตเห็นว่าไม่มีลิงก์เข้าประชุมในคำเชิญปฏิทิน แอนนารีบส่งอัปเดตพร้อมลิงก์ใหม่ทันที ทุกคนจึงเข้าประชุมได้อย่างตรงเวลาและได้ข้อสรุปการทำงานที่ยอดเยี่ยม"),
+            ("Finding the Golden Hour", "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+             [("convenient", "adj.", "สะดวก"), ("poll", "v.", "สำรวจความเห็น"), ("unanimous", "adj.", "เป็นเอกฉันท์"), ("cooperation", "n.", "ความร่วมมือ")],
+             "Scheduling four busy shift managers seemed impossible until Ploy sent a quick survey: “Does 8:30 AM before shift start work for you?”<br><br>The vote was <b>unanimous</b>. Early morning proved the most <b>convenient</b> hour, leading to great cross-shift <b>cooperation</b>.",
+             "Scheduling four busy shift managers seemed impossible until Ploy sent a quick survey: Does 8:30 AM before shift start work for you? The vote was unanimous. Early morning proved the most convenient hour, leading to great cross-shift cooperation.",
+             "การจัดเวลาให้หัวหน้ากะ 4 คนที่งานยุ่งดูเป็นเรื่องยาก จนกระทั่งพลอยส่งแบบสำรวจสั้นๆ: เช้า 8:30 น. ก่อนเริ่มกะสะดวกไหมคะ ทุกคนตอบเห็นชอบเป็นเอกฉันท์ ช่วงเช้าตรู่กลายเป็นเวลาที่สะดวกที่สุดและนำมาซึ่งความร่วมมืออันดี"),
+            ("Short Notice Gratitude", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+             [("notice", "n.", "การแจ้งล่วงหน้า"), ("apologize", "v.", "ขอโทษ"), ("understanding", "adj.", "ที่เข้าใจผู้อื่น"), ("respect", "n.", "ความเคารพ")],
+             "A pipe burst in the warehouse forced Karan to cancel a job interview on just twenty minutes' <b>notice</b>.<br><br>Instead of an automated message, he phoned the candidate to <b>apologize</b> personally. The candidate was deeply <b>understanding</b>, creating mutual <b>respect</b> from day one.",
+             "A pipe burst in the warehouse forced Karan to cancel a job interview on just twenty minutes' notice. Instead of an automated message, he phoned the candidate to apologize personally. The candidate was deeply understanding, creating mutual respect from day one.",
+             "ท่อน้ำแตกในคลังสินค้าบีบให้การันต้องยกเลิกนัดสัมภาษณ์ล่วงหน้าเพียง 20 นาที แทนที่จะส่งอีเมลอัตโนมัติ เขาเลือกโทรไปขอโทษผู้สมัครด้วยตนเอง ผู้สมัครเข้าใจสถานการณ์อย่างมาก และสร้างความประทับใจและความเคารพซึ่งกันและกันตั้งแต่วันแรก")
+        ])
+    },
+    "6": {
+        "day": 6,
+        "title": "Day 6: Clarifying Instructions & Active Listening",
+        "summary": "การทวนความเข้าใจ เช็คคำสั่ง เพื่อป้องกันความผิดพลาดในการทำงาน",
+        "rule": "Let me confirm... | Just to clarify... | Did you mean...?",
+        "vocab": make_vocab([
+            ("Elaborate", "/iˈlæb.ə.reɪt/", "v.", "อธิบายขยายความ", "Could you elaborate further?", "ช่วยอธิบายเพิ่มเติมได้ไหม"),
+            ("Alignment", "/əˈlaɪn.mənt/", "n.", "ความเข้าใจตรงกัน", "We need team alignment.", "เราต้องเข้าใจตรงกัน"),
+            ("Specification", "/ˌspes.ɪ.fɪˈkeɪ.ʃən/", "n.", "สเปกข้อกำหนด", "Read the specifications.", "อ่านข้อกำหนดสเปก"),
+            ("Verify", "/ˈver.ɪ.faɪ/", "v.", "ทวนสอบความถูกต้อง", "Verify the serial numbers.", "ทวนสอบหมายเลขซีเรียล"),
+            ("Ambiguous", "/æmˈbɪɡ.ju.əs/", "adj.", "กำกวมคลุมเครือ", "The instruction was ambiguous.", "คำสั่งมีความคลุมเครือ"),
+            ("Summarize", "/ˈsʌm.ər.aɪz/", "v.", "สรุปใจความ", "Summarize the main points.", "สรุปประเด็นสำคัญ"),
+            ("Misunderstanding", "/ˌmɪs.ʌn.dəˈstæn.dɪŋ/", "n.", "ความเข้าใจผิด", "Avoid misunderstanding.", "หลีกเลี่ยงความเข้าใจผิด"),
+            ("Rephrase", "/ˌriːˈfreɪz/", "v.", "ทวนประโยคใหม่", "Let me rephrase my point.", "ขอผมพูดใหม่ให้เข้าใจง่าย"),
+            ("Ensure", "/ɪnˈʃɔːr/", "v.", "ดูแลให้มั่นใจ", "Ensure the box is sealed.", "ดูแลให้มั่นใจว่ากล่องปิดสนิท"),
+            ("Comprehend", "/ˌkɒm.prɪˈhend/", "v.", "เข้าใจลึกซึ้ง", "Do you comprehend the SOP?", "คุณเข้าใจ SOP ครบถ้วนไหม"),
+            ("Clarification", "/ˌklær.ɪ.fɪˈkeɪ.ʃən/", "n.", "คำชี้แจง", "Thanks for the clarification.", "ขอบคุณสำหรับคำชี้แจง"),
+            ("Instruction", "/ɪnˈstrʌk.ʃən/", "n.", "คำสั่งแนะนำ", "Follow safety instructions.", "ทำตามคำแนะนำความปลอดภัย"),
+            ("Explicit", "/ɪkˈsplɪs.ɪt/", "adj.", "ชัดเจนตรงไปตรงมา", "Give explicit instructions.", "ให้คำสั่งที่ชัดเจนตรงไปตรงมา"),
+            ("Confirmation", "/ˌkɒn.fəˈmeɪ.ʃən/", "n.", "การยืนยัน", "Wait for confirmation.", "รอการยืนยัน"),
+            ("Guidance", "/ˈɡaɪ.dəns/", "n.", "คำชี้แนะ", "Thank you for your guidance.", "ขอบคุณสำหรับคำชี้แนะ"),
+            ("Tolerance", "/ˈtɒl.ər.əns/", "n.", "เกณฑ์คลาดเคลื่อน", "Check the tolerance limit.", "ตรวจเกณฑ์ความคลาดเคลื่อน"),
+            ("Concrete", "/ˈkɒŋ.kriːt/", "adj.", "เป็นรูปธรรมชัดเจน", "Give a concrete example.", "ยกตัวอย่างที่เป็นรูปธรรม"),
+            ("Recap", "/ˈriː.kæp/", "n./v.", "สรุปย่อ", "Send a meeting recap.", "ส่งอีเมลสรุปย่อ"),
+            ("Adhere", "/ədˈhɪər/", "v.", "ยึดมั่นปฏิบัติตาม", "Adhere to the standard.", "ปฏิบัติตามมาตรฐาน"),
+            ("Acknowledge", "/əkˈnɒl.ɪdʒ/", "v.", "ตอบรับทราบ", "Please acknowledge this mail.", "โปรดตอบรับทราบอีเมลนี้")
+        ]),
+        "phrases": make_phrases([
+            ("Just to make sure we are on the same page, should I prepare the report first?", "เพื่อความเข้าใจที่ตรงกัน ผมควรเตรียมรายงานก่อนใช่ไหมครับ", "on the same page = เข้าใจตรงกัน"),
+            ("Could you please elaborate on what you mean by that?", "ช่วยขยายความสิ่งที่คุณหมายถึงเพิ่มเติมอีกนิดได้ไหมครับ", "elaborate = อธิบายเพิ่ม"),
+            ("If I understand correctly, the deadline is moved to next Monday.", "ถ้าผมเข้าใจถูกต้อง กำหนดส่งเลื่อนไปเป็นวันจันทร์หน้าใช่ไหมครับ", "If I understand correctly"),
+            ("Could you please speak a bit slower? I want to catch every detail.", "ช่วยพูดช้าลงอีกนิดนึงได้ไหมครับ พอดีผมอยากจดรายละเอียดให้ครบถ้วน", "speak a bit slower"),
+            ("Let me rephrase that to make sure I got your point.", "ขออนุญาตทวนประโยคอีกครั้งเพื่อให้แน่ใจว่าผมเข้าใจประเด็นของคุณครับ", "rephrase = เปลี่ยนคำทบทวน"),
+            ("Did you mean the raw material batch or the finished goods?", "คุณหมายถึงล็อตวัตถุดิบหรือสินค้าสำเร็จรูปครับ", "Did you mean...?"),
+            ("Could you please put that instruction in an email for reference?", "รบกวนช่วยสรุปคำสั่งส่งมาทางอีเมลเพื่อใช้อ้างอิงได้ไหมครับ", "for reference = ใช้อ้างอิง"),
+            ("I understand your point clearly now. Thank you for the clarification.", "ตอนนี้ผมเข้าใจประเด็นของคุณอย่างชัดเจนแล้วครับ ขอบคุณสำหรับคำชี้แจง", "clarification = คำชี้แจง"),
+            ("So, to confirm: Step 1 is scanning, and Step 2 is labeling, correct?", "สรุปคือ ขั้นตอนที่ 1 สแกน และขั้นตอนที่ 2 ติดฉลาก ถูกต้องไหมครับ", "to confirm = เพื่อยืนยัน"),
+            ("Are there any specific tolerances we need to adhere to?", "มีค่าความคลาดเคลื่อนเฉพาะที่พวกเราต้องปฏิบัติตามไหมครับ", "adhere to = ยึดถือตาม"),
+            ("What is the expected outcome of this process change?", "ผลลัพธ์ที่คาดหวังจากการเปลี่ยนกระบวนการนี้คืออะไรครับ", "expected outcome = ผลที่คาดหวัง"),
+            ("I want to double-check before I take action.", "ผมอยากตรวจสอบความถูกต้องอีกครั้งก่อนที่จะลงมือทำครับ", "double-check"),
+            ("Please correct me if I am wrong.", "ท้วงติงได้เลยนะครับหากผมเข้าใจอะไรผิดไป", "correct me if I am wrong"),
+            ("Does everyone understand the new SOP requirements?", "ทุกคนเข้าใจข้อกำหนดของ SOP ตัวใหม่ครบถ้วนแล้วใช่ไหมครับ", "new SOP requirements"),
+            ("Could you provide a concrete example of this defect?", "ช่วยยกตัวอย่างของเสียแบบชัดเจนเป็นรูปธรรมให้ดูหน่อยได้ไหมครับ", "concrete example = ตัวอย่างชัดเจน"),
+            ("I hear what you are saying, but let's check the manual.", "ผมเข้าใจสิ่งที่คุณพูดครับ แต่เรามาเปิดคู่มือเช็คกันอีกทีดีกว่า", "I hear what you are saying"),
+            ("Let's summarize the key action points before we leave.", "เรามาสรุปการบ้านสิ่งที่ต้องทำก่อนแยกย้ายกันครับ", "key action points"),
+            ("I will send a recap email by the end of the day.", "ผมจะส่งอีเมลสรุปประเด็นให้ภายในสิ้นวันนี้นะครับ", "recap email = อีเมลสรุป"),
+            ("Can you hear me clearly on the call?", "ได้ยินเสียงผมชัดเจนในสายไหมครับ", "hear me clearly"),
+            ("Thank you for clearing up that confusion.", "ขอบคุณมากครับที่ช่วยเคลียร์ความสับสนตรงนั้นให้กระจ่าง", "clearing up = เคลียร์ให้ชัด")
+        ]),
+        "dialogues": make_dialogues([
+            ("ทวนความเข้าใจคำสั่งหัวหน้า", [("Leader", "Pack all green boxes first.", "แพ็คกล่องสีเขียวทั้งหมดก่อนนะ"), ("Staff", "To confirm, only green boxes for now?", "ขอทวนครับ ตอนนี้ทำเฉพาะกล่องเขียวใช่ไหมครับ")]),
+            ("ขอให้พูดช้าลงหน่อย", [("Foreigner", "We need to dispatch the cargo ASAP via airfreight.", "เราต้องส่งคาร์โก้ด่วนที่สุดทางเครื่องบิน"), ("Staff", "Could you please speak a bit slower?", "ช่วยพูดช้าลงอีกนิดหนึ่งได้ไหมครับ")]),
+            ("ถามแยกแยะระหว่างสองล็อต", [("QA", "Inspect batch forty-five.", "ตรวจแบทช์ 45 ด้วยนะ"), ("Staff", "Did you mean 45A or 45B?", "หมายถึง 45A หรือ 45B ครับ")]),
+            ("ขอให้อธิบายขยายความ", [("Staff", "Could you elaborate on the test criteria?", "ช่วยขยายความเกณฑ์การทดสอบหน่อยครับ"), ("Engineer", "It must withstand 50 Newtons of force.", "มันต้องทนแรงกดได้ 50 นิวตันครับ")]),
+            ("ขอให้พิมพ์คำสั่งส่งมาทางอีเมล", [("Staff", "Could you put that in an email for reference?", "ช่วยสรุปทางอีเมลไว้ใช้อ้างอิงหน่อยได้ไหมครับ"), ("Manager", "Sure, I will send it in 5 minutes.", "ได้เลย เดี๋ยวผมส่งให้ใน 5 นาที")]),
+            ("เช็คความเข้าใจเรื่องเดดไลน์", [("Staff", "If I understand correctly, delivery is on Friday?", "ถ้าเข้าใจถูกคือส่งมอบวันศุกร์ใช่ไหมครับ"), ("Client", "Yes, exactly on Friday morning.", "ใช่ครับ วันศุกร์เช้าแน่นอน")]),
+            ("ถามหาสาเหตุที่แท้จริง", [("Auditor", "What caused the label misprint?", "อะไรทำให้พิมพ์ฉลากผิดครับ"), ("Operator", "The thermal ribbon was loosely installed.", "ริบบอนความร้อนใส่ไว้หลวมครับ")]),
+            ("ขอตัวอย่างข้อบกพร่องจริง", [("New Hire", "Could you show me a sample defect?", "ช่วยเปิดตัวอย่างของเสียให้ดูหน่อยได้ไหมครับ"), ("Trainer", "Look at this crack along the edge.", "ดูรอยร้าวตามขอบตรงนี้เป็นตัวอย่างนะ")]),
+            ("ทวนตัวเลขยอดนับสินค้า", [("Staff", "Did you say 14 or 40 boxes?", "เมื่อกี้คุณพูดว่า 14 หรือ 40 กล่องนะครับ"), ("Counter", "Fourteen. One-four.", "สิบสี่ครับ หนึ่งกับสี่")]),
+            ("สรุปหลังคุยงานจบ", [("Staff", "I will send a recap email right away.", "เดี๋ยวผมรีบส่งอีเมลสรุปให้ทันทีครับ"), ("Leader", "Thanks, that ensures we are aligned.", "ขอบคุณ ช่วยให้เราเข้าใจตรงกันดีมาก")])
+        ]),
+        "exercises": make_exercises([
+            ("เพื่อให้แน่ใจว่าเราเข้าใจตรงกัน", "Just to make sure we are on the", "page.", "คำแปลว่า หน้าเดียวกัน (s...)", "same", [], "Just to make sure we are on the same page.", "'on the same page' หมายถึง มีความเข้าใจตรงกัน"),
+            ("ช่วยอธิบายขยายความเพิ่มเติมในจุดนี้ได้ไหมครับ", "Could you please", "on this specific point?", "คำกริยาแปลว่า ขยายความ (e...)", "elaborate", [], "Could you please elaborate on this specific point?", "'elaborate on' แปลว่า ให้รายละเอียดเพิ่มเติม"),
+            ("ถ้าผมเข้าใจถูกต้อง งานนี้ต้องส่งมอบภายในวันพรุ่งนี้", "If I understand", ", this must be sent tomorrow.", "คำกริยาวิเศษณ์แปลว่า อย่างถูกต้อง (c...)", "correctly", [], "If I understand correctly, this must be sent tomorrow.", "'If I understand correctly' เป็นสำนวนเช็คความเข้าใจ"),
+            ("ช่วยพูดช้าลงอีกนิดหนึ่งได้ไหมครับ", "Could you please speak a bit", "?", "คำแปลว่า ช้าลง (s...)", "slower", [], "Could you please speak a bit slower?", "'speak a bit slower' แปลว่า พูดช้าลงอีกนิด"),
+            ("คุณหมายถึงชิ้นส่วนตัวเก่าหรือตัวใหม่ครับ", "Did you", "the old part or the new one?", "คำกริยาแปลว่า หมายถึง (m...)", "mean", [], "Did you mean the old part or the new one?", "'Did you mean...?' แปลว่า คุณหมายถึง...ใช่ไหม"),
+            ("ขอให้ผมทวนประโยคเพื่อความเข้าใจที่ถูกต้อง", "Let me", "that to be clear.", "คำกริยาแปลว่า พูดใหม่ด้วยคำอื่น (r...)", "rephrase", [], "Let me rephrase that to be clear.", "'rephrase' แปลว่า ทวนด้วยคำพูดใหม่"),
+            ("ช่วยส่งคำสั่งนี้ทางอีเมลเพื่อใช้อ้างอิงด้วยครับ", "Put that in an email for", ".", "คำแปลว่า การอ้างอิง (r...)", "reference", [], "Put that in an email for reference.", "'for reference' แปลว่า ไว้ใช้อ้างอิง"),
+            ("ขอบคุณมากสำหรับคำชี้แจงที่ชัดเจนครับ", "Thank you for the", ".", "คำนามแปลว่า คำชี้แจง (c...)", "clarification", [], "Thank you for the clarification.", "'clarification' แปลว่า คำชี้แจงให้กระจ่าง"),
+            ("เราต้องทำให้มั่นใจว่ากระบวนการปลอดภัย", "We must", "that the process is safe.", "คำกริยาแปลว่า ทำให้มั่นใจ (e...)", "ensure", [], "We must ensure that the process is safe.", "'ensure' แปลว่า ทำให้แน่ใจ"),
+            ("ท้วงติงผมได้เลยหากผมเข้าใจผิดไป", "Please", "me if I am wrong.", "คำกริยาแปลว่า แก้ไขให้ถูกต้อง (c...)", "correct", [], "Please correct me if I am wrong.", "'correct me if I am wrong' แปลว่า ท้วงได้ถ้าผมผิด")
+        ]),
+        "stories": make_stories([
+            ("The Fourteen or Forty Mix-up", "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+             [("clarify", "v.", "ชี้แจง"), ("shout", "v.", "ตะโกน"), ("pallet", "n.", "พาเลท"), ("prevent", "v.", "ป้องกัน")],
+             "Over noisy machine hums, Ben heard his supervisor <b>shout</b>: “Load forty pallets!” But the small truck could only hold fourteen.<br><br>Ben stepped closer to <b>clarify</b>: “Did you say 14 or 40?” The boss laughed: “Fourteen! Good catch.” Active listening <b>prevented</b> a major shipping blunder.",
+             "Over noisy machine hums, Ben heard his supervisor shout: Load forty pallets! But the small truck could only hold fourteen. Ben stepped closer to clarify: Did you say 14 or 40? The boss laughed: Fourteen! Good catch. Active listening prevented a major shipping blunder.",
+             "ท่ามกลางเสียงเครื่องจักรดัง เบนได้ยินหัวหน้าตะโกนว่า: โหลด 40 พาเลท! แต่รถบรรทุกคันเล็กบรรทุกได้เพียง 14 พาเลท เบนเดินเข้าไปถามซ้ำ: 14 หรือ 40 นะครับ หัวหน้าหัวเราะ: สิบสี่จ้า ขอบใจที่ทวน การตั้งใจฟังช่วยป้องกันความผิดพลาดใหญ่ได้ทันเวลา"),
+            ("Inches or Centimeters?", "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop&q=80",
+             [("alignment", "n.", "ความตรงกัน"), ("blueprint", "n.", "พิมพ์เขียว"), ("dimension", "n.", "ขนาดสัดส่วน"), ("flawless", "adj.", "ไร้ที่ติ")],
+             "Before cutting metal racks for Room A1, Team Leader Sam held a short briefing: “Let’s double-check all <b>dimensions</b> on the <b>blueprint</b>.”<br><br>They caught an error where height was marked in inches instead of centimeters! Fixing it ensured the assembly was completely <b>flawless</b>.",
+             "Before cutting metal racks for Room A1, Team Leader Sam held a short briefing: Let’s double-check all dimensions on the blueprint. They caught an error where height was marked in inches instead of centimeters! Fixing it ensured the assembly was completely flawless.",
+             "ก่อนตัดแร็คเหล็กสำหรับห้อง A1 หัวหน้าแซมเรียกคุยสั้นๆ: มาทวนขนาดสัดส่วนในพิมพ์เขียวกันอีกรอบนะ พวกเขาตรวจพบว่าความสูงถูกเขียนเป็นหน่วยนิ้วแทนที่จะเป็นเซนติเมตร! การตรวจทวนช่วยให้การประกอบเสร็จสมบูรณ์แบบไร้ที่ติ"),
+            ("Speak Slower, Please", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+             [("auditor", "n.", "ผู้ตรวจประเมิน"), ("rapidly", "adv.", "อย่างรวดเร็ว"), ("polite", "adj.", "สุภาพ"), ("praise", "v.", "ชมเชย")],
+             "An American customer auditor spoke <b>rapidly</b> while inspecting the warehouse. Operator Joy <b>politely</b> raised her hand: “Could you please speak a bit slower so I capture every note?”<br><br>The auditor smiled, slowed his pace, and later <b>praised</b> Joy for her clear and confident communication.",
+             "An American customer auditor spoke rapidly while inspecting the warehouse. Operator Joy politely raised her hand: Could you please speak a bit slower so I capture every note? The auditor smiled, slowed his pace, and later praised Joy for her clear and confident communication.",
+             "ผู้ตรวจประเมินชาวอเมริกันพูดเร็วมากขณะตรวจคลังสินค้า จอยพนักงานสาวกล้ายกมือถามอย่างสุภาพ: ช่วยพูดช้าลงอีกนิดได้ไหมคะเพื่อหนูจะได้จดครบทุกข้อ ผู้ตรวจยิ้ม พูดช้าลง และยังเอ่ยปากชมเชยความมั่นใจในการสื่อสารของเธอ"),
+            ("The Bulleted Recap Email", "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+             [("recap", "n.", "สรุปย่อ"), ("habit", "n.", "นิสัย"), ("agreement", "n.", "ข้อตกลง"), ("clarity", "n.", "ความชัดเจน")],
+             "After an intense phone discussion about revised delivery dates, Dan always writes a quick <b>recap</b> email with bulleted points.<br><br>This simple professional <b>habit</b> created unquestionable <b>clarity</b> and mutual <b>agreement</b>, completely eliminating misunderstandings between departments.",
+             "After an intense phone discussion about revised delivery dates, Dan always writes a quick recap email with bulleted points. This simple professional habit created unquestionable clarity and mutual agreement, completely eliminating misunderstandings between departments.",
+             "หลังจากคุยสายเรื่องการเปลี่ยนรอบส่งของ แดนจะส่งอีเมลสรุปประเด็นเป็นข้อๆ สั้นๆ เสมอ นิสัยการทำงานอย่างมืออาชีพนี้สร้างความชัดเจนและข้อตกลงที่ตรงกัน ช่วยขจัดความเข้าใจผิดระหว่างแผนกได้อย่างสิ้นเชิง")
+        ])
+    },
+    "7": {
+        "day": 7,
+        "title": "Day 7: Weekly Wrap-up & Executive Summary",
+        "summary": "การเขียนสรุปผลงานประจำสัปดาห์ (Highlights, Metrics, Next Week Plan)",
+        "rule": "เน้นสรุปแบบ Bullet points กระชับ ชัดเจน พร้อมระบุตัวเลขชี้วัดผลงาน",
+        "vocab": make_vocab([
+            ("Achievement", "/əˈtʃiːv.mənt/", "n.", "ความสำเร็จผลงาน", "This is a great achievement.", "นี่คือความสำเร็จที่ยอดเยี่ยม"),
+            ("Benchmark", "/ˈbentʃ.mɑːk/", "n.", "เกณฑ์มาตรฐาน", "We beat the benchmark.", "เราทำได้ดีกว่าเกณฑ์มาตรฐาน"),
+            ("Output", "/ˈaʊt.pʊt/", "n.", "ผลผลิตรวม", "Total output hit 10,000 units.", "ยอดผลผลิตแตะหมื่นชิ้น"),
+            ("Efficiency", "/ɪˈfɪʃ.ən.si/", "n.", "ประสิทธิภาพ", "Picking efficiency rose by 8%.", "ประสิทธิภาพการหยิบของเพิ่ม 8%"),
+            ("Summary", "/ˈsʌm.ər.i/", "n.", "บทสรุปย่อ", "Here is the weekly summary.", "นี่คือสรุปประจำสัปดาห์"),
+            ("Momentum", "/məˈmen.təm/", "n.", "แรงส่งความต่อเนื่อง", "Keep up the great momentum.", "รักษาแรงขับเคลื่อนที่ดีไว้"),
+            ("Accomplish", "/əˈkʌm.plɪʃ/", "v.", "ทำสำเร็จลุล่วง", "We accomplished all goals.", "พวกเราทำเป้าหมายสำเร็จครบ"),
+            ("Metric", "/ˈmet.rɪk/", "n.", "ตัวชี้วัดผลงาน", "Review operational metrics.", "ตรวจดูตัวชี้วัดผลการทำงาน"),
+            ("Exceed", "/ɪkˈsiːd/", "v.", "ทำได้เกินกว่า", "Output exceeded forecast.", "ยอดผลิตเกินกว่าคาดการณ์"),
+            ("Objective", "/əbˈdʒek.tɪv/", "n.", "เป้าหมายหลัก", "Our objective was achieved.", "เป้าหมายของเราบรรลุผล"),
+            ("Overcome", "/ˌəʊ.vəˈkʌm/", "v.", "เอาชนะอุปสรรค", "We overcame the delays.", "พวกเราเอาชนะความล่าช้าได้"),
+            ("Consistent", "/kənˈsɪs.tənt/", "adj.", "สม่ำเสมอ", "Show consistent quality.", "แสดงคุณภาพที่สม่ำเสมอ"),
+            ("Contribution", "/ˌkɒn.trɪˈbjuː.ʃən/", "n.", "การมีส่วนร่วมช่วย", "Thanks for your contribution.", "ขอบคุณสำหรับการช่วยงาน"),
+            ("Productivity", "/ˌprɒd.ʌkˈtɪv.ə.ti/", "n.", "ผลิตภาพ", "Productivity reached record high.", "ผลิตภาพแตะระดับสูงสุด"),
+            ("Highlight", "/ˈhaɪ.laɪt/", "n.", "ผลงานเด่น", "Here are weekly highlights.", "นี่คือผลงานเด่นประจำสัปดาห์"),
+            ("Forecast", "/ˈfɔː.kɑːst/", "n.", "การคาดการณ์", "Review next week's forecast.", "ดูยอดคาดการณ์สัปดาห์หน้า"),
+            ("Restful", "/ˈrest.fəl/", "adj.", "ที่ได้พักผ่อนเต็มที่", "Have a restful weekend.", "ขอให้ได้พักผ่อนอย่างเต็มที่"),
+            ("Dedication", "/ˌded.ɪˈkeɪ.ʃən/", "n.", "ความทุ่มเท", "Your dedication is recognized.", "ความทุ่มเทของคุณได้รับการยอมรับ"),
+            ("Seamless", "/ˈsiːm.ləs/", "adj.", "ราบรื่นไร้รอยต่อ", "Seamless teamwork this week.", "การทำงานร่วมกันราบรื่นมาก"),
+            ("Milestone", "/ˈmaɪl.stəʊn/", "n.", "ก้าวสำคัญ", "We hit the week 1 milestone.", "เราผ่านก้าวสัปดาห์ที่ 1 แล้ว")
+        ]),
+        "phrases": make_phrases([
+            ("Here is the summary of our weekly achievements.", "นี่คือสรุปผลการดำเนินงานที่สำเร็จในสัปดาห์นี้ครับ", "achievement = ความสำเร็จ"),
+            ("We achieved a 98% on-time delivery rate this week.", "สัปดาห์นี้เราทำอัตราการส่งมอบตรงเวลาได้ถึง 98% ครับ", "ระบุตัวเลขสร้างความน่าเชื่อถือ"),
+            ("Our top priority for next week is system optimization.", "เป้าหมายสำคัญอันดับแรกสำหรับสัปดาห์หน้าคือการปรับปรุงระบบครับ", "top priority = สำคัญที่สุด"),
+            ("Thank you all for your hard work throughout the week.", "ขอบคุณทุกคนสำหรับการทำงานอย่างหนักตลอดทั้งสัปดาห์ครับ", "คำขอบคุณทีมงานวันศุกร์"),
+            ("We managed to overcome all unexpected delays.", "พวกเราสามารถเอาชนะและจัดการความล่าช้าที่ไม่คาดคิดได้ทั้งหมดครับ", "overcome = เอาชนะอุปสรรค"),
+            ("Total scrap was reduced by 4.5% compared to last week.", "ยอดของเสียรวมลดลงไป 4.5% เมื่อเทียบกับสัปดาห์ที่แล้วครับ", "compared to = เมื่อเทียบกับ"),
+            ("Please review the attached spreadsheet for full metrics.", "โปรดดูไฟล์สเปรดชีตที่แนบมาสำหรับตัวเลขดัชนีชี้วัดฉบับเต็มครับ", "metrics = ตัวชี้วัด"),
+            ("Have a restful weekend, everyone!", "ขอให้ทุกคนได้พักผ่อนอย่างเต็มที่ในวันหยุดสุดสัปดาห์นะครับ!", "restful weekend = วันหยุดที่ได้พักผ่อน"),
+            ("We successfully hit all our weekly KPIs.", "พวกเราทำผลงานบรรลุตัวชี้วัด KPI ประจำสัปดาห์ได้ทั้งหมดครับ", "hit KPIs = บรรลุตัวชี้วัด"),
+            ("The warehouse reorganization project is 50% complete.", "โปรเจกต์จัดระเบียบคลังสินค้าสำเร็จไปแล้ว 50% ครับ", "percent complete"),
+            ("No safety incidents occurred during the entire week.", "ไม่มีอุบัติเหตุด้านความปลอดภัยเกิดขึ้นเลยตลอดทั้งสัปดาห์ครับ", "no safety incidents"),
+            ("Production output exceeded the original forecast.", "ยอดการผลิตทำได้เกินกว่าตัวเลขที่คาดการณ์ไว้แต่แรกครับ", "exceeded the forecast"),
+            ("Let's maintain this positive momentum into Monday.", "มารักษาแรงผลักดันเชิงบวกนี้ต่อเนื่องไปถึงวันจันทร์กันครับ", "maintain momentum"),
+            ("I appreciate each person's dedication to quality.", "ผมขอชื่นชมความทุ่มเทในเรื่องคุณภาพของทุกคนครับ", "dedication to quality"),
+            ("Next week's shipment schedule will be heavy on Tuesday.", "ตารางส่งของสัปดาห์หน้าจะหนาแน่นมากในวันอังคารครับ", "heavy on Tuesday"),
+            ("The inventory variance was under 0.1%, our best record.", "ยอดนับสต็อกคลาดเคลื่อนต่ำกว่า 0.1% ซึ่งเป็นสถิติดีที่สุดของเรา", "best record"),
+            ("Thank you for the seamless cross-department collaboration.", "ขอบคุณสำหรับการประสานงานข้ามแผนกที่ราบรื่นมากครับ", "seamless collaboration"),
+            ("Please submit your overtime logs before leaving today.", "กรุณาส่งใบบันทึกโอทีก่อนกลับบ้านในวันนี้ด้วยครับ", "overtime logs"),
+            ("We are ready to tackle the new challenges next week.", "พวกเราพร้อมที่จะรับมือกับความท้าทายใหม่ในสัปดาห์หน้าแล้วครับ", "tackle challenges"),
+            ("Congratulations on completing Week 1 of English Sprint!", "ขอแสดงความยินดีด้วยที่คุณเรียนจบสัปดาห์ที่ 1 ของ English Sprint!", "congratulations on")
+        ]),
+        "dialogues": make_dialogues([
+            ("รายงานสรุปวันศุกร์กับผู้จัดการ", [("Manager", "How did we wrap up the week, Sam?", "สัปดาห์นี้ปิดยอดผลงานเป็นอย่างไรบ้าง แซม"), ("Sam", "We achieved 99% accuracy on inventory counts.", "เราทำความแม่นยำสต็อกได้ถึง 99% ครับ")]),
+            ("ฉลองยอดของเสียลดลง", [("QA", "Scrap rate dropped by 4.5% this week!", "อัตราของเสียลดลงไป 4.5% ในสัปดาห์นี้!"), ("Lead", "Outstanding work by all shift operators.", "ผลงานยอดเยี่ยมของพนักงานทุกคนทุกกะเลย")]),
+            ("ทบทวนเรื่องความปลอดภัยรอบสัปดาห์", [("Officer", "Zero accidents recorded for five straight days.", "ไม่มีอุบัติเหตุเลยตลอด 5 วันติดต่อกัน"), ("Team", "Safety is our number one culture.", "ความปลอดภัยคือวัฒนธรรมอันดับหนึ่งของเรา")]),
+            ("เป้าหมายสำหรับสัปดาห์หน้า", [("Leader", "What is our focus for Monday morning?", "วันจันทร์เช้าเราจะเน้นเรื่องอะไรกัน"), ("Staff", "We will start reorganizing Room A2 racks.", "เราจะเริ่มจัดระเบียบแร็คในห้อง A2 ครับ")]),
+            ("ขอบคุณทีมงานก่อนแยกย้าย", [("Supervisor", "Thank you everyone for the great dedication.", "ขอบคุณทุกคนมากสำหรับความทุ่มเทอันยอดเยี่ยม"), ("Staff", "Have a wonderful weekend, boss!", "ขอให้มีวันหยุดสุดสัปดาห์ที่ดีครับหัวหน้า!")]),
+            ("ส่งไฟล์สรุปดัชนีชี้วัด", [("Staff", "The weekly KPI deck is emailed to executives.", "ส่งสไลด์ KPI รายสัปดาห์ให้ผู้บริหารทางอีเมลแล้วครับ"), ("Director", "I received it. The numbers look impressive.", "ได้รับแล้ว ตัวเลขดูน่าประทับใจมาก")]),
+            ("นัดหมายเช้าวันจันทร์", [("Lead", "Standup meeting is at 8:00 AM sharp on Monday.", "การประชุมสแตนด์อัปวันจันทร์เวลาแปดโมงเช้าตรงนะ"), ("Team", "We will be there on time.", "พวกเราจะไปตรงเวลาแน่นอนครับ")]),
+            ("ตรวจเช็คเครื่องจักรก่อนหยุดเสาร์อาทิตย์", [("Tech", "All machines are shut down and safely locked.", "เครื่องจักรทุกตัวปิดสวิตช์และล็อกเรียบร้อยครับ"), ("Lead", "Perfect. Turn off the main warehouse lights.", "ยอดเยี่ยม ปิดไฟหลักในโกดังได้เลย")]),
+            ("ชื่นชมการแก้ปัญหาเฉพาะหน้า", [("Customer", "Thank you for handling our urgent order yesterday.", "ขอบคุณที่ช่วยจัดการออเดอร์ด่วนให้เราเมื่อวานนะ"), ("Staff", "Our pleasure. We are always ready to support.", "ด้วยความยินดีครับ เราพร้อมช่วยเหลือเสมอ")]),
+            ("จบสัปดาห์แรกของหลักสูตร", [("Learner", "I learned so many useful workplace phrases this week!", "สัปดาห์นี้ผมได้เรียนวลีที่ใช้ทำงานจริงเยอะมากเลย!"), ("Coach", "Keep practicing daily. Week 2 will be even better!", "ฝึกฝนทุกวันอย่างต่อเนื่องนะ สัปดาห์ที่สองจะยิ่งเข้มข้นขึ้น!")])
+        ]),
+        "exercises": make_exercises([
+            ("เป้าหมายสำคัญอันดับหนึ่งของเราในสัปดาห์หน้าคือการปรับปรุงระบบ", "Our top", "for next week is system optimization.", "คำแปลว่า ลำดับความสำคัญ (p...)", "priority", [], "Our top priority is system optimization.", "'top priority' คือสิ่งที่ต้องทำเป็นอันดับแรก"),
+            ("พวกเราทำอัตราการส่งมอบสินค้าตรงเวลาได้ถึง 98% ในสัปดาห์นี้", "We", "a 98% on-time delivery rate this week.", "คำกริยาอดีตแปลว่า ทำสำเร็จ (a...)", "achieved", [], "We achieved a 98% on-time delivery rate this week.", "'achieved' แปลว่า ทำสำเร็จหรือบรรลุเป้าหมาย"),
+            ("ยอดของเสียรวมลดลงเมื่อเปรียบเทียบกับสัปดาห์ที่แล้ว", "Total scrap was reduced", "to last week.", "คำแปลว่า เปรียบเทียบ (c... ตามด้วย to)", "compared", [], "Total scrap was reduced compared to last week.", "'compared to' แปลว่า เมื่อเปรียบเทียบกับ"),
+            ("นี่คือสรุปผลการดำเนินงานประจำสัปดาห์ของเราครับ", "Here is the", "of our weekly achievements.", "คำนามแปลว่า บทสรุป (s...)", "summary", [], "Here is the summary of our weekly achievements.", "'summary' แปลว่า บทสรุปย่อ"),
+            ("พวกเราสามารถเอาชนะอุปสรรคที่ไม่คาดคิดได้ทั้งหมด", "We managed to", "all unexpected delays.", "คำกริยาแปลว่า เอาชนะ (o...)", "overcome", [], "We managed to overcome all unexpected delays.", "'overcome' แปลว่า เอาชนะอุปสรรค"),
+            ("ยอดการผลิตทำได้สูงกว่าเป้าหมายที่คาดการณ์ไว้", "Output", "the original forecast.", "คำกริยาอดีตแปลว่า เกินกว่า (e...)", "exceeded", [], "Output exceeded the original forecast.", "'exceeded' แปลว่า ทำได้เกินกว่าเป้าหมาย"),
+            ("มารักษาแรงผลักดันเชิงบวกนี้ต่อไปจนถึงวันจันทร์กันครับ", "Let's maintain this", "into Monday.", "คำนามแปลว่า แรงขับเคลื่อนต่อเนื่อง (m...)", "momentum", [], "Let's maintain this momentum into Monday.", "'momentum' แปลว่า แรงส่งหรือความต่อเนื่อง"),
+            ("ขอให้ทุกคนได้พักผ่อนอย่างเต็มที่ในวันหยุดสุดสัปดาห์ครับ", "Have a", "weekend, everyone!", "คำคุณศัพท์แปลว่า ที่ได้พักผ่อนเต็มที่ (r...)", "restful", [], "Have a restful weekend, everyone!", "'restful weekend' แปลว่า วันหยุดที่ได้พักผ่อนอย่างสบายใจ"),
+            ("ไม่มีอุบัติเหตุด้านความปลอดภัยเกิดขึ้นเลยในสัปดาห์นี้", "No safety", "occurred this week.", "คำนามพหูพจน์แปลว่า อุบัติเหตุ/เหตุการณ์ (i...)", "incidents", [], "No safety incidents occurred this week.", "'safety incidents' แปลว่า เหตุการณ์ด้านความปลอดภัย"),
+            ("ขอแสดงความยินดีที่คุณเรียนจบสัปดาห์ที่ 1 แล้ว", "", "on completing Week 1!", "คำอวยพรแสดงความยินดี (C...)", "Congratulations", [], "Congratulations on completing Week 1!", "'Congratulations on...' แปลว่า ขอแสดงความยินดีด้วยกับ...")
+        ]),
+        "stories": make_stories([
+            ("Hitting the 98% Benchmark", "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&auto=format&fit=crop&q=80",
+             [("benchmark", "n.", "เกณฑ์มาตรฐาน"), ("on-time", "adj.", "ตรงเวลา"), ("achieve", "v.", "ทำสำเร็จ"), ("cheer", "v.", "ไชโยดีใจ")],
+             "Friday afternoon was tense in the dispatch office. The team needed one final delivery confirmation to hit their 98% <b>on-time</b> <b>benchmark</b>.<br><br>At 4:45 PM, the radio crackled: “Truck 12 delivered safely to Pathum Thani!” The entire office <b>cheered</b> in triumphant celebration.",
+             "Friday afternoon was tense in the dispatch office. The team needed one final delivery confirmation to hit their 98% on-time benchmark. At 4:45 PM, the radio crackled: Truck 12 delivered safely to Pathum Thani! The entire office cheered in triumphant celebration.",
+             "บ่ายวันศุกร์ในออฟฟิศปล่อยรถเต็มไปด้วยความลุ้นระทึก ทีมงานต้องการการยืนยันส่งของอีกคันเดียวเพื่อพิชิตเกณฑ์ส่งตรงเวลา 98% ตอน 16.45 น. วิทยุแจ้งเข้ามา: รถคันที่ 12 ส่งของถึงปทุมธานีเรียบร้อย! ทั้งห้องส่งเสียงเฮฉลองความสำเร็จร่วมกันอย่างกึกก้อง"),
+            ("A Well-Deserved Rest", "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=900&auto=format&fit=crop&q=80",
+             [("exhausted", "adj.", "เหนื่อยล้า"), ("dedication", "n.", "ความทุ่มเท"), ("pride", "n.", "ความภาคภูมิใจ"), ("restful", "adj.", "ได้พักผ่อน")],
+             "Krit clocked out on Friday evening feeling pleasantly tired yet beaming with <b>pride</b>. His team had reorganized sixty locations in Room A1 with zero errors.<br><br>He looked back at the spotless warehouse aisles, smiled, and headed home ready for a truly <b>restful</b> weekend.",
+             "Krit clocked out on Friday evening feeling pleasantly tired yet beaming with pride. His team had reorganized sixty locations in Room A1 with zero errors. He looked back at the spotless warehouse aisles, smiled, and headed home ready for a truly restful weekend.",
+             "กฤชสแกนนิ้วเลิกงานเย็นวันศุกร์ด้วยความเหนื่อยล้าแต่เปี่ยมด้วยความภาคภูมิใจ ทีมของเขาจัดระเบียบ 60 ช่องเก็บของในห้อง A1 ได้สำเร็จแบบไร้ข้อผิดพลาด เขามองกลับไปที่ช่องทางเดินคลังสินค้าที่สะอาดตา ยิ้มกว้าง และเดินทางกลับบ้านเพื่อพักผ่อนอย่างเต็มที่"),
+            ("The Executive Presentation", "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+             [("executive", "n.", "ผู้บริหาร"), ("summary", "n.", "บทสรุป"), ("metrics", "n.", "ตัวชี้วัด"), ("praise", "v.", "ชื่นชม")],
+             "Presenting to the Managing Director can be nerve-racking, but Natt summarized the warehouse operations into three crystal-clear <b>metrics</b>.<br><br>The director nodded approvingly and warmly <b>praised</b> the team for their data transparency and operational clarity.",
+             "Presenting to the Managing Director can be nerve-racking, but Natt summarized the warehouse operations into three crystal-clear metrics. The director nodded approvingly and warmly praised the team for their data transparency and operational clarity.",
+             "การรายงานต่อหน้ากรรมการผู้จัดการอาจทำให้ตื่นเต้น แต่นัทสรุปผลงานคลังสินค้าเป็น 3 ตัวชี้วัดที่ชัดเจนกระจ่างแจ้ง กรรมการผู้จัดการพยักหน้าเห็นชอบและเอ่ยปากชมเชยความโปร่งใสในข้อมูลและความชัดเจนในการทำงานของทีม"),
+            ("Week 1 Milestone Reached", "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+             [("milestone", "n.", "ก้าวสำคัญ"), ("consistency", "n.", "ความสม่ำเสมอ"), ("confidence", "n.", "ความมั่นใจ"), ("fluent", "adj.", "คล่องแคล่ว")],
+             "Looking back on his study notes on Sunday, Dan realized he had practiced over one hundred new English sentences in just seven days.<br><br>He no longer felt shy to speak during factory walkthroughs. Daily <b>consistency</b> had turned into genuine speaking <b>confidence</b>.",
+             "Looking back on his study notes on Sunday, Dan realized he had practiced over one hundred new English sentences in just seven days. He no longer felt shy to speak during factory walkthroughs. Daily consistency had turned into genuine speaking confidence.",
+             "เมื่อเปิดดูสมุดโน้ตในวันอาทิตย์ แดนพบว่าตัวเองได้ฝึกประโยคภาษาอังกฤษใหม่ๆ ไปมากกว่า 100 ประโยคในเวลาเพียง 7 วัน เขาไม่รู้สึกเคอะเขินอีกต่อไปเวลาต้องพูดภาษาอังกฤษในโรงงาน ความสม่ำเสมอในทุกๆ วันได้เปลี่ยนเป็นความมั่นใจในการพูดอย่างแท้จริง")
+        ])
     }
 }
 
 # -----------------------------------------------------------------------------
-# 4. Generate Days 3 to 7 Programmatically (Fully Rich Dataset)
-# -----------------------------------------------------------------------------
-DAY_CONFIGS = [
-    (3, "Day 3: Reporting Problems & Delays", "การแจ้งปัญหา ความล่าช้า และเสนอทางออก", "แจ้งปัญหา (Issue) -> อธิบายสาเหตุ (Due to) -> เสนอทางแก้ไข (Action)",
-     [("Delay", "/dɪˈleɪ/", "n./v.", "ความล่าช้า", "There is a slight delay.", "มีความล่าช้าเล็กน้อย"),
-      ("Bottleneck", "/ˈbɒt.əl.nek/", "n.", "จุดคอขวด", "We found a bottleneck at packing.", "พบจุดคอขวดที่การแพ็ค"),
-      ("Resolve", "/rɪˈzɒlv/", "v.", "แก้ไขลุล่วง", "We resolved the issue.", "พวกเราแก้ปัญหาแล้ว"),
-      ("Malfunction", "/ˌmælˈfʌŋk.ʃən/", "n.", "เครื่องขัดข้อง", "The motor malfunctioned.", "มอเตอร์ขัดข้อง"),
-      ("Impact", "/ˈɪm.pækt/", "n.", "ผลกระทบ", "We want to minimize the impact.", "เราต้องการลดผลกระทบ"),
-      ("Resume", "/rɪˈzjuːm/", "v.", "เริ่มทำงานต่อ", "Production will resume soon.", "การผลิตจะเริ่มต่อเร็วๆ นี้"),
-      ("Halt", "/hɒlt/", "v.", "หยุดชะงัก", "Operations were halted.", "การทำงานหยุดชะงัก"),
-      ("Shortage", "/ˈʃɔː.tɪdʒ/", "n.", "ของขาดแคลน", "There is a material shortage.", "เกิดภาวะวัตถุดิบขาด"),
-      ("Investigate", "/ɪnˈves.tɪ.ɡeɪt/", "v.", "สืบสวนหาสาเหตุ", "We are investigating the cause.", "เรากำลังหาสาเหตุ"),
-      ("Alternative", "/ɒlˈtɜː.nə.tɪv/", "n.", "ทางเลือกสำรอง", "We have an alternative plan.", "เรามีแผนสำรอง"),
-      ("Preventive", "/prɪˈven.tɪv/", "adj.", "เชิงป้องกัน", "Take preventive action.", "ดำเนินมาตรการป้องกัน"),
-      ("Replacement", "/rɪˈpleɪs.mənt/", "n.", "ของเปลี่ยนทดแทน", "We ordered a replacement.", "เราสั่งของทดแทนแล้ว"),
-      ("Root cause", "/ruːt kɔːz/", "n.", "สาเหตุต้นตอ", "Identify the root cause.", "ระบุสาเหตุต้นตอ"),
-      ("Correction", "/kəˈrek.ʃən/", "n.", "การแก้ไข", "Make the correction now.", "ทำการแก้ไขทันที"),
-      ("Technician", "/tekˈnɪʃ.ən/", "n.", "ช่างเทคนิค", "Call the on-duty technician.", "เรียกช่างประจำกะมา"),
-      ("Capacity", "/kəˈpæs.ə.ti/", "n.", "กำลังการผลิต", "We run at 80% capacity.", "เราเดินเครื่องที่ 80%"),
-      ("Quarantine", "/ˈkwɒr.ən.tiːn/", "n./v.", "กักแยกของเสีย", "Quarantine the damaged goods.", "กักแยกสินค้าที่เสียหาย"),
-      ("Recurrence", "/rɪˈkʌr.əns/", "n.", "การเกิดซ้ำ", "Prevent recurrence of error.", "ป้องกันการเกิดข้อผิดพลาดซ้ำ"),
-      ("Estimate", "/ˈes.tɪ.meɪt/", "v.", "ประเมินเวลา/ยอด", "Estimate two hours of delay.", "ประเมินว่าช้าไป 2 ชม."),
-      ("Contingency", "/kənˈtɪn.dʒən.si/", "n.", "แผนฉุกเฉิน", "Follow the contingency plan.", "ทำตามแผนฉุกเฉิน")]),
-    (4, "Day 4: Daily Standup & Work Progress", "การรายงานสิ่งที่ทำเสร็จ สิ่งที่กำลังทำ และอุปสรรค", "What I did yesterday -> What I will do today -> Blockers",
-     [("Backlog", "/ˈbæk.lɒɡ/", "n.", "งานคั่งค้าง", "We cleared the backlog.", "พวกเราเคลียร์งานค้างเสร็จแล้ว"),
-      ("Blocker", "/ˈblɒk.ər/", "n.", "อุปสรรคติดขัด", "Do you have any blockers?", "คุณมีอะไรติดขัดไหม"),
-      ("Milestone", "/ˈmaɪl.stəʊn/", "n.", "เป้าหมายสำคัญ", "We reached a new milestone.", "เราบรรลุเป้าหมายสำคัญ"),
-      ("Prioritize", "/praɪˈɒr.ɪ.taɪz/", "v.", "จัดลำดับสำคัญ", "Prioritize safety first.", "จัดลำดับความปลอดภัยไว้ก่อน"),
-      ("Progress", "/ˈprəʊ.ɡres/", "n.", "ความคืบหน้า", "Good progress was made.", "มีความคืบหน้าที่ดีมาก"),
-      ("Deliverable", "/dɪˈlɪv.ər.ə.bəl/", "n.", "ชิ้นงานส่งมอบ", "The deliverable is due today.", "งานส่งมอบครบกำหนดวันนี้"),
-      ("Achievement", "/əˈtʃiːv.mənt/", "n.", "ผลงานสำเร็จ", "Great team achievement.", "ผลงานยอดเยี่ยมของทีม"),
-      ("Pending", "/ˈpen.dɪŋ/", "adj.", "อยู่ระหว่างรอผล", "Approval is pending.", "กำลังรออนุมัติอยู่"),
-      ("Coordinate", "/kəʊˈɔː.dɪ.neɪt/", "v.", "ประสานงาน", "I will coordinate with QA.", "ผมจะประสานงานกับ QA"),
-      ("Handover", "/ˈhændˌəʊ.vər/", "n.", "การส่งมอบงาน", "Do a smooth shift handover.", "ส่งมอบงานระหว่างกะอย่างราบรื่น"),
-      ("Target", "/ˈtɑː.ɡɪt/", "n.", "เป้าหมาย", "We hit our daily target.", "เราทำยอดได้ตามเป้า"),
-      ("Update", "/ʌpˈdeɪt/", "v./n.", "รายงานความคืบหน้า", "Give me a quick update.", "ช่วยอัปเดตสั้นๆ ให้ฟังหน่อย"),
-      ("Support", "/səˈpɔːt/", "n.", "การช่วยเหลือ", "I need technical support.", "ผมต้องการความช่วยเหลือทางเทคนิค"),
-      ("Efficiency", "/ɪˈfɪʃ.ən.si/", "n.", "ประสิทธิภาพ", "Boost warehouse efficiency.", "เพิ่มประสิทธิภาพคลัง"),
-      ("Assign", "/əˈsaɪn/", "v.", "มอบหมายงาน", "Assign tasks to the crew.", "มอบหมายงานให้ทีม"),
-      ("Status", "/ˈsteɪ.təs/", "n.", "สถานะงาน", "What is the status now?", "สถานะงานตอนนี้เป็นอย่างไร"),
-      ("Resource", "/rɪˈzɔːs/", "n.", "ทรัพยากร/กำลังคน", "We need more resources.", "เราต้องการกำลังคนเพิ่ม"),
-      ("Morale", "/məˈrɑːl/", "n.", "ขวัญกำลังใจ", "Team morale is high.", "ขวัญกำลังใจทีมงานดีมาก"),
-      ("Align", "/əˈlaɪn/", "v.", "ปรับให้ตรงกัน", "Let's align our tasks.", "มาปรับงานให้ตรงกัน"),
-      ("Wrap up", "/ræp ʌp/", "v.", "สรุปจบงาน", "Wrap up the standup meeting.", "สรุปจบการประชุมสแตนด์อัป")]),
-    (5, "Day 5: Scheduling & Rescheduling Meetings", "การนัดหมาย เสนอเวลาว่าง เลื่อนนัด และยืนยันกำหนดการ", "ระบุเวลาชัดเจน + เสนอทางเลือก (Does [time] work for you?)",
-     [("Available", "/əˈveɪ.lə.bəl/", "adj.", "ว่าง / สะดวก", "Are you available tomorrow?", "พรุ่งนี้คุณว่างไหมครับ"),
-      ("Reschedule", "/ˌriːˈskedʒ.uːl/", "v.", "เลื่อนนัดหมาย", "Can we reschedule our call?", "ขอเลื่อนนัดคุยสายได้ไหม"),
-      ("Conflict", "/ˈkɒn.flɪkt/", "n.", "เวลาชนกัน", "I have a scheduling conflict.", "ผมมีตารางเวลาชนกัน"),
-      ("Propose", "/prəˈpəʊz/", "v.", "เสนอเวลา", "I propose Friday at 2 PM.", "ผมขอเสนอวันศุกร์บ่ายสอง"),
-      ("Confirm", "/kənˈfɜːm/", "v.", "ยืนยัน", "Confirm the meeting room.", "ช่วยยืนยันห้องประชุมด้วย"),
-      ("Postpone", "/pəʊstˈpəʊn/", "v.", "เลื่อนออกไป", "The sync was postponed.", "การประชุมถูกเลื่อนออกไป"),
-      ("Agenda", "/əˈdʒen.də/", "n.", "วาระการประชุม", "Check the meeting agenda.", "ตรวจดูวาระการประชุม"),
-      ("Attendee", "/ə.tenˈdiː/", "n.", "ผู้เข้าร่วม", "All attendees arrived.", "ผู้เข้าร่วมทุกคนมาถึงแล้ว"),
-      ("Convenient", "/kənˈviː.ni.ənt/", "adj.", "สะดวกสบาย", "Is Thursday convenient?", "วันพฤหัสบดีสะดวกไหม"),
-      ("Invitation", "/ˌɪn.vɪˈteɪ.ʃən/", "n.", "คำเชิญปฏิทิน", "Send a calendar invitation.", "ส่งคำเชิญปฏิทินมาด้วย"),
-      ("Duration", "/djʊəˈreɪ.ʃən/", "n.", "ระยะเวลาประชุม", "The duration is 30 mins.", "ระยะเวลาคือ 30 นาที"),
-      ("Minutes", "/ˈmɪn.ɪts/", "n.", "บันทึกการประชุม", "Send the meeting minutes.", "ส่งบันทึกการประชุม"),
-      ("Facilitate", "/fəˈsɪl.ɪ.teɪt/", "v.", "ดำเนินรายการ", "Who will facilitate the call?", "ใครจะดำเนินรายการประชุม"),
-      ("Discussion", "/dɪˈskʌʃ.ən/", "n.", "การหารือ", "We had a great discussion.", "เรามีการหารือที่ดีมาก"),
-      ("Tentative", "/ˈten.tə.tɪv/", "adj.", "กำหนดการคร่าวๆ", "This is a tentative date.", "นี่คือวันนัดคร่าวๆ"),
-      ("Reminder", "/rɪˈmaɪn.dər/", "n.", "การเตือนความจำ", "Send a quick reminder.", "ส่งการเตือนความจำสั้นๆ"),
-      ("Platform", "/ˈplæt.fɔːm/", "n.", "โปรแกรมประชุม", "Teams is our platform.", "เราใช้ Teams ประชุม"),
-      ("Dial-in", "/ˈdaɪ.əl.ɪn/", "n.", "ลิงก์เข้าประชุม", "Here is the dial-in link.", "นี่คือลิงก์เข้าประชุม"),
-      ("Punctual", "/ˈpʌŋk.tʃu.əl/", "adj.", "ตรงต่อเวลา", "Please be punctual.", "กรุณาตรงต่อเวลา"),
-      ("Accommodate", "/əˈkɒm.ə.deɪt/", "v.", "ปรับเวลาให้ลงตัว", "Thanks for accommodating me.", "ขอบคุณที่ปรับเวลาให้")]),
-    (6, "Day 6: Clarifying Instructions & Active Listening", "การทวนความเข้าใจ เช็คคำสั่ง เพื่อป้องกันความผิดพลาด", "Let me confirm... | Just to clarify... | Did you mean...?",
-     [("Elaborate", "/iˈlæb.ə.reɪt/", "v.", "อธิบายขยายความ", "Could you elaborate further?", "ช่วยอธิบายเพิ่มเติมได้ไหม"),
-      ("Alignment", "/əˈlaɪn.mənt/", "n.", "ความเข้าใจตรงกัน", "We need team alignment.", "เราต้องเข้าใจตรงกัน"),
-      ("Specification", "/ˌspes.ɪ.fɪˈkeɪ.ʃən/", "n.", "สเปกข้อกำหนด", "Read the specifications.", "อ่านข้อกำหนดสเปก"),
-      ("Verify", "/ˈver.ɪ.faɪ/", "v.", "ทวนสอบความถูกต้อง", "Verify the serial numbers.", "ทวนสอบหมายเลขซีเรียล"),
-      ("Ambiguous", "/æmˈbɪɡ.ju.əs/", "adj.", "กำกวมคลุมเครือ", "The instruction was ambiguous.", "คำสั่งมีความคลุมเครือ"),
-      ("Summarize", "/ˈsʌm.ər.aɪz/", "v.", "สรุปใจความ", "Summarize the main points.", "สรุปประเด็นสำคัญ"),
-      ("Misunderstanding", "/ˌmɪs.ʌn.dəˈstæn.dɪŋ/", "n.", "ความเข้าใจผิด", "Avoid misunderstanding.", "หลีกเลี่ยงความเข้าใจผิด"),
-      ("Rephrase", "/ˌriːˈfreɪz/", "v.", "ทวนประโยคใหม่", "Let me rephrase my point.", "ขอผมพูดใหม่ให้เข้าใจง่าย"),
-      ("Ensure", "/ɪnˈʃɔːr/", "v.", "ดูแลให้มั่นใจ", "Ensure the box is sealed.", "ดูแลให้มั่นใจว่ากล่องปิดสนิท"),
-      ("Comprehend", "/ˌkɒm.prɪˈhend/", "v.", "เข้าใจลึกซึ้ง", "Do you comprehend the SOP?", "คุณเข้าใจ SOP ครบถ้วนไหม"),
-      ("Clarification", "/ˌklær.ɪ.fɪˈkeɪ.ʃən/", "n.", "คำชี้แจง", "Thanks for the clarification.", "ขอบคุณสำหรับคำชี้แจง"),
-      ("Instruction", "/ɪnˈstrʌk.ʃən/", "n.", "คำสั่งแนะนำ", "Follow safety instructions.", "ทำตามคำแนะนำความปลอดภัย"),
-      ("Explicit", "/ɪkˈsplɪs.ɪt/", "adj.", "ชัดเจนตรงไปตรงมา", "Give explicit instructions.", "ให้คำสั่งที่ชัดเจนตรงไปตรงมา"),
-      ("Confirmation", "/ˌkɒn.fəˈmeɪ.ʃən/", "n.", "การยืนยัน", "Wait for confirmation.", "รอการยืนยัน"),
-      ("Guidance", "/ˈɡaɪ.dəns/", "n.", "คำชี้แนะ", "Thank you for your guidance.", "ขอบคุณสำหรับคำชี้แนะ"),
-      ("Tolerance", "/ˈtɒl.ər.əns/", "n.", "เกณฑ์คลาดเคลื่อน", "Check the tolerance limit.", "ตรวจเกณฑ์ความคลาดเคลื่อน"),
-      ("Concrete", "/ˈkɒŋ.kriːt/", "adj.", "เป็นรูปธรรมชัดเจน", "Give a concrete example.", "ยกตัวอย่างที่เป็นรูปธรรม"),
-      ("Recap", "/ˈriː.kæp/", "n./v.", "สรุปย่อ", "Send a meeting recap.", "ส่งอีเมลสรุปย่อ"),
-      ("Adhere", "/ədˈhɪər/", "v.", "ยึดมั่นปฏิบัติตาม", "Adhere to the standard.", "ปฏิบัติตามมาตรฐาน"),
-      ("Acknowledge", "/əkˈnɒl.ɪdʒ/", "v.", "ตอบรับทราบ", "Please acknowledge this mail.", "โปรดตอบรับทราบอีเมลนี้")]),
-    (7, "Day 7: Weekly Wrap-up & Executive Summary", "การเขียนสรุปผลงานประจำสัปดาห์ (Highlights, KPIs, Plans)", "เน้นสรุปแบบ Bullet points กระชับ พร้อมตัวเลขชี้วัดผลงาน",
-     [("Achievement", "/əˈtʃiːv.mənt/", "n.", "ความสำเร็จผลงาน", "This is a great achievement.", "นี่คือความสำเร็จที่ยอดเยี่ยม"),
-      ("Benchmark", "/ˈbentʃ.mɑːk/", "n.", "เกณฑ์มาตรฐาน", "We beat the benchmark.", "เราทำได้ดีกว่าเกณฑ์มาตรฐาน"),
-      ("Output", "/ˈaʊt.pʊt/", "n.", "ผลผลิตรวม", "Total output hit 10,000 units.", "ยอดผลผลิตแตะหมื่นชิ้น"),
-      ("Efficiency", "/ɪˈfɪʃ.ən.si/", "n.", "ประสิทธิภาพ", "Picking efficiency rose by 8%.", "ประสิทธิภาพการหยิบของเพิ่ม 8%"),
-      ("Summary", "/ˈsʌm.ər.i/", "n.", "บทสรุปย่อ", "Here is the weekly summary.", "นี่คือสรุปประจำสัปดาห์"),
-      ("Momentum", "/məˈmen.təm/", "n.", "แรงส่งความต่อเนื่อง", "Keep up the great momentum.", "รักษาแรงขับเคลื่อนที่ดีไว้"),
-      ("Accomplish", "/əˈkʌm.plɪʃ/", "v.", "ทำสำเร็จลุล่วง", "We accomplished all goals.", "พวกเราทำเป้าหมายสำเร็จครบ"),
-      ("Metric", "/ˈmet.rɪk/", "n.", "ตัวชี้วัดผลงาน", "Review operational metrics.", "ตรวจดูตัวชี้วัดผลการทำงาน"),
-      ("Exceed", "/ɪkˈsiːd/", "v.", "ทำได้เกินกว่า", "Output exceeded forecast.", "ยอดผลิตเกินกว่าคาดการณ์"),
-      ("Objective", "/əbˈdʒek.tɪv/", "n.", "เป้าหมายหลัก", "Our objective was achieved.", "เป้าหมายของเราบรรลุผล"),
-      ("Overcome", "/ˌəʊ.vəˈkʌm/", "v.", "เอาชนะอุปสรรค", "We overcame the delays.", "พวกเราเอาชนะความล่าช้าได้"),
-      ("Consistent", "/kənˈsɪs.tənt/", "adj.", "สม่ำเสมอ", "Show consistent quality.", "แสดงคุณภาพที่สม่ำเสมอ"),
-      ("Contribution", "/ˌkɒn.trɪˈbjuː.ʃən/", "n.", "การมีส่วนร่วมช่วย", "Thanks for your contribution.", "ขอบคุณสำหรับการช่วยงาน"),
-      ("Productivity", "/ˌprɒd.ʌkˈtɪv.ə.ti/", "n.", "ผลิตภาพ", "Productivity reached record high.", "ผลิตภาพแตะระดับสูงสุด"),
-      ("Highlight", "/ˈhaɪ.laɪt/", "n.", "ผลงานเด่น", "Here are weekly highlights.", "นี่คือผลงานเด่นประจำสัปดาห์"),
-      ("Forecast", "/ˈfɔː.kɑːst/", "n.", "การคาดการณ์", "Review next week's forecast.", "ดูยอดคาดการณ์สัปดาห์หน้า"),
-      ("Restful", "/ˈrest.fəl/", "adj.", "ที่ได้พักผ่อนเต็มที่", "Have a restful weekend.", "ขอให้ได้พักผ่อนอย่างเต็มที่"),
-      ("Dedication", "/ˌded.ɪˈkeɪ.ʃən/", "n.", "ความทุ่มเท", "Your dedication is recognized.", "ความทุ่มเทของคุณได้รับการยอมรับ"),
-      ("Seamless", "/ˈsiːm.ləs/", "adj.", "ราบรื่นไร้รอยต่อ", "Seamless teamwork this week.", "การทำงานร่วมกันราบรื่นมาก"),
-      ("Milestone", "/ˈmaɪl.stəʊn/", "n.", "ก้าวสำคัญ", "We hit the week 1 milestone.", "เราผ่านก้าวสัปดาห์ที่ 1 แล้ว")])
-]
-
-# ประมวลผลสร้าง Day 3 ถึง Day 7 ลงใน WEEK_1_DATA
-for d_num, d_title, d_sum, d_rule, d_voc in DAY_CONFIGS:
-    d_str = str(d_num)
-    WEEK_1_DATA[d_str] = {
-        "day": d_num,
-        "title": d_title,
-        "summary": d_sum,
-        "rule": d_rule,
-        "vocab": make_vocab(d_voc),
-        "phrases": make_phrases([
-            (f"We are reviewing the {d_voc[0][0].lower()} process today.", f"พวกเรากำลังทบทวนกระบวนการ {d_voc[0][3]} ในวันนี้ครับ", "เน้นคำสำคัญ"),
-            (f"Please prioritize the {d_voc[1][0].lower()} task first.", f"กรุณาจัดลำดับงาน {d_voc[1][3]} เป็นอันดับแรกครับ", "prioritize = จัดลำดับ"),
-            (f"The team managed to {d_voc[2][0].lower()} yesterday.", f"ทีมงานสามารถดำเนินการ {d_voc[2][3]} ได้สำเร็จเมื่อวานนี้ครับ", "รูปอดีต Past tense"),
-            (f"Could you please check the {d_voc[3][0].lower()} status?", f"ช่วยตรวจสอบสถานะ {d_voc[3][3]} หน่อยได้ไหมครับ", "Could you please สุภาพ"),
-            (f"We want to minimize any negative {d_voc[4][0].lower()}.", f"เราต้องการลดผลกระทบเชิงลบให้น้อยที่สุดครับ", "minimize = ลดให้น้อยสุด"),
-            (f"Operations will {d_voc[5][0].lower()} by early afternoon.", f"การทำงานจะกลับมาดำเนินการตามปกติช่วงบ่ายครับ", "resume = เริ่มใหม่"),
-            (f"Did you verify the latest {d_voc[6][0].lower()} sheet?", f"คุณได้ตรวจสอบเอกสาร {d_voc[6][3]} ฉบับล่าสุดแล้วหรือยังครับ", "verify = ทวนสอบ"),
-            (f"We have an effective plan for this {d_voc[7][0].lower()}.", f"พวกเรามีแผนงานที่มีประสิทธิภาพสำหรับเรื่องนี้ครับ", "effective plan"),
-            (f"Please coordinate with the {d_voc[8][0].lower()} team.", f"กรุณาประสานงานร่วมกับทีมที่เกี่ยวข้องครับ", "coordinate with"),
-            (f"All items comply with safety {d_voc[9][0].lower()} guidelines.", f"สินค้าทุกชิ้นสอดคล้องกับข้อกำหนดความปลอดภัยครับ", "comply with"),
-            ("Everything is on track to meet our weekly deadline.", "ทุกอย่างดำเนินไปตามแผนและทันกำหนดแน่นอนครับ", "on track = ตามแผน"),
-            ("Let me double-check the figures before submission.", "ขอให้ผมตรวจทานตัวเลขซ้ำอีกครั้งก่อนส่งมอบนะครับ", "double-check"),
-            ("Could you put that instruction in an email for reference?", "รบกวนช่วยสรุปคำสั่งส่งทางอีเมลเพื่อใช้อ้างอิงได้ไหมครับ", "for reference"),
-            ("I will provide a full status update before 5 PM.", "ผมจะส่งสรุปรายงานความคืบหน้าให้ก่อน 5 โมงเย็นครับ", "status update"),
-            ("We achieved a 99% accuracy rate across all lines.", "เราทำความแม่นยำได้ถึง 99% ในทุกสายการผลิตครับ", "accuracy rate"),
-            ("Thank you for the seamless cross-team cooperation.", "ขอบคุณสำหรับการประสานงานข้ามแผนกที่ราบรื่นมากครับ", "seamless"),
-            ("Please wear your personal protective equipment at all times.", "กรุณาสวมใส่อุปกรณ์ป้องกันภัยส่วนบุคคลตลอดเวลาครับ", "PPE equipment"),
-            ("We are closely monitoring the operational metrics.", "พวกเรากำลังติดตามตัวเลขตัวชี้วัดการทำงานอย่างใกล้ชิดครับ", "monitoring"),
-            ("Have a restful and safe weekend, everyone!", "ขอให้ทุกคนได้พักผ่อนอย่างเต็มที่และปลอดภัยในวันหยุดครับ!", "weekend greeting"),
-            ("Congratulations on completing today's English sprint!", "ขอแสดงความยินดีด้วยที่คุณผ่านบทเรียนฝึกภาษาอังกฤษวันนี้!", "congratulations")
-        ]),
-        "dialogues": make_dialogues([
-            ("รายงานความคืบหน้า", [("Lead", "How is the task progressing?", "งานคืบหน้าไปถึงไหนแล้ว"), ("Staff", f"We are handling the {d_voc[0][0].lower()} right now.", f"กำลังจัดการ {d_voc[0][3]} อยู่ครับ")]),
-            ("ขอคำแนะนำด่วน", [("Staff", "Could you provide guidance on this point?", "ช่วยให้คำแนะนำในจุดนี้หน่อยได้ไหมครับ"), ("Lead", "Sure, let's look at the standard guide.", "ได้สิ มาเปิดดูคู่มือมาตรฐานกัน")]),
-            ("ตรวจสอบความถูกต้อง", [("QA", "Did you verify the serial numbers?", "ตรวจหมายเลขซีเรียลแล้วหรือยัง"), ("Staff", "Yes, everything matches the system perfectly.", "ตรวจแล้วครับ ทุกอย่างตรงกับในระบบเป๊ะเลย")]),
-            ("การส่งต่องานระหว่างกะ", [("Shift A", "We cleared 80% of the assigned volume.", "พวกเราเคลียร์ยอดไปได้ 80% แล้วครับ"), ("Shift B", "Great, we will take over and finish the rest.", "เยี่ยม เดี๋ยวพวกเรามารับช่วงต่อให้เสร็จ")]),
-            ("แจ้งแก้ปัญหาหน้างาน", [("Tech", "The issue has been successfully resolved.", "ปัญหาได้รับการแก้ไขเรียบร้อยแล้วครับ"), ("Lead", "Awesome job, resume normal operations.", "ยอดเยี่ยมมาก เริ่มเดินเครื่องตามปกติต่อได้เลย")]),
-            ("นัดหมายคุยงานสั้นๆ", [("Colleague", "Do you have 5 minutes for a quick sync?", "มีเวลาสัก 5 นาทีคุยกันสั้นๆ ไหมครับ"), ("Staff", "Yes, I am available right now.", "ได้เลยครับ ตอนนี้ผมว่างอยู่พอดี")]),
-            ("ประสานงานข้ามแผนก", [("Procurement", "The spare parts will arrive by 2 PM.", "อะไหล่สำรองจะมาถึงตอนบ่ายสองค่ะ"), ("Warehouse", "Thanks, we have cleared the receiving dock.", "ขอบคุณครับ เราเตรียมพื้นที่รอรับไว้แล้ว")]),
-            ("เช็คความเข้าใจคำสั่ง", [("Staff", "Just to confirm, should I pack Room A1 first?", "ขอทวนครับ ให้แพ็คของห้อง A1 ก่อนใช่ไหมครับ"), ("Leader", "Yes, exactly. Room A1 is our top priority.", "ถูกต้อง ห้อง A1 คือเป้าหมายสำคัญที่สุด")]),
-            ("สรุปรายงานส่งผู้บริหาร", [("Staff", "The summary metrics deck is ready.", "สไลด์สรุปดัชนีชี้วัดพร้อมแล้วครับ"), ("Manager", "Great work, please email it to the director.", "ทำได้ดีมาก ส่งอีเมลให้ท่านผอ.ได้เลย")]),
-            ("ปิดการทำงานประจำวัน", [("Leader", "Thank you everyone for the great dedication today!", "ขอบคุณทุกคนมากสำหรับความทุ่มเทในวันนี้!"), ("Team", "Have a great evening, see you tomorrow!", "ขอให้เป็นเย็นที่ดี เจอกันพรุ่งนี้ครับ!")])
-        ]),
-        "exercises": make_exercises([
-            (f"พวกเรากำลังทบทวนกระบวนการ {d_voc[0][3]} ในขณะนี้", "We are currently", f"the {d_voc[0][0].lower()} process.", "กริยา review ในรูป V.ing", "reviewing", ["checking"], f"We are currently reviewing the {d_voc[0][0].lower()} process.", "กำลังกระทำอยู่ใช้ is/am/are + V.ing"),
-            ("เป้าหมายสำคัญอันดับหนึ่งของเราคือการส่งมอบตรงเวลา", "Our top", "is on-time delivery.", "คำแปลว่า ลำดับความสำคัญ (p...)", "priority", [], "Our top priority is on-time delivery.", "'top priority' คือสิ่งที่ต้องทำเป็นอันดับแรก"),
-            ("ปัญหานี้ได้รับการแก้ไขเรียบร้อยแล้วโดยทีมงาน", "The issue has been", "by the team.", "คำกริยาช่อง 3 แปลว่า แก้ไขลุล่วง (r...)", "resolved", ["fixed"], "The issue has been resolved by the team.", "'resolved' แปลว่า แก้ไขปัญหาได้สำเร็จ"),
-            ("พวกเราทำงานเสร็จเร็วกว่ากำหนดการสองชั่วโมง", "We finished ahead of", ".", "คำนามแปลว่า กำหนดการ (s...)", "schedule", [], "We finished ahead of schedule.", "'ahead of schedule' แปลว่า เร็วกว่ากำหนด"),
-            ("ช่วยส่งคำสั่งนี้ทางอีเมลเพื่อใช้อ้างอิงด้วยครับ", "Put that in an email for", ".", "คำแปลว่า การอ้างอิง (r...)", "reference", [], "Put that in an email for reference.", "'for reference' แปลว่า ไว้ใช้อ้างอิง"),
-            ("ทุกอย่างดำเนินไปตามแผนงานที่วางไว้", "Everything is on", "to meet the deadline.", "สำนวนแปลว่า ตามแผน (t...)", "track", [], "Everything is on track to meet the deadline.", "'on track' แปลว่า เป็นไปตามแผนงาน"),
-            ("เราจำเป็นต้องลดผลกระทบต่อลูกค้าให้น้อยที่สุด", "We must", "the impact on customers.", "คำกริยาแปลว่า ลดให้น้อยที่สุด (m...)", "minimize", ["minimise"], "We must minimize the impact on customers.", "'minimize' แปลว่า ลดระดับลงให้เหลือน้อยที่สุด"),
-            ("ขอบคุณล่วงหน้าสำหรับความร่วมมืออันดีของคุณครับ", "Thank you in", "for your kind cooperation.", "คำแปลว่า ล่วงหน้า (a...)", "advance", [], "Thank you in advance for your kind cooperation.", "'in advance' แปลว่า ล่วงหน้า"),
-            ("ช่วยอธิบายขยายความเพิ่มเติมในจุดนี้ได้ไหมครับ", "Could you please", "on this specific point?", "คำกริยาแปลว่า ขยายความ (e...)", "elaborate", ["clarify"], "Could you please elaborate on this specific point?", "'elaborate on' แปลว่า ให้รายละเอียดเพิ่มเติม"),
-            ("ขอแสดงความยินดีที่คุณเรียนจบบทเรียนวันนี้แล้ว", "", "on completing today's sprint!", "คำอวยพรแสดงความยินดี (C...)", "Congratulations", [], "Congratulations on completing today's sprint!", "'Congratulations on...' แปลว่า ขอแสดงความยินดีด้วย")
-        ]),
-        "stories": make_stories([
-            (f"Efficiency at Work (Day {d_num})", "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
-             [(d_voc[0][0], "n.", d_voc[0][3]), (d_voc[1][0], "adj.", d_voc[1][3]), (d_voc[2][0], "v.", d_voc[2][3]), ("team", "n.", "ทีมงาน")],
-             f"The warehouse shift begins with checking the <b>{d_voc[0][0].lower()}</b>. An urgent request requires immediate action.<br><br>Through clear communication, the <b>team</b> manages to <b>{d_voc[2][0].lower()}</b> the task smoothly before noon.",
-             f"The warehouse shift begins with checking the {d_voc[0][0].lower()}. An urgent request requires immediate action. Through clear communication, the team manages to {d_voc[2][0].lower()} the task smoothly before noon.",
-             f"กะการทำงานในคลังเริ่มต้นด้วยการตรวจเช็ค {d_voc[0][3]} งานด่วนต้องการการจัดการทันที ด้วยการสื่อสารที่ชัดเจน ทีมงานสามารถดำเนินการ {d_voc[2][3]} ได้อย่างราบรื่นก่อนเที่ยง"),
-            (f"Active Communication (Day {d_num})", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
-             [(d_voc[3][0], "n.", d_voc[3][3]), ("clarify", "v.", "ชี้แจง"), ("listen", "v.", "รับฟัง"), ("success", "n.", "ความสำเร็จ")],
-             "Whenever instructions seem unclear, Tan politely asks to <b>clarify</b> the requirements. He takes detailed notes and <b>listens</b> carefully.<br><br>That simple habit turns confusion into complete operational <b>success</b>.",
-             "Whenever instructions seem unclear, Tan politely asks to clarify the requirements. He takes detailed notes and listens carefully. That simple habit turns confusion into complete operational success.",
-             "เมื่อใดก็ตามที่คำสั่งดูไม่ชัดเจน ธันจะถามอย่างสุภาพเพื่อขอคำชี้แจง เขาจดบันทึกและตั้งใจฟัง นิสัยง่ายๆ นี้เปลี่ยนความสับสนเป็นความสำเร็จในการทำงานอย่างสมบูรณ์"),
-            (f"Solving the Puzzle (Day {d_num})", "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80",
-             [(d_voc[4][0], "n.", d_voc[4][3]), ("solve", "v.", "แก้ไข"), ("calm", "adj.", "ใจเย็น"), ("relief", "n.", "ความโล่งอก")],
-             "A sudden error code caused tension on the packing line. Instead of panicking, the crew stayed <b>calm</b>, inspected the sensors, and <b>solved</b> the issue within minutes with immense <b>relief</b>.",
-             "A sudden error code caused tension on the packing line. Instead of panicking, the crew stayed calm, inspected the sensors, and solved the issue within minutes with immense relief.",
-             "รหัสข้อผิดพลาดกะทันหันสร้างความตึงเครียดในสายบรรจุหีบห่อ แทนที่จะตื่นตระหนก ทีมงานตั้งสติ ตรวจสอบเซนเซอร์ และแก้ไขปัญหาได้สำเร็จภายในไม่กี่นาทีด้วยความโล่งอก"),
-            (f"Friday Milestone (Day {d_num})", "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
-             [("milestone", "n.", "ก้าวสำคัญ"), ("dedication", "n.", "ความทุ่มเท"), ("proud", "adj.", "ภาคภูมิใจ"), ("rest", "n.", "การพักผ่อน")],
-             "At the end of the shift, the team celebrated hitting their weekly <b>milestone</b>. Their tireless <b>dedication</b> kept every customer satisfied. Everyone headed home <b>proud</b> and ready for a well-deserved <b>rest</b>.",
-             "At the end of the shift, the team celebrated hitting their weekly milestone. Their tireless dedication kept every customer satisfied. Everyone headed home proud and ready for a well-deserved rest.",
-             "เมื่อสิ้นสุดกะการทำงาน ทีมงานร่วมยินดีที่บรรลุเป้าหมายสำคัญประจำสัปดาห์ ความทุ่มเทอย่างไม่เหน็ดเหนื่อยช่วยให้ลูกค้าทุกคนพึงพอใจ ทุกคนเดินทางกลับบ้านด้วยความภาคภูมิใจและพร้อมสำหรับการพักผ่อนอย่างเต็มที่")
-        ])
-    }
-
-# -----------------------------------------------------------------------------
-# 5. Persistence Layer
+# 4. Persistence Layer
 # -----------------------------------------------------------------------------
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 PROGRESS_FILE = os.path.join(DATA_DIR, "user_progress.json")
@@ -480,7 +770,7 @@ if "user_data" not in st.session_state:
 completed_days = set(st.session_state.user_data.get("completed_days", []))
 
 # -----------------------------------------------------------------------------
-# 6. Audio Booster Engine (Web Audio API 2.5x)
+# 5. Audio Booster Engine (Web Audio API 2.5x)
 # -----------------------------------------------------------------------------
 @st.cache_data(show_spinner=False)
 def get_tts_bytes(text: str) -> bytes:
@@ -561,7 +851,7 @@ def play_audio_button(text: str, key_id: str, label: str = "🔊 ฟังเส
     components.html(html_code, height=44)
 
 # -----------------------------------------------------------------------------
-# 7. AI Writing Coach (Gemini 3.6 Flash)
+# 6. AI Writing Coach (Gemini 3.6 Flash)
 # -----------------------------------------------------------------------------
 def analyze_with_ai(text_to_check: str, api_key: str) -> str:
     try:
@@ -586,7 +876,7 @@ def analyze_with_ai(text_to_check: str, api_key: str) -> str:
         return f"⚠️ ไม่สามารถเชื่อมต่อกับ AI ได้: {str(err)}"
 
 # -----------------------------------------------------------------------------
-# 8. Sidebar Navigation
+# 7. Sidebar Navigation
 # -----------------------------------------------------------------------------
 curriculum = load_curriculum()
 
@@ -634,7 +924,7 @@ with st.sidebar:
     )
 
 # -----------------------------------------------------------------------------
-# 9. Main Learning Dashboard
+# 8. Main Learning Dashboard
 # -----------------------------------------------------------------------------
 day_key = str(selected_day)
 lesson = curriculum.get(day_key)
@@ -741,7 +1031,7 @@ else:
         else:
             st.write("ไม่มีแบบฝึกหัดสำหรับวันนี้")
 
-    # TAB 5: Short Stories
+    # TAB 5: Short Stories (4 Unique Stories per Day with Realistic Imagery)
     with tabs[4]:
         st.subheader("📚 ฝึกอ่านเรื่องสั้น ไม่เก่งก็อ่านได้ (วันละ 4 เรื่อง)")
         st.caption("อ่านเรื่องสั้นเพลินๆ พร้อมภาพประกอบ กล่องคำศัพท์ และคำแปลไทย")
