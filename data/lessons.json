@@ -49,253 +49,709 @@
       {"en": "Let me double-check the packing list once more.", "th": "ขอให้ผมตรวจทานใบรายการบรรจุภัณฑ์อีกสักครั้งนะครับ", "tip": "double-check = ตรวจทานซ้ำ"}
     ],
     "dialogues": [
-      {
-        "title": "ตรวจสอบสต็อกประจำวัน (Morning Inventory Sync)",
-        "lines": [
-          {"speaker": "Leader", "en": "Good morning. How is the inventory check going?", "th": "อรุณสวัสดิ์ การตรวจนับสต็อกเป็นอย่างไรบ้าง"},
-          {"speaker": "Operator", "en": "We are counting Rack 1 to Rack 3 right now.", "th": "ตอนนี้พวกเรากำลังนับแร็ค 1 ถึง 3 อยู่ครับ"}
-        ]
-      },
-      {
-        "title": "แจ้งพบยอดคลาดเคลื่อน (Discrepancy Alert)",
-        "lines": [
-          {"speaker": "Operator", "en": "There is a discrepancy of 10 boxes on Rack 2.", "th": "พบยอดคลาดเคลื่อนหายไป 10 กล่องที่แร็ค 2 ครับ"},
-          {"speaker": "Leader", "en": "Check the dispatch log to see if they were shipped.", "th": "ลองไปเช็คสมุดบันทึกการส่งของว่าถูกส่งออกไปแล้วหรือยัง"}
-        ]
-      },
-      {
-        "title": "ของด่วนจากลูกค้า (Urgent Customer Order)",
-        "lines": [
-          {"speaker": "Customer Service", "en": "We have an urgent order that needs to leave by noon.", "th": "เรามีออเดอร์ด่วนที่ต้องส่งออกก่อนเที่ยงนี้ค่ะ"},
-          {"speaker": "Warehouse", "en": "Understood. We will prioritize picking this batch.", "th": "รับทราบครับ เดี๋ยวเราจะจัดลำดับหยิบสินค้านี้เป็นอันดับแรกครับ"}
-        ]
-      },
-      {
-        "title": "รถรับสินค้ามาถึงแล้ว (Truck Arrival)",
-        "lines": [
-          {"speaker": "Driver", "en": "Hello, I am here to collect the shipment for Ayutthaya.", "th": "สวัสดีครับ ผมมารับสินค้าล็อตไปอยุธยาครับ"},
-          {"speaker": "Staff", "en": "Please park at Dock 4. We will load the pallets shortly.", "th": "รบกวนถอยเข้าช่องจอด 4 เลยครับ เดี๋ยวเราจะยกพาเลทขึ้นรถให้ครับ"}
-        ]
-      },
-      {
-        "title": "ขอเปลี่ยนฉลากบาร์โค้ด (Damaged Barcode Label)",
-        "lines": [
-          {"speaker": "Worker", "en": "The barcode on this pallet is torn and unreadable.", "th": "บาร์โค้ดบนพาเลทนี้ฉีกขาดจนสแกนไม่ออกครับ"},
-          {"speaker": "Supervisor", "en": "Re-print a new label from the terminal immediately.", "th": "ไปกดพิมพ์ฉลากใหม่จากเครื่องคอมพิวเตอร์มาติดทับทันทีเลย"}
-        ]
-      },
-      {
-        "title": "ตรวจเช็คอุณหภูมิห้อง A1 (Temperature Check)",
-        "lines": [
-          {"speaker": "QA Inspector", "en": "What is the current temperature in Room A1?", "th": "อุณหภูมิปัจจุบันในห้อง A1 อยู่ที่เท่าไหร่ครับ"},
-          {"speaker": "Technician", "en": "It is steady at 22 degrees Celsius, within specification.", "th": "คงที่อยู่ที่ 22 องศาเซลเซียส อยู่ในเกณฑ์มาตรฐานครับ"}
-        ]
-      },
-      {
-        "title": "กล่องบรรจุชำรุด (Damaged Outer Box)",
-        "lines": [
-          {"speaker": "Receiving Staff", "en": "Two outer cartons arrived dented and damaged.", "th": "กล่องลังภายนอกมีรอยบุบชำรุดเสียหายมา 2 กล่องครับ"},
-          {"speaker": "Lead", "en": "Take clear photos and quarantine them before signing.", "th": "ถ่ายรูปให้ชัดเจน แล้วนำไปกักแยกไว้ก่อนจะเซ็นรับของนะ"}
-        ]
-      },
-      {
-        "title": "การขอใช้อุปกรณ์ร่วมกัน (Sharing Equipment)",
-        "lines": [
-          {"speaker": "Operator A", "en": "Are you using the hydraulic pallet jack right now?", "th": "คุณกำลังใช้แฮนด์ลิฟต์ลากพาเลทอยู่หรือเปล่าครับ"},
-          {"speaker": "Operator B", "en": "No, I just finished. You can take it.", "th": "ไม่ได้ใช้แล้วครับ เพิ่งเสร็จเลย เอาไปใช้ได้เลยครับ"}
-        ]
-      },
-      {
-        "title": "ประสานงานกะถัดไป (Shift Handover)",
-        "lines": [
-          {"speaker": "Morning Shift", "en": "We finished 500 units. The remaining 200 are for you.", "th": "กะเช้าเราทำเสร็จไป 500 ชิ้น ส่วนที่เหลืออีก 200 ชิ้นส่งต่อให้กะบ่ายนะ"},
-          {"speaker": "Evening Shift", "en": "Got it. We will clear everything before 8 PM.", "th": "รับทราบครับ เดี๋ยวพวกเราจะเคลียร์ให้หมดก่อน 2 ทุ่มครับ"}
-        ]
-      },
-      {
-        "title": "สรุปงานส่งหัวหน้า (Final Daily Report)",
-        "lines": [
-          {"speaker": "Staff", "en": "Leader, the daily attendance and stock report is ready.", "th": "หัวหน้าครับ รายงานการเข้างานและสต็อกประจำวันพร้อมแล้วครับ"},
-          {"speaker": "Leader", "en": "Excellent work. Upload it to the shared Drive folder.", "th": "ยอดเยี่ยมมาก อัปโหลดขึ้นโฟลเดอร์ Google Drive ส่วนกลางได้เลย"}
-        ]
-      }
+      {"title": "ตรวจนับสต็อกเช้า", "lines": [{"speaker": "Leader", "en": "How is the inventory check going?", "th": "การตรวจนับสต็อกเป็นอย่างไรบ้าง"}, {"speaker": "Staff", "en": "We are counting Rack 1 to 3 right now.", "th": "กำลังนับแร็ค 1 ถึง 3 อยู่ครับ"}]},
+      {"title": "แจ้งยอดคลาดเคลื่อน", "lines": [{"speaker": "Staff", "en": "There is a discrepancy of 10 boxes.", "th": "พบยอดคลาดเคลื่อน 10 กล่องครับ"}, {"speaker": "Leader", "en": "Check the dispatch log immediately.", "th": "ไปตรวจสมุดส่งของทันทีเลย"}]},
+      {"title": "สินค้าด่วนลูกค้า", "lines": [{"speaker": "CS", "en": "This urgent order must leave by noon.", "th": "ออเดอร์ด่วนนี้ต้องส่งออกก่อนเที่ยงค่ะ"}, {"speaker": "Staff", "en": "Understood. We will pick it first.", "th": "รับทราบครับ เดี๋ยวหยิบให้ก่อนเลย"}]},
+      {"title": "รถรับสินค้ามาถึง", "lines": [{"speaker": "Driver", "en": "I am here for the shipment.", "th": "ผมมารับสินค้าล็อตนี้ครับ"}, {"speaker": "Staff", "en": "Please park at Dock 4.", "th": "รบกวนถอยเข้าช่องจอด 4 เลยครับ"}]},
+      {"title": "บาร์โค้ดชำรุด", "lines": [{"speaker": "Worker", "en": "The barcode label is torn.", "th": "ฉลากบาร์โค้ดฉีกขาดครับ"}, {"speaker": "Leader", "en": "Print a replacement label now.", "th": "สั่งพิมพ์ฉลากใหม่ออกมาติดเลย"}]},
+      {"title": "ตรวจอุณหภูมิห้อง A1", "lines": [{"speaker": "QA", "en": "What is the temperature in Room A1?", "th": "อุณหภูมิในห้อง A1 เท่าไหร่ครับ"}, {"speaker": "Staff", "en": "It is steady at 22 degrees.", "th": "คงที่อยู่ที่ 22 องศาครับ"}]},
+      {"title": "กล่องมีรอยบุบ", "lines": [{"speaker": "Staff", "en": "Two cartons arrived dented.", "th": "มีกล่องบุบมา 2 กล่องครับ"}, {"speaker": "Leader", "en": "Quarantine them and take photos.", "th": "กักแยกไว้แล้วถ่ายรูปเก็บไว้เลย"}]},
+      {"title": "ยืมอุปกรณ์ลากพาเลท", "lines": [{"speaker": "Staff A", "en": "Are you using the pallet jack?", "th": "คุณใช้แฮนด์ลิฟต์อยู่ไหมครับ"}, {"speaker": "Staff B", "en": "No, you can take it now.", "th": "ไม่แล้วครับ เอาไปได้เลย"}]},
+      {"title": "ส่งต่องานระหว่างกะ", "lines": [{"speaker": "Morning", "en": "We completed 500 units today.", "th": "กะเช้าเราทำเสร็จ 500 ชิ้นแล้ว"}, {"speaker": "Night", "en": "Got it. We will clear the rest.", "th": "รับทราบครับ เดี๋ยวเคลียร์ที่เหลือให้"}]},
+      {"title": "สรุปรายงานรายวัน", "lines": [{"speaker": "Staff", "en": "The attendance summary is ready.", "th": "รายงานการเข้างานพร้อมแล้วครับ"}, {"speaker": "Leader", "en": "Upload it to Google Drive.", "th": "อัปโหลดเข้า Google Drive ได้เลย"}]}
     ],
     "exercises": [
-      {
-        "thai_prompt": "ฉันส่งเอกสารให้ลูกค้าเรียบร้อยแล้วเมื่อวานนี้",
-        "prefix": "I",
-        "suffix": "the document to the client yesterday.",
-        "hint": "คำกริยา 'send' เปลี่ยนรูปเป็นอดีต (Past Simple)",
-        "acceptable_answers": ["sent", "already sent"],
-        "correct_word": "sent",
-        "full_sentence": "I sent the document to the client yesterday.",
-        "explanation": "เหตุการณ์จบลงแล้วในอดีต (yesterday) ต้องใช้กริยาช่อง 2 คือ sent"
-      },
-      {
-        "thai_prompt": "พวกเรากำลังตรวจสอบสต็อกสินค้าอยู่ในขณะนี้",
-        "prefix": "We are currently",
-        "suffix": "the inventory in the warehouse.",
-        "hint": "คำกริยา 'check' ในรูปกำลังกระทำ (V.ing)",
-        "acceptable_answers": ["checking", "reviewing", "inspecting"],
-        "correct_word": "checking",
-        "full_sentence": "We are currently checking the inventory in the warehouse.",
-        "explanation": "Present Continuous ใช้โครงสร้าง is/am/are + V.ing เพื่อบอกสิ่งที่กำลังทำอยู่"
-      },
-      {
-        "thai_prompt": "ฉันจะแจ้งให้คุณทราบทันทีที่มีข้อมูลอัปเดต",
-        "prefix": "I will",
-        "suffix": "you know as soon as there is an update.",
-        "hint": "คำกริยาแปลว่า 'ปล่อย/อนุญาต/ให้' (l...)",
-        "acceptable_answers": ["let"],
-        "correct_word": "let",
-        "full_sentence": "I will let you know as soon as there is an update.",
-        "explanation": "สำนวน 'let you know' แปลว่า แจ้งให้คุณทราบ"
-      },
-      {
-        "thai_prompt": "เครื่องจักรหยุดทำงานเนื่องจากเหตุขัดข้องทางเทคนิค",
-        "prefix": "The machine stopped running",
-        "suffix": "to technical issues.",
-        "hint": "คำเชื่อมแปลว่า 'เนื่องจาก' (d...)",
-        "acceptable_answers": ["due"],
-        "correct_word": "due",
-        "full_sentence": "The machine stopped running due to technical issues.",
-        "explanation": "'due to' เป็นบุพบทแปลว่า เนื่องจาก ตามด้วยคำนาม"
-      },
-      {
-        "thai_prompt": "ช่วยยืนยันการรับสินค้าล็อตนี้ให้ด้วยครับ",
-        "prefix": "Could you please",
-        "suffix": "receipt of this shipment?",
-        "hint": "คำกริยาแปลว่า 'ยืนยัน' (c...)",
-        "acceptable_answers": ["confirm", "verify"],
-        "correct_word": "confirm",
-        "full_sentence": "Could you please confirm receipt of this shipment?",
-        "explanation": "'confirm receipt' เป็นสำนวนธุรกิจแปลว่า ยืนยันการรับของ"
-      },
-      {
-        "thai_prompt": "ทุกอย่างดำเนินไปตามกำหนดการที่วางไว้",
-        "prefix": "Everything is running according to",
-        "suffix": ".",
-        "hint": "คำนามแปลว่า 'กำหนดการ/ตารางเวลา' (s...)",
-        "acceptable_answers": ["schedule", "plan"],
-        "correct_word": "schedule",
-        "full_sentence": "Everything is running according to schedule.",
-        "explanation": "'according to schedule' แปลว่า เป็นไปตามกำหนดการ"
-      },
-      {
-        "thai_prompt": "รถขนส่งสินค้ามาถึงที่ท่าเทียบรับสินค้าเรียบร้อยแล้ว",
-        "prefix": "The delivery truck has arrived at the loading",
-        "suffix": ".",
-        "hint": "คำนามแปลว่า 'ท่าเทียบเรือ/ช่องเทียบรถ' (d...)",
-        "acceptable_answers": ["dock", "bay"],
-        "correct_word": "dock",
-        "full_sentence": "The delivery truck has arrived at the loading dock.",
-        "explanation": "'loading dock' คือจุดจอดเทียบถ่ายสินค้า"
-      },
-      {
-        "thai_prompt": "กรุณาติดฉลากบาร์โค้ดลงบนทุกกล่องอย่างระมัดระวัง",
-        "prefix": "Please",
-        "suffix": "a barcode on every carton carefully.",
-        "hint": "คำกริยาแปลว่า 'ติดป้าย/ติดฉลาก' (l...)",
-        "acceptable_answers": ["label", "stick", "put", "attach"],
-        "correct_word": "label",
-        "full_sentence": "Please label a barcode on every carton carefully.",
-        "explanation": "'label' สามารถใช้เป็นกริยา แปลว่า ติดฉลาก"
-      },
-      {
-        "thai_prompt": "เราจำเป็นต้องเก็บรักษาชิ้นส่วนที่มีตำหนิไว้ในพื้นที่กักแยก",
-        "prefix": "We must put the defective parts in the",
-        "suffix": "area.",
-        "hint": "คำแปลว่า 'พื้นที่กักกัน/กักแยก' (q...)",
-        "acceptable_answers": ["quarantine", "isolated"],
-        "correct_word": "quarantine",
-        "full_sentence": "We must put the defective parts in the quarantine area.",
-        "explanation": "'quarantine area' คือพื้นที่กักแยกของเสียหรือรอตรวจสอบ"
-      },
-      {
-        "thai_prompt": "พวกเราทำงานล่าช้ากว่ากำหนดการเดิมเล็กน้อยในวันนี้",
-        "prefix": "We are running slightly",
-        "suffix": "schedule today.",
-        "hint": "คำบุพบทแปลว่า 'อยู่ข้างหลัง/ช้ากว่า' (b...)",
-        "acceptable_answers": ["behind"],
-        "correct_word": "behind",
-        "full_sentence": "We are running slightly behind schedule today.",
-        "explanation": "'behind schedule' แปลว่า ช้ากว่ากำหนดการที่วางไว้"
-      }
+      {"thai_prompt": "ฉันส่งเอกสารให้ลูกค้าเรียบร้อยแล้วเมื่อวานนี้", "prefix": "I", "suffix": "the document to the client yesterday.", "hint": "send เปลี่ยนเป็นอดีต (Past Simple)", "acceptable_answers": ["sent"], "correct_word": "sent", "full_sentence": "I sent the document to the client yesterday.", "explanation": "เหตุการณ์ในอดีต (yesterday) ใช้กริยาช่อง 2 คือ sent"},
+      {"thai_prompt": "พวกเรากำลังตรวจสอบสต็อกสินค้าอยู่ในขณะนี้", "prefix": "We are currently", "suffix": "the inventory in the warehouse.", "hint": "check ในรูปกำลังกระทำ (V.ing)", "acceptable_answers": ["checking"], "correct_word": "checking", "full_sentence": "We are currently checking the inventory in the warehouse.", "explanation": "กำลังกระทำอยู่ใช้ is/am/are + V.ing"},
+      {"thai_prompt": "ฉันจะแจ้งให้คุณทราบทันทีที่มีข้อมูลอัปเดต", "prefix": "I will", "suffix": "you know as soon as there is an update.", "hint": "คำกริยาแปลว่า ปล่อย/ให้ (l...)", "acceptable_answers": ["let"], "correct_word": "let", "full_sentence": "I will let you know as soon as there is an update.", "explanation": "'let you know' แปลว่า แจ้งให้คุณทราบ"},
+      {"thai_prompt": "เครื่องจักรหยุดทำงานเนื่องจากเหตุขัดข้องทางเทคนิค", "prefix": "The machine stopped running", "suffix": "to technical issues.", "hint": "คำเชื่อมแปลว่า เนื่องจาก (d...)", "acceptable_answers": ["due"], "correct_word": "due", "full_sentence": "The machine stopped running due to technical issues.", "explanation": "'due to' แปลว่า เนื่องจาก ตามด้วยคำนาม"},
+      {"thai_prompt": "ช่วยยืนยันการรับสินค้าล็อตนี้ให้ด้วยครับ", "prefix": "Could you please", "suffix": "receipt of this shipment?", "hint": "คำกริยาแปลว่า ยืนยัน (c...)", "acceptable_answers": ["confirm"], "correct_word": "confirm", "full_sentence": "Could you please confirm receipt of this shipment?", "explanation": "'confirm receipt' แปลว่า ยืนยันการรับของ"},
+      {"thai_prompt": "ทุกอย่างดำเนินไปตามกำหนดการที่วางไว้", "prefix": "Everything is running according to", "suffix": ".", "hint": "คำนามแปลว่า กำหนดการ (s...)", "acceptable_answers": ["schedule"], "correct_word": "schedule", "full_sentence": "Everything is running according to schedule.", "explanation": "'according to schedule' แปลว่า ตามกำหนดการ"},
+      {"thai_prompt": "รถขนส่งสินค้ามาถึงที่ท่าเทียบรับสินค้าเรียบร้อยแล้ว", "prefix": "The truck has arrived at the loading", "suffix": ".", "hint": "คำแปลว่า ท่าเทียบโหลดของ (d...)", "acceptable_answers": ["dock"], "correct_word": "dock", "full_sentence": "The truck has arrived at the loading dock.", "explanation": "'loading dock' แปลว่า ท่าขนถ่ายสินค้า"},
+      {"thai_prompt": "กรุณาติดฉลากบาร์โค้ดลงบนทุกกล่องอย่างระมัดระวัง", "prefix": "Please", "suffix": "a barcode on every carton carefully.", "hint": "คำกริยาแปลว่า ติดฉลาก (l...)", "acceptable_answers": ["label"], "correct_word": "label", "full_sentence": "Please label a barcode on every carton carefully.", "explanation": "'label' ใช้เป็นกริยาแปลว่า ติดฉลาก"},
+      {"thai_prompt": "เราจำเป็นต้องเก็บชิ้นส่วนที่มีตำหนิไว้ในพื้นที่กักแยก", "prefix": "We must put defective parts in the", "suffix": "area.", "hint": "พื้นที่กักกัน/แยกของ (q...)", "acceptable_answers": ["quarantine"], "correct_word": "quarantine", "full_sentence": "We must put defective parts in the quarantine area.", "explanation": "'quarantine area' คือพื้นที่กักแยกสินค้า"},
+      {"thai_prompt": "พวกเราทำงานล่าช้ากว่ากำหนดการเดิมเล็กน้อยในวันนี้", "prefix": "We are running slightly", "suffix": "schedule today.", "hint": "คำบุพบทแปลว่า ช้ากว่า/อยู่หลัง (b...)", "acceptable_answers": ["behind"], "correct_word": "behind", "full_sentence": "We are running slightly behind schedule today.", "explanation": "'behind schedule' แปลว่า ช้ากว่ากำหนดการ"}
     ],
     "stories": [
       {
         "title": "Too Much Foam",
         "image_url": "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=900&auto=format&fit=crop&q=80",
-        "vocab_list": [
-          {"word": "washing machine", "pos": "n.", "th": "เครื่องซักผ้า"},
-          {"word": "break", "pos": "v.", "th": "เสีย / พัง"},
-          {"word": "laundromat", "pos": "n.", "th": "ร้านซักผ้าหยอดเหรียญ"},
-          {"word": "add", "pos": "v.", "th": "เพิ่ม / ใส่ลงไป"},
-          {"word": "foam", "pos": "n.", "th": "ฟองสบู่ / ฟองโฟม"},
-          {"word": "pour", "pos": "v.", "th": "เท / ไหลทะลัก"},
-          {"word": "staff member", "pos": "n.", "th": "พนักงาน"},
-          {"word": "turn off", "pos": "v.", "th": "ปิดเครื่อง"},
-          {"word": "dish soap", "pos": "n.", "th": "น้ำยาล้างจาน"},
-          {"word": "laundry detergent", "pos": "n.", "th": "น้ำยาซักผ้า"},
-          {"word": "clean", "pos": "v.", "th": "ทำความสะอาด"}
-        ],
-        "story_en": "Eric’s <b>washing machine breaks</b>, so he visits a <b>laundromat</b>. He puts his clothes into a machine, <b>adds</b> some soap, and presses Start. A few minutes later, <b>foam</b> begins <b>pouring</b> onto the floor.<br><br>Eric quickly looks for a <b>staff member</b>. A woman <b>turns off</b> the machine and points to the bottle in his hand. “That is <b>dish soap</b>, not <b>laundry detergent</b>,” she explains.<br><br>Eric helps <b>clean</b> the floor. Before he leaves, the woman gives him a small bottle of detergent. “Save the other soap for your dishes,” she says with a smile.",
-        "story_en_plain": "Eric’s washing machine breaks, so he visits a laundromat. He puts his clothes into a machine, adds some soap, and presses Start. A few minutes later, foam begins pouring onto the floor. Eric quickly looks for a staff member. A woman turns off the machine and points to the bottle in his hand. That is dish soap, not laundry detergent, she explains. Eric helps clean the floor. Before he leaves, the woman gives him a small bottle of detergent. Save the other soap for your dishes, she says with a smile.",
-        "story_th": "เครื่องซักผ้าของอีริกเสีย เขาจึงไปร้านซักผ้าหยอดเหรียญ เขาใส่เสื้อผ้าลงในเครื่อง เติมน้ำยาทำความสะอาด แล้วกดปุ่มเริ่มทำงาน ไม่กี่นาทีต่อมา ฟองจำนวนมากเริ่มไหลทะลักออกมาเต็มพื้น\n\nอีริกรีบมองหาพนักงาน ผู้หญิงคนหนึ่งรีบเข้ามาปิดเครื่องแล้วชี้ไปที่ขวดในมือของเขา “นั่นมันน้ำยาล้างจานค่ะ ไม่ใช่น้ำยาซักผ้า” เธออธิบาย\n\nอีริกช่วยทำความสะอาดเช็ดพื้น ก่อนที่เขาจะกลับ ผู้หญิงคนนั้นมอบน้ำยาซักผ้าขวดเล็กๆ ให้เขา แล้วบอกว่า “เก็บน้ำยาอีกขวดไว้ใช้ล้างจานของคุณเถอะนะคะ”"
+        "vocab_list": [{"word": "washing machine", "pos": "n.", "th": "เครื่องซักผ้า"}, {"word": "break", "pos": "v.", "th": "เสีย/พัง"}, {"word": "laundromat", "pos": "n.", "th": "ร้านซักผ้าหยอดเหรียญ"}, {"word": "foam", "pos": "n.", "th": "ฟองสบู่"}],
+        "story_en": "Eric’s <b>washing machine breaks</b>, so he visits a <b>laundromat</b>. He puts clothes into a machine, adds soap, and presses Start. Minutes later, <b>foam</b> pours onto the floor.<br><br>The staff turns it off and points to his bottle: “That is dish soap, not laundry detergent!”",
+        "story_en_plain": "Eric’s washing machine breaks, so he visits a laundromat. He puts clothes into a machine, adds soap, and presses Start. Minutes later, foam pours onto the floor. The staff turns it off and points to his bottle: That is dish soap, not laundry detergent!",
+        "story_th": "เครื่องซักผ้าของอีริกพัง เขาจึงไปร้านซักผ้าหยอดเหรียญ เขาใส่ผ้า เติมน้ำยา แล้วกดเริ่ม ไม่กี่นาทีต่อมาฟองไหลทะลักเต็มพื้น พนักงานรีบมาปิดแล้วชี้ขวดในมือเขา: นั่นมันน้ำยาล้างจาน ไม่ใช่น้ำยาซักผ้า!"
       },
       {
         "title": "The Power Cut",
         "image_url": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=900&auto=format&fit=crop&q=80",
-        "vocab_list": [
-          {"word": "apartment", "pos": "n.", "th": "อพาร์ตเมนต์ / ที่พัก"},
-          {"word": "suddenly", "pos": "adv.", "th": "กะทันหัน / จู่ๆ ก็"},
-          {"word": "flashlight", "pos": "n.", "th": "ไฟฉาย"},
-          {"word": "hallway", "pos": "n.", "th": "โถงทางเดิน"},
-          {"word": "neighbor", "pos": "n.", "th": "เพื่อนบ้าน"},
-          {"word": "snack", "pos": "n.", "th": "ขนมขบเคี้ยว"},
-          {"word": "candle", "pos": "n.", "th": "เทียนไข"},
-          {"word": "notice", "pos": "v.", "th": "สังเกตเห็น"},
-          {"word": "electricity", "pos": "n.", "th": "ไฟฟ้า"},
-          {"word": "cheer", "pos": "v.", "th": "ส่งเสียงดีใจ / ไชโย"},
-          {"word": "enjoyable", "pos": "adj.", "th": "สนุกสนาน / เพลิดเพลิน"}
-        ],
-        "story_en": "At eight o’clock, all the lights in Maya’s <b>apartment</b> building <b>suddenly</b> go out. She finds a <b>flashlight</b> and walks into the <b>hallway</b>, where several <b>neighbors</b> are checking the doors and stairs.<br><br>Without television or internet, everyone begins talking. One neighbor brings <b>snacks</b>, another finds <b>candles</b>, and a child starts telling funny stories. Nobody <b>notices</b> how quickly the time passes.<br><br>An hour later, the <b>electricity</b> returns. Everyone <b>cheers</b>, but then they turn the lights off again. The hallway party is much more <b>enjoyable</b> in the dark.",
-        "story_en_plain": "At eight o’clock, all the lights in Maya’s apartment building suddenly go out. She finds a flashlight and walks into the hallway, where several neighbors are checking the doors and stairs. Without television or internet, everyone begins talking. One neighbor brings snacks, another finds candles, and a child starts telling funny stories. Nobody notices how quickly the time passes. An hour later, the electricity returns. Everyone cheers, but then they turn the lights off again. The hallway party is much more enjoyable in the dark.",
-        "story_th": "ตอนสองทุ่ม ไฟทุกดวงในอาคารที่พักของมายาดับลงกะทันหัน เธอหาไฟฉายและเดินออกไปที่โถงทางเดิน ซึ่งเพื่อนบ้านหลายคนกำลังเดินตรวจดูประตูและบันได\n\nเมื่อไม่มีทีวีหรืออินเทอร์เน็ต ทุกคนจึงเริ่มเปิดใจพูดคุยกัน เพื่อนบ้านคนหนึ่งนำขนมมาแบ่ง อีกคนหาเทียนไขมาจุด และเด็กคนหนึ่งเริ่มเล่าเรื่องตลก ไม่มีใครสังเกตเลยว่าเวลาผ่านไปเร็วแค่ไหน\n\nหนึ่งชั่วโมงต่อมา ไฟฟ้ากลับมาติด ทุกคนส่งเสียงดีใจ แต่แล้วพวกเขากลับปิดไฟลงอีกครั้ง งานเลี้ยงเล็กๆ ตรงโถงทางเดินสนุกสนานกว่ามากเมื่ออยู่ใต้แสงเทียน"
+        "vocab_list": [{"word": "apartment", "pos": "n.", "th": "อพาร์ตเมนต์"}, {"word": "suddenly", "pos": "adv.", "th": "กะทันหัน"}, {"word": "flashlight", "pos": "n.", "th": "ไฟฉาย"}, {"word": "neighbor", "pos": "n.", "th": "เพื่อนบ้าน"}],
+        "story_en": "At eight o'clock, the lights in Maya's <b>apartment</b> <b>suddenly</b> go out. She grabs a <b>flashlight</b> and walks out to meet her <b>neighbors</b>.<br><br>Without internet, they share snacks and tell stories under candlelight, enjoying the cozy evening together.",
+        "story_en_plain": "At eight o'clock, the lights in Maya's apartment suddenly go out. She grabs a flashlight and walks out to meet her neighbors. Without internet, they share snacks and tell stories under candlelight, enjoying the cozy evening together.",
+        "story_th": "ตอนสองทุ่ม ไฟในอพาร์ตเมนต์ของมายาดับลงกะทันหัน เธอคว้าไฟฉายเดินออกไปเจอเพื่อนบ้าน เมื่อไม่มีเน็ต ทุกคนจึงแบ่งขนมและเล่าเรื่องสนุกสนานใต้แสงเทียนอย่างมีความสุข"
       },
       {
         "title": "The Missing Barcode",
         "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
-        "vocab_list": [
-          {"word": "scanner", "pos": "n.", "th": "เครื่องสแกนเนอร์"},
-          {"word": "beep", "pos": "v.", "th": "ส่งเสียงบี๊บเตือน"},
-          {"word": "carton", "pos": "n.", "th": "กล่องกระดาษลูกฟูก"},
-          {"word": "smudge", "pos": "v./n.", "th": "เปื้อนหมึก / เลอะเลือน"},
-          {"word": "system", "pos": "n.", "th": "ระบบข้อมูล"},
-          {"word": "serial number", "pos": "n.", "th": "หมายเลขลำดับเฉพาะ"},
-          {"word": "print", "pos": "v.", "th": "พิมพ์เอกสาร"},
-          {"word": "relief", "pos": "n.", "th": "ความโล่งอก / สบายใจ"}
-        ],
-        "story_en": "Sam points his handheld <b>scanner</b> at the box, but it will not <b>beep</b>. The <b>barcode</b> on the large <b>carton</b> is wet and heavily <b>smudged</b>.<br><br>The transport truck leaves in thirty minutes. Sam cannot dispatch the goods without registering them into the <b>system</b>. He calmly reads the tiny <b>serial number</b> printed beneath the smudge and types it manually.<br><br>The screen flashes green with <b>relief</b>. Sam quickly <b>prints</b> a fresh label, sticks it on, and loads the box onto the waiting pallet.",
-        "story_en_plain": "Sam points his handheld scanner at the box, but it will not beep. The barcode on the large carton is wet and heavily smudged. The transport truck leaves in thirty minutes. Sam cannot dispatch the goods without registering them into the system. He calmly reads the tiny serial number printed beneath the smudge and types it manually. The screen flashes green with relief. Sam quickly prints a fresh label, sticks it on, and loads the box onto the waiting pallet.",
-        "story_th": "แซมจ่อเครื่องสแกนพกพาไปที่กล่องสินค้า แต่มันกลับไม่มีเสียงบี๊บตอบรับ บาร์โค้ดบนกล่องกระดาษลังขนาดใหญ่เปียกน้ำและเลอะเลือนจนอ่านไม่ออก\n\nรถบรรทุกขนส่งจะออกเดินทางในอีก 30 นาที แซมไม่สามารถปล่อยสินค้าออกไปได้หากยังไม่ลงทะเบียนเข้าระบบ เขาตั้งสติแล้วอ่านหมายเลขซีเรียลตัวเล็กๆ ใต้รอยเปื้อนแล้วพิมพ์ลงเครื่องด้วยมือ\n\nหน้าจอสว่างขึ้นเป็นสีเขียวด้วยความโล่งอก แซมรีบสั่งพิมพ์ฉลากใบใหม่ออกมา ติดลงบนกล่อง แล้วยกขึ้นจัดเรียงบนพาเลทที่จอดรออยู่ทันที"
+        "vocab_list": [{"word": "scanner", "pos": "n.", "th": "เครื่องสแกน"}, {"word": "carton", "pos": "n.", "th": "กล่องลัง"}, {"word": "smudge", "pos": "v.", "th": "เปื้อนเลอะ"}, {"word": "serial number", "pos": "n.", "th": "หมายเลขลำดับ"}],
+        "story_en": "Sam's <b>scanner</b> fails because the <b>carton</b> barcode is wet and <b>smudged</b>. The truck departs soon.<br><br>He calmly reads the tiny <b>serial number</b>, keys it into the system manually, prints a new label, and loads the box safely.",
+        "story_en_plain": "Sam's scanner fails because the carton barcode is wet and smudged. The truck departs soon. He calmly reads the tiny serial number, keys it into the system manually, prints a new label, and loads the box safely.",
+        "story_th": "เครื่องสแกนของแซมอ่านไม่ได้เพราะบาร์โค้ดบนกล่องเปียกและเปื้อนหมึก ขณะที่รถบรรทุกใกล้จะออก เขาตั้งสติอ่านเลขซีเรียลตัวจิ๋ว พิมพ์เข้าระบบ สั่งพิมพ์ฉลากใหม่ แล้วยกของขึ้นรถได้ทันเวลา"
       },
       {
         "title": "A Warm Cup of Coffee",
         "image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=900&auto=format&fit=crop&q=80",
-        "vocab_list": [
-          {"word": "exhausted", "pos": "adj.", "th": "เหนื่อยล้าอย่างยิ่ง"},
-          {"word": "shift", "pos": "n.", "th": "กะการทำงาน"},
-          {"word": "reorganize", "pos": "v.", "th": "จัดระเบียบใหม่"},
-          {"word": "heavy", "pos": "adj.", "th": "หนัก / มีน้ำหนักมาก"},
-          {"word": "canteen", "pos": "n.", "th": "โรงอาหาร"},
-          {"word": "colleague", "pos": "n.", "th": "เพื่อนร่วมงาน"},
-          {"word": "hand over", "pos": "v.", "th": "ยื่นส่งให้"},
-          {"word": "recharge", "pos": "v.", "th": "เติมพลัง / ชาร์จแบต"}
-        ],
-        "story_en": "After eight hours of counting boxes in Room A1, Tom is completely <b>exhausted</b>. His morning <b>shift</b> involved <b>reorganizing</b> sixty storage locations and moving <b>heavy</b> racks.<br><br>He sits down quietly in the factory <b>canteen</b>. His <b>colleague</b> Sarah notices his tired face and walks over, <b>handing over</b> a hot cup of fresh coffee. “Great job today on the warehouse project,” she smiles.<br><br>Tom takes a warm sip and feels instantly <b>recharged</b>. A little kindness from a coworker makes all the hard work worthwhile.",
-        "story_en_plain": "After eight hours of counting boxes in Room A1, Tom is completely exhausted. His morning shift involved reorganizing sixty storage locations and moving heavy racks. He sits down quietly in the factory canteen. His colleague Sarah notices his tired face and walks over, handing over a hot cup of fresh coffee. Great job today on the warehouse project, she smiles. Tom takes a warm sip and feels instantly recharged. A little kindness from a coworker makes all the hard work worthwhile.",
-        "story_th": "หลังจากการตรวจนับกล่องสินค้าในห้อง A1 มายาวนานถึง 8 ชั่วโมง ทอมรู้สึกเหนื่อยล้าเป็นอย่างยิ่ง กะเช้าของเขาต้องจัดระเบียบตำแหน่งจัดเก็บถึง 60 จุดและยกย้ายแร็คที่หนักมาก\n\nเขานั่งลงเงียบๆ ในโรงอาหารของโรงงาน ซาร่าเพื่อนร่วมงานสังเกตเห็นสีหน้าอ่อนเพลียของเขา จึงเดินเข้ามาหาพร้อมยื่นกาแฟร้อนแก้วใหม่ให้ “วันนี้ทำผลงานโปรเจกต์คลังสินค้าได้ยอดเยี่ยมมากเลยนะ” เธอยิ้มให้\n\nทอมจิบกาแฟอุ่นๆ และรู้สึกเหมือนได้เติมพลังขึ้นมาทันที ความมีน้ำใจเล็กๆ น้อยๆ จากเพื่อนร่วมงานทำให้ความเหนื่อยยากตลอดทั้งวันมีคุณค่าขึ้นมาทันที"
+        "vocab_list": [{"word": "exhausted", "pos": "adj.", "th": "เหนื่อยล้ามาก"}, {"word": "shift", "pos": "n.", "th": "กะการทำงาน"}, {"word": "colleague", "pos": "n.", "th": "เพื่อนร่วมงาน"}, {"word": "recharge", "pos": "v.", "th": "เติมพลัง"}],
+        "story_en": "After an eight-hour <b>shift</b> counting boxes in Room A1, Tom is <b>exhausted</b>.<br><br>His <b>colleague</b> Sarah hands him a warm cup of coffee with a smile: “Great work today!” That simple kindness <b>recharges</b> his spirit instantly.",
+        "story_en_plain": "After an eight-hour shift counting boxes in Room A1, Tom is exhausted. His colleague Sarah hands him a warm cup of coffee with a smile: Great work today! That simple kindness recharges his spirit instantly.",
+        "story_th": "หลังจบกะ 8 ชั่วโมงตรวจนับกล่องในห้อง A1 ทอมเหนื่อยล้ามาก ซาร่าเพื่อนร่วมงานยื่นกาแฟอุ่นๆ พร้อมรอยยิ้ม: วันนี้ทำได้ยอดเยี่ยมมาก! น้ำใจเล็กๆ ช่วยเติมพลังให้เขาทันที"
+      }
+    ]
+  },
+  "2": {
+    "day": 2,
+    "title": "Day 2: Polite Requests & Inquiries",
+    "summary": "เทคนิคการขอความช่วยเหลือและการสอบถามข้อมูลอย่างสุภาพและเป็นมืออาชีพ",
+    "rule": "ใช้ Could you please... หรือ Would you mind... แทนการออกคำสั่งตรงๆ",
+    "vocab": [
+      {"word": "Clarify", "phonetic": "/ˈklær.ɪ.faɪ/", "part_of_speech": "v.", "meaning": "ชี้แจง / อธิบายให้กระจ่าง", "example": "Could you clarify this point?", "example_th": "ช่วยชี้แจงประเด็นนี้หน่อยได้ไหมครับ"},
+      {"word": "Appreciate", "phonetic": "/əˈpriː.ʃi.eɪt/", "part_of_speech": "v.", "meaning": "ซาบซึ้ง / ขอบคุณ", "example": "I appreciate your quick help.", "example_th": "ผมขอบคุณสำหรับความช่วยเหลืออันรวดเร็ว"},
+      {"word": "Assistance", "phonetic": "/əˈsɪs.təns/", "part_of_speech": "n.", "meaning": "ความช่วยเหลือ", "example": "Thank you for your assistance.", "example_th": "ขอบคุณสำหรับความช่วยเหลือครับ"},
+      {"word": "Prompt", "phonetic": "/prɒmpt/", "part_of_speech": "adj.", "meaning": "รวดเร็ว / ทันเวลา", "example": "Thank you for the prompt reply.", "example_th": "ขอบคุณสำหรับการตอบกลับอย่างรวดเร็ว"},
+      {"word": "Convenient", "phonetic": "/kənˈviː.ni.ənt/", "part_of_speech": "adj.", "meaning": "สะดวก", "example": "Call me when it is convenient.", "example_th": "โทรหาผมเมื่อสะดวกนะครับ"},
+      {"word": "Inquire", "phonetic": "/ɪnˈkwaɪər/", "part_of_speech": "v.", "meaning": "สอบถาม / ขอข้อมูล", "example": "I am calling to inquire about pricing.", "example_th": "ผมโทรมาเพื่อสอบถามเรื่องราคา"},
+      {"word": "Attachment", "phonetic": "/əˈtætʃ.mənt/", "part_of_speech": "n.", "meaning": "ไฟล์แนบ", "example": "Please see the attachment.", "example_th": "โปรดดูรายละเอียดในไฟล์แนบครับ"},
+      {"word": "Resend", "phonetic": "/ˌriːˈsend/", "part_of_speech": "v.", "meaning": "ส่งใหม่อีกครั้ง", "example": "Could you please resend the file?", "example_th": "ช่วยส่งไฟล์ใหม่อีกรอบได้ไหมครับ"},
+      {"word": "Regarding", "phonetic": "/rɪˈɡɑː.dɪŋ/", "part_of_speech": "prep.", "meaning": "เกี่ยวกับ / ในเรื่องของ", "example": "I have a question regarding safety.", "example_th": "ผมมีคำถามเกี่ยวกับความปลอดภัย"},
+      {"word": "Forward", "phonetic": "/ˈfɔː.wəd/", "part_of_speech": "v.", "meaning": "ส่งต่อ (อีเมล/ข้อความ)", "example": "Please forward this email to Jane.", "example_th": "ช่วยส่งต่ออีเมลนี้ให้เจนด้วยครับ"},
+      {"word": "Requirement", "phonetic": "/rɪˈkwaɪə.mənt/", "part_of_speech": "n.", "meaning": "ข้อกำหนด / ความต้องการ", "example": "Does it meet customer requirements?", "example_th": "มันตรงตามข้อกำหนดลูกค้าไหม"},
+      {"word": "Permission", "phonetic": "/pəˈmɪʃ.ən/", "part_of_speech": "n.", "meaning": "การอนุญาต", "example": "You need permission to enter.", "example_th": "คุณต้องได้รับอนุญาตก่อนเข้าพื้นที่"},
+      {"word": "Feedback", "phonetic": "/ˈfiːd.bæk/", "part_of_speech": "n.", "meaning": "ข้อเสนอแนะ / ความเห็นตอบกลับ", "example": "We welcome your honest feedback.", "example_th": "เรายินดีรับฟังข้อเสนอแนะที่จริงใจ"},
+      {"word": "Colleague", "phonetic": "/ˈkɒl.iːɡ/", "part_of_speech": "n.", "meaning": "เพื่อนร่วมงาน", "example": "My colleague will assist you.", "example_th": "เพื่อนร่วมงานของผมจะช่วยดูแลคุณครับ"},
+      {"word": "Urgent", "phonetic": "/ˈɜː.dʒənt/", "part_of_speech": "adj.", "meaning": "ด่วน", "example": "This is an urgent matter.", "example_th": "นี่คือเรื่องด่วนครับ"},
+      {"word": "Extend", "phonetic": "/ɪkˈstend/", "part_of_speech": "v.", "meaning": "ขยายเวลา / ยืดออกไป", "example": "Can we extend the deadline?", "example_th": "เราขอขยายเวลาส่งงานได้ไหมครับ"},
+      {"word": "Approve", "phonetic": "/əˈpruːv/", "part_of_speech": "v.", "meaning": "อนุมัติ", "example": "Please approve the overtime form.", "example_th": "ช่วยอนุมัติใบโอทีด้วยครับ"},
+      {"word": "Verify", "phonetic": "/ˈver.ɪ.faɪ/", "part_of_speech": "v.", "meaning": "ตรวจสอบยืนยัน", "example": "Verify the numbers carefully.", "example_th": "ตรวจสอบตัวเลขอย่างละเอียด"},
+      {"word": "Request", "phonetic": "/rɪˈkwest/", "part_of_speech": "n./v.", "meaning": "คำขอ / ร้องขอ", "example": "We received your request.", "example_th": "พวกเราได้รับคำขอของคุณแล้ว"},
+      {"word": "Available", "phonetic": "/əˈveɪ.lə.bəl/", "part_of_speech": "adj.", "meaning": "ว่าง / พร้อมใช้", "example": "Is the supervisor available?", "example_th": "หัวหน้างานว่างอยู่ไหมครับ"}
+    ],
+    "phrases": [
+      {"en": "Could you please clarify the delivery schedule?", "th": "ช่วยชี้แจงกำหนดการจัดส่งสินค้าให้ชัดเจนได้ไหมครับ", "tip": "Could you please สุภาพกว่า Can you"},
+      {"en": "Would you mind checking this detail for me?", "th": "รบกวนช่วยตรวจสอบรายละเอียดตรงนี้ให้หน่อยได้ไหมครับ", "tip": "หลัง Would you mind ตามด้วย V.ing เสมอ"},
+      {"en": "I would appreciate it if you could reply by today.", "th": "จะขอบคุณมากหากคุณสามารถตอบกลับได้ภายในวันนี้", "tip": "ใช้เร่งงานอย่างสุภาพ"},
+      {"en": "May I ask for an update regarding the shipment?", "th": "ขออนุญาตสอบถามความคืบหน้าเกี่ยวกับการจัดส่งได้ไหมครับ", "tip": "May I ask for สุภาพและเป็นทางการมาก"},
+      {"en": "Do you have five minutes for a quick sync?", "th": "คุณสะดวกคุยสายสั้นๆ สัก 5 นาทีไหมครับ", "tip": "quick sync = ประชุมอัปเดตงานสั้นๆ"},
+      {"en": "Please let me know if you need any further information.", "th": "แจ้งได้เลยนะครับหากต้องการข้อมูลเพิ่มเติม", "tip": "ประโยคปิดท้ายอีเมลยอดนิยม"},
+      {"en": "Could you resend the attachment? I did not receive it.", "th": "ช่วยส่งไฟล์แนบมาใหม่อีกครั้งได้ไหมครับ พอดีผมยังไม่ได้รับ", "tip": "resend เน้นเสียง /riːˈsend/"},
+      {"en": "Would it be possible to arrange a meeting tomorrow?", "th": "พอจะเป็นไปได้ไหมที่จะขอนัดประชุมวันพรุ่งนี้ครับ", "tip": "Would it be possible to... นุ่มนวลมาก"},
+      {"en": "Could you give me a hand with these heavy boxes?", "th": "ช่วยผมยกกล่องหนักพวกนี้หน่อยได้ไหมครับ", "tip": "give me a hand = ช่วยเหลือ"},
+      {"en": "I was wondering if you could check this document.", "th": "ผมอยากทราบว่าคุณพอจะช่วยดูเอกสารนี้ได้ไหมครับ", "tip": "I was wondering if... เป็นรูปขอร้องขั้นสูง"},
+      {"en": "May I borrow your scanner for just a few minutes?", "th": "ขออนุญาตยืมเครื่องสแกนสักสองสามนาทีได้ไหมครับ", "tip": "borrow = ขอยืม"},
+      {"en": "Could you please forward the invoice to Accounting?", "th": "ช่วยส่งต่อใบแจ้งหนี้ให้ฝ่ายบัญชีด้วยได้ไหมครับ", "tip": "forward to = ส่งต่อให้"},
+      {"en": "Would you mind speaking a little louder, please?", "th": "รบกวนช่วยพูดดังขึ้นอีกนิดหนึ่งได้ไหมครับ", "tip": "speaking เติม -ing หลัง mind"},
+      {"en": "Could you kindly remind the team about the deadline?", "th": "ช่วยกรุณาเตือนทีมงานเรื่องกำหนดส่งงานด้วยได้ไหมครับ", "tip": "Could you kindly... สุภาพและเป็นกันเอง"},
+      {"en": "May I have your approval on this overtime request?", "th": "ขออนุมัติจากคุณสำหรับคำขอทำโอทีนี้ได้ไหมครับ", "tip": "approval = การอนุมัติ"},
+      {"en": "Could you show me how to use this software?", "th": "ช่วยสอนวิธีใช้งานโปรแกรมนี้ให้ผมหน่อยได้ไหมครับ", "tip": "show me how to = สอนวิธีทำ"},
+      {"en": "I would be grateful if you could confirm by noon.", "th": "จะยินดีเป็นอย่างยิ่งหากคุณยืนยันกลับมาภายในเที่ยงนี้", "tip": "grateful = รู้สึกขอบคุณ"},
+      {"en": "Could you please make sure the door is locked?", "th": "ช่วยดูแลให้มั่นใจว่าประตูล็อคเรียบร้อยแล้วได้ไหมครับ", "tip": "make sure = ทำให้แน่ใจ"},
+      {"en": "Can you double-check the part number for me?", "th": "ช่วยตรวจทานหมายเลขชิ้นส่วนซ้ำให้ผมหน่อยได้ไหมครับ", "tip": "double-check = ตรวจทานซ้ำ"},
+      {"en": "Thank you in advance for your kind cooperation.", "th": "ขอบคุณล่วงหน้าสำหรับความร่วมมืออันดีของคุณครับ", "tip": "in advance = ล่วงหน้า"}
+    ],
+    "dialogues": [
+      {"title": "ขอให้เพื่อนร่วมงานช่วยตรวจไฟล์", "lines": [{"speaker": "A", "en": "Could you please check this Excel file for me?", "th": "ช่วยดูไฟล์ Excel นี้ให้หน่อยได้ไหมครับ"}, {"speaker": "B", "en": "Sure, send it over and I will look at it.", "th": "ได้สิ ส่งมาเลยเดี๋ยวผมดูให้ครับ"}]},
+      {"title": "ขอให้ส่งไฟล์แนบมาใหม่", "lines": [{"speaker": "Staff", "en": "The attachment was missing in your email.", "th": "ในอีเมลของคุณไม่มีไฟล์แนบมาด้วยครับ"}, {"speaker": "Vendor", "en": "Sorry about that! I will resend it right now.", "th": "ขอโทษด้วยครับ! เดี๋ยวผมรีบส่งใหม่ทันที"}]},
+      {"title": "ขอนัดประชุมสั้นๆ 5 นาที", "lines": [{"speaker": "Leader", "en": "Do you have 5 minutes for a quick sync?", "th": "คุณมีเวลาสัก 5 นาทีคุยกันสั้นๆ ไหม"}, {"speaker": "Staff", "en": "Yes, I am available right now.", "th": "ว่างครับ คุยตอนนี้ได้เลยครับ"}]},
+      {"title": "ขออนุญาตเข้าพบผู้จัดการ", "lines": [{"speaker": "Staff", "en": "May I talk to the manager for a moment?", "th": "ขออนุญาตคุยกับผู้จัดการสักครู่ได้ไหมครับ"}, {"speaker": "Admin", "en": "He is in a meeting. Please wait until 2 PM.", "th": "ท่านติดประชุมอยู่ค่ะ รบกวนรอถึงบ่ายสองนะคะ"}]},
+      {"title": "ขอยืมเครื่องสแกนบาร์โค้ด", "lines": [{"speaker": "Tom", "en": "May I borrow your scanner for ten minutes?", "th": "ขอยืมเครื่องสแกนของคุณสัก 10 นาทีได้ไหม"}, {"speaker": "Jack", "en": "Go ahead, I am not using it right now.", "th": "เอาไปได้เลย ตอนนี้ฉันไม่ได้ใช้อยู่พอดี"}]},
+      {"title": "ขอให้ชี้แจงรายละเอียดสเปก", "lines": [{"speaker": "Engineer", "en": "Could you clarify the thickness tolerance?", "th": "ช่วยชี้แจงเกณฑ์ความหนาที่ยอมรับได้หน่อยครับ"}, {"speaker": "QA", "en": "It must be between 1.5 and 1.8 millimeters.", "th": "ต้องอยู่ระหว่าง 1.5 ถึง 1.8 มิลลิเมตรครับ"}]},
+      {"title": "ขอให้ช่วยยกของหนัก", "lines": [{"speaker": "Worker A", "en": "Could you give me a hand with this rack?", "th": "ช่วยผมยกแร็คตัวนี้หน่อยได้ไหมครับ"}, {"speaker": "Worker B", "en": "Hold on, let me put on my gloves first.", "th": "รอแป๊บนะ ขอฉันใส่ถุงมือก่อน"}]},
+      {"title": "ขอขยายเวลาส่งงาน", "lines": [{"speaker": "Leader", "en": "Would it be possible to extend the deadline?", "th": "พอจะเป็นไปได้ไหมที่จะขอขยายเวลาส่งมอบ"}, {"speaker": "Client", "en": "We can grant you one extra day until Friday.", "th": "เราขยายเวลาให้ได้อีก 1 วันจนถึงวันศุกร์ครับ"}]},
+      {"title": "ขอให้เซ็นอนุมัติใบเบิกของ", "lines": [{"speaker": "Staff", "en": "Could you please sign off on this requisition?", "th": "ช่วยลงนามอนุมัติใบเบิกของนี้ให้หน่อยครับ"}, {"speaker": "Supervisor", "en": "Let me review the quantities first.", "th": "ขอผมดูจำนวนรายการก่อนนะ"}]},
+      {"title": "ขอความเห็นหลังการพรีเซนต์", "lines": [{"speaker": "Presenter", "en": "I would appreciate your feedback on my slides.", "th": "ผมจะขอบคุณมากหากคุณให้ความเห็นเรื่องสไลด์"}, {"speaker": "Colleague", "en": "They were clear and very easy to follow.", "th": "สไลด์ชัดเจนและเข้าใจง่ายมากเลยครับ"}]}
+    ],
+    "exercises": [
+      {"thai_prompt": "รบกวนช่วยตรวจสอบรายละเอียดตรงนี้ให้หน่อยได้ไหมครับ", "prefix": "Would you mind", "suffix": "this detail for me?", "hint": "check หลัง Would you mind ต้องเป็นรูป Gerund", "acceptable_answers": ["checking"], "correct_word": "checking", "full_sentence": "Would you mind checking this detail for me?", "explanation": "โครงสร้าง Would you mind + V.ing เสมอ"},
+      {"thai_prompt": "ช่วยชี้แจงกำหนดการส่งสินค้าให้ชัดเจนได้ไหมครับ", "prefix": "Could you please", "suffix": "the delivery schedule?", "hint": "คำกริยาแปลว่า ทำให้ชัดเจน/ชี้แจง (c...)", "acceptable_answers": ["clarify"], "correct_word": "clarify", "full_sentence": "Could you please clarify the delivery schedule?", "explanation": "Could you please + กริยาช่อง 1 ใช้ขอร้องอย่างสุภาพ"},
+      {"thai_prompt": "ผมจะขอบคุณเป็นอย่างยิ่งหากคุณสามารถตอบกลับได้ภายในวันนี้", "prefix": "I would", "suffix": "it if you could reply by today.", "hint": "คำกริยาแปลว่า ซาบซึ้ง/ขอบคุณ (a...)", "acceptable_answers": ["appreciate"], "correct_word": "appreciate", "full_sentence": "I would appreciate it if you could reply by today.", "explanation": "'I would appreciate it if...' เป็นสำนวนขอความร่วมมือชั้นสูง"},
+      {"thai_prompt": "ขออนุญาตสอบถามความคืบหน้าเกี่ยวกับพัสดุนี้ได้ไหมครับ", "prefix": "May I ask for an update", "suffix": "the shipment?", "hint": "คำบุพบทแปลว่า เกี่ยวกับ (ขึ้นต้นด้วย r)", "acceptable_answers": ["regarding"], "correct_word": "regarding", "full_sentence": "May I ask for an update regarding the shipment?", "explanation": "'regarding' แปลว่า เกี่ยวกับ ใช้ในบริบททางการ"},
+      {"thai_prompt": "คุณพอจะมีเวลาสัก 5 นาทีคุยงานสั้นๆ ไหมครับ", "prefix": "Do you have five minutes for a", "suffix": "sync?", "hint": "คำแปลว่า รวดเร็ว/ว่องไว (q...)", "acceptable_answers": ["quick"], "correct_word": "quick", "full_sentence": "Do you have five minutes for a quick sync?", "explanation": "'quick sync' แปลว่า ประชุมอัปเดตสั้นๆ"},
+      {"thai_prompt": "ช่วยส่งต่ออีเมลฉบับนี้ไปยังฝ่ายจัดซื้อให้หน่อยได้ไหมครับ", "prefix": "Could you please", "suffix": "this email to Procurement?", "hint": "คำกริยาแปลว่า ส่งต่อ (f...)", "acceptable_answers": ["forward"], "correct_word": "forward", "full_sentence": "Could you please forward this email to Procurement?", "explanation": "'forward' แปลว่า ส่งต่ออีเมล"},
+      {"thai_prompt": "พอจะเป็นไปได้ไหมที่จะเลื่อนเวลาประชุมออกไป", "prefix": "Would it be", "suffix": "to postpone the meeting?", "hint": "คำแปลว่า เป็นไปได้ (p...)", "acceptable_answers": ["possible"], "correct_word": "possible", "full_sentence": "Would it be possible to postpone the meeting?", "explanation": "'Would it be possible to...' แปลว่า พอจะเป็นไปได้ไหม"},
+      {"thai_prompt": "ช่วยส่งไฟล์แนบมาใหม่อีกครั้งได้ไหมครับ", "prefix": "Could you please", "suffix": "the attachment?", "hint": "คำกริยาแปลว่า ส่งซ้ำอีกรอบ (r...)", "acceptable_answers": ["resend"], "correct_word": "resend", "full_sentence": "Could you please resend the attachment?", "explanation": "'resend' แปลว่า ส่งใหม่อีกครั้ง"},
+      {"thai_prompt": "ช่วยมาช่วยผมยกของตรงนี้หน่อยได้ไหมครับ", "prefix": "Could you give me a", "suffix": "with this task?", "hint": "สำนวนแปลว่า ยื่นมือช่วยเหลือ (h...)", "acceptable_answers": ["hand"], "correct_word": "hand", "full_sentence": "Could you give me a hand with this task?", "explanation": "'give me a hand' แปลว่า ช่วยเหลือ"},
+      {"thai_prompt": "ขอบคุณล่วงหน้าสำหรับความช่วยเหลืออันดีของคุณครับ", "prefix": "Thank you in", "suffix": "for your kind assistance.", "hint": "คำแปลว่า ล่วงหน้า (a...)", "acceptable_answers": ["advance"], "correct_word": "advance", "full_sentence": "Thank you in advance for your kind assistance.", "explanation": "'in advance' แปลว่า ล่วงหน้า"}
+    ],
+    "stories": [
+      {
+        "title": "The Forgotten Attachment",
+        "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "attachment", "pos": "n.", "th": "ไฟล์แนบ"}, {"word": "forget", "pos": "v.", "th": "ลืม"}, {"word": "client", "pos": "n.", "th": "ลูกค้า"}, {"word": "resend", "pos": "v.", "th": "ส่งใหม่"}],
+        "story_en": "David clicks Send on an important email to his <b>client</b>. A minute later, he realizes he <b>forgot</b> to attach the invoice.<br><br>He politely replies: “Please find the <b>attachment</b> included in this message, with my apologies.” The client replies with a smile emoji.",
+        "story_en_plain": "David clicks Send on an important email to his client. A minute later, he realizes he forgot to attach the invoice. He politely replies: Please find the attachment included in this message, with my apologies. The client replies with a smile emoji.",
+        "story_th": "เดวิดกดส่งอีเมลสำคัญหาลูกค้า หนึ่งนาทีต่อมาเขานึกขึ้นได้ว่าลืมแนบใบแจ้งหนี้ เขาจึงรีบส่งตามไปอย่างสุภาพ: ขออภัยด้วยครับ โปรดดูไฟล์แนบในอีเมลฉบับนี้ ลูกค้าตอบกลับมาพร้อมอีโมจิยิ้ม"
+      },
+      {
+        "title": "A Quick Five Minutes",
+        "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "available", "pos": "adj.", "th": "ว่าง"}, {"word": "clarify", "pos": "v.", "th": "ชี้แจง"}, {"word": "project", "pos": "n.", "th": "โครงการ"}, {"word": "solution", "pos": "n.", "th": "ทางออก"}],
+        "story_en": "Lisa sees her supervisor walking past. “Do you have five minutes to <b>clarify</b> the label format?” she asks.<br><br>Her boss stops, looks at the sample, and points out the correct barcode standard. That five-minute chat saves the team three hours of rework.",
+        "story_en_plain": "Lisa sees her supervisor walking past. Do you have five minutes to clarify the label format? she asks. Her boss stops, looks at the sample, and points out the correct barcode standard. That five-minute chat saves the team three hours of rework.",
+        "story_th": "ลิซ่าเห็นหัวหน้าเดินผ่านมา จึงถามว่า: พอมีเวลา 5 นาทีช่วยดูรูปแบบฉลากหน่อยได้ไหมคะ หัวหน้าหยุดดูตัวอย่างแล้วชี้จุดมาตรฐานบาร์โค้ดที่ถูกต้อง การคุยแค่ 5 นาทีช่วยประหยัดเวลาแก้งานได้ถึง 3 ชั่วโมง"
+      },
+      {
+        "title": "Borrowing the Hand Truck",
+        "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "borrow", "pos": "v.", "th": "ขอยืม"}, {"word": "heavy", "pos": "adj.", "th": "หนัก"}, {"word": "cooperation", "pos": "n.", "th": "ความร่วมมือ"}, {"word": "return", "pos": "v.", "th": "นำมาคืน"}],
+        "story_en": "Ken needs to move twenty <b>heavy</b> boxes across Room A1. He walks over to Line 3: “May I <b>borrow</b> your hand truck for fifteen minutes?”<br><br>The operator agrees cheerfully. Ken finishes early and <b>returns</b> the cart with a cold can of green tea as thanks.",
+        "story_en_plain": "Ken needs to move twenty heavy boxes across Room A1. He walks over to Line 3: May I borrow your hand truck for fifteen minutes? The operator agrees cheerfully. Ken finishes early and returns the cart with a cold can of green tea as thanks.",
+        "story_th": "เคนต้องย้ายกล่องหนัก 20 กล่องในห้อง A1 เขาเดินไปที่สายการผลิตที่ 3: ขอยืมรถเข็นสัก 15 นาทีได้ไหมครับ เพื่อนร่วมงานยินดีให้ยืม เคนทำงานเสร็จเร็วและนำรถเข็นมาคืนพร้อมชาเขียวเย็นเป็นการขอบคุณ"
+      },
+      {
+        "title": "Polite Words Open Doors",
+        "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "polite", "pos": "adj.", "th": "สุภาพ"}, {"word": "urgent", "pos": "adj.", "th": "เร่งด่วน"}, {"word": "customs", "pos": "n.", "th": "ศุลกากร"}, {"word": "clearance", "pos": "n.", "th": "การผ่านพิธีการ"}],
+        "story_en": "An international shipment was stuck at <b>customs</b>. Instead of demanding immediate release, Nancy wrote a very <b>polite</b> email explaining the medical urgency.<br><br>Touched by her respectful tone, the customs officer expedited the <b>clearance</b> within the hour.",
+        "story_en_plain": "An international shipment was stuck at customs. Instead of demanding immediate release, Nancy wrote a very polite email explaining the medical urgency. Touched by her respectful tone, the customs officer expedited the clearance within the hour.",
+        "story_th": "สินค้าด่วนระหว่างประเทศติดอยู่ที่ด่านศุลกากร แทนที่จะส่งอีเมลสั่งการ แนนซี่เขียนอธิบายความจำเป็นอย่างสุภาพ เจ้าหน้าที่ประทับใจในความนุ่มนวล จึงเร่งดำเนินเรื่องให้เสร็จสิ้นภายในหนึ่งชั่วโมง"
+      }
+    ]
+  },
+  "3": {
+    "day": 3,
+    "title": "Day 3: Reporting Problems & Delays",
+    "summary": "การแจ้งปัญหา ความล่าช้า และการเสนอแนวทางแก้ไขโดยไม่ให้ผู้ฟังตระหนก",
+    "rule": "แจ้งปัญหา (Issue) -> อธิบายสาเหตุสั้นๆ (Due to) -> เสนอทางแก้ไข (Action)",
+    "vocab": [
+      {"word": "Delay", "phonetic": "/dɪˈleɪ/", "part_of_speech": "n./v.", "meaning": "ความล่าช้า / ทำให้ช้า", "example": "There is a slight delay.", "example_th": "มีความล่าช้าเกิดขึ้นเล็กน้อย"},
+      {"word": "Bottleneck", "phonetic": "/ˈbɒt.əl.nek/", "part_of_speech": "n.", "meaning": "จุดคอขวด / จุดติดขัด", "example": "We found a bottleneck at packing.", "example_th": "เราพบจุดคอขวดที่แผนกแพ็คของ"},
+      {"word": "Resolve", "phonetic": "/rɪˈzɒlv/", "part_of_speech": "v.", "meaning": "แก้ไขปัญหาลุล่วง", "example": "We resolved the issue.", "example_th": "พวกเราแก้ไขปัญหาเรียบร้อยแล้ว"},
+      {"word": "Malfunction", "phonetic": "/ˌmælˈfʌŋk.ʃən/", "part_of_speech": "n./v.", "meaning": "เครื่องขัดข้อง / ผิดปกติ", "example": "The motor malfunctioned.", "example_th": "มอเตอร์ทำงานผิดปกติ"},
+      {"word": "Impact", "phonetic": "/ˈɪm.pækt/", "part_of_speech": "n./v.", "meaning": "ผลกระทบ", "example": "We want to minimize the impact.", "example_th": "เราต้องการลดผลกระทบให้น้อยที่สุด"},
+      {"word": "Resume", "phonetic": "/rɪˈzjuːm/", "part_of_speech": "v.", "meaning": "เริ่มทำงานต่อ", "example": "Production will resume soon.", "example_th": "การผลิตจะเริ่มเดินเครื่องต่อเร็วๆ นี้"},
+      {"word": "Halt", "phonetic": "/hɒlt/", "part_of_speech": "v./n.", "meaning": "หยุดชะงัก", "example": "Operations were halted.", "example_th": "การดำเนินงานหยุดชะงักลง"},
+      {"word": "Emergency", "phonetic": "/ɪˈmɜː.dʒən.si/", "part_of_speech": "n.", "meaning": "เหตุฉุกเฉิน", "example": "Press the emergency stop button.", "example_th": "กดปุ่มหยุดฉุกเฉินทันที"},
+      {"word": "Shortage", "phonetic": "/ˈʃɔː.tɪdʒ/", "part_of_speech": "n.", "meaning": "ภาวะขาดแคลน / ของขาด", "example": "There is a raw material shortage.", "example_th": "เกิดภาวะขาดแคลนวัตถุดิบ"},
+      {"word": "Disruption", "phonetic": "/dɪsˈrʌp.ʃən/", "part_of_speech": "n.", "meaning": "การหยุดชะงัก / การขัดจังหวะ", "example": "We apologize for the disruption.", "example_th": "ขออภัยสำหรับการหยุดชะงัก"},
+      {"word": "Investigate", "phonetic": "/ɪnˈves.tɪ.ɡeɪt/", "part_of_speech": "v.", "meaning": "สืบสวน / ตรวจสอบหาสาเหตุ", "example": "We are investigating the cause.", "example_th": "เรากำลังตรวจสอบหาสาเหตุ"},
+      {"word": "Damage", "phonetic": "/ˈdæm.ɪdʒ/", "part_of_speech": "n./v.", "meaning": "ความเสียหาย / ชำรุด", "example": "Inspect the box for damage.", "example_th": "ตรวจดูกล่องว่ามีความเสียหายไหม"},
+      {"word": "Alternative", "phonetic": "/ɒlˈtɜː.nə.tɪv/", "part_of_speech": "n./adj.", "meaning": "ทางเลือกสำรอง", "example": "We have an alternative plan.", "example_th": "พวกเรามีแผนสำรองรองรับไว้"},
+      {"word": "Critical", "phonetic": "/ˈkrɪt.ɪ.kəl/", "part_of_speech": "adj.", "meaning": "วิกฤต / สำคัญยิ่ง", "example": "This is a critical spare part.", "example_th": "นี่คืออะไหล่ชิ้นส่วนสำคัญยิ่ง"},
+      {"word": "Overcome", "phonetic": "/ˌəʊ.vəˈkʌm/", "part_of_speech": "v.", "meaning": "เอาชนะอุปสรรค", "example": "We can overcome this issue.", "example_th": "เราสามารถเอาชนะปัญหานี้ได้"},
+      {"word": "Preventive", "phonetic": "/prɪˈven.tɪv/", "part_of_speech": "adj.", "meaning": "เชิงป้องกัน", "example": "Take preventive action.", "example_th": "ดำเนินมาตรการเชิงป้องกัน"},
+      {"word": "Technician", "phonetic": "/tekˈnɪʃ.ən/", "part_of_speech": "n.", "meaning": "ช่างเทคนิค", "example": "Call the on-duty technician.", "example_th": "เรียกช่างเทคนิคประจำกะมา"},
+      {"word": "Replacement", "phonetic": "/rɪˈpleɪs.mənt/", "part_of_speech": "n.", "meaning": "ของเปลี่ยนทดแทน", "example": "We ordered a replacement.", "example_th": "เราสั่งของทดแทนมาแล้ว"},
+      {"word": "Estimate", "phonetic": "/ˈes.tɪ.meɪt/", "part_of_speech": "v./n.", "meaning": "ประมาณการ", "example": "What is the estimated repair time?", "example_th": "เวลาซ่อมโดยประมาณคือเท่าไหร่"},
+      {"word": "Correction", "phonetic": "/kəˈrek.ʃən/", "part_of_speech": "n.", "meaning": "การแก้ไขให้ถูกต้อง", "example": "Make the necessary correction.", "example_th": "ทำการแก้ไขตามความจำเป็น"}
+    ],
+    "phrases": [
+      {"en": "We are experiencing a slight delay due to technical issues.", "th": "เรากำลังประสบปัญหาล่าช้าเล็กน้อยเนื่องจากปัญหาทางเทคนิค", "tip": "due to ตามด้วยคำนามเสมอ"},
+      {"en": "We have already taken corrective actions to resolve this.", "th": "เราได้ดำเนินมาตรการแก้ไขเพื่อจัดการปัญหานี้เรียบร้อยแล้ว", "tip": "corrective actions = มาตรการแก้ไข"},
+      {"en": "There is a minor discrepancy in the count.", "th": "พบความคลาดเคลื่อนเล็กน้อยในจำนวนนับ", "tip": "discrepancy = ยอดไม่ตรงกัน"},
+      {"en": "We are doing our best to minimize the impact on production.", "th": "พวกเรากำลังทำเต็มที่เพื่อลดผลกระทบต่อสายการผลิตให้น้อยที่สุด", "tip": "minimize the impact เป็นสำนวนมืออาชีพ"},
+      {"en": "The machine is temporarily out of service for maintenance.", "th": "เครื่องจักรหยุดทำงานชั่วคราวเพื่อรับการซ่อมบำรุงครับ", "tip": "out of service = ปิดซ่อม/งดบริการ"},
+      {"en": "We expect operations to resume by 3:00 PM.", "th": "เราคาดว่าจะกลับมาเดินเครื่องได้อีกครั้งตอนบ่าย 3 โมง", "tip": "resume = เริ่มต่อ"},
+      {"en": "The root cause was identified as a sensor failure.", "th": "สาเหตุที่แท้จริงตรวจพบว่าเกิดจากเซนเซอร์ขัดข้อง", "tip": "root cause = สาเหตุต้นตอ"},
+      {"en": "We apologize for the inconvenience and will keep you updated.", "th": "ขออภัยในความไม่สะดวกและจะคอยรายงานความคืบหน้าครับ", "tip": "ประโยคจบการแจ้งปัญหามาตรฐาน"},
+      {"en": "Production was halted for thirty minutes due to power loss.", "th": "สายการผลิตหยุดชะงักไป 30 นาทีเนื่องจากไฟดับ", "tip": "halted = หยุดชะงัก"},
+      {"en": "Our technician is currently troubleshooting the error code.", "th": "ช่างเทคนิคกำลังตรวจสอบแก้รหัสข้อผิดพลาดอยู่ครับ", "tip": "troubleshooting = วิเคราะห์แก้ปัญหา"},
+      {"en": "We switched to our backup supplier to avoid a material shortage.", "th": "เราเปลี่ยนไปใช้ซัพพลายเออร์สำรองเพื่อเลี่ยงของขาด", "tip": "backup supplier = ผู้จัดหาสำรอง"},
+      {"en": "Please isolate the damaged goods immediately.", "th": "กรุณาแยกสินค้าที่ชำรุดออกไปโดยทันทีครับ", "tip": "isolate = แยกเดี่ยว"},
+      {"en": "This error occurred during the system calibration.", "th": "ข้อผิดพลาดนี้เกิดขึ้นระหว่างการปรับเทียบค่าระบบ", "tip": "occurred = เกิดขึ้น"},
+      {"en": "We are currently running at 70% capacity.", "th": "ปัจจุบันเราเดินเครื่องอยู่ที่ 70% ของกำลังการผลิตครับ", "tip": "capacity = กำลังการผลิต"},
+      {"en": "The estimated delay is approximately two hours.", "th": "ความล่าช้าโดยประมาณอยู่ที่ราวๆ สองชั่วโมงครับ", "tip": "approximately = โดยประมาณ"},
+      {"en": "All operators have been briefed on the contingency plan.", "th": "พนักงานทุกคนได้รับฟังการชี้แจงแผนสำรองแล้วครับ", "tip": "contingency plan = แผนฉุกเฉิน"},
+      {"en": "No customer orders will be affected by this incident.", "th": "จะไม่มีออเดอร์ของลูกค้าได้รับผลกระทบจากเหตุการณ์นี้ครับ", "tip": "will be affected = ได้รับผลกระทบ"},
+      {"en": "We have implemented preventive measures to avoid recurrence.", "th": "เราได้ใช้มาตรการป้องกันเพื่อไม่ให้เกิดซ้ำแล้วครับ", "tip": "recurrence = การเกิดซ้ำ"},
+      {"en": "Please escalate this issue to the engineering manager.", "th": "รบกวนส่งต่อเรื่องนี้ให้ผู้จัดการฝ่ายวิศวกรรมด้วยครับ", "tip": "escalate = ส่งต่อเรื่องด่วน"},
+      {"en": "Everything is back under control now.", "th": "ตอนนี้ทุกอย่างกลับมาอยู่ภายใต้การควบคุมเรียบร้อยแล้วครับ", "tip": "under control = ควบคุมได้"}
+    ],
+    "dialogues": [
+      {"title": "เครื่องจักรสายพานหยุดกะทันหัน", "lines": [{"speaker": "Lead", "en": "Why did Line 2 stop?", "th": "ทำไมสายการผลิตที่ 2 ถึงหยุด"}, {"speaker": "Tech", "en": "The conveyor belt jammed. Fixing it now.", "th": "สายพานติดขัดครับ กำลังแก้ไขอยู่"}]},
+      {"title": "แจ้งลูกค้าเรื่องสินค้าดีเลย์", "lines": [{"speaker": "Staff", "en": "Your delivery will be delayed by one hour.", "th": "สินค้าของคุณจะล่าช้าไป 1 ชั่วโมงครับ"}, {"speaker": "Client", "en": "Thank you for informing us in advance.", "th": "ขอบคุณที่แจ้งให้เราทราบล่วงหน้าครับ"}]},
+      {"title": "วัตถุดิบขาดสต็อก", "lines": [{"speaker": "Purchasing", "en": "The raw material shipment is stuck at port.", "th": "วัตถุดิบติดอยู่ที่ท่าเรือครับ"}, {"speaker": "Manager", "en": "Use our safety stock for today's run.", "th": "นำสต็อกสำรองออกมาใช้ก่อนสำหรับวันนี้"}]},
+      {"title": "ตรวจพบรอยขีดข่วนบนชิ้นงาน", "lines": [{"speaker": "Inspector", "en": "I spotted surface scratches on this batch.", "th": "ผมพบรอยขีดข่วนบนผิวชิ้นงานล็อตนี้ครับ"}, {"speaker": "Lead", "en": "Quarantine them and notify QA right away.", "th": "กักแยกไว้แล้วรีบแจ้ง QA ทันที"}]},
+      {"title": "ไฟฟ้าดับในโกดัง", "lines": [{"speaker": "Staff", "en": "The power is out in Warehouse B.", "th": "ไฟดับในโกดัง B ครับ"}, {"speaker": "Lead", "en": "The generator will kick in in 30 seconds.", "th": "เครื่องปั่นไฟสำรองจะทำงานใน 30 วินาที"}]},
+      {"title": "รถโฟล์คลิฟต์แบตหมด", "lines": [{"speaker": "Driver", "en": "Forklift number 3 has a dead battery.", "th": "รถโฟล์คลิฟต์เบอร์ 3 แบตหมดครับ"}, {"speaker": "Lead", "en": "Plug it in and switch to Forklift 5.", "th": "เสียบชาร์จไว้แล้วไปใช้เบอร์ 5 แทน"}]},
+      {"title": "อุณหภูมิห้องเย็นเกินเกณฑ์", "lines": [{"speaker": "QA", "en": "Room A1 rose to 26 degrees Celsius.", "th": "ห้อง A1 อุณหภูมิพุ่งไป 26 องศาแล้ว"}, {"speaker": "Tech", "en": "I will reset the compressor unit now.", "th": "เดี๋ยวผมรีเซ็ตคอมเพรสเซอร์เดี๋ยวนี้ครับ"}]},
+      {"title": "กล่องสินค้าตกหล่น", "lines": [{"speaker": "Operator", "en": "One box fell from the top shelf.", "th": "มีกล่องหนึ่งตกลงมาจากชั้นบนสุดครับ"}, {"speaker": "Lead", "en": "Check if the inner products are intact.", "th": "ตรวจดูว่าสินค้าข้างในยังสมบูรณ์ดีไหม"}]},
+      {"title": "ระบบสแกนออนไลน์ล่ม", "lines": [{"speaker": "Staff", "en": "The Wi-Fi dropped; scanners cannot sync.", "th": "เน็ตหลุดครับ สแกนเนอร์ส่งข้อมูลไม่ได้"}, {"speaker": "IT", "en": "We are restarting the access point.", "th": "พวกเรากำลังรีสตาร์ตตัวกระจายสัญญาณครับ"}]},
+      {"title": "รายงานผู้จัดการเมื่อแก้เสร็จ", "lines": [{"speaker": "Staff", "en": "Line 2 is fully operational again.", "th": "สายการผลิตที่ 2 กลับมาเดินเครื่องปกติแล้วครับ"}, {"speaker": "Manager", "en": "Great recovery. Document the root cause.", "th": "กู้สถานการณ์ได้ดีมาก จดบันทึกสาเหตุไว้ด้วยนะ"}]}
+    ],
+    "exercises": [
+      {"thai_prompt": "เรากำลังประสบปัญหาล่าช้าเล็กน้อยเนื่องจากปัญหาทางเทคนิค", "prefix": "We are experiencing a slight delay", "suffix": "technical issues.", "hint": "คำบุพบทแปลว่า เนื่องจาก (d...)", "acceptable_answers": ["due to"], "correct_word": "due to", "full_sentence": "We are experiencing a slight delay due to technical issues.", "explanation": "ใช้วลี due to ตามด้วยคำนามเพื่ออธิบายสาเหตุ"},
+      {"thai_prompt": "พวกเรากำลังทำทุกอย่างเพื่อลดผลกระทบต่อลูกค้าให้น้อยที่สุด", "prefix": "We are doing our best to", "suffix": "the impact on customers.", "hint": "คำกริยาแปลว่า ลดให้น้อยที่สุด (m...)", "acceptable_answers": ["minimize", "minimise"], "correct_word": "minimize", "full_sentence": "We are doing our best to minimize the impact on customers.", "explanation": "'minimize' แปลว่า ลดระดับลงให้เหลือน้อยที่สุด"},
+      {"thai_prompt": "ปัญหานี้ได้รับการแก้ไขเรียบร้อยแล้วโดยทีมวิศวกร", "prefix": "This problem has been", "suffix": "by the engineering team.", "hint": "คำกริยาช่อง 3 แปลว่า แก้ไขลุล่วง (r...)", "acceptable_answers": ["resolved", "fixed"], "correct_word": "resolved", "full_sentence": "This problem has been resolved by the engineering team.", "explanation": "'resolved' นิยมใช้ในความหมายว่า แก้ไขปัญหาสำเร็จ"},
+      {"thai_prompt": "เครื่องจักรหยุดทำงานลงอย่างกะทันหัน", "prefix": "The machinery was", "suffix": "unexpectedly.", "hint": "คำกริยาช่อง 3 แปลว่า ถูกสั่งหยุด/ชะงัก (h...)", "acceptable_answers": ["halted", "stopped"], "correct_word": "halted", "full_sentence": "The machinery was halted unexpectedly.", "explanation": "'halted' หมายถึง การหยุดชะงักลง"},
+      {"thai_prompt": "เราจำเป็นต้องแยกสินค้าที่มีตำหนิออกทันที", "prefix": "We must", "suffix": "the defective items immediately.", "hint": "คำกริยาแปลว่า แยกเดี่ยว/กักแยก (i...)", "acceptable_answers": ["isolate", "quarantine"], "correct_word": "isolate", "full_sentence": "We must isolate the defective items immediately.", "explanation": "'isolate' แปลว่า แยกชิ้นส่วนที่มีปัญหาออก"},
+      {"thai_prompt": "การผลิตจะกลับมาเริ่มต้นใหม่อีกครั้งเวลาบ่ายสองโมง", "prefix": "Production will", "suffix": "at 2:00 PM.", "hint": "คำกริยาแปลว่า กลับมาเริ่มต่อ (r...)", "acceptable_answers": ["resume"], "correct_word": "resume", "full_sentence": "Production will resume at 2:00 PM.", "explanation": "'resume' แปลว่า เริ่มทำงานใหม่อีกครั้งหลังจากหยุดไป"},
+      {"thai_prompt": "สาเหตุที่แท้จริงเกิดจากเซนเซอร์ตรวจจับเสีย", "prefix": "The", "suffix": "cause was a broken sensor.", "hint": "คำแปลว่า รากเหง้า/ต้นตอ (r...)", "acceptable_answers": ["root"], "correct_word": "root", "full_sentence": "The root cause was a broken sensor.", "explanation": "'root cause' คือสาเหตุที่แท้จริงของปัญหา"},
+      {"thai_prompt": "เรามีแผนสำรองเพื่อป้องกันสินค้าขาดแคลน", "prefix": "We have a", "suffix": "plan in place.", "hint": "คำแปลว่า ทางเลือกสำรอง (c... หรือ a...)", "acceptable_answers": ["contingency", "backup", "alternative"], "correct_word": "contingency", "full_sentence": "We have a contingency plan in place.", "explanation": "'contingency plan' แปลว่า แผนฉุกเฉินสำรอง"},
+      {"thai_prompt": "เรากำลังเผชิญกับภาวะขาดแคลนวัตถุดิบ", "prefix": "We are facing a material", "suffix": ".", "hint": "คำนามแปลว่า การขาดแคลน (s...)", "acceptable_answers": ["shortage"], "correct_word": "shortage", "full_sentence": "We are facing a material shortage.", "explanation": "'shortage' แปลว่า ภาวะของขาดแคลน"},
+      {"thai_prompt": "ตอนนี้สถานการณ์ทั้งหมดกลับมาอยู่ภายใต้การควบคุมแล้ว", "prefix": "The situation is back", "suffix": "control now.", "hint": "คำบุพบทแปลว่า ใต้ (u...)", "acceptable_answers": ["under"], "correct_word": "under", "full_sentence": "The situation is back under control now.", "explanation": "'under control' แปลว่า อยู่ในการควบคุม"},
+    ],
+    "stories": [
+      {
+        "title": "The Jammed Conveyor",
+        "image_url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "conveyor", "pos": "n.", "th": "สายพานลำเลียง"}, {"word": "jam", "pos": "v.", "th": "ติดขัด"}, {"word": "technician", "pos": "n.", "th": "ช่างเทคนิค"}, {"word": "resume", "pos": "v.", "th": "เริ่มทำงานต่อ"}],
+        "story_en": "A loud screech echoes across the packing area. A plastic box <b>jammed</b> inside the <b>conveyor</b> belt, halting all movement.<br><br>The on-duty <b>technician</b> clears the blockage and inspects the motor. Within twenty minutes, the line <b>resumes</b> safely without damaging a single product.",
+        "story_en_plain": "A loud screech echoes across the packing area. A plastic box jammed inside the conveyor belt, halting all movement. The on-duty technician clears the blockage and inspects the motor. Within twenty minutes, the line resumes safely without damaging a single product.",
+        "story_th": "เสียงดังเอี๊ยดก้องไปทั่วแผนกบรรจุหีบห่อ กล่องพลาสติกติดขัดในสายพานลำเลียงทำให้ทุกอย่างหยุดชะงัก ช่างเทคนิคประจำกะรีบเคลียร์จุดติดขัดและตรวจเช็คมอเตอร์ ภายใน 20 นาทีสายการผลิตก็กลับมาเดินเครื่องได้ตามปกติโดยไม่มีสินค้าเสียหาย"
+      },
+      {
+        "title": "The Temperature Warning",
+        "image_url": "https://images.unsplash.com/photo-1584467735815-f778f274e296?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "temperature", "pos": "n.", "th": "อุณหภูมิ"}, {"word": "warning", "pos": "n.", "th": "การเตือนภัย"}, {"word": "sensor", "pos": "n.", "th": "เซนเซอร์"}, {"word": "relief", "pos": "n.", "th": "ความโล่งอก"}],
+        "story_en": "A red flashing light warns that Room A1's <b>temperature</b> reached 25°C. Sensitive electronics components must stay below 22°C.<br><br>The team quickly investigates and discovers a faulty door seal, not a broken cooler. They shut the inner door tightly, cooling the room back to safety with a collective sigh of <b>relief</b>.",
+        "story_en_plain": "A red flashing light warns that Room A1's temperature reached 25°C. Sensitive electronics components must stay below 22°C. The team quickly investigates and discovers a faulty door seal, not a broken cooler. They shut the inner door tightly, cooling the room back to safety with a collective sigh of relief.",
+        "story_th": "ไฟแดงกะพริบเตือนว่าอุณหภูมิในห้อง A1 แตะ 25 องศา ซึ่งชิ้นส่วนอิเล็กทรอนิกส์ต้องเก็บต่ำกว่า 22 องศา ทีมงานรีบตรวจพบว่าขอบยางประตูไม่สนิท ไม่ใช่แอร์เสีย พวกเขาปิดประตูด้านในให้แน่นจนอุณหภูมิลดลงสู่ระดับปลอดภัยด้วยความโล่งอก"
+      },
+      {
+        "title": "Rainstorm on the Highway",
+        "image_url": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "rainstorm", "pos": "n.", "th": "พายุฝน"}, {"word": "highway", "pos": "n.", "th": "ทางหลวง"}, {"word": "safety", "pos": "n.", "th": "ความปลอดภัย"}, {"word": "intact", "pos": "adj.", "th": "สมบูรณ์ดี"}],
+        "story_en": "Truck Driver Somchai was heading from Ayutthaya to Pathum Thani when a fierce <b>rainstorm</b> struck the <b>highway</b>. Visibility dropped to near zero.<br><br>Prioritizing <b>safety</b>, Somchai safely parked at a rest area and notified the warehouse. He arrived forty minutes late, but every single pallet was completely dry and <b>intact</b>.",
+        "story_en_plain": "Truck Driver Somchai was heading from Ayutthaya to Pathum Thani when a fierce rainstorm struck the highway. Visibility dropped to near zero. Prioritizing safety, Somchai safely parked at a rest area and notified the warehouse. He arrived forty minutes late, but every single pallet was completely dry and intact.",
+        "story_th": "คนขับรถสมชายกำลังวิ่งจากอยุธยาไปปทุมธานี แต่พายุฝนกระหน่ำบนทางหลวงจนมองแทบไม่เห็นทาง เขาเลือกความปลอดภัยโดยจอดพักที่จุดพักรถและโทรแจ้งคลังสินค้า เขาส่งของช้าไป 40 นาที แต่สินค้าทุกพาเลทแห้งสนิทและสมบูรณ์ 100%"
+      },
+      {
+        "title": "The Missing Crate",
+        "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "crate", "pos": "n.", "th": "ลังไม้ / ตะกร้า"}, {"word": "discrepancy", "pos": "n.", "th": "ยอดคลาดเคลื่อน"}, {"word": "location", "pos": "n.", "th": "ตำแหน่ง"}, {"word": "correct", "pos": "v.", "th": "แก้ไข"}],
+        "story_en": "During the cycle count, one wooden <b>crate</b> of connectors was missing from Rack A1112. The audit showed an alarming <b>discrepancy</b>.<br><br>Instead of panicking, the team checked the adjacent shelf and found it mislabeled under A1113. They quickly <b>corrected</b> the system tag with zero loss.",
+        "story_en_plain": "During the cycle count, one wooden crate of connectors was missing from Rack A1112. The audit showed an alarming discrepancy. Instead of panicking, the team checked the adjacent shelf and found it mislabeled under A1113. They quickly corrected the system tag with zero loss.",
+        "story_th": "ระหว่างการนับสต็อก ลังคอนเนกเตอร์หายไปหนึ่งลังจากแร็ค A1112 ซึ่งทำให้ยอดไม่ตรงอย่างน่าตกใจ ทีมงานตั้งสติแล้วเดินตรวจแร็คข้างๆ จนพบว่าถูกวางสลับไว้ที่ A1113 พวกเขาจึงรีบแก้ไขแท็กในระบบให้ถูกต้องโดยไม่มีของสูญหาย"
+      }
+    ]
+  },
+  "4": {
+    "day": 4,
+    "title": "Day 4: Daily Standup & Work Progress",
+    "summary": "พูดรายงานสิ่งที่ทำเสร็จ สิ่งที่กำลังทำ และอุปสรรคในการประชุมประจำวัน",
+    "rule": "รูปแบบ 3 ขั้น: What I did yesterday -> What I will do today -> Blockers/Obstacles",
+    "vocab": [
+      {"word": "Backlog", "phonetic": "/ˈbæk.lɒɡ/", "part_of_speech": "n.", "meaning": "งานคั่งค้าง", "example": "We cleared the backlog.", "example_th": "พวกเราเคลียร์งานค้างเสร็จแล้ว"},
+      {"word": "Blocker", "phonetic": "/ˈblɒk.ər/", "part_of_speech": "n.", "meaning": "อุปสรรคติดขัด", "example": "Do you have any blockers?", "example_th": "คุณมีอะไรติดขัดไหมครับ"},
+      {"word": "Milestone", "phonetic": "/ˈmaɪl.stəʊn/", "part_of_speech": "n.", "meaning": "เป้าหมายสำคัญ", "example": "We reached a new milestone.", "example_th": "เราบรรลุเป้าหมายสำคัญใหม่"},
+      {"word": "Prioritize", "phonetic": "/praɪˈɒr.ɪ.taɪz/", "part_of_speech": "v.", "meaning": "จัดลำดับความสำคัญ", "example": "Prioritize safety first.", "example_th": "จัดลำดับความปลอดภัยไว้ก่อน"},
+      {"word": "Progress", "phonetic": "/ˈprəʊ.ɡres/", "part_of_speech": "n./v.", "meaning": "ความคืบหน้า", "example": "The project is making progress.", "example_th": "โครงการกำลังคืบหน้า"},
+      {"word": "Deliverable", "phonetic": "/dɪˈlɪv.ər.ə.bəl/", "part_of_speech": "n.", "meaning": "ชิ้นงานส่งมอบ", "example": "The deliverable is due today.", "example_th": "งานส่งมอบครบกำหนดวันนี้"},
+      {"word": "Status", "phonetic": "/ˈsteɪ.təs/", "part_of_speech": "n.", "meaning": "สถานะงาน", "example": "What is the current status?", "example_th": "สถานะปัจจุบันคืออะไร"},
+      {"word": "Achievement", "phonetic": "/əˈtʃiːv.mənt/", "part_of_speech": "n.", "meaning": "ผลงานที่สำเร็จ", "example": "Great achievement by the team.", "example_th": "ผลงานยอดเยี่ยมของทีม"},
+      {"word": "Pending", "phonetic": "/ˈpen.dɪŋ/", "part_of_speech": "adj.", "meaning": "อยู่ระหว่างรอผล", "example": "Approval is pending.", "example_th": "กำลังรอการอนุมัติอยู่"},
+      {"word": "Coordinate", "phonetic": "/kəʊˈɔː.dɪ.neɪt/", "part_of_speech": "v.", "meaning": "ประสานงาน", "example": "I will coordinate with QA.", "example_th": "ผมจะประสานงานกับ QA"},
+      {"word": "Capacity", "phonetic": "/kəˈpæs.ə.ti/", "part_of_speech": "n.", "meaning": "ขีดความสามารถ / ความจุ", "example": "We are at full capacity.", "example_th": "เราทำงานเต็มกำลังความสามารถ"},
+      {"word": "Estimate", "phonetic": "/ˈes.tɪ.meɪt/", "part_of_speech": "v.", "meaning": "ประเมินเวลา / ยอด", "example": "I estimate two more hours.", "example_th": "ผมประเมินว่าอีกสองชั่วโมง"},
+      {"word": "Resource", "phonetic": "/rɪˈzɔːs/", "part_of_speech": "n.", "meaning": "ทรัพยากร / กำลังคน", "example": "We need more resources.", "example_th": "เราต้องการกำลังคนเพิ่ม"},
+      {"word": "Assign", "phonetic": "/əˈsaɪn/", "part_of_speech": "v.", "meaning": "มอบหมายงาน", "example": "Tasks were assigned to each shift.", "example_th": "งานถูกมอบหมายให้แต่ละกะ"},
+      {"word": "Handover", "phonetic": "/ˈhændˌəʊ.vər/", "part_of_speech": "n.", "meaning": "การส่งมอบงานต่องวด", "example": "Do a smooth shift handover.", "example_th": "ส่งมอบงานระหว่างกะอย่างราบรื่น"},
+      {"word": "Target", "phonetic": "/ˈtɑː.ɡɪt/", "part_of_speech": "n.", "meaning": "เป้าหมาย", "example": "We hit our daily target.", "example_th": "เราทำยอดได้ตามเป้าประจำวัน"},
+      {"word": "Update", "phonetic": "/ʌpˈdeɪt/", "part_of_speech": "v./n.", "meaning": "รายงานความคืบหน้า", "example": "Give me a quick update.", "example_th": "ช่วยอัปเดตสั้นๆ ให้ฟังหน่อย"},
+      {"word": "Support", "phonetic": "/səˈpɔːt/", "part_of_speech": "n./v.", "meaning": "สนับสนุน / ช่วยเหลือ", "example": "Do you need any support?", "example_th": "คุณต้องการความช่วยเหลือไหม"},
+      {"word": "Summary", "phonetic": "/ˈsʌm.ər.i/", "part_of_speech": "n.", "meaning": "บทสรุป", "example": "Read the daily summary.", "example_th": "อ่านสรุปงานประจำวัน"},
+      {"word": "Efficiency", "phonetic": "/ɪˈfɪʃ.ən.si/", "part_of_speech": "n.", "meaning": "ประสิทธิภาพ", "example": "Boost warehouse efficiency.", "example_th": "เพิ่มประสิทธิภาพการทำงานคลัง"}
+    ],
+    "phrases": [
+      {"en": "Yesterday, I finalized the inspection report.", "th": "เมื่อวานนี้ผมสรุปรายงานการตรวจสอบเสร็จเรียบร้อยแล้วครับ", "tip": "finalize = สรุปเสร็จสมบูรณ์"},
+      {"en": "Today, I am focusing on clearing the backlog.", "th": "วันนี้ผมจะโฟกัสที่การเคลียร์งานที่คั่งค้างอยู่ครับ", "tip": "focusing on = ทุ่มความสนใจ"},
+      {"en": "I am currently blocked by pending approval from QA.", "th": "ตอนนี้ผมติดปัญหาเรื่องรอการอนุมัติจากแผนก QA ครับ", "tip": "blocked by = ติดขัดเรื่อง"},
+      {"en": "Everything is on track to meet the deadline.", "th": "ทุกอย่างดำเนินไปตามแผนและทันกำหนดแน่นอนครับ", "tip": "on track = เป็นไปตามแผน"},
+      {"en": "We completed five cycles ahead of schedule.", "th": "พวกเรานับสต็อกเสร็จก่อนเวลา 5 รอบครับ", "tip": "ahead of schedule = เร็วกว่ากำหนด"},
+      {"en": "My top priority today is checking Rack 4.", "th": "เป้าหมายหลักของผมวันนี้คือการตรวจแร็ค 4 ครับ", "tip": "top priority = เรื่องสำคัญอันดับแรก"},
+      {"en": "I will collaborate with the night shift leader.", "th": "ผมจะประสานงานกับหัวหน้ากะดึกครับ", "tip": "collaborate = ร่วมมือกัน"},
+      {"en": "No major blockers were reported this morning.", "th": "ไม่มีรายงานปัญหาติดขัดรุนแรงเช้านี้ครับ", "tip": "no major blockers"},
+      {"en": "We hit our target of packing 800 units.", "th": "เราทำยอดแพ็คของได้ตามเป้า 800 ชิ้นครับ", "tip": "hit our target = บรรลุเป้าหมาย"},
+      {"en": "I need fifteen minutes of technical support.", "th": "ผมต้องการความช่วยเหลือทางเทคนิคสัก 15 นาทีครับ", "tip": "technical support = ความช่วยเหลือด้านเทคนิค"},
+      {"en": "The attendance sheet has been updated.", "th": "ตารางการเข้างานได้รับการอัปเดตแล้วครับ", "tip": "attendance sheet = ใบลงเวลา"},
+      {"en": "We are currently running at full efficiency.", "th": "ตอนนี้เราเดินงานเต็มประสิทธิภาพครับ", "tip": "full efficiency = เต็มประสิทธิภาพ"},
+      {"en": "I will deliver the finalized document by 4 PM.", "th": "ผมจะส่งเอกสารฉบับสมบูรณ์ให้ก่อน 4 โมงเย็นครับ", "tip": "deliver = นำส่ง"},
+      {"en": "Let's align our tasks before starting the shift.", "th": "พวกเรามาปรับเป้าหมายงานให้ตรงกันก่อนเริ่มกะกันครับ", "tip": "align tasks = ปรับงานให้ตรงกัน"},
+      {"en": "Who is assigned to inspect the incoming shipment?", "th": "ใครได้รับมอบหมายให้ตรวจสินค้าที่รับเข้ามาครับ", "tip": "assigned to = มอบหมายให้"},
+      {"en": "We managed to reduce processing time by 10%.", "th": "เราลดระยะเวลาการทำงานลงได้ถึง 10% ครับ", "tip": "processing time = ระยะเวลาทำงาน"},
+      {"en": "I will follow up on the missing quotation today.", "th": "วันนี้ผมจะติดตามเรื่องใบเสนอราคาที่ยังขาดอยู่ครับ", "tip": "follow up on = ติดตามเรื่อง"},
+      {"en": "The team morale is high and productive.", "th": "กำลังใจของทีมงานดีมากและทำงานได้ผลงานสูงครับ", "tip": "morale = ขวัญกำลังใจ"},
+      {"en": "Please log your completed items in the system.", "th": "ช่วยบันทึกรายการที่ทำเสร็จลงในระบบด้วยครับ", "tip": "log in the system = บันทึกเข้าระบบ"},
+      {"en": "That wraps up my morning standup report.", "th": "นั่นคือสรุปรายงานการประชุมสแตนด์อัปเช้านี้ของผมครับ", "tip": "wraps up = ปิดท้ายสรุป"}
+    ],
+    "dialogues": [
+      {"title": "รายงานกะสแตนด์อัป", "lines": [{"speaker": "Leader", "en": "What is your main task today, Sam?", "th": "วันนี้งานหลักของคุณคืออะไร แซม"}, {"speaker": "Sam", "en": "I am clearing the Room A1 backlog.", "th": "ผมจะเคลียร์งานคั่งค้างในห้อง A1 ครับ"}]},
+      {"title": "แจ้งติดขัดรอเอกสาร", "lines": [{"speaker": "Staff", "en": "I am blocked by the missing invoice.", "th": "ผมติดปัญหาเรื่องยังไม่ได้ใบแจ้งหนี้ครับ"}, {"speaker": "Leader", "en": "I will call the accounting team now.", "th": "เดี๋ยวผมโทรตามบัญชีให้เดี๋ยวนี้"}]},
+      {"title": "แจ้งทำยอดทะลุเป้า", "lines": [{"speaker": "Lead", "en": "Did we reach our target yesterday?", "th": "เมื่อวานเราทำยอดถึงเป้าไหม"}, {"speaker": "Staff", "en": "Yes, we packed 1,200 units, 10% over target.", "th": "ถึงครับ แพ็คได้ 1,200 ชิ้น เกินเป้า 10% ครับ"}]},
+      {"title": "ขอความช่วยเหลือจากเพื่อนร่วมงาน", "lines": [{"speaker": "Operator", "en": "I need support with heavy lifting today.", "th": "วันนี้ผมอยากได้คนช่วยยกของหนักครับ"}, {"speaker": "Colleague", "en": "I will join you after my coffee break.", "th": "เดี๋ยวฉันไปช่วยหลังจากพักดื่มกาแฟนะ"}]},
+      {"title": "ส่งมอบงานก่อนเลิกกะ", "lines": [{"speaker": "A", "en": "All pallets on Rack 5 are verified.", "th": "พาเลททั้งหมดบนแร็ค 5 ตรวจสอบแล้ว"}, {"speaker": "B", "en": "Thanks, I will take over Rack 6 now.", "th": "ขอบคุณ เดี๋ยวผมรับช่วงต่อแร็ค 6 เอง"}]},
+      {"title": "รายงานระบบคอมพิวเตอร์พร้อมใช้", "lines": [{"speaker": "IT", "en": "The warehouse scanner system is fully updated.", "th": "ระบบสแกนเนอร์ของคลังอัปเดตเรียบร้อยแล้ว"}, {"speaker": "Staff", "en": "Great, the sync is much faster now.", "th": "ยอดเยี่ยม ส่งข้อมูลไวขึ้นเยอะเลยครับ"}]},
+      {"title": "แบ่งหน้าที่ในกะเช้า", "lines": [{"speaker": "Leader", "en": "Ken, handle inbound. Lisa, handle packing.", "th": "เคนดูของเข้า ลิซ่าดูแลการแพ็คของนะ"}, {"speaker": "Both", "en": "Understood, we are on it.", "th": "รับทราบครับ/ค่ะ พวกเราลุยเลย"}]},
+      {"title": "ติดตามเรื่องความปลอดภัย", "lines": [{"speaker": "Safety Officer", "en": "Remember to wear high-visibility vests.", "th": "อย่าลืมสวมเสื้อกั๊กสะท้อนแสงกันทุกคนนะ"}, {"speaker": "Team", "en": "Yes, safety first every single day.", "th": "รับทราบครับ ปลอดภัยไว้ก่อนทุกๆ วัน"}]},
+      {"title": "รายงานการซ่อมบำรุงรถโฟล์คลิฟต์", "lines": [{"speaker": "Mechanic", "en": "Forklift maintenance is complete.", "th": "การบำรุงรักษารถโฟล์คลิฟต์เสร็จแล้วครับ"}, {"speaker": "Driver", "en": "Awesome, I will do a quick brake test.", "th": "เยี่ยมเลย เดี๋ยวผมขอทดสอบเบรกแป๊บหนึ่ง"}]},
+      {"title": "ปิดการประชุมยามเช้า", "lines": [{"speaker": "Manager", "en": "Let's have a safe and productive day!", "th": "ขอให้เป็นวันที่ปลอดภัยและมีผลงานยอดเยี่ยมนะ!"}, {"speaker": "Team", "en": "Let's do this!", "th": "ลุยกันเลยครับ!"}]}
+    ],
+    "exercises": [
+      {"thai_prompt": "ทุกอย่างดำเนินไปตามแผนเพื่อส่งงานให้ทันกำหนด", "prefix": "Everything is on", "suffix": "to meet the deadline.", "hint": "สำนวนแปลว่า ตามแผน (t...)", "acceptable_answers": ["track"], "correct_word": "track", "full_sentence": "Everything is on track to meet the deadline.", "explanation": "'on track' แปลว่า เป็นไปตามแผนงาน"},
+      {"thai_prompt": "วันนี้ผมมุ่งเน้นไปที่การเคลียร์งานที่ค้างอยู่", "prefix": "Today, I am", "suffix": "on clearing the backlog.", "hint": "คำกริยาเติม -ing แปลว่า จดจ่อ/มุ่งเน้น (f...)", "acceptable_answers": ["focusing"], "correct_word": "focusing", "full_sentence": "Today, I am focusing on clearing the backlog.", "explanation": "'focusing on' แปลว่า ให้ความสำคัญ/จดจ่อ"},
+      {"thai_prompt": "ผมติดปัญหาเรื่องยังรอการอนุมัติอยู่ครับ", "prefix": "I am", "suffix": "by pending approval.", "hint": "คำกริยาช่อง 3 แปลว่า ติดขัด (b...)", "acceptable_answers": ["blocked"], "correct_word": "blocked", "full_sentence": "I am blocked by pending approval.", "explanation": "'blocked by' แปลว่า ติดปัญหาหรือติดขัดจาก..."},
+      {"thai_prompt": "งานส่งมอบชิ้นสุดท้ายมีกำหนดส่งวันนี้", "prefix": "The final", "suffix": "is due today.", "hint": "คำนามแปลว่า ชิ้นงานส่งมอบ (d...)", "acceptable_answers": ["deliverable"], "correct_word": "deliverable", "full_sentence": "The final deliverable is due today.", "explanation": "'deliverable' คือผลงานที่ต้องส่งมอบ"},
+      {"thai_prompt": "เมื่อวานนี้ผมสรุปรายงานการตรวจเสร็จเรียบร้อยแล้ว", "prefix": "Yesterday, I", "suffix": "the inspection report.", "hint": "คำกริยาอดีตแปลว่า ทำให้เสร็จสิ้น (f...)", "acceptable_answers": ["finalized"], "correct_word": "finalized", "full_sentence": "Yesterday, I finalized the inspection report.", "explanation": "'finalized' แปลว่า ทำเสร็จสมบูรณ์ในอดีต"},
+      {"thai_prompt": "พวกเราทำงานเสร็จเร็วกว่ากำหนดการสองชั่วโมง", "prefix": "We finished two hours ahead of", "suffix": ".", "hint": "คำนามแปลว่า กำหนดการ (s...)", "acceptable_answers": ["schedule"], "correct_word": "schedule", "full_sentence": "We finished two hours ahead of schedule.", "explanation": "'ahead of schedule' แปลว่า เร็วกว่ากำหนด"},
+      {"thai_prompt": "ใครได้รับมอบหมายให้ดูแลงานชิ้นนี้ครับ", "prefix": "Who is", "suffix": "to this task?", "hint": "คำกริยาช่อง 3 แปลว่า มอบหมาย (a...)", "acceptable_answers": ["assigned"], "correct_word": "assigned", "full_sentence": "Who is assigned to this task?", "explanation": "'assigned to' แปลว่า ได้รับมอบหมายให้ทำ"},
+      {"thai_prompt": "เป้าหมายสำคัญอันดับหนึ่งของฉันคือการจัดระเบียบแร็ค", "prefix": "My top", "suffix": "is organizing the racks.", "hint": "คำแปลว่า ลำดับความสำคัญ (p...)", "acceptable_answers": ["priority"], "correct_word": "priority", "full_sentence": "My top priority is organizing the racks.", "explanation": "'top priority' คือสิ่งที่ต้องทำเป็นอันดับแรก"},
+      {"thai_prompt": "เราจำเป็นต้องประสานงานกับทีมงานกะดึก", "prefix": "We must", "suffix": "with the night shift team.", "hint": "คำกริยาแปลว่า ประสานงาน (c...)", "acceptable_answers": ["coordinate", "collaborate"], "correct_word": "coordinate", "full_sentence": "We must coordinate with the night shift team.", "explanation": "'coordinate with' แปลว่า ประสานงานร่วมกับ"},
+      {"thai_prompt": "นั่นคือสรุปรายงานการประชุมประจำเช้าของผมครับ", "prefix": "That", "suffix": "up my morning report.", "hint": "คำกริยาเติม s แปลว่า ห่อ/สรุปปิดท้าย (w...)", "acceptable_answers": ["wraps"], "correct_word": "wraps", "full_sentence": "That wraps up my morning report.", "explanation": "'wraps up' แปลว่า จบหรือสรุปรายงาน"}
+    ],
+    "stories": [
+      {
+        "title": "Clear the Backlog",
+        "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "backlog", "pos": "n.", "th": "งานคั่งค้าง"}, {"word": "standup", "pos": "n.", "th": "การประชุมสั้น"}, {"word": "target", "pos": "n.", "th": "เป้าหมาย"}, {"word": "celebrate", "pos": "v.", "th": "ฉลอง"}],
+        "story_en": "At the morning <b>standup</b>, the warehouse team faced a daunting <b>backlog</b> of five hundred unverified parcels.<br><br>The team leader broke the target into hourly milestones. By 4 PM, they met the <b>target</b> and shared a box of donuts to <b>celebrate</b>.",
+        "story_en_plain": "At the morning standup, the warehouse team faced a daunting backlog of five hundred unverified parcels. The team leader broke the target into hourly milestones. By 4 PM, they met the target and shared a box of donuts to celebrate.",
+        "story_th": "ในการประชุมสแตนด์อัปยามเช้า ทีมคลังสินค้าต้องเผชิญกับพัสดุคั่งค้างที่ยังไม่ตรวจนับถึง 500 กล่อง หัวหน้าทีมจึงแบ่งเป้าหมายออกเป็นชั่วโมงๆ เมื่อถึงบ่ายสี่โมง พวกเขาก็ทำสำเร็จตามเป้าและแบ่งโดนัทฉลองร่วมกัน"
+      },
+      {
+        "title": "The Honest Blocker",
+        "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "blocker", "pos": "n.", "th": "อุปสรรค"}, {"word": "honest", "pos": "adj.", "th": "ซื่อสัตย์/ตรงไปตรงมา"}, {"word": "solve", "pos": "v.", "th": "แก้ไข"}, {"word": "appreciate", "pos": "v.", "th": "ชื่นชม"}],
+        "story_en": "During the update, young technician Leo spoke up: “I have a <b>blocker</b>. I don’t fully understand the new wiring diagram.”<br><br>Instead of scolding him, senior engineer Paul <b>appreciated</b> his <b>honest</b> words, spent ten minutes guiding him, and <b>solved</b> the hurdle instantly.",
+        "story_en_plain": "During the update, young technician Leo spoke up: I have a blocker. I don’t fully understand the new wiring diagram. Instead of scolding him, senior engineer Paul appreciated his honest words, spent ten minutes guiding him, and solved the hurdle instantly.",
+        "story_th": "ระหว่างรายงานผล ลีโอช่างเทคนิครุ่นใหม่พูดขึ้นอย่างตรงไปตรงมาว่า: ผมติดปัญหาตรงที่ไม่ค่อยเข้าใจแบบวงจรไฟฟ้าอันใหม่ครับ แทนที่จะตำหนิ พอลวิศวกรอาวุโสกลับชื่นชมในความซื่อสัตย์ ใช้เวลา 10 นาทีช่วยสอนจนแก้ปัญหาได้ทันที"
+      },
+      {
+        "title": "A Smooth Handover",
+        "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "handover", "pos": "n.", "th": "การส่งต่องาน"}, {"word": "accurate", "pos": "adj.", "th": "แม่นยำ"}, {"word": "shift", "pos": "n.", "th": "กะทำงาน"}, {"word": "grateful", "pos": "adj.", "th": "รู้สึกขอบคุณ"}],
+        "story_en": "Before leaving, Niran wrote a detailed <b>handover</b> note specifying which racks were counted and which pallet numbers remained.<br><br>The incoming night <b>shift</b> leader was genuinely <b>grateful</b> for the clear and <b>accurate</b> report, making the night operations effortless.",
+        "story_en_plain": "Before leaving, Niran wrote a detailed handover note specifying which racks were counted and which pallet numbers remained. The incoming night shift leader was genuinely grateful for the clear and accurate report, making the night operations effortless.",
+        "story_th": "ก่อนกลับบ้าน นิรันดร์เขียนบันทึกส่งมอบงานอย่างละเอียดว่าแร็คไหนนับแล้วและพาเลทเบอร์ใดที่ยังค้างอยู่ หัวหน้ากะดึกที่มารับช่วงต่อรู้สึกขอบคุณในความชัดเจนและแม่นยำ ทำให้การทำงานกะกลางคืนราบรื่นไร้ปัญหา"
+      },
+      {
+        "title": "The Power of Alignment",
+        "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "alignment", "pos": "n.", "th": "ความเข้าใจตรงกัน"}, {"word": "collaborate", "pos": "v.", "th": "ร่วมมือ"}, {"word": "success", "pos": "n.", "th": "ความสำเร็จ"}, {"word": "goal", "pos": "n.", "th": "เป้าหมาย"}],
+        "story_en": "Production and Material Control used to argue about delays. One morning, both team leads agreed to have a daily three-minute standup together.<br><br>That simple <b>alignment</b> transformed confusion into <b>collaboration</b>, driving both teams to record-breaking <b>success</b>.",
+        "story_en_plain": "Production and Material Control used to argue about delays. One morning, both team leads agreed to have a daily three-minute standup together. That simple alignment transformed confusion into collaboration, driving both teams to record-breaking success.",
+        "story_th": "แผนกผลิตและแผนกคุมวัตถุดิบเคยมีปากเสียงกันเรื่องงานล่าช้า เช้าวันหนึ่ง หัวหน้าทั้งสองฝ่ายตกลงจะมายืนประชุมสแตนด์อัปพร้อมกัน 3 นาที ความเข้าใจที่ตรงกันเปลี่ยนความสับสนเป็นความร่วมมือ และนำพาผลงานพุ่งสู่สถิติสูงสุด"
+      }
+    ]
+  },
+  "5": {
+    "day": 5,
+    "title": "Day 5: Scheduling & Rescheduling Meetings",
+    "summary": "การนัดหมาย เสนอเวลาว่าง เลื่อนนัด และยืนยันกำหนดการอย่างมืออาชีพ",
+    "rule": "ระบุวันเวลาให้ชัดเจนเสมอ + เสนอทางเลือก (Does [time] work for you?)",
+    "vocab": [
+      {"word": "Available", "phonetic": "/əˈveɪ.lə.bəl/", "part_of_speech": "adj.", "meaning": "ว่าง / สะดวก", "example": "Are you available tomorrow?", "example_th": "พรุ่งนี้คุณว่างไหมครับ"},
+      {"word": "Reschedule", "phonetic": "/ˌriːˈskedʒ.uːl/", "part_of_speech": "v.", "meaning": "เลื่อนนัดหมาย", "example": "Can we reschedule our call?", "example_th": "ขอเลื่อนนัดคุยสายได้ไหม"},
+      {"word": "Conflict", "phonetic": "/ˈkɒn.flɪkt/", "part_of_speech": "n.", "meaning": "เวลาชนกัน / ขัดแย้ง", "example": "I have a scheduling conflict.", "example_th": "ผมมีตารางเวลาชนกัน"},
+      {"word": "Propose", "phonetic": "/prəˈpəʊz/", "part_of_speech": "v.", "meaning": "เสนอเวลา / นัด", "example": "I propose Friday at 2 PM.", "example_th": "ผมขอเสนอเป็นวันศุกร์บ่ายสอง"},
+      {"word": "Confirm", "phonetic": "/kənˈfɜːm/", "part_of_speech": "v.", "meaning": "ยืนยัน", "example": "Please confirm the meeting room.", "example_th": "ช่วยยืนยันห้องประชุมด้วย"},
+      {"word": "Postpone", "phonetic": "/pəʊstˈpəʊn/", "part_of_speech": "v.", "meaning": "เลื่อนออกไป", "example": "The sync was postponed.", "example_th": "การประชุมสั้นถูกเลื่อนออกไป"},
+      {"word": "Agenda", "phonetic": "/əˈdʒen.də/", "part_of_speech": "n.", "meaning": "วาระการประชุม", "example": "Check the meeting agenda.", "example_th": "ตรวจดูวาระการประชุม"},
+      {"word": "Attendee", "phonetic": "/ə.tenˈdiː/", "part_of_speech": "n.", "meaning": "ผู้เข้าร่วมประชุม", "example": "All attendees have arrived.", "example_th": "ผู้เข้าร่วมทุกคนมาถึงแล้ว"},
+      {"word": "Convenient", "phonetic": "/kənˈviː.ni.ənt/", "part_of_speech": "adj.", "meaning": "สะดวกสบาย", "example": "Is Thursday convenient for you?", "example_th": "วันพฤหัสบดีสะดวกสำหรับคุณไหม"},
+      {"word": "Invitation", "phonetic": "/ˌɪn.vɪˈteɪ.ʃən/", "part_of_speech": "n.", "meaning": "หนังสือเชิญ / ปฏิทินเชิญ", "example": "Send me a calendar invitation.", "example_th": "ส่งคำเชิญปฏิทินมาให้ผมด้วย"},
+      {"word": "Urgency", "phonetic": "/ˈɜː.dʒən.si/", "part_of_speech": "n.", "meaning": "ความเร่งด่วน", "example": "Due to the urgency, we meet now.", "example_th": "เนื่องจากความเร่งด่วน เราประชุมทันที"},
+      {"word": "Duration", "phonetic": "/djʊəˈreɪ.ʃən/", "part_of_speech": "n.", "meaning": "ระยะเวลาการประชุม", "example": "The duration is thirty minutes.", "example_th": "ระยะเวลาคือ 30 นาที"},
+      {"word": "Minutes", "phonetic": "/ˈmɪn.ɪts/", "part_of_speech": "n.", "meaning": "รายงานการประชุม", "example": "I will send the meeting minutes.", "example_th": "เดี๋ยวผมส่งบันทึกการประชุมให้"},
+      {"word": "Facilitate", "phonetic": "/fəˈsɪl.ɪ.teɪt/", "part_of_speech": "v.", "meaning": "ดำเนินรายการ / อำนวยความสะดวก", "example": "Who will facilitate the call?", "example_th": "ใครจะเป็นคนดำเนินรายการประชุม"},
+      {"word": "Discussion", "phonetic": "/dɪˈskʌʃ.ən/", "part_of_speech": "n.", "meaning": "การหารือ / การพูดคุย", "example": "We had a fruitful discussion.", "example_th": "เรามีการหารือที่ได้ประโยชน์มาก"},
+      {"word": "Tentative", "phonetic": "/ˈten.tə.tɪv/", "part_of_speech": "adj.", "meaning": "ชั่วคราว (ยังไม่ยืนยัน 100%)", "example": "This is a tentative schedule.", "example_th": "นี่คือกำหนดการคร่าวๆ"},
+      {"word": "Reminder", "phonetic": "/rɪˈmaɪn.dər/", "part_of_speech": "n.", "meaning": "การแจ้งเตือนความจำ", "example": "Send a reminder email.", "example_th": "ส่งอีเมลเตือนความจำไป"},
+      {"word": "Platform", "phonetic": "/ˈplæt.fɔːm/", "part_of_speech": "n.", "meaning": "แพลตฟอร์ม (Teams, Zoom)", "example": "We use Teams as our platform.", "example_th": "เราใช้โปรแกรม Teams ประชุม"},
+      {"word": "Dial-in", "phonetic": "/ˈdaɪ.əl.ɪn/", "part_of_speech": "n.", "meaning": "ลิงก์หรือเบอร์ต่อสายเข้าประชุม", "example": "Here is the dial-in link.", "example_th": "นี่คือลิงก์สำหรับกดเข้าประชุม"},
+      {"word": "Wrap-up", "phonetic": "/ˈræp.ʌp/", "part_of_speech": "n.", "meaning": "การสรุปจบการประชุม", "example": "Let's do a quick wrap-up.", "example_th": "มาสรุปจบประเด็นกันครับ"}
+    ],
+    "phrases": [
+      {"en": "Are you available for a quick meeting tomorrow at 2 PM?", "th": "คุณสะดวกประชุมสั้นๆ พรุ่งนี้ตอนบ่าย 2 โมงไหมครับ", "tip": "available ออกเสียงว่า /əˈveɪ.lə.bəl/"},
+      {"en": "Does Thursday morning work for you?", "th": "เช้าวันพฤหัสบดีสะดวกสำหรับคุณไหมครับ", "tip": "Does ... work for you? เป็นคำถามสุภาพมาก"},
+      {"en": "I am afraid I have a scheduling conflict at that time.", "th": "ผมเกรงว่าผมจะมีนัดชนกันในช่วงเวลาดังกล่าวครับ", "tip": "scheduling conflict = นัดซ้อนชนกัน"},
+      {"en": "Could we reschedule our sync to Friday instead?", "th": "พวกเราขอเลื่อนการประชุมสั้นๆ ไปเป็นวันศุกร์แทนได้ไหมครับ", "tip": "reschedule = เลื่อนนัด"},
+      {"en": "Please send over a calendar invite once confirmed.", "th": "เมื่อยืนยันแล้ว รบกวนส่งคำเชิญปฏิทินมาให้ด้วยนะครับ", "tip": "calendar invite = คำเชิญปฏิทิน"},
+      {"en": "Any time after 3:00 PM works perfectly for me.", "th": "เวลาไหนก็ได้หลังบ่าย 3 โมง สะดวกสำหรับผมทั้งหมดเลยครับ", "tip": "works perfectly for me"},
+      {"en": "I would like to confirm our appointment for Monday.", "th": "ผมขออนุญาตยืนยันการนัดหมายของเราในวันจันทร์นี้นะครับ", "tip": "confirm our appointment"},
+      {"en": "Sorry for the short notice regarding this meeting change.", "th": "ขออภัยด้วยครับที่แจ้งเปลี่ยนแปลงกำหนดประชุมกระชั้นชิด", "tip": "short notice = แจ้งกะทันหัน"},
+      {"en": "Would next Tuesday be more convenient for the team?", "th": "วันอังคารหน้าจะสะดวกกับทีมมากกว่าไหมครับ", "tip": "more convenient = สะดวกกว่า"},
+      {"en": "I will send the meeting link fifteen minutes prior.", "th": "ผมจะส่งลิงก์ห้องประชุมให้ล่วงหน้า 15 นาทีครับ", "tip": "prior = ก่อนล่วงหน้า"},
+      {"en": "Let's postpone the review until the data is verified.", "th": "เราเลื่อนการทบทวนไปจนกว่าข้อมูลจะตรวจเสร็จดีกว่าครับ", "tip": "postpone = เลื่อนออกไป"},
+      {"en": "The meeting is scheduled to last approximately thirty minutes.", "th": "การประชุมถูกกำหนดไว้ที่ประมาณ 30 นาทีครับ", "tip": "last approximately = กินเวลาราวๆ"},
+      {"en": "Could you please add John to the meeting invite?", "th": "ช่วยเพิ่มจอห์นเข้าไปในรายชื่อผู้เข้าร่วมประชุมด้วยได้ไหมครับ", "tip": "add to the invite"},
+      {"en": "I have an urgent production issue and cannot join today.", "th": "ผมติดปัญหาด่วนในสายการผลิต คงเข้าร่วมวันนี้ไม่ได้ครับ", "tip": "cannot join = เข้าร่วมไม่ได้"},
+      {"en": "Please find the proposed agenda attached for your review.", "th": "โปรดดูวาระการประชุมที่เสนอในเอกสารแนบครับ", "tip": "proposed agenda = วาระที่เสนอ"},
+      {"en": "Can we move our call thirty minutes earlier?", "th": "เราเลื่อนเวลาคุยให้เร็วขึ้น 30 นาทีได้ไหมครับ", "tip": "earlier = เร็วขึ้น"},
+      {"en": "I will be five minutes late due to traffic.", "th": "ผมจะเข้าประชุมสาย 5 นาทีเนื่องจากรถติดครับ", "tip": "late due to"},
+      {"en": "Let's lock in the time for Thursday at 10 AM.", "th": "เราขอล็อกเวลานัดเป็นวันพฤหัสบดี 10 โมงเช้าเลยนะครับ", "tip": "lock in = ล็อกเวลายืนยัน"},
+      {"en": "Thank you for accommodating my busy schedule.", "th": "ขอบคุณมากที่ช่วยปรับเวลาตามตารางงานที่ยุ่งของผมครับ", "tip": "accommodating = ปรับตัวยืดหยุ่นให้"},
+      {"en": "Looking forward to our discussion tomorrow.", "th": "รอคอยที่จะได้พูดคุยหารือกันในวันพรุ่งนี้นะครับ", "tip": "looking forward to = ตั้งตารอ"}
+    ],
+    "dialogues": [
+      {"title": "นัดเวลาคุยสเปกงาน", "lines": [{"speaker": "A", "en": "Does tomorrow morning work for you?", "th": "เช้าพรุ่งนี้สะดวกสำหรับคุณไหมครับ"}, {"speaker": "B", "en": "Yes, 9:30 AM works perfectly.", "th": "ได้เลยครับ เก้าโมงครึ่งสะดวกมาก"}]},
+      {"title": "ขอเลื่อนนัดเพราะติดงานด่วน", "lines": [{"speaker": "Staff", "en": "I have a conflict at 2 PM. Can we move it?", "th": "ผมมีนัดชนตอนบ่ายสอง ขอเลื่อนได้ไหมครับ"}, {"speaker": "Client", "en": "No problem, how about Friday at 10 AM?", "th": "ไม่มีปัญหา วันศุกร์สิบโมงเช้าเป็นอย่างไร"}]},
+      {"title": "ขอล็อกห้องประชุมใหญ่", "lines": [{"speaker": "Admin", "en": "The main conference room is reserved for you.", "th": "ห้องประชุมใหญ่จองไว้ให้คุณแล้วค่ะ"}, {"speaker": "Lead", "en": "Thank you, please send the key card.", "th": "ขอบคุณครับ รบกวนส่งคีย์การ์ดมาด้วยนะครับ"}]},
+      {"title": "ประชุมผ่านโปรแกรม Teams", "lines": [{"speaker": "Host", "en": "Can everyone see my shared screen?", "th": "ทุกคนมองเห็นหน้าจอที่ผมแชร์ไหมครับ"}, {"speaker": "User", "en": "Yes, loud and clear.", "th": "เห็นชัดเจนและได้ยินเสียงชัดมากครับ"}]},
+      {"title": "แจ้งขอเข้าประชุมสาย", "lines": [{"speaker": "Tech", "en": "I will join 10 minutes late due to Line 1.", "th": "ผมจะเข้าสาย 10 นาทีเพราะติดดูไลน์ 1 ครับ"}, {"speaker": "Host", "en": "Understood, we will cover your part later.", "th": "รับทราบ เดี๋ยวเราค่อยคุยส่วนของคุณทีหลัง"}]},
+      {"title": "ยืนยันเวลากับซัพพลายเออร์", "lines": [{"speaker": "Buyer", "en": "Confirming our supplier review for Thursday.", "th": "ขอยืนยันนัดประเมินซัพพลายเออร์วันพฤหัสบดีนะ"}, {"speaker": "Vendor", "en": "Confirmed. We have our slides ready.", "th": "ยืนยันครับ พวกเราเตรียมสไลด์พร้อมแล้ว"}]},
+      {"title": "ขอส่งคนอื่นเข้าประชุมแทน", "lines": [{"speaker": "Manager", "en": "I cannot make it, but Dan will represent me.", "th": "ผมไปไม่ได้ แต่แดนจะเป็นตัวแทนผมเข้าประชุม"}, {"speaker": "Leader", "en": "Perfect, Dan knows the project well.", "th": "ยอดเยี่ยมครับ แดนเข้าใจงานนี้เป็นอย่างดี"}]},
+      {"title": "ขยายเวลาประชุมต่อ", "lines": [{"speaker": "Speaker", "en": "We have 5 minutes left, but need more time.", "th": "เหลือเวลา 5 นาทีแต่เราต้องการคุยต่ออีกหน่อย"}, {"speaker": "All", "en": "We can stay another 15 minutes.", "th": "พวกเราอยู่ต่อได้อีก 15 นาทีครับ"}]},
+      {"title": "เตือนความจำก่อนเริ่มประชุม", "lines": [{"speaker": "Secretary", "en": "Quick reminder: project sync starts in 10 mins.", "th": "เตือนความจำ: ประชุมโปรเจกต์เริ่มในอีก 10 นาทีค่ะ"}, {"speaker": "Team", "en": "Thanks, heading to the meeting room now.", "th": "ขอบคุณครับ กำลังเดินไปห้องประชุมเดี๋ยวนี้"}]},
+      {"title": "ส่งสรุปบันทึกการประชุม", "lines": [{"speaker": "Staff", "en": "I just emailed the meeting minutes to all.", "th": "ผมเพิ่งส่งบันทึกการประชุมทางอีเมลให้ทุกคนแล้วครับ"}, {"speaker": "Manager", "en": "Great summary, thanks for the prompt action.", "th": "สรุปได้ดีมาก ขอบคุณสำหรับการทำงานที่รวดเร็ว"}]}
+    ],
+    "exercises": [
+      {"thai_prompt": "บ่ายวันพรุ่งนี้สะดวกสำหรับคุณไหมครับ", "prefix": "Does tomorrow afternoon", "suffix": "for you?", "hint": "คำกริยาแปลว่า ใช้การได้/สะดวก (w...)", "acceptable_answers": ["work"], "correct_word": "work", "full_sentence": "Does tomorrow afternoon work for you?", "explanation": "สำนวน 'Does [time] work for you?' แปลว่า วัน/เวลานั้นสะดวกไหม"},
+      {"thai_prompt": "ผมเกรงว่าผมจะมีนัดหมายซ้อนกันในช่วงเวลานั้นครับ", "prefix": "I am afraid I have a scheduling", "suffix": "at that time.", "hint": "คำนามแปลว่า ขัดแย้ง/ชนกัน (c...)", "acceptable_answers": ["conflict"], "correct_word": "conflict", "full_sentence": "I am afraid I have a scheduling conflict at that time.", "explanation": "'scheduling conflict' แปลว่า ตารางเวลาชนกัน"},
+      {"thai_prompt": "พวกเราสามารถเลื่อนการประชุมไปสัปดาห์หน้าได้ไหมครับ", "prefix": "Could we", "suffix": "the meeting to next week?", "hint": "คำกริยาแปลว่า กำหนดวันเวลาใหม่ (r...)", "acceptable_answers": ["reschedule"], "correct_word": "reschedule", "full_sentence": "Could we reschedule the meeting to next week?", "explanation": "'reschedule' แปลว่า เลื่อนกำหนดการนัด"},
+      {"thai_prompt": "คุณว่างสำหรับการคุยงานสั้นๆ ไหมครับ", "prefix": "Are you", "suffix": "for a short call?", "hint": "คำแปลว่า ว่าง/สะดวก (a...)", "acceptable_answers": ["available"], "correct_word": "available", "full_sentence": "Are you available for a short call?", "explanation": "'available' แปลว่า ว่างหรือสะดวก"},
+      {"thai_prompt": "โปรดส่งคำเชิญปฏิทินมาให้ผมด้วยครับ", "prefix": "Please send over a calendar", "suffix": ".", "hint": "คำแปลว่า คำเชิญ (i...)", "acceptable_answers": ["invite", "invitation"], "correct_word": "invite", "full_sentence": "Please send over a calendar invite.", "explanation": "'calendar invite' แปลว่า บัตรเชิญปฏิทินนัดหมาย"},
+      {"thai_prompt": "เวลาไหนก็ได้หลังบ่ายสองโมงสะดวกสำหรับฉันมาก", "prefix": "Any time after 2 PM works", "suffix": "for me.", "hint": "คำกริยาวิเศษณ์แปลว่า อย่างสมบูรณ์แบบ (p...)", "acceptable_answers": ["perfectly"], "correct_word": "perfectly", "full_sentence": "Any time after 2 PM works perfectly for me.", "explanation": "'works perfectly' แปลว่า สะดวกอย่างยิ่ง"},
+      {"thai_prompt": "ขออภัยที่แจ้งเปลี่ยนแปลงเวลากะทันหันครับ", "prefix": "Sorry for the short", "suffix": "regarding the change.", "hint": "คำแปลว่า การบอกล่วงหน้าสั้นๆ (n...)", "acceptable_answers": ["notice"], "correct_word": "notice", "full_sentence": "Sorry for the short notice regarding the change.", "explanation": "'short notice' แปลว่า แจ้งในเวลากระชั้นชิด"},
+      {"thai_prompt": "เรามาเลื่อนการประชุมไปจนกว่าข้อมูลจะพร้อมดีกว่า", "prefix": "Let's", "suffix": "the meeting until data is ready.", "hint": "คำกริยาแปลว่า เลื่อนออกไป (p...)", "acceptable_answers": ["postpone"], "correct_word": "postpone", "full_sentence": "Let's postpone the meeting until data is ready.", "explanation": "'postpone' แปลว่า เลื่อนออกไป"},
+      {"thai_prompt": "โปรดดูวาระการประชุมที่แนบมานี้", "prefix": "Please check the attached meeting", "suffix": ".", "hint": "คำนามแปลว่า วาระการประชุม (a...)", "acceptable_answers": ["agenda"], "correct_word": "agenda", "full_sentence": "Please check the attached meeting agenda.", "explanation": "'meeting agenda' แปลว่า วาระการประชุม"},
+      {"thai_prompt": "ขอยืนยันนัดหมายของเราในวันพฤหัสบดีครับ", "prefix": "Confirming our", "suffix": "for Thursday.", "hint": "คำนามแปลว่า การนัดหมาย (a...)", "acceptable_answers": ["appointment"], "correct_word": "appointment", "full_sentence": "Confirming our appointment for Thursday.", "explanation": "'appointment' แปลว่า การนัดหมาย"}
+    ],
+    "stories": [
+      {
+        "title": "Double Booked",
+        "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "conflict", "pos": "n.", "th": "เวลาชนกัน"}, {"word": "reschedule", "pos": "v.", "th": "เลื่อนนัด"}, {"word": "polite", "pos": "adj.", "th": "สุภาพ"}, {"word": "agree", "pos": "v.", "th": "เห็นพ้อง"}],
+        "story_en": "Mark realized his calendar had two meetings booked at 2 PM: one with QA and one with a supplier.<br><br>He sent a <b>polite</b> note to the supplier explaining the <b>conflict</b> and <b>rescheduled</b> for 3:30 PM. Both parties <b>agreed</b> without friction.",
+        "story_en_plain": "Mark realized his calendar had two meetings booked at 2 PM: one with QA and one with a supplier. He sent a polite note to the supplier explaining the conflict and rescheduled for 3:30 PM. Both parties agreed without friction.",
+        "story_th": "มาร์คพบว่าปฏิทินของเขามีนัดซ้อนกันสองนัดตอนบ่ายสอง: นัดหนึ่งกับ QA อีกนัดกับซัพพลายเออร์ เขาจึงส่งข้อความอย่างสุภาพเพื่อขอเลื่อนเวลากับซัพพลายเออร์ไปเป็นบ่ายสามโมงครึ่ง ทั้งสองฝ่ายต่างเห็นชอบด้วยดี"
+      },
+      {
+        "title": "The Calendar Invite",
+        "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "invite", "pos": "n.", "th": "คำเชิญ"}, {"word": "link", "pos": "n.", "th": "ลิงก์เข้าประชุม"}, {"word": "punctual", "pos": "adj.", "th": "ตรงต่อเวลา"}, {"word": "productive", "pos": "adj.", "th": "ได้ผลงานดี"}],
+        "story_en": "Anna sent out a meeting <b>invite</b> with an agenda and dial-in <b>link</b> attached.<br><br>Because all instructions were clear, all five engineers joined <b>punctual</b> and prepared, making the thirty-minute sync incredibly <b>productive</b>.",
+        "story_en_plain": "Anna sent out a meeting invite with an agenda and dial-in link attached. Because all instructions were clear, all five engineers joined punctual and prepared, making the thirty-minute sync incredibly productive.",
+        "story_th": "แอนนาส่งคำเชิญปฏิทินพร้อมแนบวาระและลิงก์เข้าประชุมอย่างครบถ้วน เพราะคำแนะนำชัดเจน วิศวกรทั้ง 5 คนจึงเข้าร่วมตรงเวลาและเตรียมตัวมาอย่างดี ทำให้การประชุมครึ่งชั่วโมงได้ข้อสรุปที่ยอดเยี่ยม"
+      },
+      {
+        "title": "Short Notice Relief",
+        "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "notice", "pos": "n.", "th": "การแจ้งล่วงหน้า"}, {"word": "understand", "pos": "v.", "th": "เข้าใจ"}, {"word": "emergency", "pos": "n.", "th": "เหตุฉุกเฉิน"}, {"word": "kindness", "pos": "n.", "th": "ความมีน้ำใจ"}],
+        "story_en": "Karan had to cancel an interview on thirty minutes' <b>notice</b> due to a plant water leak.<br><br>He called the candidate personally to apologize. The candidate completely <b>understood</b>, and Karan's <b>kindness</b> left an amazing impression.",
+        "story_en_plain": "Karan had to cancel an interview on thirty minutes' notice due to a plant water leak. He called the candidate personally to apologize. The candidate completely understood, and Karan's kindness left an amazing impression.",
+        "story_th": "การันจำต้องยกเลิกนัดสัมภาษณ์ล่วงหน้าเพียง 30 นาทีเนื่องจากท่อน้ำในโรงงานแตก เขารีบโทรหาผู้สมัครด้วยตนเองเพื่อกล่าวขอโทษ ผู้สมัครเข้าใจสถานการณ์เป็นอย่างดี และน้ำใจของเขาสร้างความประทับใจให้อีกฝ่ายอย่างมาก"
+      },
+      {
+        "title": "Finding the Right Time",
+        "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "convenient", "pos": "adj.", "th": "สะดวก"}, {"word": "busy", "pos": "adj.", "th": "ยุ่ง"}, {"word": "morning", "pos": "n.", "th": "ตอนเช้า"}, {"word": "success", "pos": "n.", "th": "ความสำเร็จ"}],
+        "story_en": "Coordinating four busy supervisors seemed impossible. Ploy polled everyone: “Does 8:30 AM before shift start work for you?”<br><br>To her delight, all four agreed that early <b>morning</b> was the most <b>convenient</b> slot, resulting in a successful weekly sync.",
+        "story_en_plain": "Coordinating four busy supervisors seemed impossible. Ploy polled everyone: Does 8:30 AM before shift start work for you? To her delight, all four agreed that early morning was the most convenient slot, resulting in a successful weekly sync.",
+        "story_th": "การจัดเวลาให้หัวหน้างาน 4 คนที่ยุ่งตลอดวันดูเหมือนจะเป็นไปไม่ได้ พลอยจึงสอบถามทุกคน: เช้าแปดโมงครึ่งก่อนเริ่มกะสะดวกไหมคะ ทุกคนต่างเห็นชอบว่าช่วงเช้าตรู่สะดวกที่สุด ทำให้การประชุมประจำสัปดาห์เกิดขึ้นได้สำเร็จ"
+      }
+    ]
+  },
+  "6": {
+    "day": 6,
+    "title": "Day 6: Clarifying Instructions & Active Listening",
+    "summary": "การทวนความเข้าใจ เช็คคำสั่ง เพื่อป้องกันความผิดพลาดในการทำงาน",
+    "rule": "Let me confirm... | Just to clarify... | Did you mean...?",
+    "vocab": [
+      {"word": "Elaborate", "phonetic": "/iˈlæb.ə.reɪt/", "part_of_speech": "v.", "meaning": "อธิบายขยายความ", "example": "Could you elaborate further?", "example_th": "ช่วยอธิบายเพิ่มเติมได้ไหม"},
+      {"word": "Alignment", "phonetic": "/əˈlaɪn.mənt/", "part_of_speech": "n.", "meaning": "ความเข้าใจตรงกัน", "example": "We need cross-team alignment.", "example_th": "เราต้องเข้าใจตรงกันทุกทีม"},
+      {"word": "Specification", "phonetic": "/ˌspes.ɪ.fɪˈkeɪ.ʃən/", "part_of_speech": "n.", "meaning": "สเปก / ข้อกำหนด", "example": "Read the engineering specification.", "example_th": "อ่านข้อกำหนดวิศวกรรม"},
+      {"word": "Verify", "phonetic": "/ˈver.ɪ.faɪ/", "part_of_speech": "v.", "meaning": "ทวนสอบความถูกต้อง", "example": "Verify the numbers carefully.", "example_th": "ทวนสอบตัวเลขอย่างถี่ถ้วน"},
+      {"word": "Ambiguous", "phonetic": "/æmˈbɪɡ.ju.əs/", "part_of_speech": "adj.", "meaning": "กำกวม / คลุมเครือ", "example": "The email was ambiguous.", "example_th": "อีเมลมีความคลุมเครือ"},
+      {"word": "Summarize", "phonetic": "/ˈsʌm.ər.aɪz/", "part_of_speech": "v.", "meaning": "สรุปใจความ", "example": "Let me summarize the action items.", "example_th": "ขอผมสรุปสิ่งที่ต้องทำ"},
+      {"word": "Misunderstanding", "phonetic": "/ˌmɪs.ʌn.dəˈstæn.dɪŋ/", "part_of_speech": "n.", "meaning": "ความเข้าใจผิด", "example": "Clear any misunderstanding.", "example_th": "เคลียร์ความเข้าใจผิดให้หมด"},
+      {"word": "Rephrase", "phonetic": "/ˌriːˈfreɪz/", "part_of_speech": "v.", "meaning": "ทวนประโยคด้วยคำใหม่", "example": "Let me rephrase my statement.", "example_th": "ขอผมพูดใหม่ให้เข้าใจง่ายขึ้น"},
+      {"word": "Ensure", "phonetic": "/ɪnˈʃɔːr/", "part_of_speech": "v.", "meaning": "ทำให้มั่นใจ / ดูแลให้แน่ใจ", "example": "Ensure the power is turned off.", "example_th": "ดูให้มั่นใจว่าปิดไฟแล้ว"},
+      {"word": "Comprehend", "phonetic": "/ˌkɒm.prɪˈhend/", "part_of_speech": "v.", "meaning": "เข้าใจลึกซึ้ง", "example": "Do you comprehend the procedure?", "example_th": "คุณเข้าใจขั้นตอนครบถ้วนไหม"},
+      {"word": "Clarification", "phonetic": "/ˌklær.ɪ.fɪˈkeɪ.ʃən/", "part_of_speech": "n.", "meaning": "การชี้แจงให้กระจ่าง", "example": "Thank you for the clarification.", "example_th": "ขอบคุณสำหรับคำชี้แจง"},
+      {"word": "Instruction", "phonetic": "/ɪnˈstrʌk.ʃən/", "part_of_speech": "n.", "meaning": "คำสั่ง / คำแนะนำการทำ", "example": "Follow the safety instruction.", "example_th": "ทำตามคำแนะนำความปลอดภัย"},
+      {"word": "Explicit", "phonetic": "/ɪkˈsplɪs.ɪt/", "part_of_speech": "adj.", "meaning": "ชัดเจนตรงไปตรงมา", "example": "Give explicit instructions.", "example_th": "ให้คำสั่งที่ชัดเจนตรงไปตรงมา"},
+      {"word": "Confirmation", "phonetic": "/ˌkɒn.fəˈmeɪ.ʃən/", "part_of_speech": "n.", "meaning": "การยืนยัน", "example": "Wait for written confirmation.", "example_th": "รอการยืนยันเป็นลายลักษณ์อักษร"},
+      {"word": "Feedback", "phonetic": "/ˈfiːd.bæk/", "part_of_speech": "n.", "meaning": "ความเห็นสะท้อนกลับ", "example": "Give constructive feedback.", "example_th": "ให้ความเห็นเชิงสร้างสรรค์"},
+      {"word": "Attention", "phonetic": "/əˈten.ʃən/", "part_of_speech": "n.", "meaning": "ความเอาใจใส่ / สมาธิ", "example": "Pay close attention to detail.", "example_th": "ใส่ใจในรายละเอียดอย่างใกล้ชิด"},
+      {"word": "Guidance", "phonetic": "/ˈɡaɪ.dəns/", "part_of_speech": "n.", "meaning": "คำชี้แนะ / แนวทาง", "example": "Thank you for your guidance.", "example_th": "ขอบคุณสำหรับคำชี้แนะ"},
+      {"word": "Perception", "phonetic": "/pəˈsep.ʃən/", "part_of_speech": "n.", "meaning": "การรับรู้ / มุมมอง", "example": "Change the perception.", "example_th": "เปลี่ยนมุมมองการรับรู้"},
+      {"word": "Repetition", "phonetic": "/ˌrep.əˈtɪʃ.ən/", "part_of_speech": "n.", "meaning": "การพูดซ้ำ / การทำซ้ำ", "example": "Repetition aids memory.", "example_th": "การพูดซ้ำช่วยจำ"},
+      {"word": "Acknowledgement", "phonetic": "/əkˈnɒl.ɪdʒ.mənt/", "part_of_speech": "n.", "meaning": "การรับทราบ", "example": "Send an acknowledgement email.", "example_th": "ส่งอีเมลรับทราบเรื่อง"}
+    ],
+    "phrases": [
+      {"en": "Just to make sure we are on the same page, should I prepare the report first?", "th": "เพื่อความเข้าใจที่ตรงกัน ผมควรเตรียมรายงานก่อนใช่ไหมครับ", "tip": "on the same page = เข้าใจตรงกัน"},
+      {"en": "Could you please elaborate on what you mean by that?", "th": "ช่วยขยายความสิ่งที่คุณหมายถึงเพิ่มเติมอีกนิดได้ไหมครับ", "tip": "elaborate = อธิบายเพิ่ม"},
+      {"en": "If I understand correctly, the deadline is moved to next Monday.", "th": "ถ้าผมเข้าใจถูกต้อง กำหนดส่งเลื่อนไปเป็นวันจันทร์หน้าใช่ไหมครับ", "tip": "If I understand correctly"},
+      {"en": "Could you please speak a bit slower? I want to catch every detail.", "th": "ช่วยพูดช้าลงอีกนิดนึงได้ไหมครับ พอดีผมอยากจดรายละเอียดให้ครบถ้วน", "tip": "speak a bit slower"},
+      {"en": "Let me rephrase that to make sure I got your point.", "th": "ขออนุญาตทวนประโยคอีกครั้งเพื่อให้แน่ใจว่าผมเข้าใจประเด็นของคุณครับ", "tip": "rephrase = เปลี่ยนคำทบทวน"},
+      {"en": "Did you mean the raw material batch or the finished goods?", "th": "คุณหมายถึงล็อตวัตถุดิบหรือสินค้าสำเร็จรูปครับ", "tip": "Did you mean...?"},
+      {"en": "Could you please put that instruction in an email for reference?", "th": "รบกวนช่วยสรุปคำสั่งส่งมาทางอีเมลเพื่อใช้อ้างอิงได้ไหมครับ", "tip": "for reference = ใช้อ้างอิง"},
+      {"en": "I understand your point clearly now. Thank you for the clarification.", "th": "ตอนนี้ผมเข้าใจประเด็นของคุณอย่างชัดเจนแล้วครับ ขอบคุณสำหรับคำชี้แจง", "tip": "clarification = คำชี้แจง"},
+      {"en": "So, to confirm: Step 1 is scanning, and Step 2 is labeling, correct?", "th": "สรุปคือ ขั้นตอนที่ 1 สแกน และขั้นตอนที่ 2 ติดฉลาก ถูกต้องไหมครับ", "tip": "to confirm = เพื่อยืนยัน"},
+      {"en": "Are there any specific tolerances we need to adhere to?", "th": "มีค่าความคลาดเคลื่อนเฉพาะที่พวกเราต้องปฏิบัติตามไหมครับ", "tip": "adhere to = ยึดถือตาม"},
+      {"en": "What is the expected outcome of this process change?", "th": "ผลลัพธ์ที่คาดหวังจากการเปลี่ยนกระบวนการนี้คืออะไรครับ", "tip": "expected outcome = ผลที่คาดหวัง"},
+      {"en": "I want to double-check before I take action.", "th": "ผมอยากตรวจสอบความถูกต้องอีกครั้งก่อนที่จะลงมือทำครับ", "tip": "double-check"},
+      {"en": "Please correct me if I am wrong.", "th": "ท้วงติงได้เลยนะครับหากผมเข้าใจอะไรผิดไป", "tip": "correct me if I am wrong"},
+      {"en": "Does everyone understand the new SOP requirements?", "th": "ทุกคนเข้าใจข้อกำหนดของ SOP ตัวใหม่ครบถ้วนแล้วใช่ไหมครับ", "tip": "new SOP requirements"},
+      {"en": "Could you provide a concrete example of this defect?", "th": "ช่วยยกตัวอย่างของเสียแบบชัดเจนเป็นรูปธรรมให้ดูหน่อยได้ไหมครับ", "tip": "concrete example = ตัวอย่างชัดเจน"},
+      {"en": "I hear what you are saying, but let's check the manual.", "th": "ผมเข้าใจสิ่งที่คุณพูดครับ แต่เรามาเปิดคู่มือเช็คกันอีกทีดีกว่า", "tip": "I hear what you are saying"},
+      {"en": "Let's summarize the key action points before we leave.", "th": "เรามาสรุปการบ้านสิ่งที่ต้องทำก่อนแยกย้ายกันครับ", "tip": "key action points"},
+      {"en": "I will send a recap email by the end of the day.", "th": "ผมจะส่งอีเมลสรุปประเด็นให้ภายในสิ้นวันนี้นะครับ", "tip": "recap email = อีเมลสรุป"},
+      {"en": "Can you hear me clearly on the call?", "th": "ได้ยินเสียงผมชัดเจนในสายไหมครับ", "tip": "hear me clearly"},
+      {"en": "Thank you for clearing up that confusion.", "th": "ขอบคุณมากครับที่ช่วยเคลียร์ความสับสนตรงนั้นให้กระจ่าง", "tip": "clearing up = เคลียร์ให้ชัด"}
+    ],
+    "dialogues": [
+      {"title": "ทวนความเข้าใจคำสั่งหัวหน้า", "lines": [{"speaker": "Leader", "en": "Pack all green boxes first.", "th": "แพ็คกล่องสีเขียวทั้งหมดก่อนนะ"}, {"speaker": "Staff", "en": "To confirm, only green boxes for now?", "th": "ขอทวนครับ ตอนนี้ทำเฉพาะกล่องเขียวใช่ไหมครับ"}]},
+      {"title": "ขอให้พูดช้าลงหน่อย", "lines": [{"speaker": "Foreigner", "en": "We need to dispatch the cargo ASAP via airfreight.", "th": "เราต้องส่งคาร์โก้ด่วนที่สุดทางเครื่องบิน"}, {"speaker": "Staff", "en": "Could you please speak a bit slower?", "th": "ช่วยพูดช้าลงอีกนิดหนึ่งได้ไหมครับ"}]},
+      {"title": "ถามแยกแยะระหว่างสองล็อต", "lines": [{"speaker": "QA", "en": "Inspect batch forty-five.", "th": "ตรวจแบทช์ 45 ด้วยนะ"}, {"speaker": "Staff", "en": "Did you mean 45A or 45B?", "th": "หมายถึง 45A หรือ 45B ครับ"}]},
+      {"title": "ขอให้อธิบายขยายความ", "lines": [{"speaker": "Staff", "en": "Could you elaborate on the test criteria?", "th": "ช่วยขยายความเกณฑ์การทดสอบหน่อยครับ"}, {"speaker": "Engineer", "en": "It must withstand 50 Newtons of force.", "th": "มันต้องทนแรงกดได้ 50 นิวตันครับ"}]},
+      {"title": "ขอให้พิมพ์คำสั่งส่งมาทางอีเมล", "lines": [{"speaker": "Staff", "en": "Could you put that in an email for reference?", "th": "ช่วยสรุปทางอีเมลไว้ใช้อ้างอิงหน่อยได้ไหมครับ"}, {"speaker": "Manager", "en": "Sure, I will send it in 5 minutes.", "th": "ได้เลย เดี๋ยวผมส่งให้ใน 5 นาที"}]},
+      {"title": "เช็คความเข้าใจเรื่องเดดไลน์", "lines": [{"speaker": "Staff", "en": "If I understand correctly, delivery is on Friday?", "th": "ถ้าเข้าใจถูกคือส่งมอบวันศุกร์ใช่ไหมครับ"}, {"speaker": "Client", "en": "Yes, exactly on Friday morning.", "th": "ใช่ครับ วันศุกร์เช้าแน่นอน"}]},
+      {"title": "ถามหาสาเหตุที่แท้จริง", "lines": [{"speaker": "Auditor", "en": "What caused the label misprint?", "th": "อะไรทำให้พิมพ์ฉลากผิดครับ"}, {"speaker": "Operator", "en": "The thermal ribbon was loosely installed.", "th": "ริบบอนความร้อนใส่ไว้หลวมครับ"}]},
+      {"title": "ขอตัวอย่างข้อบกพร่องจริง", "lines": [{"speaker": "New Hire", "en": "Could you show me a sample defect?", "th": "ช่วยเปิดตัวอย่างของเสียให้ดูหน่อยได้ไหมครับ"}, {"speaker": "Trainer", "en": "Look at this crack along the edge.", "th": "ดูรอยร้าวตามขอบตรงนี้เป็นตัวอย่างนะ"}]},
+      {"title": "ทวนตัวเลขยอดนับสินค้า", "lines": [{"speaker": "Staff", "en": "Did you say 14 or 40 boxes?", "th": "เมื่อกี้คุณพูดว่า 14 หรือ 40 กล่องนะครับ"}, {"speaker": "Counter", "en": "Fourteen. One-four.", "th": "สิบสี่ครับ หนึ่งกับสี่"}]},
+      {"title": "สรุปหลังคุยงานจบ", "lines": [{"speaker": "Staff", "en": "I will send a recap email right away.", "th": "เดี๋ยวผมรีบส่งอีเมลสรุปให้ทันทีครับ"}, {"speaker": "Leader", "en": "Thanks, that ensures we are aligned.", "th": "ขอบคุณ ช่วยให้เราเข้าใจตรงกันดีมาก"}]}
+    ],
+    "exercises": [
+      {"thai_prompt": "เพื่อให้แน่ใจว่าเราเข้าใจตรงกัน", "prefix": "Just to make sure we are on the", "suffix": "page.", "hint": "คำแปลว่า หน้าเดียวกัน (s...)", "acceptable_answers": ["same"], "correct_word": "same", "full_sentence": "Just to make sure we are on the same page.", "explanation": "'on the same page' หมายถึง มีความเข้าใจตรงกัน"},
+      {"thai_prompt": "ช่วยอธิบายขยายความเพิ่มเติมในจุดนี้ได้ไหมครับ", "prefix": "Could you please", "suffix": "on this specific point?", "hint": "คำกริยาแปลว่า ขยายความ (e...)", "acceptable_answers": ["elaborate"], "correct_word": "elaborate", "full_sentence": "Could you please elaborate on this specific point?", "explanation": "'elaborate on' แปลว่า ให้รายละเอียดเพิ่มเติม"},
+      {"thai_prompt": "ถ้าผมเข้าใจถูกต้อง งานนี้ต้องส่งมอบภายในวันพรุ่งนี้", "prefix": "If I understand", "suffix": ", this must be sent tomorrow.", "hint": "คำกริยาวิเศษณ์แปลว่า อย่างถูกต้อง (c...)", "acceptable_answers": ["correctly"], "correct_word": "correctly", "full_sentence": "If I understand correctly, this must be sent tomorrow.", "explanation": "'If I understand correctly' เป็นสำนวนเช็คความเข้าใจ"},
+      {"thai_prompt": "ช่วยพูดช้าลงอีกนิดหนึ่งได้ไหมครับ", "prefix": "Could you please speak a bit", "suffix": "?", "hint": "คำแปลว่า ช้าลง (s...)", "acceptable_answers": ["slower"], "correct_word": "slower", "full_sentence": "Could you please speak a bit slower?", "explanation": "'speak a bit slower' แปลว่า พูดช้าลงอีกนิด"},
+      {"thai_prompt": "คุณหมายถึงชิ้นส่วนตัวเก่าหรือตัวใหม่ครับ", "prefix": "Did you", "suffix": "the old part or the new one?", "hint": "คำกริยาแปลว่า หมายถึง (m...)", "acceptable_answers": ["mean"], "correct_word": "mean", "full_sentence": "Did you mean the old part or the new one?", "explanation": "'Did you mean...?' แปลว่า คุณหมายถึง...ใช่ไหม"},
+      {"thai_prompt": "ขอให้ผมทวนประโยคเพื่อความเข้าใจที่ถูกต้อง", "prefix": "Let me", "suffix": "that to be clear.", "hint": "คำกริยาแปลว่า พูดใหม่ด้วยคำอื่น (r...)", "acceptable_answers": ["rephrase"], "correct_word": "rephrase", "full_sentence": "Let me rephrase that to be clear.", "explanation": "'rephrase' แปลว่า ทวนด้วยคำพูดใหม่"},
+      {"thai_prompt": "ช่วยส่งคำสั่งนี้ทางอีเมลเพื่อใช้อ้างอิงด้วยครับ", "prefix": "Put that in an email for", "suffix": ".", "hint": "คำแปลว่า การอ้างอิง (r...)", "acceptable_answers": ["reference"], "correct_word": "reference", "full_sentence": "Put that in an email for reference.", "explanation": "'for reference' แปลว่า ไว้ใช้อ้างอิง"},
+      {"thai_prompt": "ขอบคุณมากสำหรับคำชี้แจงที่ชัดเจนครับ", "prefix": "Thank you for the", "suffix": ".", "hint": "คำนามแปลว่า คำชี้แจง (c...)", "acceptable_answers": ["clarification"], "correct_word": "clarification", "full_sentence": "Thank you for the clarification.", "explanation": "'clarification' แปลว่า คำชี้แจงให้กระจ่าง"},
+      {"thai_prompt": "เราต้องทำให้มั่นใจว่ากระบวนการปลอดภัย", "prefix": "We must", "suffix": "that the process is safe.", "hint": "คำกริยาแปลว่า ทำให้มั่นใจ (e...)", "acceptable_answers": ["ensure"], "correct_word": "ensure", "full_sentence": "We must ensure that the process is safe.", "explanation": "'ensure' แปลว่า ทำให้แน่ใจ"},
+      {"thai_prompt": "ท้วงติงผมได้เลยหากผมเข้าใจผิดไป", "prefix": "Please", "suffix": "me if I am wrong.", "hint": "คำกริยาแปลว่า แก้ไขให้ถูกต้อง (c...)", "acceptable_answers": ["correct"], "correct_word": "correct", "full_sentence": "Please correct me if I am wrong.", "explanation": "'correct me if I am wrong' แปลว่า ท้วงได้ถ้าผมผิด"}
+    ],
+    "stories": [
+      {
+        "title": "The Fourteen or Forty Mix-up",
+        "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "clarify", "pos": "v.", "th": "ชี้แจง"}, {"word": "accent", "pos": "n.", "th": "สำเนียง"}, {"word": "pallet", "pos": "n.", "th": "พาเลท"}, {"word": "prevent", "pos": "v.", "th": "ป้องกัน"}],
+        "story_en": "Over the noisy forklift sounds, Ben heard the supervisor shout: “Load forty pallets!” But the truck could only fit fourteen.<br><br>Ben stepped closer and asked: “Did you say 14 or 40?” The supervisor smiled: “Fourteen! Good catch.” Active listening <b>prevented</b> a huge shipping error.",
+        "story_en_plain": "Over the noisy forklift sounds, Ben heard the supervisor shout: Load forty pallets! But the truck could only fit fourteen. Ben stepped closer and asked: Did you say 14 or 40? The supervisor smiled: Fourteen! Good catch. Active listening prevented a huge shipping error.",
+        "story_th": "ท่ามกลางเสียงรถโฟล์คลิฟต์ดัง เบนได้ยินหัวหน้าตะโกนว่า โหลด 40 พาเลท! แต่รถบรรทุกใส่ได้แค่ 14 พาเลท เบนเดินเข้าไปถามซ้ำ: 14 หรือ 40 นะครับ หัวหน้ายิ้ม: สิบสี่จ้า ขอบใจที่ทวน การตั้งใจฟังและถามซ้ำช่วยป้องกันความผิดพลาดใหญ่ได้ทันท่วงที"
+      },
+      {
+        "title": "On the Same Page",
+        "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "alignment", "pos": "n.", "th": "ความตรงกัน"}, {"word": "recap", "pos": "n.", "th": "การสรุป"}, {"word": "crucial", "pos": "adj.", "th": "สำคัญยิ่ง"}, {"word": "flawless", "pos": "adj.", "th": "ไร้ที่ติ"}],
+        "story_en": "Before building the new temperature control racks, Team Leader Sam asked for a five-minute meeting: “Let’s recap the dimensions to make sure we are <b>on the same page</b>.”<br><br>They caught a blueprint unit error between inches and centimeters. The rack construction was completely <b>flawless</b>.",
+        "story_en_plain": "Before building the new temperature control racks, Team Leader Sam asked for a five-minute meeting: Let’s recap the dimensions to make sure we are on the same page. They caught a blueprint unit error between inches and centimeters. The rack construction was completely flawless.",
+        "story_th": "ก่อนประกอบแร็คคุมอุณหภูมิชุดใหม่ หัวหน้าแซมขอนัดคุย 5 นาที: มาทวนขนาดกันอีกทีเพื่อความเข้าใจที่ตรงกันนะ พวกเขาตรวจพบข้อผิดพลาดในแบบระหว่างหน่วยนิ้วกับเซนติเมตร ทำให้งานสร้างแร็คออกมาสมบูรณ์แบบไร้ที่ติ"
+      },
+      {
+        "title": "Speak Slower, Please",
+        "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "auditor", "pos": "n.", "th": "ผู้ตรวจประเมิน"}, {"word": "fluent", "pos": "adj.", "th": "คล่องแคล่ว"}, {"word": "courage", "pos": "n.", "th": "ความกล้า"}, {"word": "compliment", "pos": "v.", "th": "ชมเชย"}],
+        "story_en": "An American customer auditor spoke very rapidly during the warehouse walk. Operator Joy politely raised her hand: “Could you please speak a bit slower so I can note every point?”<br><br>The auditor smiled warmly, slowed his pace, and later <b>complimented</b> Joy for her professional communication.",
+        "story_en_plain": "An American customer auditor spoke very rapidly during the warehouse walk. Operator Joy politely raised her hand: Could you please speak a bit slower so I can note every point? The auditor smiled warmly, slowed his pace, and later complimented Joy for her professional communication.",
+        "story_th": "ผู้ตรวจประเมินชาวอเมริกันพูดเร็วมากขณะเดินตรวจคลังสินค้า จอยพนักงานสาวกล้ายกมือถามอย่างสุภาพ: ช่วยพูดช้าลงอีกนิดได้ไหมคะเพื่อหนูจะได้จดครบทุกประเด็น ผู้ตรวจยิ้มอย่างอบอุ่น พูดช้าลง และยังเอ่ยปากชมเชยความเป็นมืออาชีพของเธอ"
+      },
+      {
+        "title": "The Email Recap",
+        "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "recap", "pos": "n.", "th": "สรุปย่อ"}, {"word": "clarity", "pos": "n.", "th": "ความชัดเจน"}, {"word": "evidence", "pos": "n.", "th": "หลักฐาน"}, {"word": "praise", "pos": "v.", "th": "ยกย่อง"}],
+        "story_en": "After an intense phone call about shipment changes, Dan always sends a bulleted <b>recap</b> email: “As discussed, we agreed on the following three actions.”<br><br>This simple habit provided clear written <b>evidence</b> and saved his team whenever misunderstandings arose.",
+        "story_en_plain": "After an intense phone call about shipment changes, Dan always sends a bulleted recap email: As discussed, we agreed on the following three actions. This simple habit provided clear written evidence and saved his team whenever misunderstandings arose.",
+        "story_th": "หลังจากคุยสายเรื่องการเปลี่ยนรอบส่งของ แดนจะส่งอีเมลสรุปประเด็นเป็นข้อๆ เสมอว่า: ตามที่ตกลงกัน เราเห็นชอบใน 3 ข้อนี้ นิสัยง่ายๆ นี้สร้างหลักฐานที่ชัดเจนและช่วยปกป้องทีมงานของเขาทุกครั้งที่เกิดการเข้าใจผิด"
+      }
+    ]
+  },
+  "7": {
+    "day": 7,
+    "title": "Day 7: Weekly Wrap-up & Executive Summary",
+    "summary": "การเขียนสรุปผลงานประจำสัปดาห์ (Highlights, Challenges, Next Week Plan)",
+    "rule": "เน้นสรุปแบบ Bullet points กระชับ ชัดเจน พร้อมระบุตัวเลขชี้วัดผลงาน",
+    "vocab": [
+      {"word": "Achievement", "phonetic": "/əˈtʃiːv.mənt/", "part_of_speech": "n.", "meaning": "ความสำเร็จ / ผลงาน", "example": "This is a great achievement.", "example_th": "นี่คือความสำเร็จที่ยอดเยี่ยม"},
+      {"word": "Benchmark", "phonetic": "/ˈbentʃ.mɑːk/", "part_of_speech": "n.", "meaning": "เกณฑ์มาตรฐานเปรียบเทียบ", "example": "We beat the safety benchmark.", "example_th": "เราทำได้ดีกว่าเกณฑ์ความปลอดภัย"},
+      {"word": "Output", "phonetic": "/ˈaʊt.pʊt/", "part_of_speech": "n.", "meaning": "ผลผลิตรวม", "example": "Total output hit 10,000 units.", "example_th": "ยอดผลผลิตแตะหมื่นชิ้น"},
+      {"word": "Efficiency", "phonetic": "/ɪˈfɪʃ.ən.si/", "part_of_speech": "n.", "meaning": "ประสิทธิภาพ", "example": "Picking efficiency rose by 8%.", "example_th": "ประสิทธิภาพการหยิบของเพิ่ม 8%"},
+      {"word": "Summary", "phonetic": "/ˈsʌm.ər.i/", "part_of_speech": "n.", "meaning": "บทสรุป", "example": "Here is the weekly summary.", "example_th": "นี่คือสรุปประจำสัปดาห์"},
+      {"word": "Momentum", "phonetic": "/məˈmen.təm/", "part_of_speech": "n.", "meaning": "แรงขับเคลื่อนความต่อเนื่อง", "example": "Keep up the great momentum.", "example_th": "รักษาแรงขับเคลื่อนที่ดีไว้"},
+      {"word": "Accomplish", "phonetic": "/əˈkʌm.plɪʃ/", "part_of_speech": "v.", "meaning": "ทำสำเร็จลุล่วง", "example": "We accomplished all our goals.", "example_th": "พวกเราทำเป้าหมายสำเร็จครบ"},
+      {"word": "Metric", "phonetic": "/ˈmet.rɪk/", "part_of_speech": "n.", "meaning": "ตัวชี้วัด / มาตรวัด", "example": "Review the operational metrics.", "example_th": "ตรวจดูตัวชี้วัดผลการทำงาน"},
+      {"word": "Exceed", "phonetic": "/ɪkˈsiːd/", "part_of_speech": "v.", "meaning": "ทำได้เกินกว่า / เหนือกว่า", "example": "Output exceeded the target.", "example_th": "ยอดผลิตเกินกว่าเป้าที่ตั้งไว้"},
+      {"word": "Objective", "phonetic": "/əbˈdʒek.tɪv/", "part_of_speech": "n.", "meaning": "วัตถุประสงค์ / เป้าหมาย", "example": "Our objective was fully achieved.", "example_th": "เป้าหมายของเราบรรลุผลครบถ้วน"},
+      {"word": "Overcome", "phonetic": "/ˌəʊ.vəˈkʌm/", "part_of_speech": "v.", "meaning": "เอาชนะอุปสรรค", "example": "We overcame the delays.", "example_th": "พวกเราเอาชนะความล่าช้าได้"},
+      {"word": "Consistent", "phonetic": "/kənˈsɪs.tənt/", "part_of_speech": "adj.", "meaning": "สม่ำเสมอ", "example": "Show consistent performance.", "example_th": "แสดงผลงานที่สม่ำเสมอ"},
+      {"word": "Contribution", "phonetic": "/ˌkɒn.trɪˈbjuː.ʃən/", "part_of_speech": "n.", "meaning": "การมีส่วนร่วมช่วยงาน", "example": "Thank you for your contribution.", "example_th": "ขอบคุณสำหรับการมีส่วนร่วมช่วยงาน"},
+      {"word": "Productivity", "phonetic": "/ˌprɒd.ʌkˈtɪv.ə.ti/", "part_of_speech": "n.", "meaning": "ผลิตภาพ", "example": "Productivity reached a record high.", "example_th": "ผลิตภาพแตะระดับสูงสุดเป็นสถิติ"},
+      {"word": "Highlight", "phonetic": "/ˈhaɪ.laɪt/", "part_of_speech": "n.", "meaning": "จุดเด่น / ผลงานเด่น", "example": "Here are the week's highlights.", "example_th": "นี่คือผลงานเด่นประจำสัปดาห์"},
+      {"word": "Forecast", "phonetic": "/ˈfɔː.kɑːst/", "part_of_speech": "n./v.", "meaning": "การคาดการณ์ล่วงหน้า", "example": "Review next week's forecast.", "example_th": "ดูยอดคาดการณ์สัปดาห์หน้า"},
+      {"word": "Reflection", "phonetic": "/rɪˈflek.ʃən/", "part_of_speech": "n.", "meaning": "การสะท้อนคิด / ถอดบทเรียน", "example": "A moment of reflection on safety.", "example_th": "ช่วงเวลาถอดบทเรียนเรื่องความปลอดภัย"},
+      {"word": "Milestone", "phonetic": "/ˈmaɪl.stəʊn/", "part_of_speech": "n.", "meaning": "จุดหมายสำคัญ", "example": "We passed the week 1 milestone.", "example_th": "เราผ่านจุดหมายสัปดาห์ที่ 1 แล้ว"},
+      {"word": "Restful", "phonetic": "/ˈrest.fəl/", "part_of_speech": "adj.", "meaning": "ที่ได้พักผ่อนอย่างเต็มที่", "example": "Have a restful weekend.", "example_th": "ขอให้ได้พักผ่อนอย่างเต็มที่ในวันหยุด"},
+      {"word": "Dedication", "phonetic": "/ˌded.ɪˈkeɪ.ʃən/", "part_of_speech": "n.", "meaning": "ความทุ่มเท", "example": "Your dedication is recognized.", "example_th": "ความทุ่มเทของคุณได้รับการยอมรับ"}
+    ],
+    "phrases": [
+      {"en": "Here is the summary of our weekly achievements.", "th": "นี่คือสรุปผลการดำเนินงานที่สำเร็จในสัปดาห์นี้ครับ", "tip": "achievement = ความสำเร็จ"},
+      {"en": "We achieved a 98% on-time delivery rate this week.", "th": "สัปดาห์นี้เราทำอัตราการส่งมอบตรงเวลาได้ถึง 98% ครับ", "tip": "ระบุตัวเลขสร้างความน่าเชื่อถือ"},
+      {"en": "Our top priority for next week is system optimization.", "th": "เป้าหมายสำคัญอันดับแรกสำหรับสัปดาห์หน้าคือการปรับปรุงระบบครับ", "tip": "top priority = สำคัญที่สุด"},
+      {"en": "Thank you all for your hard work throughout the week.", "th": "ขอบคุณทุกคนสำหรับการทำงานอย่างหนักตลอดทั้งสัปดาห์ครับ", "tip": "คำขอบคุณทีมงานวันศุกร์"},
+      {"en": "We managed to overcome all unexpected delays.", "th": "พวกเราสามารถเอาชนะและจัดการความล่าช้าที่ไม่คาดคิดได้ทั้งหมดครับ", "tip": "overcome = เอาชนะอุปสรรค"},
+      {"en": "Total scrap was reduced by 4.5% compared to last week.", "th": "ยอดของเสียรวมลดลงไป 4.5% เมื่อเทียบกับสัปดาห์ที่แล้วครับ", "tip": "compared to = เมื่อเทียบกับ"},
+      {"en": "Please review the attached spreadsheet for full metrics.", "th": "โปรดดูไฟล์สเปรดชีตที่แนบมาสำหรับตัวเลขดัชนีชี้วัดฉบับเต็มครับ", "tip": "metrics = ตัวชี้วัด"},
+      {"en": "Have a restful weekend, everyone!", "th": "ขอให้ทุกคนได้พักผ่อนอย่างเต็มที่ในวันหยุดสุดสัปดาห์นะครับ!", "tip": "restful weekend = วันหยุดที่ได้พักผ่อน"},
+      {"en": "We successfully hit all our weekly KPIs.", "th": "พวกเราทำผลงานบรรลุตัวชี้วัด KPI ประจำสัปดาห์ได้ทั้งหมดครับ", "tip": "hit KPIs = บรรลุตัวชี้วัด"},
+      {"en": "The warehouse reorganization project is 50% complete.", "th": "โปรเจกต์จัดระเบียบคลังสินค้าสำเร็จไปแล้ว 50% ครับ", "tip": "percent complete"},
+      {"en": "No safety incidents occurred during the entire week.", "th": "ไม่มีอุบัติเหตุด้านความปลอดภัยเกิดขึ้นเลยตลอดทั้งสัปดาห์ครับ", "tip": "no safety incidents"},
+      {"en": "Production output exceeded the original forecast.", "th": "ยอดการผลิตทำได้เกินกว่าตัวเลขที่คาดการณ์ไว้แต่แรกครับ", "tip": "exceeded the forecast"},
+      {"en": "Let's maintain this positive momentum into Monday.", "th": "มารักษาแรงผลักดันเชิงบวกนี้ต่อเนื่องไปถึงวันจันทร์กันครับ", "tip": "maintain momentum"},
+      {"en": "I appreciate each person's dedication to quality.", "th": "ผมขอชื่นชมความทุ่มเทในเรื่องคุณภาพของทุกคนครับ", "tip": "dedication to quality"},
+      {"en": "Next week's shipment schedule will be heavy on Tuesday.", "th": "ตารางส่งของสัปดาห์หน้าจะหนาแน่นมากในวันอังคารครับ", "tip": "heavy on Tuesday"},
+      {"en": "The inventory variance was under 0.1%, our best record.", "th": "ยอดนับสต็อกคลาดเคลื่อนต่ำกว่า 0.1% ซึ่งเป็นสถิติดีที่สุดของเรา", "tip": "best record"},
+      {"en": "Thank you for the seamless cross-department collaboration.", "th": "ขอบคุณสำหรับการประสานงานข้ามแผนกที่ราบรื่นมากครับ", "tip": "seamless collaboration"},
+      {"en": "Please submit your overtime logs before leaving today.", "th": "กรุณาส่งใบบันทึกโอทีก่อนกลับบ้านในวันนี้ด้วยครับ", "tip": "overtime logs"},
+      {"en": "We are ready to tackle the new challenges next week.", "th": "พวกเราพร้อมที่จะรับมือกับความท้าทายใหม่ในสัปดาห์หน้าแล้วครับ", "tip": "tackle challenges"},
+      {"en": "Congratulations on completing Week 1 of English Sprint!", "th": "ขอแสดงความยินดีด้วยที่คุณเรียนจบสัปดาห์ที่ 1 ของ English Sprint!", "tip": "congratulations on"}
+    ],
+    "dialogues": [
+      {"title": "รายงานสรุปวันศุกร์กับผู้จัดการ", "lines": [{"speaker": "Manager", "en": "How did we wrap up the week, Sam?", "th": "สัปดาห์นี้ปิดยอดผลงานเป็นอย่างไรบ้าง แซม"}, {"speaker": "Sam", "en": "We achieved 99% accuracy on inventory counts.", "th": "เราทำความแม่นยำสต็อกได้ถึง 99% ครับ"}]},
+      {"title": "ฉลองยอดของเสียลดลง", "lines": [{"speaker": "QA", "en": "Scrap rate dropped by 4.5% this week!", "th": "อัตราของเสียลดลงไป 4.5% ในสัปดาห์นี้!"}, {"speaker": "Lead", "en": "Outstanding work by all shift operators.", "th": "ผลงานยอดเยี่ยมของพนักงานทุกคนทุกกะเลย"}]},
+      {"title": "ทบทวนเรื่องความปลอดภัยรอบสัปดาห์", "lines": [{"speaker": "Officer", "en": "Zero accidents recorded for five straight days.", "th": "ไม่มีอุบัติเหตุเลยตลอด 5 วันติดต่อกัน"}, {"speaker": "Team", "en": "Safety is our number one culture.", "th": "ความปลอดภัยคือวัฒนธรรมอันดับหนึ่งของเรา"}]},
+      {"title": "เป้าหมายสำหรับสัปดาห์หน้า", "lines": [{"speaker": "Leader", "en": "What is our focus for Monday morning?", "th": "วันจันทร์เช้าเราจะเน้นเรื่องอะไรกัน"}, {"speaker": "Staff", "en": "We will start reorganizing Room A2 racks.", "th": "เราจะเริ่มจัดระเบียบแร็คในห้อง A2 ครับ"}]},
+      {"title": "ขอบคุณทีมงานก่อนแยกย้าย", "lines": [{"speaker": "Supervisor", "en": "Thank you everyone for the great dedication.", "th": "ขอบคุณทุกคนมากสำหรับความทุ่มเทอันยอดเยี่ยม"}, {"speaker": "Staff", "en": "Have a wonderful weekend, boss!", "th": "ขอให้มีวันหยุดสุดสัปดาห์ที่ดีครับหัวหน้า!"}]},
+      {"title": "ส่งไฟล์สรุปดัชนีชี้วัด", "lines": [{"speaker": "Staff", "en": "The weekly KPI deck is emailed to executives.", "th": "ส่งสไลด์ KPI รายสัปดาห์ให้ผู้บริหารทางอีเมลแล้วครับ"}, {"speaker": "Director", "en": "I received it. The numbers look impressive.", "th": "ได้รับแล้ว ตัวเลขดูน่าประทับใจมาก"}]},
+      {"title": "นัดหมายเช้าวันจันทร์", "lines": [{"speaker": "Lead", "en": "Standup meeting is at 8:00 AM sharp on Monday.", "th": "การประชุมสแตนด์อัปวันจันทร์เวลาแปดโมงเช้าตรงนะ"}, {"speaker": "Team", "en": "We will be there on time.", "th": "พวกเราจะไปตรงเวลาแน่นอนครับ"}]},
+      {"title": "ตรวจเช็คเครื่องจักรก่อนหยุดเสาร์อาทิตย์", "lines": [{"speaker": "Tech", "en": "All machines are shut down and safely locked.", "th": "เครื่องจักรทุกตัวปิดสวิตช์และล็อกเรียบร้อยครับ"}, {"speaker": "Lead", "en": "Perfect. Turn off the main warehouse lights.", "th": "ยอดเยี่ยม ปิดไฟหลักในโกดังได้เลย"}]},
+      {"title": "ชื่นชมการแก้ปัญหาเฉพาะหน้า", "lines": [{"speaker": "Customer", "en": "Thank you for handling our urgent order yesterday.", "th": "ขอบคุณที่ช่วยจัดการออเดอร์ด่วนให้เราเมื่อวานนะ"}, {"speaker": "Staff", "en": "Our pleasure. We are always ready to support.", "th": "ด้วยความยินดีครับ เราพร้อมช่วยเหลือเสมอ"}]},
+      {"title": "จบสัปดาห์แรกของหลักสูตร", "lines": [{"speaker": "Learner", "en": "I learned so many useful workplace phrases this week!", "th": "สัปดาห์นี้ผมได้เรียนวลีที่ใช้ทำงานจริงเยอะมากเลย!"}, {"speaker": "Coach", "en": "Keep practicing daily. Week 2 will be even better!", "th": "ฝึกฝนทุกวันอย่างต่อเนื่องนะ สัปดาห์ที่สองจะยิ่งเข้มข้นขึ้น!"}]}
+    ],
+    "exercises": [
+      {"thai_prompt": "เป้าหมายสำคัญอันดับหนึ่งของเราในสัปดาห์หน้าคือการปรับปรุงระบบ", "prefix": "Our top", "suffix": "for next week is system optimization.", "hint": "คำแปลว่า ลำดับความสำคัญ (p...)", "acceptable_answers": ["priority"], "correct_word": "priority", "full_sentence": "Our top priority for next week is system optimization.", "explanation": "'top priority' คือสิ่งที่ต้องทำเป็นอันดับแรก"},
+      {"thai_prompt": "พวกเราทำอัตราการส่งมอบสินค้าตรงเวลาได้ถึง 98% ในสัปดาห์นี้", "prefix": "We", "suffix": "a 98% on-time delivery rate this week.", "hint": "คำกริยาอดีตแปลว่า ทำสำเร็จ (a...)", "acceptable_answers": ["achieved"], "correct_word": "achieved", "full_sentence": "We achieved a 98% on-time delivery rate this week.", "explanation": "'achieved' แปลว่า ทำสำเร็จหรือบรรลุเป้าหมาย"},
+      {"thai_prompt": "ยอดของเสียรวมลดลงเมื่อเปรียบเทียบกับสัปดาห์ที่แล้ว", "prefix": "Total scrap was reduced", "suffix": "to last week.", "hint": "คำแปลว่า เปรียบเทียบ (c... ตามด้วย to)", "acceptable_answers": ["compared"], "correct_word": "compared", "full_sentence": "Total scrap was reduced compared to last week.", "explanation": "'compared to' แปลว่า เมื่อเปรียบเทียบกับ"},
+      {"thai_prompt": "นี่คือสรุปผลการดำเนินงานประจำสัปดาห์ของเราครับ", "prefix": "Here is the", "suffix": "of our weekly achievements.", "hint": "คำนามแปลว่า บทสรุป (s...)", "acceptable_answers": ["summary"], "correct_word": "summary", "full_sentence": "Here is the summary of our weekly achievements.", "explanation": "'summary' แปลว่า บทสรุปย่อ"},
+      {"thai_prompt": "พวกเราสามารถเอาชนะอุปสรรคที่ไม่คาดคิดได้ทั้งหมด", "prefix": "We managed to", "suffix": "all unexpected delays.", "hint": "คำกริยาแปลว่า เอาชนะ (o...)", "acceptable_answers": ["overcome"], "correct_word": "overcome", "full_sentence": "We managed to overcome all unexpected delays.", "explanation": "'overcome' แปลว่า เอาชนะอุปสรรค"},
+      {"thai_prompt": "ยอดการผลิตทำได้สูงกว่าเป้าหมายที่คาดการณ์ไว้", "prefix": "Output", "suffix": "the original forecast.", "hint": "คำกริยาอดีตแปลว่า เกินกว่า (e...)", "acceptable_answers": ["exceeded"], "correct_word": "exceeded", "full_sentence": "Output exceeded the original forecast.", "explanation": "'exceeded' แปลว่า ทำได้เกินกว่าเป้าหมาย"},
+      {"thai_prompt": "มารักษาแรงผลักดันเชิงบวกนี้ต่อไปจนถึงวันจันทร์กันครับ", "prefix": "Let's maintain this", "suffix": "into Monday.", "hint": "คำนามแปลว่า แรงขับเคลื่อนต่อเนื่อง (m...)", "acceptable_answers": ["momentum"], "correct_word": "momentum", "full_sentence": "Let's maintain this momentum into Monday.", "explanation": "'momentum' แปลว่า แรงส่งหรือความต่อเนื่อง"},
+      {"thai_prompt": "ขอให้ทุกคนได้พักผ่อนอย่างเต็มที่ในวันหยุดสุดสัปดาห์ครับ", "prefix": "Have a", "suffix": "weekend, everyone!", "hint": "คำคุณศัพท์แปลว่า ที่ได้พักผ่อนเต็มที่ (r...)", "acceptable_answers": ["restful"], "correct_word": "restful", "full_sentence": "Have a restful weekend, everyone!", "explanation": "'restful weekend' แปลว่า วันหยุดที่ได้พักผ่อนอย่างสบายใจ"},
+      {"thai_prompt": "ไม่มีอุบัติเหตุด้านความปลอดภัยเกิดขึ้นเลยในสัปดาห์นี้", "prefix": "No safety", "suffix": "occurred this week.", "hint": "คำนามพหูพจน์แปลว่า อุบัติเหตุ/เหตุการณ์ (i...)", "acceptable_answers": ["incidents"], "correct_word": "incidents", "full_sentence": "No safety incidents occurred this week.", "explanation": "'safety incidents' แปลว่า เหตุการณ์ด้านความปลอดภัย"},
+      {"thai_prompt": "ขอแสดงความยินดีที่คุณเรียนจบสัปดาห์ที่ 1 แล้ว", "prefix": "", "suffix": "on completing Week 1!", "hint": "คำอวยพรแสดงความยินดี (C...)", "acceptable_answers": ["Congratulations"], "correct_word": "Congratulations", "full_sentence": "Congratulations on completing Week 1!", "explanation": "'Congratulations on...' แปลว่า ขอแสดงความยินดีด้วยกับ..."}
+    ],
+    "stories": [
+      {
+        "title": "Hitting the 98% Benchmark",
+        "image_url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "benchmark", "pos": "n.", "th": "เกณฑ์มาตรฐาน"}, {"word": "on-time", "pos": "adj.", "th": "ตรงเวลา"}, {"word": "achieve", "pos": "v.", "th": "ทำสำเร็จ"}, {"word": "cheer", "pos": "v.", "th": "ไชโยดีใจ"}],
+        "story_en": "Friday afternoon was tense in the dispatch office. The weekly report needed one more truck delivery to reach the 98% <b>on-time</b> <b>benchmark</b>.<br><br>At 4:45 PM, the radio confirmed: “Truck 12 has safely delivered to Pathum Thani!” The entire team <b>cheered</b> as the screen turned green.",
+        "story_en_plain": "Friday afternoon was tense in the dispatch office. The weekly report needed one more truck delivery to reach the 98% on-time benchmark. At 4:45 PM, the radio confirmed: Truck 12 has safely delivered to Pathum Thani! The entire team cheered as the screen turned green.",
+        "story_th": "บ่ายวันศุกร์ในออฟฟิศปล่อยรถเต็มไปด้วยความตึงเครียด รายงานประจำสัปดาห์ต้องการรถอีกคันเดียวเพื่อทำยอดส่งมอบตรงเวลาให้แตะ 98% ตอน 16.45 น. วิทยุแจ้งเข้ามา: รถคันที่ 12 ส่งของถึงปทุมธานีเรียบร้อย! ทีมงานทุกคนส่งเสียงเฮดีใจลั่นห้อง"
+      },
+      {
+        "title": "A Well-Deserved Rest",
+        "image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "exhausted", "pos": "adj.", "th": "เหนื่อยล้า"}, {"word": "dedication", "pos": "n.", "th": "ความทุ่มเท"}, {"word": "pride", "pos": "n.", "th": "ความภาคภูมิใจ"}, {"word": "restful", "pos": "adj.", "th": "ได้พักผ่อน"}],
+        "story_en": "Krit clocked out on Friday evening feeling completely tired yet full of <b>pride</b>. His team organized sixty storage locations in Room A1 with zero errors.<br><br>He looked back at the spotless warehouse, smiled, and headed home ready for a truly <b>restful</b> weekend with his family.",
+        "story_en_plain": "Krit clocked out on Friday evening feeling completely tired yet full of pride. His team organized sixty storage locations in Room A1 with zero errors. He looked back at the spotless warehouse, smiled, and headed home ready for a truly restful weekend with his family.",
+        "story_th": "กฤชสแกนนิ้วเลิกงานเย็นวันศุกร์ด้วยความเหนื่อยล้าแต่เปี่ยมด้วยความภาคภูมิใจ ทีมของเขาจัดระเบียบ 60 ช่องเก็บของในห้อง A1 ได้สำเร็จแบบไร้ข้อผิดพลาด เขามองกลับไปที่คลังสินค้าที่สะอาดเป็นระเบียบ ยิ้มกว้าง และเดินทางกลับบ้านเพื่อพักผ่อนกับครอบครัว"
+      },
+      {
+        "title": "The Executive Presentation",
+        "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "executive", "pos": "n.", "th": "ผู้บริหาร"}, {"word": "summary", "pos": "n.", "th": "บทสรุป"}, {"word": "metrics", "pos": "n.", "th": "ตัวชี้วัด"}, {"word": "praise", "pos": "v.", "th": "ชื่นชม"}],
+        "story_en": "Presenting before directors can be intimidating, but Natt summarized the Material Control operations into three simple <b>metrics</b>: efficiency, safety, and cost reduction.<br><br>The managing director nodded approvingly and <b>praised</b> the team’s outstanding transparency and clarity.",
+        "story_en_plain": "Presenting before directors can be intimidating, but Natt summarized the Material Control operations into three simple metrics: efficiency, safety, and cost reduction. The managing director nodded approvingly and praised the team’s outstanding transparency and clarity.",
+        "story_th": "การรายงานต่อหน้าคณะผู้บริหารอาจดูน่าเกรงขาม แต่นัทสรุปผลงานแผนกคุมวัตถุดิบเป็น 3 ตัวชี้วัดสั้นๆ: ประสิทธิภาพ ความปลอดภัย และการลดต้นทุน กรรมการผู้จัดการพยักหน้าเห็นชอบและเอ่ยชมเชยความโปร่งใสและชัดเจนของทีมงาน"
+      },
+      {
+        "title": "Week 1 Milestone Reached",
+        "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80",
+        "vocab_list": [{"word": "milestone", "pos": "n.", "th": "ก้าวสำคัญ"}, {"word": "consistency", "pos": "n.", "th": "ความสม่ำเสมอ"}, {"word": "confidence", "pos": "n.", "th": "ความมั่นใจ"}, {"word": "fluent", "pos": "adj.", "th": "คล่องแคล่ว"}],
+        "story_en": "Looking at his notebook on Sunday, Dan realized he had practiced over one hundred new English sentences in seven days.<br><br>He was no longer hesitant to speak during factory tours. Small, daily <b>consistency</b> had turned into remarkable speaking <b>confidence</b>.",
+        "story_en_plain": "Looking at his notebook on Sunday, Dan realized he had practiced over one hundred new English sentences in seven days. He was no longer hesitant to speak during factory tours. Small, daily consistency had turned into remarkable speaking confidence.",
+        "story_th": "เมื่อเปิดสมุดบันทึกในวันอาทิตย์ แดนพบว่าตัวเองได้ฝึกประโยคภาษาอังกฤษใหม่ๆ ไปมากกว่า 100 ประโยคในรอบ 7 วัน เขาไม่ประหม่าอีกต่อไปเวลาต้องสื่อสารในโรงงาน ความสม่ำเสมอเล็กๆ ในแต่ละวันได้แปรเปลี่ยนเป็นความมั่นใจที่น่าทึ่ง"
       }
     ]
   }
